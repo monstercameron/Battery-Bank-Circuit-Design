@@ -1,0 +1,39 @@
+(kicad_sch
+  (version 20231120)
+  (generator "bb_gen")
+  (generator_version "1.0")
+  (uuid "cf0b0499-3f41-5649-b3c8-4fd1b783efed")
+  (paper "A2")
+  (title_block
+    (title "Battery Bank / Travel Router - top level")
+    (rev "A"))
+  (lib_symbols)
+  (sheet
+    (at 25 40)
+    (size 60 12)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "9db256eb-5f9b-5f03-a768-e5e0b2eabfa0")
+    (property "Sheetname" "cartridge"
+      (at 25 39.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "cartridge.kicad_sch"
+      (at 25 52.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed"
+          (page "2")))))
+  (sheet_instances
+    (path "/"
+      (page "1"))))

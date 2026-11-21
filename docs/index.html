@@ -1,0 +1,1508 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="claude:viewport-fit-sides" content="cover">
+<title>Battery Bank Travel Router</title>
+<meta name="description" content="One box instead of five: an open-hardware 90 Wh travel power bank that is also a 2.5G Wi-Fi 6 travel router, flashlight, speakerphone and Meshtastic LoRa node. Designed in KiCad 10 for JLCPCB assembly; schematic in design review.">
+<script>try{var t=localStorage.getItem('bb-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config = {
+  darkMode: ['class', '[data-theme="dark"]'],
+  theme: {
+    extend: {
+      colors: {
+        bg: 'rgb(var(--bg) / <alpha-value>)',
+        surface: 'rgb(var(--surface) / <alpha-value>)',
+        surface2: 'rgb(var(--surface2) / <alpha-value>)',
+        ink: 'rgb(var(--ink) / <alpha-value>)',
+        ink2: 'rgb(var(--ink2) / <alpha-value>)',
+        muted: 'rgb(var(--muted) / <alpha-value>)',
+        line: 'rgb(var(--line) / <alpha-value>)',
+        line2: 'rgb(var(--line2) / <alpha-value>)',
+        strong: 'rgb(var(--strong) / <alpha-value>)',
+        copper: 'rgb(var(--copper) / <alpha-value>)',
+        copper2: 'rgb(var(--copper2) / <alpha-value>)',
+        enig: 'rgb(var(--enig) / <alpha-value>)',
+        input: 'rgb(var(--input) / <alpha-value>)',
+        limit: 'rgb(var(--limit) / <alpha-value>)',
+        ok: 'rgb(var(--ok) / <alpha-value>)',
+        net: 'rgb(var(--net) / <alpha-value>)'
+      },
+      fontFamily: {
+        display: ['Archivo', '"Arial Narrow"', 'system-ui', 'sans-serif'],
+        sans: ['"IBM Plex Sans"', 'system-ui', '-apple-system', '"Segoe UI"', 'sans-serif'],
+        mono: ['"IBM Plex Mono"', 'ui-monospace', '"SFMono-Regular"', 'Consolas', 'monospace']
+      }
+    }
+  }
+};
+</script>
+<style>
+:root{
+  --bg:233 239 244; --surface:244 247 250; --surface2:221 230 238;
+  --ink:18 32 45; --ink2:58 74 89; --muted:88 102 116;
+  --line:160 176 191; --line2:204 215 225; --strong:31 47 62;
+  --copper:164 86 31; --copper2:208 138 76; --enig:176 136 23; --enigsoft:229 207 134; --enigink:120 90 8;
+  --input:28 100 160; --limit:194 58 46; --ok:44 122 75; --net:40 118 121; --loss:141 153 165;
+  --traceoff:186 198 209; --grid:31 79 122; --grid-a:.065; --flow:255 255 255;
+  --model-bg:#e3eaf0; --model-copper:#b8692e; --model-mask:#1b1e21; --model-silk:#f2f4f5; --model-alu:#b7c0c8; --model-cap:#2c3238;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:15 18 20; --surface:22 26 29; --surface2:31 37 41;
+    --ink:234 237 232; --ink2:190 197 196; --muted:140 150 153;
+    --line:66 76 82; --line2:40 47 52; --strong:214 219 215;
+    --copper:222 146 88; --copper2:236 186 138; --enig:226 191 88; --enigsoft:109 90 36; --enigink:226 191 88;
+    --input:112 182 234; --limit:255 110 96; --ok:96 196 140; --net:82 184 176; --loss:96 106 112;
+    --traceoff:50 59 65; --grid:217 140 82; --grid-a:.045; --flow:15 18 20;
+    --model-bg:#0f1214; --model-copper:#d38a4f; --model-mask:#15181a; --model-silk:#e8ebe6; --model-alu:#8f9aa3; --model-cap:#2a3034;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:15 18 20; --surface:22 26 29; --surface2:31 37 41;
+  --ink:234 237 232; --ink2:190 197 196; --muted:140 150 153;
+  --line:66 76 82; --line2:40 47 52; --strong:214 219 215;
+  --copper:222 146 88; --copper2:236 186 138; --enig:226 191 88; --enigsoft:109 90 36; --enigink:226 191 88;
+  --input:112 182 234; --limit:255 110 96; --ok:96 196 140; --net:82 184 176; --loss:96 106 112;
+  --traceoff:50 59 65; --grid:217 140 82; --grid-a:.045; --flow:15 18 20;
+  --model-bg:#0f1214; --model-copper:#d38a4f; --model-mask:#15181a; --model-silk:#e8ebe6; --model-alu:#8f9aa3; --model-cap:#2a3034;
+  color-scheme:dark;
+}
+html{-webkit-text-size-adjust:100%}
+body{
+  background-color:rgb(var(--bg)); color:rgb(var(--ink));
+  background-image:linear-gradient(rgb(var(--grid) / var(--grid-a)) 1px,transparent 1px),linear-gradient(90deg,rgb(var(--grid) / var(--grid-a)) 1px,transparent 1px);
+  background-size:24px 24px; overflow-x:hidden;
+  font-family:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif; line-height:1.6;
+}
+.wrap{max-width:1200px;margin-inline:auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+@media (min-width:768px){.wrap{padding-left:max(32px,env(safe-area-inset-left,0px));padding-right:max(32px,env(safe-area-inset-right,0px))}}
+.disp{font-family:Archivo,"Arial Narrow",system-ui,sans-serif;font-stretch:122%;letter-spacing:-.01em}
+.tnum,.mono{font-variant-numeric:tabular-nums}
+.mono{font-family:"IBM Plex Mono",ui-monospace,Consolas,monospace}
+.lbl{font-family:"IBM Plex Mono",ui-monospace,Consolas,monospace;font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:rgb(var(--muted))}
+.net{font-family:"IBM Plex Mono",ui-monospace,Consolas,monospace;font-size:.8em;padding:.05em .35em;border:1px solid rgb(var(--line));border-radius:2px;color:rgb(var(--copper));background:rgb(var(--surface));white-space:nowrap}
+a{color:inherit}
+.lnk{color:rgb(var(--copper));text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.lnk:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid rgb(var(--input));outline-offset:2px;border-radius:2px}
+.scrollx{overflow-x:auto;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain}
+.scrollx:focus-visible{outline-offset:-2px}
+.navscroll{scrollbar-width:none}.navscroll::-webkit-scrollbar{display:none}
+.sec{padding-block:64px;border-top:1.5px solid rgb(var(--strong))}
+@media (max-width:640px){.sec{padding-block:44px}}
+.panel{background:rgb(var(--surface));border:1px solid rgb(var(--line))}
+.corner{position:relative}
+.corner::before,.corner::after{content:"";position:absolute;width:10px;height:10px;border-color:rgb(var(--copper));border-style:solid}
+.corner::before{top:-1px;left:-1px;border-width:2px 0 0 2px}
+.corner::after{bottom:-1px;right:-1px;border-width:0 2px 2px 0}
+/* title block */
+.tb{border:1.5px solid rgb(var(--strong));background:rgb(var(--surface))}
+.tb div{display:grid;grid-template-columns:7.2rem 1fr;border-top:1px solid rgb(var(--line))}
+.tb div:first-child{border-top:0}
+.tb dt{padding:.45rem .7rem;border-right:1px solid rgb(var(--line));font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:rgb(var(--muted))}
+.tb dd{padding:.45rem .7rem;font-size:.9rem;min-width:0}
+.stamp{border:1.5px solid rgb(var(--copper));color:rgb(var(--ink));background:rgb(var(--surface) / .85)}
+.stamp b{color:rgb(var(--copper))}
+/* spec strip */
+.spec{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border:1.5px solid rgb(var(--strong));background:rgb(var(--surface))}
+.spec>div{padding:1rem 1rem .9rem;border-left:1px solid rgb(var(--line));min-width:0}
+.spec>div:first-child{border-left:0}
+@media (max-width:900px){.spec{grid-template-columns:repeat(2,minmax(0,1fr))}.spec>div{border-top:1px solid rgb(var(--line))}.spec>div:nth-child(odd){border-left:0}.spec>div:nth-child(-n+2){border-top:0}.spec>div:last-child{grid-column:1 / -1}}
+/* svg */
+svg text{font-family:"IBM Plex Mono",ui-monospace,Consolas,monospace;font-variant-numeric:tabular-nums}
+.s-ink{fill:rgb(var(--ink))}.s-ink2{fill:rgb(var(--ink2))}.s-mut{fill:rgb(var(--muted))}.s-cu{fill:rgb(var(--copper))}.s-in{fill:rgb(var(--input))}
+.s-box{fill:rgb(var(--surface));stroke:rgb(var(--strong));stroke-width:1.2}
+.s-box2{fill:rgb(var(--surface2));stroke:rgb(var(--line));stroke-width:1}
+.s-stk{fill:rgb(var(--surface));stroke:rgb(var(--line));stroke-width:1}
+.s-line{stroke:rgb(var(--strong));stroke-width:1.2;fill:none}
+.s-thin{stroke:rgb(var(--line));stroke-width:1;fill:none}
+.s-hid{stroke:rgb(var(--muted));stroke-width:1;fill:none;stroke-dasharray:6 4}
+.s-ctr{stroke:rgb(var(--muted));stroke-width:.8;fill:none;stroke-dasharray:18 4 3 4;opacity:.8}
+.s-rail{stroke:rgb(var(--enig));stroke-width:7;stroke-linecap:square}
+.s-arrow{stroke:rgb(var(--ink2));stroke-width:1.3;fill:none}
+.s-cuS{stroke:rgb(var(--copper));stroke-width:1.4;fill:none}
+.s-lead{stroke:rgb(var(--ink2));stroke-width:.9;fill:none}
+.bal circle{fill:rgb(var(--surface));stroke:rgb(var(--strong));stroke-width:1.2}
+.bal text{font-size:11px;font-weight:600;fill:rgb(var(--ink));text-anchor:middle;dominant-baseline:central}
+/* power flow */
+.pf .tr{fill:none;stroke:rgb(var(--traceoff));stroke-linecap:round;transition:stroke-width .25s ease,stroke .25s ease}
+.pf .fl{fill:none;stroke:rgb(var(--flow));stroke-linecap:round;stroke-dasharray:1.2 9.3;opacity:0}
+.pf .link.on.out .tr{stroke:rgb(var(--copper))}
+.pf .link.on.in .tr{stroke:rgb(var(--input))}
+.pf .link.on.bat .tr{stroke:rgb(var(--enig))}
+.pf .link.on .fl{opacity:.75}
+.pf .node rect{fill:rgb(var(--surface));stroke:rgb(var(--line));stroke-width:1;stroke-dasharray:3 3}
+.pf .node.on rect{stroke:rgb(var(--copper));stroke-dasharray:none;stroke-width:1.4}
+.pf .node.in.on rect{stroke:rgb(var(--input))}
+.pf .node{cursor:pointer}
+.pf .node.locked{cursor:default}
+.pf .node .nm{font-size:11.5px;font-weight:500;fill:rgb(var(--muted))}
+.pf .node.on .nm{fill:rgb(var(--ink))}
+.pf .node .wt{font-size:11.5px;font-weight:600;fill:rgb(var(--muted));text-anchor:end}
+.pf .node.on .wt{fill:rgb(var(--copper))}
+.pf .node.in.on .wt{fill:rgb(var(--input))}
+.pf .nl{font-size:9.5px;fill:rgb(var(--muted))}
+.pf .via{fill:rgb(var(--surface));stroke:rgb(var(--enig));stroke-width:1.2}
+@media (prefers-reduced-motion:no-preference){
+  .pf .link.on .fl{animation:pf-flow 1.4s linear infinite}
+  .pf .link.on.rev .fl{animation-direction:reverse}
+}
+@keyframes pf-flow{to{stroke-dashoffset:-10.5}}
+/* toggles */
+.tg{display:inline-flex;align-items:center;gap:.45rem;padding:.34rem .6rem;border:1px solid rgb(var(--line));background:rgb(var(--surface));font-family:"IBM Plex Mono",monospace;font-size:.78rem;color:rgb(var(--muted));border-radius:2px;line-height:1.2;font-variant-numeric:tabular-nums;transition:border-color .15s,color .15s}
+.tg:hover{border-color:rgb(var(--strong))}
+.tg .led{width:.55rem;height:.55rem;border:1px solid rgb(var(--muted));border-radius:50%;flex:none}
+.tg[aria-pressed="true"]{color:rgb(var(--ink));border-color:rgb(var(--copper))}
+.tg[aria-pressed="true"] .led{background:rgb(var(--copper));border-color:rgb(var(--copper))}
+.tg.in[aria-pressed="true"]{border-color:rgb(var(--input))}
+.tg.in[aria-pressed="true"] .led{background:rgb(var(--input));border-color:rgb(var(--input))}
+.tg[aria-disabled="true"]{cursor:not-allowed;opacity:.75}
+.tg .w{color:rgb(var(--muted))}
+.seg{display:inline-flex;border:1px solid rgb(var(--line));border-radius:2px;overflow:hidden}
+.seg button{padding:.34rem .65rem;font-family:"IBM Plex Mono",monospace;font-size:.78rem;color:rgb(var(--muted));background:rgb(var(--surface))}
+.seg button+button{border-left:1px solid rgb(var(--line))}
+.seg button[aria-pressed="true"]{background:rgb(var(--strong));color:rgb(var(--bg))}
+.btn{padding:.38rem .75rem;border:1px solid rgb(var(--strong));font-family:"IBM Plex Mono",monospace;font-size:.78rem;border-radius:2px;background:rgb(var(--surface))}
+.btn:hover{background:rgb(var(--surface2))}
+/* budget bar */
+.bar{position:relative;height:46px;border:1.5px solid rgb(var(--strong));background:rgb(var(--surface))}
+.bar .zone{position:absolute;top:0;bottom:0}
+.bar .zone.pt{background:repeating-linear-gradient(135deg,rgb(var(--input) / .16) 0 6px,transparent 6px 12px)}
+.bar .segs{position:absolute;left:0;top:8px;bottom:8px;display:flex;right:0}
+.bar .sg{height:100%;flex:none;border-right:1px solid rgb(var(--surface));transition:width .25s ease}
+.bar .sg.usb{background:rgb(var(--copper))}.bar .sg.pwr{background:rgb(var(--copper2))}.bar .sg.net{background:rgb(var(--net))}.bar .sg.misc{background:rgb(var(--enig))}
+.bar .sg.loss{background:repeating-linear-gradient(90deg,rgb(var(--loss)) 0 2px,transparent 2px 4px)}
+.bar .mk{position:absolute;top:-8px;bottom:-8px;width:0;border-left:2px solid rgb(var(--limit))}
+.bar .mk.pt{border-left:2px dashed rgb(var(--input))}
+.ticks{position:relative;height:22px}
+.ticks span{position:absolute;top:4px;transform:translateX(-50%);font-family:"IBM Plex Mono",monospace;font-size:.68rem;color:rgb(var(--muted));font-variant-numeric:tabular-nums}
+.ticks span::before{content:"";position:absolute;left:50%;top:-5px;height:4px;border-left:1px solid rgb(var(--line))}
+.sw{display:inline-block;width:.8rem;height:.8rem;vertical-align:-1px;margin-right:.35rem}
+.sw.usb{background:rgb(var(--copper))}.sw.pwr{background:rgb(var(--copper2))}.sw.net{background:rgb(var(--net))}.sw.misc{background:rgb(var(--enig))}.sw.loss{background:repeating-linear-gradient(90deg,rgb(var(--loss)) 0 2px,transparent 2px 4px)}.sw.pt{background:repeating-linear-gradient(135deg,rgb(var(--input) / .35) 0 3px,transparent 3px 6px);border:1px solid rgb(var(--input))}
+.rd dd.v{font-family:Archivo,sans-serif;font-stretch:115%;font-weight:700;font-size:1.9rem;line-height:1.05;font-variant-numeric:tabular-nums}
+/* feature list */
+.fl-row{display:flex;align-items:baseline;gap:.5rem}
+.fl-row .k{flex:none;font-weight:500}
+.fl-row .dots{flex:1;min-width:1rem;border-bottom:1px dotted rgb(var(--line));transform:translateY(-4px)}
+.fl-row .v{font-family:"IBM Plex Mono",monospace;font-size:.82rem;color:rgb(var(--copper));text-align:right;font-variant-numeric:tabular-nums}
+@media (max-width:480px){.fl-row{flex-wrap:wrap}.fl-row .dots{display:none}.fl-row .v{text-align:left;width:100%}}
+/* safety bars */
+.sb-track{position:relative;height:14px;border:1px solid rgb(var(--strong));background:rgb(var(--surface))}
+.sb-fill{position:absolute;left:0;top:0;bottom:0;background:rgb(var(--copper))}
+.sb-fill.ex{background:repeating-linear-gradient(135deg,rgb(var(--limit)) 0 4px,rgb(var(--limit) / .35) 4px 8px)}
+.sb-third{position:absolute;top:-6px;bottom:-6px;left:33.333%;border-left:1px dashed rgb(var(--ink2))}
+/* tables */
+.tbl{width:100%;border-collapse:collapse;font-size:.9rem}
+.tbl th{font-family:"IBM Plex Mono",monospace;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:rgb(var(--muted));font-weight:500;text-align:left;padding:.55rem .7rem;border-bottom:1.5px solid rgb(var(--strong))}
+.tbl td{padding:.5rem .7rem;border-bottom:1px solid rgb(var(--line2));vertical-align:top}
+.tbl tr.grp td{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:rgb(var(--copper));padding-top:1rem;border-bottom:1px solid rgb(var(--line))}
+.tbl td.c{font-family:"IBM Plex Mono",monospace;font-size:.82rem;white-space:nowrap;font-variant-numeric:tabular-nums}
+.tbl tbody tr:not(.grp):hover td{background:rgb(var(--surface2) / .5)}
+/* 3d */
+.device-3d{position:relative;width:100%;max-width:100%;aspect-ratio:16 / 10;background:var(--model-bg);border:1.5px solid rgb(var(--strong));overflow:hidden;
+  background-image:linear-gradient(rgb(var(--grid) / calc(var(--grid-a) * 1.6)) 1px,transparent 1px),linear-gradient(90deg,rgb(var(--grid) / calc(var(--grid-a) * 1.6)) 1px,transparent 1px);background-size:32px 32px}
+@supports not (aspect-ratio:1){.device-3d{height:0;padding-bottom:62.5%}}
+/* status */
+.st-col{border-top:3px solid rgb(var(--line))}
+.st-col.done{border-top-color:rgb(var(--ok))}.st-col.prog{border-top-color:rgb(var(--copper))}.st-col.next{border-top-color:rgb(var(--input))}
+.st-li{position:relative;padding-left:1.1rem}
+.st-li::before{content:"";position:absolute;left:0;top:.62em;width:.45rem;height:.45rem;border:1.5px solid currentColor;border-radius:50%}
+.done .st-li::before{background:rgb(var(--ok));border-color:rgb(var(--ok))}
+.prog .st-li::before{border-color:rgb(var(--copper));background:linear-gradient(90deg,rgb(var(--copper)) 50%,transparent 50%)}
+.next .st-li::before{border-color:rgb(var(--input))}
+.doc-row{display:grid;grid-template-columns:minmax(0,13rem) minmax(0,1fr) auto;gap:1rem;align-items:baseline;padding:.8rem .2rem;border-bottom:1px solid rgb(var(--line));text-decoration:none}
+.doc-row:hover{background:rgb(var(--surface) / .8)}
+.doc-row:hover .dt{color:rgb(var(--copper))}
+@media (max-width:640px){.doc-row{grid-template-columns:minmax(0,1fr) auto}.doc-row .df{display:none}}
+.navl{white-space:nowrap;font-family:"IBM Plex Mono",monospace;font-size:.76rem;letter-spacing:.04em;color:rgb(var(--ink2));text-decoration:none;padding:.2rem .1rem;border-bottom:1px solid transparent}
+.navl:hover{color:rgb(var(--copper));border-bottom-color:rgb(var(--copper))}
+/* buttons */
+.btn-p{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.05rem;background:rgb(var(--strong));color:rgb(var(--bg));border:1.5px solid rgb(var(--strong));font-family:"IBM Plex Mono",monospace;font-size:.85rem;font-weight:500;border-radius:2px;text-decoration:none;transition:background .15s,border-color .15s}
+.btn-p:hover{background:rgb(var(--copper));border-color:rgb(var(--copper));color:rgb(var(--bg))}
+.btn-s{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.05rem;background:rgb(var(--surface));color:rgb(var(--ink));border:1.5px solid rgb(var(--strong));font-family:"IBM Plex Mono",monospace;font-size:.85rem;font-weight:500;border-radius:2px;text-decoration:none;transition:border-color .15s,color .15s}
+.btn-s:hover{border-color:rgb(var(--copper));color:rgb(var(--copper))}
+/* plain-language notes */
+.pl{border:1px dashed rgb(var(--line));background:rgb(var(--surface) / .75)}
+.pl>summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;gap:.65rem;padding:.7rem .85rem;font-weight:500;color:rgb(var(--ink));line-height:1.35}
+.pl>summary::-webkit-details-marker{display:none}
+.pl>summary:hover{background:rgb(var(--surface2) / .6)}
+.pl>summary:focus-visible{outline-offset:-2px}
+.pl .q{flex:none;font-family:"IBM Plex Mono",monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:rgb(var(--copper));border:1px solid rgb(var(--copper));padding:.08rem .32rem;border-radius:2px;transform:translateY(-2px)}
+.pl .chev{margin-left:auto;flex:none;font-family:"IBM Plex Mono",monospace;color:rgb(var(--muted));transition:transform .2s ease;line-height:1}
+.pl[open]>summary .chev{transform:rotate(45deg)}
+.pl .pl-b{padding:.1rem .85rem .9rem;color:rgb(var(--ink2));font-size:.93rem}
+.pl .pl-b p+p,.pl .pl-b p+ul,.pl .pl-b ul+p{margin-top:.55rem}
+.pl .pl-b ul{list-style:none;padding:0}
+.pl .pl-b li{position:relative;padding-left:1rem}
+.pl .pl-b li+li{margin-top:.3rem}
+.pl .pl-b li::before{content:"";position:absolute;left:0;top:.68em;width:.45rem;border-top:1.5px solid rgb(var(--copper))}
+.aside{border-left:3px solid rgb(var(--copper));background:rgb(var(--surface) / .8);padding:.9rem 1rem}
+/* use cases */
+.uc-n{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid rgb(var(--line));margin-top:auto}
+.uc-n>div{padding:.6rem .5rem 0 0;min-width:0}
+.uc-n>div+div{padding-left:.7rem;border-left:1px solid rgb(var(--line2))}
+.uc-n dt{font-family:"IBM Plex Mono",monospace;font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:rgb(var(--muted))}
+.uc-n dd{font-family:"IBM Plex Mono",monospace;font-size:.82rem;font-weight:600;color:rgb(var(--copper));font-variant-numeric:tabular-nums;line-height:1.3;margin-top:.15rem}
+@media (max-width:420px){.uc-n{grid-template-columns:minmax(0,1fr)}.uc-n>div+div{padding-left:0;border-left:0;border-top:1px solid rgb(var(--line2));padding-top:.5rem;margin-top:.5rem}.uc-n>div{padding-top:.5rem}}
+.uc-ic{display:inline-flex;align-items:center;justify-content:center;width:2.3rem;height:2.3rem;border:1.5px solid rgb(var(--strong));background:rgb(var(--bg));flex:none}
+/* process */
+.step{position:relative;padding-left:3.1rem;padding-bottom:1.6rem}
+.step:last-child{padding-bottom:0}
+.step::before{content:"";position:absolute;left:1.05rem;top:2.2rem;bottom:0;border-left:1.5px dashed rgb(var(--line))}
+.step:last-child::before{display:none}
+.step .n{position:absolute;left:0;top:0;width:2.2rem;height:2.2rem;display:flex;align-items:center;justify-content:center;border:1.5px solid rgb(var(--copper));background:rgb(var(--surface));font-family:"IBM Plex Mono",monospace;font-size:.8rem;font-weight:600;color:rgb(var(--copper));border-radius:50%}
+.catch{display:grid;grid-template-columns:minmax(0,1fr);gap:.2rem;padding:.75rem 0;border-bottom:1px solid rgb(var(--line2))}
+.catch:last-child{border-bottom:0}
+/* status figures */
+.fig4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1.5px solid rgb(var(--strong));background:rgb(var(--surface))}
+.fig4>div{padding:.8rem .9rem;border-left:1px solid rgb(var(--line));min-width:0}
+.fig4>div:first-child{border-left:0}
+@media (max-width:640px){.fig4{grid-template-columns:repeat(2,minmax(0,1fr))}.fig4>div:nth-child(3){border-left:0}.fig4>div:nth-child(n+3){border-top:1px solid rgb(var(--line))}}
+/* call to action */
+.cta-band{border:1.5px solid rgb(var(--strong));background:rgb(var(--surface))}
+.cta-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.cta-grid a{display:flex;flex-direction:column;gap:.35rem;padding:1.1rem 1.1rem 1.2rem;border-left:1px solid rgb(var(--line));text-decoration:none;min-width:0;transition:background .15s}
+.cta-grid a:first-child{border-left:0}
+.cta-grid a:hover{background:rgb(var(--surface2) / .7)}
+.cta-grid a:hover .ct{color:rgb(var(--copper))}
+.cta-grid a:focus-visible{outline-offset:-3px}
+.cta-grid .ar{margin-top:auto;padding-top:.6rem;font-family:"IBM Plex Mono",monospace;font-size:.78rem;color:rgb(var(--copper))}
+@media (max-width:900px){.cta-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cta-grid a:nth-child(3){border-left:0}.cta-grid a:nth-child(n+3){border-top:1px solid rgb(var(--line))}}
+@media (max-width:480px){.cta-grid{grid-template-columns:minmax(0,1fr)}.cta-grid a{border-left:0}.cta-grid a+a{border-top:1px solid rgb(var(--line))}}
+/* glossary */
+.gl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 2rem}
+@media (max-width:1023px){.gl{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.gl{grid-template-columns:minmax(0,1fr)}}
+.gl>div{padding:.85rem 0;border-top:1px solid rgb(var(--line));min-width:0}
+.gl dt{font-family:"IBM Plex Mono",monospace;font-size:.85rem;font-weight:600;color:rgb(var(--copper))}
+.gl dt span{font-family:"IBM Plex Sans",sans-serif;font-weight:400;color:rgb(var(--muted));font-size:.82rem;margin-left:.35rem}
+.gl dd{margin-top:.25rem;font-size:.9rem;color:rgb(var(--ink2))}
+.t-enig{color:rgb(var(--enigink))}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+html{scroll-behavior:smooth}
+[id]{scroll-margin-top:64px}
+</style>
+</head>
+<body class="antialiased">
+
+<a href="#why" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-2 focus:z-50 focus:bg-surface focus:px-3 focus:py-2 focus:border focus:border-strong mono text-sm">Skip to content</a>
+
+<header class="sticky top-0 z-40 border-b border-strong/80 bg-bg/90 backdrop-blur">
+  <div class="wrap flex items-center gap-4 py-2.5">
+    <a href="#top" class="flex items-center gap-2.5 no-underline flex-none" aria-label="Battery Bank Travel Router, top of page">
+      <svg width="30" height="20" viewBox="0 0 30 20" aria-hidden="true"><rect x="1" y="3" width="24" height="14" rx="1.5" fill="none" stroke="rgb(var(--strong))" stroke-width="1.6"/><rect x="25" y="7" width="3.5" height="6" fill="rgb(var(--strong))"/><path d="M5 10h5l2-4 3 8 2-4h4" fill="none" stroke="rgb(var(--copper))" stroke-width="1.6" stroke-linejoin="round"/></svg>
+      <span class="disp font-bold text-[0.95rem] leading-none hidden sm:inline">BB&#8209;TR</span>
+    </a>
+    <nav aria-label="Sections" class="scrollx navscroll min-w-0 flex-1">
+      <ul class="flex gap-4 py-1">
+        <li><a class="navl" href="#why">Why</a></li>
+        <li><a class="navl" href="#power">Power flow</a></li>
+        <li><a class="navl" href="#features">Features</a></li>
+        <li><a class="navl" href="#case">Case</a></li>
+        <li><a class="navl" href="#model">3D</a></li>
+        <li><a class="navl" href="#safety">Safety</a></li>
+        <li><a class="navl" href="#architecture">Architecture</a></li>
+        <li><a class="navl" href="#parts">Parts</a></li>
+        <li><a class="navl" href="#process">Process</a></li>
+        <li><a class="navl" href="#status">Status</a></li>
+        <li><a class="navl" href="#glossary">Glossary</a></li>
+        <li><a class="navl" href="#docs">Docs</a></li>
+      </ul>
+    </nav>
+    <button id="theme-btn" type="button" class="btn flex-none flex items-center gap-1.5" aria-label="Switch color theme">
+      <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><circle cx="7" cy="7" r="5.5" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M7 1.5a5.5 5.5 0 0 1 0 11z" fill="currentColor"/></svg>
+      <span id="theme-lbl">Theme</span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="wrap pt-10 pb-10 md:pt-16 md:pb-14">
+  <div class="grid gap-10 lg:grid-cols-[minmax(0,1.55fr)_minmax(0,1fr)] items-start">
+    <div class="min-w-0">
+      <p class="lbl mb-4">Open hardware &middot; KiCad 10 &middot; JLCPCB PCBA</p>
+      <h1 class="text-ink"><span class="block disp font-bold text-[1.05rem] sm:text-xl tracking-normal mb-3">Battery Bank <span class="text-copper">/</span> Travel Router</span><span class="block disp font-extrabold text-[2.2rem] min-[400px]:text-[2.5rem] leading-[0.98] sm:text-6xl lg:text-[4.6rem]">Pack one box,<br>not five<span class="text-copper">.</span></span></h1>
+      <p class="mt-6 text-lg md:text-xl text-ink2 max-w-[40rem]">Travelling with a laptop usually means a power bank, a travel router, a flashlight and a Bluetooth speaker, plus a mesh radio if you go off-grid. This open design puts all five in one 150&nbsp;&times;&nbsp;94&nbsp;&times;&nbsp;70&nbsp;mm aluminium case. Plug it into a hotel's Ethernet jack and you have your own Wi&#8209;Fi&nbsp;6 network. Its four USB&#8209;C ports charge up to four laptops and phones at once, take a charger on any port, and give a laptop 2.5&nbsp;Gb/s wired Ethernet over the same cable. The 90&nbsp;Wh battery is under the 100&nbsp;Wh airline limit, so it flies without airline approval.</p>
+      <div class="mt-7 flex flex-wrap gap-3">
+        <a class="btn-p" href="#why">Why it exists <span aria-hidden="true">&darr;</span></a>
+        <a class="btn-s" href="devlog.html">Follow the build <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      <div class="stamp mt-7 p-4 max-w-[40rem] text-[0.95rem]" role="note">
+        <p class="mono text-[0.72rem] tracking-[0.12em] uppercase mb-1.5"><b>Preliminary</b> &middot; not for construction</p>
+        <p class="text-ink2">The full first-pass schematic is generated: 16 sheets, 1,114 parts, 0 design-check errors. Three reviewers, each with a different focus, are trying to break it right now; their findings get repaired and re-reviewed before any layout starts. Nothing is laid out or built yet, so please don't build from these files.</p>
+      </div>
+    </div>
+    <dl class="tb min-w-0 text-ink" aria-label="Project title block">
+      <div><dt>Project</dt><dd class="font-medium">Battery Bank / Travel Router</dd></div>
+      <div><dt>Status</dt><dd><span class="mono text-[0.8rem] text-copper font-semibold tracking-wide">DESIGN REVIEW</span></dd></div>
+      <div><dt>Schematic</dt><dd class="tnum">16 sheets, 1,114 parts, 0 errors</dd></div>
+      <div><dt>CAD</dt><dd>KiCad 10, schematic generated from Python</dd></div>
+      <div><dt>Fab</dt><dd>JLCPCB standard PCBA, 6&#8209;layer, ENIG</dd></div>
+      <div><dt>Cells</dt><dd class="tnum">5S1P Samsung 50S, 90&nbsp;Wh</dd></div>
+      <div><dt>Bus</dt><dd><span class="net">VBAT</span> <span class="tnum">15.0&ndash;21.0&nbsp;V</span></dd></div>
+      <div><dt>Enclosure</dt><dd class="tnum">150 &times; 94 &times; 70&nbsp;mm, aluminium</dd></div>
+      <div><dt>Updated</dt><dd class="mono text-[0.85rem]">2026&#8209;11&#8209;21 &middot; dev log entry 9</dd></div>
+    </dl>
+  </div>
+
+  <div class="spec mt-10 md:mt-14" role="list" aria-label="Key figures">
+    <div role="listitem"><div class="disp font-bold text-3xl md:text-[2.15rem] tnum leading-none">90<span class="text-lg ml-1 text-muted">Wh</span></div><p class="mt-2 text-sm text-ink2">Swappable 5S1P cartridge. Under 100&nbsp;Wh, so it flies without airline approval.</p></div>
+    <div role="listitem"><div class="disp font-bold text-3xl md:text-[2.15rem] tnum leading-none">125<span class="text-lg ml-1 text-muted">W</span></div><p class="mt-2 text-sm text-ink2">Guaranteed from the battery alone: 8.3&nbsp;A at 15&nbsp;V.</p></div>
+    <div role="listitem"><div class="disp font-bold text-3xl md:text-[2.15rem] tnum leading-none">4&times;100<span class="text-lg ml-1 text-muted">W</span></div><p class="mt-2 text-sm text-ink2">USB&#8209;C PD 3.x with 28&nbsp;V EPR and PPS. Every port is also an input.</p></div>
+    <div role="listitem"><div class="disp font-bold text-3xl md:text-[2.15rem] tnum leading-none">4&times;2.5<span class="text-lg ml-1 text-muted">G</span></div><p class="mt-2 text-sm text-ink2">Ethernet over each USB&#8209;C port, switched into an OpenWrt Wi&#8209;Fi&nbsp;6 router.</p></div>
+    <div role="listitem"><div class="disp font-bold text-3xl md:text-[2.15rem] tnum leading-none">3:1</div><p class="mt-2 text-sm text-ink2">Every part runs at a third of its current, power and thermal rating. <a class="lnk" href="#safety">What that means</a></p></div>
+  </div>
+</section>
+
+<!-- ============ WHY ============ -->
+<section id="why" class="sec" aria-labelledby="why-h">
+  <div class="wrap">
+    <div class="grid gap-4 md:grid-cols-[6rem_minmax(0,1fr)] mb-10">
+      <p class="lbl pt-2">Sheet 01</p>
+      <div class="min-w-0">
+        <h2 id="why-h" class="disp font-bold text-3xl md:text-[2.4rem] leading-tight">Why build this</h2>
+        <p class="mt-3 text-ink2 max-w-[46rem]">Every gadget in a travel bag is one more thing to charge, one more cable and often one more charger. Putting them in one box only helps if they can all run at the same time and the box stays safe while they do. So the design starts from one hard case: everything switched on, from the battery alone, with every part working at no more than a third of its rating.</p>
+      </div>
+    </div>
+
+    <div class="grid gap-x-8 gap-y-8 md:grid-cols-3 md:pl-[7rem]">
+      <div class="min-w-0 border-t-2 border-copper pt-4">
+        <p class="lbl text-copper">Everything at once</p>
+        <p class="mt-2 text-[0.95rem] text-ink2">The 125&nbsp;W battery budget covers all four USB&#8209;C ports, USB&#8209;A, DC out, the Qi pad, the router, Ethernet, audio and light together. Plug in a charger and its power goes to whatever is running first; only the surplus charges the pack.</p>
+      </div>
+      <div class="min-w-0 border-t-2 border-net pt-4">
+        <p class="lbl" style="color:rgb(var(--net))">Every port works both ways</p>
+        <p class="mt-2 text-[0.95rem] text-ink2">Each USB&#8209;C port has its own bidirectional power stage, so any port can charge a laptop or take a charger. Each one also carries 2.5&nbsp;Gb/s Ethernet into a built-in switch and an OpenWrt router.</p>
+      </div>
+      <div class="min-w-0 border-t-2 border-input pt-4">
+        <p class="lbl text-input">Safe with open firmware</p>
+        <p class="mt-2 text-[0.95rem] text-ink2">The limits live in hardware: the cartridge BMS, fuses, resistor-set charger ceilings and an independent over-temperature cutoff. The firmware can be open and hackable because it can't push past them.</p>
+      </div>
+    </div>
+
+    <h3 class="disp font-bold text-2xl md:text-[1.75rem] leading-tight mt-14 md:pl-[7rem]">Four places it earns its space</h3>
+    <p class="mt-2 text-ink2 max-w-[46rem] md:pl-[7rem] md:max-w-[53rem]">Each scenario uses figures from the <a class="lnk" href="power-budget.html">power budget</a>. They are design limits, not measurements: nothing has been built yet.</p>
+    <div class="grid gap-6 md:grid-cols-2 mt-6">
+      <article class="panel corner p-5 md:p-6 min-w-0 flex flex-col gap-0">
+        <div class="flex items-center gap-3">
+          <span class="uc-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22"><rect x="3" y="4" width="16" height="13" fill="none" stroke="rgb(var(--ink))" stroke-width="1.5"/><path d="M7 17v-4h2v-2h4v2h2v4" fill="none" stroke="rgb(var(--copper))" stroke-width="1.5"/><path d="M11 4V1" stroke="rgb(var(--ink))" stroke-width="1.5"/></svg></span>
+          <p class="lbl">Scenario A</p>
+        </div>
+        <h4 class="disp font-bold text-xl mt-3">The hotel room</h4>
+        <p class="mt-2 text-[0.95rem] text-ink2 pb-4">The room has one Ethernet jack and patchy Wi&#8209;Fi. Plug the jack into the RJ45 and the built-in OpenWrt router makes your own Wi&#8209;Fi&nbsp;6 network for everything you carry. A laptop on any USB&#8209;C port gets power and 2.5&nbsp;Gb/s wired Ethernet over one cable. Put the laptop's charger on another port and the bank runs on pass-through: with a 100&nbsp;W charger, the other ports can still give up to 60&nbsp;W each while the pack charges.</p>
+        <dl class="uc-n"><div><dt>Router + Ethernet</dt><dd>8 W + 7 W</dd></div><div><dt>Charger in</dt><dd>100 W / port</dd></div><div><dt>Wired</dt><dd>2.5 Gb/s</dd></div></dl>
+      </article>
+      <article class="panel corner p-5 md:p-6 min-w-0 flex flex-col">
+        <div class="flex items-center gap-3">
+          <span class="uc-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M11 9v11M8 20h6" stroke="rgb(var(--ink))" stroke-width="1.5" fill="none"/><circle cx="11" cy="8" r="1.6" fill="rgb(var(--copper))"/><path d="M7.2 4.6a5 5 0 0 0 0 6.8M14.8 4.6a5 5 0 0 1 0 6.8M4.4 2a9 9 0 0 0 0 12M17.6 2a9 9 0 0 1 0 12" fill="none" stroke="rgb(var(--copper))" stroke-width="1.3"/></svg></span>
+          <p class="lbl">Scenario B</p>
+        </div>
+        <h4 class="disp font-bold text-xl mt-3">The festival or the trail</h4>
+        <p class="mt-2 text-[0.95rem] text-ink2 pb-4">No phone signal, lots of people. The Meshtastic LoRa node (nRF52840 + SX1262) lets phones send text messages over Bluetooth into an off-grid mesh, and it can keep running as a relay with the rest of the bank switched off. The same box is the flashlight, with a red night light and SOS, the speaker at camp, and it tops up from a solar panel through the DC jack.</p>
+        <dl class="uc-n"><div><dt>Flashlight</dt><dd>~1.5 W</dd></div><div><dt>Speaker</dt><dd>~1 W avg</dd></div><div><dt>Solar / DC in</dt><dd>40 W max</dd></div></dl>
+      </article>
+      <article class="panel corner p-5 md:p-6 min-w-0 flex flex-col">
+        <div class="flex items-center gap-3">
+          <span class="uc-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22"><rect x="6" y="2" width="10" height="8" fill="none" stroke="rgb(var(--ink))" stroke-width="1.5"/><path d="M9 10v3M13 10v3" stroke="rgb(var(--ink))" stroke-width="1.5"/><path d="M11 13v7" stroke="rgb(var(--copper))" stroke-width="2"/><path d="M8.5 5.5h5" stroke="rgb(var(--copper))" stroke-width="1.5"/></svg></span>
+          <p class="lbl">Scenario C</p>
+        </div>
+        <h4 class="disp font-bold text-xl mt-3">The van or the desk, on PoE</h4>
+        <p class="mt-2 text-[0.95rem] text-ink2 pb-4">One Ethernet cable from an 802.3bt PoE switch carries both the network and the power. About 51&nbsp;W arrives at the jack and about 46&nbsp;W reaches the bus after the isolated converter. That is enough to run the router, the Ethernet switch and your phones for as long as the cable is live, without touching the battery.</p>
+        <dl class="uc-n"><div><dt>PoE in</dt><dd>802.3bt Type 3</dd></div><div><dt>Usable</dt><dd>~46 W</dd></div><div><dt>Router + Ethernet</dt><dd>15 W</dd></div></dl>
+      </article>
+      <article class="panel corner p-5 md:p-6 min-w-0 flex flex-col">
+        <div class="flex items-center gap-3">
+          <span class="uc-ic" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 22 22"><path d="M3 10L11 3l8 7M5 8.5V19h12V8.5" fill="none" stroke="rgb(var(--ink))" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 9l-3 4.5h3.5L10 18" fill="none" stroke="rgb(var(--copper))" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
+          <p class="lbl">Scenario D</p>
+        </div>
+        <h4 class="disp font-bold text-xl mt-3">The power cut at home</h4>
+        <p class="mt-2 text-[0.95rem] text-ink2 pb-4">Keep the home router up through an outage. Leave the bank on a USB&#8209;C charger and feed a 12&nbsp;V router from the DC output. Inputs and loads share one battery node, so when the mains goes the battery is already in the path. A router drawing 12&nbsp;W would run roughly 7&nbsp;hours by the simple estimate: 90&nbsp;Wh &divide; (12&nbsp;W plus ~6% conversion losses). This is a design intent, not a tested feature; DC out is off by default and its voltage is set in the app.</p>
+        <dl class="uc-n"><div><dt>DC out</dt><dd>12&ndash;24 V</dd></div><div><dt>Jack limit</dt><dd>20 W at 12 V</dd></div><div><dt>Estimate</dt><dd>~7 h at 12 W</dd></div></dl>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ POWER FLOW ============ -->
+<section id="power" class="sec" aria-labelledby="power-h">
+  <div class="wrap">
+    <div class="grid gap-4 md:grid-cols-[6rem_minmax(0,1fr)] mb-8">
+      <p class="lbl pt-2">Sheet 02</p>
+      <div class="min-w-0">
+        <h2 id="power-h" class="disp font-bold text-3xl md:text-[2.4rem] leading-tight">Power flow, everything on</h2>
+        <p class="mt-3 text-ink2 max-w-[46rem]">Every load and input meets on one battery node, <span class="net">VBAT</span>. The default below is the design case from the power budget: every block at its 3:1&#8209;derated maximum, battery only, landing exactly on the 125&nbsp;W limit. Switch loads off or plug an input in to see where the watts go. Trace width follows power, like copper sized for current.</p>
+      </div>
+    </div>
+
+    <div class="panel corner">
+      <div class="scrollx" tabindex="0" role="region" aria-label="Power-flow diagram, scrolls sideways on small screens">
+        <svg id="pf" class="pf block min-w-[760px] w-full h-auto" viewBox="0 0 960 476" role="img" aria-labelledby="pf-title pf-desc">
+          <title id="pf-title">Power-flow diagram</title>
+          <desc id="pf-desc">Inputs on the left (USB-C C1 to C4 as chargers, DC jack, PoE) feed the VBAT battery node through the BQ25756 port stages or the diode-OR forward charger. The 90 Wh cartridge connects to the same node. Loads on the right draw from it.</desc>
+          <text x="16" y="40" class="lbl" style="font-size:10px;letter-spacing:.1em;fill:rgb(var(--input))">INPUTS &#183; PASS-THROUGH</text>
+          <text x="760" y="18" style="font-size:10px;letter-spacing:.1em" class="s-cu">LOADS &#183; EVERYTHING-ON PROFILE</text>
+          <g id="pf-links"></g>
+          <line x1="470" y1="28" x2="470" y2="456" class="s-rail"/>
+          <text x="480" y="20" style="font-size:11px;font-weight:600" class="s-ink">VBAT</text>
+          <text x="516" y="20" style="font-size:10px" class="s-mut">15.0&#8211;21.0 V</text>
+          <rect x="196" y="48" width="110" height="182" class="s-box"/>
+          <text x="251" y="128" text-anchor="middle" style="font-size:11px;font-weight:600" class="s-ink">BQ25756 &#215;4</text>
+          <text x="251" y="143" text-anchor="middle" style="font-size:10px" class="s-ink2">TPS26750 &#215;4</text>
+          <text x="251" y="160" text-anchor="middle" style="font-size:9.5px" class="s-mut">bidirectional</text>
+          <text x="251" y="172" text-anchor="middle" style="font-size:9.5px" class="s-mut">buck-boost</text>
+          <rect x="184" y="332" width="124" height="36" class="s-box"/>
+          <text x="246" y="347" text-anchor="middle" style="font-size:10.5px;font-weight:600" class="s-ink">TPS2373-4</text>
+          <text x="246" y="361" text-anchor="middle" style="font-size:9.5px" class="s-mut">isolated flyback</text>
+          <rect x="340" y="272" width="84" height="96" class="s-box"/>
+          <text x="382" y="300" text-anchor="middle" style="font-size:10.5px;font-weight:600" class="s-ink">LM74700</text>
+          <text x="382" y="314" text-anchor="middle" style="font-size:9.5px" class="s-mut">diode-OR</text>
+          <text x="382" y="336" text-anchor="middle" style="font-size:10.5px;font-weight:600" class="s-ink">BQ25756</text>
+          <text x="382" y="350" text-anchor="middle" style="font-size:9.5px" class="s-mut">forward only</text>
+          <rect x="236" y="398" width="188" height="58" class="s-box" style="stroke:rgb(var(--enig));stroke-width:1.6"/>
+          <text x="248" y="418" style="font-size:11px;font-weight:600" class="s-ink">CARTRIDGE &#183; 90 Wh</text>
+          <text x="248" y="433" style="font-size:9.5px" class="s-ink2">5S1P Samsung 50S</text>
+          <text x="248" y="447" style="font-size:9.5px" class="s-mut">BQ77915 protector</text>
+          <text id="pf-batw" x="447" y="416" text-anchor="middle" style="font-size:10px;font-weight:600" class="s-ink">125 W</text>
+          <g id="pf-nodes"></g>
+        </svg>
+      </div>
+      <p class="px-4 pb-3 pt-1 text-[0.8rem] text-muted border-t border-line2">Each USB&#8209;C port is one connector and one bidirectional BQ25756 stage. It is drawn on both sides because it can be either an input or an output, never both at once. Click a node or use the switches below.</p>
+    </div>
+
+    <div class="grid gap-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] mt-6">
+      <div class="panel p-4 md:p-5 min-w-0">
+        <dl class="rd grid grid-cols-2 sm:grid-cols-4 gap-x-4 gap-y-4">
+          <div class="min-w-0"><dt class="lbl">Load</dt><dd class="v" id="r-load">125 W</dd><dd class="text-xs text-muted mt-1 mono" id="r-load-s">118 W + 7 W losses</dd></div>
+          <div class="min-w-0"><dt class="lbl">Inputs</dt><dd class="v text-input" id="r-in">0 W</dd><dd class="text-xs text-muted mt-1 mono" id="r-in-s">battery only</dd></div>
+          <div class="min-w-0"><dt class="lbl">Battery</dt><dd class="v" id="r-bat">125 W</dd><dd class="text-xs text-muted mt-1 mono" id="r-bat-s">out &#183; 8.3 A at 15 V</dd></div>
+          <div class="min-w-0"><dt class="lbl">Runtime</dt><dd class="v" id="r-run">43 min</dd><dd class="text-xs text-muted mt-1 mono" id="r-run-s">90 Wh &#247; 125 W</dd></div>
+        </dl>
+        <div class="mt-6" aria-hidden="true">
+          <div class="bar" id="bar"><div class="zone pt" id="bar-pt" style="left:83.333%;width:0"></div><div class="segs" id="bar-segs"></div><div class="mk" id="bar-mk" style="left:83.333%"></div><div class="mk pt" id="bar-mk2" style="display:none"></div></div>
+          <div class="ticks" id="bar-ticks"></div>
+        </div>
+        <p id="r-msg" class="mt-3 text-[0.95rem] text-ink2 min-h-[3rem]" aria-live="polite">At the 125&nbsp;W battery limit with everything on. This is the design case: every block at its 3:1&#8209;derated maximum.</p>
+        <p class="mt-3 flex flex-wrap gap-x-4 gap-y-1 text-xs text-muted mono">
+          <span><i class="sw usb"></i>USB&#8209;C</span><span><i class="sw pwr"></i>USB&#8209;A, DC, Qi</span><span><i class="sw net"></i>router + Ethernet</span><span><i class="sw misc"></i>control, audio, light</span><span><i class="sw loss"></i>losses ~6%</span><span><i class="sw pt"></i>pass-through</span><span><i class="sw" style="border-left:2px solid rgb(var(--limit));width:2px"></i>125 W battery limit</span>
+        </p>
+      </div>
+      <div class="panel p-4 md:p-5 min-w-0">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <p class="lbl">Inputs</p>
+          <button type="button" class="btn" id="pf-reset">Reset: everything on, battery only</button>
+        </div>
+        <div class="flex flex-wrap gap-2 mt-2" id="pf-in-chips" role="group" aria-label="Inputs"></div>
+        <p class="lbl mt-5">Loads</p>
+        <div class="flex flex-wrap gap-2 mt-2" id="pf-load-chips" role="group" aria-label="Loads"></div>
+        <p class="lbl mt-5">USB&#8209;C demand per output port</p>
+        <div class="seg mt-2" role="group" aria-label="USB-C demand per output port">
+          <button type="button" data-demand="18" aria-pressed="true">18 W profile</button>
+          <button type="button" data-demand="100" aria-pressed="false">100 W max</button>
+        </div>
+        <p class="mt-4 text-xs text-muted">Numbers are from <a class="lnk" href="power-budget.html">power-budget.md</a>. Inputs count at their maximum: USB&#8209;C charger 100&nbsp;W per port, PoE about 46&nbsp;W after the isolated converter, DC jack 40&nbsp;W. Runtime is a simple 90&nbsp;Wh &divide; battery draw; the budget quotes about 40&nbsp;min at the full load.</p>
+      </div>
+    </div>
+
+    <div class="grid gap-4 lg:grid-cols-3 mt-6 items-start">
+      <details class="pl min-w-0">
+        <summary><span class="q">Plain words</span><span>What is pass-through?</span><span class="chev" aria-hidden="true">+</span></summary>
+        <div class="pl-b">
+          <p>Pass-through means using the bank while it is plugged in. Here every input and every load connects to the same battery node, <span class="net">VBAT</span>. Power from a charger feeds whatever is running first, and only what is left over charges the cells.</p>
+          <p>Unplug the charger and the battery is already on that node, so the loads carry on from it. Try it above: switch on <b class="font-medium text-ink">C1 in</b> and watch the battery go from supplying power to receiving it.</p>
+        </div>
+      </details>
+      <details class="pl min-w-0">
+        <summary><span class="q">Plain words</span><span>Why 125&nbsp;W, and why 8.3&nbsp;A but an 8.0&nbsp;A limit?</span><span class="chev" aria-hidden="true">+</span></summary>
+        <div class="pl-b">
+          <p>The Samsung 50S cell is rated for 25&nbsp;A. A third of that is 8.3&nbsp;A, and at the empty-pack voltage of 15&nbsp;V, 8.3&nbsp;A is 125&nbsp;W. That is the guaranteed figure, because a fuller pack has a higher voltage and gives more watts for the same current.</p>
+          <p>The three numbers stack up like this:</p>
+          <ul>
+            <li><b class="font-medium text-ink">8.0&nbsp;A</b>: where firmware stops, a little under the 3:1 ceiling.</li>
+            <li><b class="font-medium text-ink">8.3&nbsp;A</b>: the 3:1 ceiling the parts are sized for.</li>
+            <li><b class="font-medium text-ink">Above 8.3&nbsp;A, below 25&nbsp;A</b>: where the BQ77915 protector in the cartridge cuts off in hardware, as a backstop.</li>
+          </ul>
+          <p>Right at the bottom of the pack, 8.0&nbsp;A is 120&nbsp;W, so the allocator trims the USB&#8209;C offers by a few watts there.</p>
+        </div>
+      </details>
+      <details class="pl min-w-0">
+        <summary><span class="q">Numbers</span><span>The design case, line by line</span><span class="chev" aria-hidden="true">+</span></summary>
+        <div class="pl-b">
+          <table class="tbl text-[0.86rem]">
+            <caption class="sr-only">Everything-on power budget, battery only</caption>
+            <thead><tr><th scope="col">Load</th><th scope="col" class="text-right">W</th></tr></thead>
+            <tbody>
+              <tr><td>USB&#8209;C C1&ndash;C4, 4 &times; 18&nbsp;W</td><td class="c text-right">72</td></tr>
+              <tr><td>USB&#8209;A, 5&nbsp;V 1.5&nbsp;A</td><td class="c text-right">7.5</td></tr>
+              <tr><td>DC out, 12&nbsp;V 1&nbsp;A</td><td class="c text-right">12</td></tr>
+              <tr><td>Qi pad, 5&nbsp;W out<sup>*</sup></td><td class="c text-right">5</td></tr>
+              <tr><td>Router module</td><td class="c text-right">8</td></tr>
+              <tr><td>Ethernet: 4 NICs, switch, PHY</td><td class="c text-right">7</td></tr>
+              <tr><td>ESP32, LoRa, NFC, gauge, logic</td><td class="c text-right">2</td></tr>
+              <tr><td>Audio, average</td><td class="c text-right">1</td></tr>
+              <tr><td>Flashlight</td><td class="c text-right">1.5</td></tr>
+              <tr><td>Glow LEDs + fan</td><td class="c text-right">2</td></tr>
+              <tr><td class="font-semibold text-ink">Subtotal</td><td class="c text-right font-semibold text-ink">118</td></tr>
+              <tr><td>Conversion losses, ~6%</td><td class="c text-right">~7</td></tr>
+              <tr><td class="font-semibold text-ink">From the battery</td><td class="c text-right font-semibold text-copper">~125</td></tr>
+            </tbody>
+          </table>
+          <p class="text-xs text-muted mt-2"><sup>*</sup>The Qi transmitter draws about 7&nbsp;W to deliver 5&nbsp;W. Its 2&nbsp;W of loss is counted in the losses line, not twice.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section id="features" class="sec" aria-labelledby="feat-h">
+  <div class="wrap">
+    <div class="grid gap-4 md:grid-cols-[6rem_minmax(0,1fr)] mb-10">
+      <p class="lbl pt-2">Sheet 03</p>
+      <div class="min-w-0">
+        <h2 id="feat-h" class="disp font-bold text-3xl md:text-[2.4rem] leading-tight">What it does</h2>
+        <p class="mt-3 text-ink2 max-w-[46rem]">Five products in one aluminium case. Every limit below is the derated figure the design is built to, not a peak.</p>
+      </div>
+    </div>
+    <div class="grid gap-x-10 gap-y-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)_minmax(0,1fr)]">
+      <div class="min-w-0 lg:row-span-2 border-t-2 border-copper pt-4">
+        <p class="lbl text-copper">01 &middot; Power</p>
+        <ul class="mt-4 space-y-3.5 text-[0.95rem]">
+          <li><div class="fl-row"><span class="k">Battery cartridge</span><span class="dots"></span><span class="v">90 Wh &middot; 5S1P</span></div><p class="text-sm text-muted">Samsung 50S cells, BMS, fuse, NTC and ID chip inside a swappable cartridge.</p></li>
+          <li><div class="fl-row"><span class="k">Battery-only output</span><span class="dots"></span><span class="v">125 W</span></div><p class="text-sm text-muted">3:1 on the cell's 25&nbsp;A rating: 8.3&nbsp;A at 15&nbsp;V, empty pack.</p></li>
+          <li><div class="fl-row"><span class="k">USB&#8209;C &times;4</span><span class="dots"></span><span class="v">100 W each</span></div><p class="text-sm text-muted">USB PD 3.x, 28&nbsp;V EPR at 3.57&nbsp;A, PPS. Each port has its own TI BQ25756 buck-boost and TPS26750 PD controller, so any port is also an input.</p></li>
+          <li><div class="fl-row"><span class="k">USB&#8209;A</span><span class="dots"></span><span class="v">1.5 A</span></div><p class="text-sm text-muted">QC up to 12&nbsp;V.</p></li>
+          <li><div class="fl-row"><span class="k">DC barrel in / out</span><span class="dots"></span><span class="v">40 W</span></div><p class="text-sm text-muted">Output is 12&ndash;24&nbsp;V, chosen in the app and off by default. The input also takes solar.</p></li>
+          <li><div class="fl-row"><span class="k">PoE input</span><span class="dots"></span><span class="v">~51 W</span></div><p class="text-sm text-muted">802.3bt Type 3 on the RJ45, through an isolated converter.</p></li>
+          <li><div class="fl-row"><span class="k">Pass-through</span><span class="dots"></span><span class="v">all inputs</span></div><p class="text-sm text-muted">From USB&#8209;C, the DC jack or PoE, with everything running. Input serves the loads first; the surplus charges the pack.</p></li>
+          <li><div class="fl-row"><span class="k">Slow charge</span><span class="dots"></span><span class="v">app + SLOW switch</span></div><p class="text-sm text-muted">Toggles for the bank, each port and the Qi pad, plus a physical switch.</p></li>
+        </ul>
+      </div>
+      <div class="min-w-0 border-t-2 border-net pt-4">
+        <p class="lbl" style="color:rgb(var(--net))">02 &middot; Networking</p>
+        <ul class="mt-4 space-y-3.5 text-[0.95rem]">
+          <li><div class="fl-row"><span class="k">Ethernet over USB&#8209;C</span><span class="dots"></span><span class="v">4 &times; 2.5G</span></div><p class="text-sm text-muted">An RTL8156BG on every port.</p></li>
+          <li><div class="fl-row"><span class="k">Switch</span><span class="dots"></span><span class="v">RTL8372N</span></div><p class="text-sm text-muted">Four 2.5G ports with integrated PHYs.</p></li>
+          <li><div class="fl-row"><span class="k">Travel router</span><span class="dots"></span><span class="v">Wi&#8209;Fi 6</span></div><p class="text-sm text-muted">OpenWrt module (Acelink SM81, MT7981). Power-gated to save battery.</p></li>
+          <li><div class="fl-row"><span class="k">RJ45 WAN</span><span class="dots"></span><span class="v">RTL8221B</span></div><p class="text-sm text-muted">2.5G PHY; the same jack takes PoE in.</p></li>
+        </ul>
+      </div>
+      <div class="min-w-0 border-t-2 border-input pt-4">
+        <p class="lbl text-input">03 &middot; Radios</p>
+        <ul class="mt-4 space-y-3.5 text-[0.95rem]">
+          <li><div class="fl-row"><span class="k">Meshtastic LoRa</span><span class="dots"></span><span class="v">SX1262</span></div><p class="text-sm text-muted">nRF52840 + SX1262. Phones connect over Bluetooth; it can stay on as a relay with the rest off.</p></li>
+          <li><div class="fl-row"><span class="k">Control + app</span><span class="dots"></span><span class="v">ESP32</span></div><p class="text-sm text-muted">ESP32&#8209;WROOM&#8209;32UE with a U.FL antenna, because the metal case detunes a PCB antenna.</p></li>
+          <li><div class="fl-row"><span class="k">NFC</span><span class="dots"></span><span class="v">tap-to-pair</span></div><p class="text-sm text-muted">NT3H2111 tag.</p></li>
+        </ul>
+      </div>
+      <div class="min-w-0 border-t-2 border-enig pt-4">
+        <p class="lbl t-enig">04 &middot; Audio &amp; light</p>
+        <ul class="mt-4 space-y-3.5 text-[0.95rem]">
+          <li><div class="fl-row"><span class="k">Speakerphone</span><span class="dots"></span><span class="v">~1 W avg</span></div><p class="text-sm text-muted">Bluetooth A2DP/HFP and IP audio. MAX98357A amp, PDM mic.</p></li>
+          <li><div class="fl-row"><span class="k">Flashlight</span><span class="dots"></span><span class="v">~1.5 W</span></div><p class="text-sm text-muted">Plus a red night light, SOS and a siren.</p></li>
+          <li><div class="fl-row"><span class="k">Attention glow</span><span class="dots"></span><span class="v">8 &times; RGB</span></div><p class="text-sm text-muted">SK6812 LEDs along the front-top edge.</p></li>
+        </ul>
+      </div>
+      <div class="min-w-0 border-t-2 border-strong pt-4">
+        <p class="lbl text-ink">05 &middot; Travel extras</p>
+        <ul class="mt-4 space-y-3.5 text-[0.95rem]">
+          <li><div class="fl-row"><span class="k">Qi pad</span><span class="dots"></span><span class="v">5 W</span></div></li>
+          <li><div class="fl-row"><span class="k">microSD</span><span class="dots"></span><span class="v">slot</span></div></li>
+          <li><div class="fl-row"><span class="k">Cooling</span><span class="dots"></span><span class="v">fan + case</span></div><p class="text-sm text-muted">The aluminium body is the heatsink; NTCs drive throttling.</p></li>
+          <li><div class="fl-row"><span class="k">Open firmware</span><span class="dots"></span><span class="v">limits in HW</span></div><p class="text-sm text-muted">Safety limits live in hardware, so firmware can't exceed them.</p></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid gap-4 lg:grid-cols-2 mt-12 items-start">
+      <details class="pl min-w-0">
+        <summary><span class="q">Plain words</span><span>What are USB PD, EPR and PPS?</span><span class="chev" aria-hidden="true">+</span></summary>
+        <div class="pl-b">
+          <p><b class="font-medium text-ink">USB Power Delivery (PD)</b> is how a USB&#8209;C charger and a laptop agree on power. They talk over the cable first, then the charger raises the voltage to what was agreed. The standard range tops out at 20&nbsp;V &times; 5&nbsp;A, which is 100&nbsp;W.</p>
+          <p><b class="font-medium text-ink">EPR</b> (Extended Power Range) adds higher voltages such as 28&nbsp;V. This design supports 28&nbsp;V but keeps each port at 100&nbsp;W by limiting current to 3.57&nbsp;A, which is what the 3:1 rule allows for the port's power stage.</p>
+          <p><b class="font-medium text-ink">PPS</b> (Programmable Power Supply) lets a phone ask for its voltage in small steps while it charges, and the port follows. OnePlus phones fast-charge this way over USB&#8209;C.</p>
+        </div>
+      </details>
+      <details class="pl min-w-0">
+        <summary><span class="q">Plain words</span><span>Why Ethernet over USB&#8209;C, and why 2.5G?</span><span class="chev" aria-hidden="true">+</span></summary>
+        <div class="pl-b">
+          <p>Many laptops have no Ethernet jack any more. Here each USB&#8209;C port has its own USB network adapter chip (RTL8156BG), so the same cable that charges the laptop also gives it a wired 2.5&nbsp;Gb/s connection, with no dongle. The four adapters join an RTL8372N switch, which links to the Wi&#8209;Fi&nbsp;6 router and the RJ45.</p>
+          <p>2.5G won over 5G because the RTL8156BG is stocked at JLCPCB and costs less than the 1G chip, while the 5G RTL8157 isn't stocked and needs 10&nbsp;Gb/s routing.</p>
+          <p>One honest caveat: the bank has to swap USB data roles with the device, and some phones may refuse. That is on the <a class="lnk" href="roadmap.html">risk list</a> to test.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASE ============ -->
+<section id="case" class="sec" aria-labelledby="case-h">
+  <div class="wrap">
+    <div class="grid gap-4 md:grid-cols-[6rem_minmax(0,1fr)] mb-8">
+      <p class="lbl pt-2">Sheet 04</p>
+      <div class="min-w-0">
+        <h2 id="case-h" class="disp font-bold text-3xl md:text-[2.4rem] leading-tight">Ports and case</h2>
+        <p class="mt-3 text-ink2 max-w-[46rem]">An extruded aluminium body with two end caps: a clear PC cap on the left for the flashlight and the antennas, an ABS cap on the right for the battery door. Two stacked 6&#8209;layer boards sit inside.</p>
+      </div>
+    </div>
+    <div class="grid gap-6 xl:grid-cols-[minmax(0,1fr)_17rem]">
+      <figure class="panel corner min-w-0">
+        <div class="scrollx" tabindex="0" role="region" aria-label="Enclosure drawing, scrolls sideways on small screens">
+          <svg class="block min-w-[820px] w-full h-auto" viewBox="0 0 1090 610" role="img" aria-labelledby="case-t case-d">
+            <title id="case-t">Enclosure drawing: top, left end, front and back views</title>
+            <desc id="case-d">Third-angle drawing of the 150 by 94 by 70 millimetre enclosure. Front face: four USB-C ports, USB-A, SLOW switch, flashlight and boot buttons, microSD and the glow strip along the top edge. Back face: RJ45 with PoE, DC in, DC out and the fan grille. Left end: flashlight optic, red night LED and LoRa SMA antenna. Top: Qi window and speaker grille. The battery cartridge slides in from the right end.</desc>
+            <defs>
+              <pattern id="grille" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="3.5" cy="3.5" r="1.3" style="fill:rgb(var(--muted))"/></pattern>
+              <marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:rgb(var(--ink2))"/></marker>
+            </defs>
+            <!-- TOP VIEW -->
+            <line x1="300" y1="44" x2="630" y2="44" class="s-thin" marker-start="url(#ar)" marker-end="url(#ar)"/>
+            <line x1="300" y1="38" x2="300" y2="56" class="s-thin"/><line x1="630" y1="38" x2="630" y2="56" class="s-thin"/>
+            <rect x="447" y="31" width="36" height="14" style="fill:rgb(var(--surface))"/><text x="465" y="42" text-anchor="middle" style="font-size:11px" class="s-ink2">150</text>
+            <line x1="282" y1="60" x2="282" y2="266.8" class="s-thin" marker-start="url(#ar)" marker-end="url(#ar)"/>
+            <line x1="276" y1="60" x2="294" y2="60" class="s-thin"/><line x1="276" y1="266.8" x2="294" y2="266.8" class="s-thin"/>
+            <text x="276" y="167" text-anchor="middle" style="font-size:11px" class="s-ink2" transform="rotate(-90 276 163)">94</text>
+            <rect x="300" y="60" width="330" height="206.8" class="s-box" style="stroke-width:1.5"/>
+            <line x1="300" y1="73.2" x2="630" y2="73.2" class="s-thin"/><line x1="300" y1="253.6" x2="630" y2="253.6" class="s-thin"/>
+            <line x1="326.4" y1="60" x2="326.4" y2="266.8" class="s-line"/><line x1="603.6" y1="60" x2="603.6" y2="266.8" class="s-line"/>
+            <rect x="330.8" y="77.6" width="246.4" height="180.4" class="s-hid"/>
+            <rect x="394.6" y="93" width="140.8" height="140.8" rx="4" style="fill:rgb(var(--input) / .07);stroke:rgb(var(--input));stroke-width:1.2"/>
+            <circle cx="361.6" cy="200.8" r="44" style="fill:url(#grille);stroke:rgb(var(--ink2));stroke-width:1"/>
+            <circle cx="465" cy="163.4" r="7" class="s-hid"/>
+            <line x1="290" y1="163.4" x2="640" y2="163.4" class="s-ctr"/><line x1="465" y1="52" x2="465" y2="276" class="s-ctr"/>
+            <line x1="344" y1="264.2" x2="586" y2="264.2" style="stroke:rgb(var(--enig));stroke-width:3.5"/>
+            <text x="165" y="150" text-anchor="middle" style="font-size:12px;font-weight:600;letter-spacing:.1em" class="s-ink">TOP VIEW</text>
+            <text x="165" y="168" text-anchor="middle" style="font-size:9.5px" class="s-mut">cartridge shown hidden</text>
+            <path d="M694 163.4H640" class="s-arrow" marker-end="url(#ar)"/>
+            <text x="694" y="200" style="font-size:9.5px" class="s-mut">cartridge slides</text><text x="694" y="212" style="font-size:9.5px" class="s-mut">in from this end</text>
+            <!-- FRONT VIEW -->
+            <line x1="282" y1="330" x2="282" y2="484" class="s-thin" marker-start="url(#ar)" marker-end="url(#ar)"/>
+            <line x1="276" y1="330" x2="294" y2="330" class="s-thin"/><line x1="276" y1="484" x2="294" y2="484" class="s-thin"/>
+            <text x="276" y="411" text-anchor="middle" style="font-size:11px" class="s-ink2" transform="rotate(-90 276 407)">70</text>
+            <rect x="300" y="330" width="330" height="154" class="s-box" style="stroke-width:1.5"/>
+            <line x1="326.4" y1="330" x2="326.4" y2="484" class="s-line"/><line x1="603.6" y1="330" x2="603.6" y2="484" class="s-line"/>
+            <line x1="324.2" y1="420.6" x2="597" y2="420.6" class="s-hid"/><line x1="324.2" y1="376.6" x2="597" y2="376.6" class="s-hid"/>
+            <text x="332" y="436" style="font-size:8.5px" class="s-mut">board A</text><text x="332" y="392" style="font-size:8.5px" class="s-mut">board B</text>
+            <rect x="344" y="331.5" width="242" height="5" style="fill:rgb(var(--enig))"/>
+            <rect x="345.1" y="417" width="19.8" height="7.3" rx="3.6" class="s-box"/><rect x="380.3" y="417" width="19.8" height="7.3" rx="3.6" class="s-box"/>
+            <rect x="415.5" y="417" width="19.8" height="7.3" rx="3.6" class="s-box"/><rect x="450.7" y="417" width="19.8" height="7.3" rx="3.6" class="s-box"/>
+            <rect x="485.7" y="406.1" width="29" height="12.8" rx="1" class="s-box"/><rect x="489" y="409" width="22.4" height="3.6" style="fill:rgb(var(--copper))"/>
+            <rect x="529.8" y="411.2" width="20" height="7.7" rx="1" class="s-box"/><rect x="531.5" y="412.6" width="8" height="4.9" style="fill:rgb(var(--strong))"/>
+            <circle cx="561.8" cy="413.3" r="5.6" class="s-box"/>
+            <circle cx="579.4" cy="413.3" r="5.6" class="s-box"/><circle cx="579.4" cy="413.3" r="2.4" class="s-box2"/>
+            <rect x="528.8" y="370.7" width="30.8" height="4.2" class="s-box"/>
+            <!-- BACK VIEW -->
+            <rect x="700" y="330" width="330" height="154" class="s-box" style="stroke-width:1.5"/>
+            <line x1="726.4" y1="330" x2="726.4" y2="484" class="s-line"/><line x1="1003.6" y1="330" x2="1003.6" y2="484" class="s-line"/>
+            <line x1="733" y1="420.6" x2="1005.8" y2="420.6" class="s-hid"/><line x1="733" y1="376.6" x2="1005.8" y2="376.6" class="s-hid"/>
+            <rect x="737.4" y="332.2" width="66" height="66" class="s-box2"/><circle cx="770.4" cy="365.2" r="30" style="fill:url(#grille);stroke:rgb(var(--ink2));stroke-width:1"/>
+            <rect x="850.7" y="394.7" width="19.8" height="24.2" rx="1.5" class="s-box"/><circle cx="860.6" cy="406.8" r="6" class="s-box2"/><circle cx="860.6" cy="406.8" r="2" style="fill:rgb(var(--copper))"/>
+            <rect x="885.9" y="394.7" width="19.8" height="24.2" rx="1.5" class="s-box"/><circle cx="895.8" cy="406.8" r="6" class="s-box2"/><circle cx="895.8" cy="406.8" r="1.6" style="fill:rgb(var(--copper))"/>
+            <rect x="948.6" y="345.2" width="35.2" height="29.7" rx="1" class="s-box"/><path d="M953 350h26.4v14h-6v5h-14.4v-5h-6z" class="s-box2"/>
+            <!-- LEFT END VIEW -->
+            <rect x="40" y="330" width="206.8" height="154" rx="13.2" class="s-box" style="stroke-width:1.5;fill:rgb(var(--input) / .05)"/>
+            <line x1="53.2" y1="420.6" x2="242.4" y2="420.6" class="s-hid"/><line x1="53.2" y1="376.6" x2="242.4" y2="376.6" class="s-hid"/>
+            <circle cx="143.4" cy="391.6" r="22" class="s-box"/><circle cx="143.4" cy="391.6" r="15" class="s-thin"/><circle cx="143.4" cy="391.6" r="6" style="fill:rgb(var(--enig) / .5);stroke:rgb(var(--enig))"/>
+            <circle cx="114.8" cy="413.6" r="3.6" style="fill:rgb(var(--limit))"/>
+            <path d="M70.8 348.4l6.9 4v8l-6.9 4-6.9-4v-8z" class="s-box"/><circle cx="70.8" cy="356.4" r="3" style="fill:rgb(var(--copper))"/>
+            <!-- balloons + leaders -->
+            <g>
+              <path d="M340 529L355 424.3M372 529L390.2 424.3M404 529L425.4 424.3M436 529L460.6 424.3M480 529L500.2 419M520 529L539.8 419M556 529L561.8 419M592 529L579.4 419M654 372.8L575 372.8M654 334L586 334M966 311L966.2 345.2M896 311L895.8 394.7M860 311L860.6 394.7M770 311L770.4 332.2M150 311L143.4 369.6M100 311L114.8 410M60 311L70.8 348.4M654 110L535.4 120M262 236L325 220" class="s-lead"/>
+              <g class="bal"><circle cx="340" cy="540" r="11"/><text x="340" y="540">1</text></g>
+              <g class="bal"><circle cx="372" cy="540" r="11"/><text x="372" y="540">2</text></g>
+              <g class="bal"><circle cx="404" cy="540" r="11"/><text x="404" y="540">3</text></g>
+              <g class="bal"><circle cx="436" cy="540" r="11"/><text x="436" y="540">4</text></g>
+              <g class="bal"><circle cx="480" cy="540" r="11"/><text x="480" y="540">5</text></g>
+              <g class="bal"><circle cx="520" cy="540" r="11"/><text x="520" y="540">6</text></g>
+              <g class="bal"><circle cx="556" cy="540" r="11"/><text x="556" y="540">7</text></g>
+              <g class="bal"><circle cx="592" cy="540" r="11"/><text x="592" y="540">8</text></g>
+              <g class="bal"><circle cx="665" cy="372.8" r="11"/><text x="665" y="372.8">9</text></g>
+              <g class="bal"><circle cx="665" cy="334" r="11"/><text x="665" y="334">10</text></g>
+              <g class="bal"><circle cx="966" cy="300" r="11"/><text x="966" y="300">11</text></g>
+              <g class="bal"><circle cx="896" cy="300" r="11"/><text x="896" y="300">12</text></g>
+              <g class="bal"><circle cx="860" cy="300" r="11"/><text x="860" y="300">13</text></g>
+              <g class="bal"><circle cx="770" cy="300" r="11"/><text x="770" y="300">14</text></g>
+              <g class="bal"><circle cx="150" cy="300" r="11"/><text x="150" y="300">15</text></g>
+              <g class="bal"><circle cx="100" cy="300" r="11"/><text x="100" y="300">16</text></g>
+              <g class="bal"><circle cx="60" cy="300" r="11"/><text x="60" y="300">17</text></g>
+              <g class="bal"><circle cx="665" cy="110" r="11"/><text x="665" y="110">18</text></g>
+              <g class="bal"><circle cx="251" cy="243" r="11"/><text x="251" y="243">19</text></g>
+              <g class="bal"><circle cx="706" cy="163.4" r="11"/><text x="706" y="163.4">20</text></g>
+            </g>
+            <text x="143.4" y="586" text-anchor="middle" style="font-size:12px;font-weight:600;letter-spacing:.1em" class="s-ink">LEFT END</text>
+            <text x="465" y="586" text-anchor="middle" style="font-size:12px;font-weight:600;letter-spacing:.1em" class="s-ink">FRONT</text>
+            <text x="865" y="586" text-anchor="middle" style="font-size:12px;font-weight:600;letter-spacing:.1em" class="s-ink">BACK</text>
+            <!-- notes -->
+            <g style="font-size:10px">
+              <text x="760" y="64" style="font-size:11px;font-weight:600;letter-spacing:.1em" class="s-ink">NOTES</text>
+              <text x="760" y="84" class="s-ink2">1. Dimensions in mm. Third-angle</text>
+              <text x="774" y="98" class="s-ink2">projection; all views same scale.</text>
+              <text x="760" y="118" class="s-ink2">2. From mech_spec.json Rev A,</text>
+              <text x="774" y="132" class="s-ink2">a pre-layout estimate.</text>
+              <text x="760" y="152" class="s-ink2">3. Items 16 and 17 positions are</text>
+              <text x="774" y="166" class="s-ink2">illustrative only.</text>
+              <text x="760" y="186" class="s-ink2">4. Dashed: hidden (cartridge,</text>
+              <text x="774" y="200" class="s-ink2">tripod insert, boards A and B).</text>
+            </g>
+          </svg>
+        </div>
+        <figcaption class="px-4 py-3 text-[0.8rem] text-muted border-t border-line2">Connector positions come from <span class="net">hardware/mechanical/mech_spec.json</span> Rev&nbsp;A, a pre-layout estimate, so treat them as illustrative. They will move during layout.</figcaption>
+      </figure>
+      <ol class="min-w-0 text-sm grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-1 gap-x-6 content-start" aria-label="Drawing callouts">
+        <li class="flex gap-3 py-1.5 border-b border-line2"><span class="mono text-muted w-6 flex-none text-right">1&ndash;4</span><span>USB&#8209;C C1&ndash;C4 <span class="text-muted mono text-xs">J_USBC1&ndash;4</span></span></li>
+        <li class="flex gap-3 py-1.5 border-b border-line2"><span class="mono text-muted w-6 flex-none text-right">5</span><span>USB&#8209;A <span class="text-muted mono text-xs">J_USBA</span></span></li>
+        <li class="flex gap-3 py-1.5 border-b border-line2"><span class="mono text-muted w-6 flex-none text-right">6</span><span>SLOW switch <span class="text-muted mono text-xs">SW_SLOW</span></span></li>
+        <li class="flex gap-3 py-1.5 border-b border-line2"><span class="mono text-muted w-6 flex-none text-right">7</span><span>Flashlight button <span class="text-muted mono text-xs">SW_FLASH</span></span></li>
+        <li class="flex gap-3 py-1.5 border-b border-line2"><span class="mono text-muted w-6 flex-none text-right">8</span><span>Boot button, recessed <span class="text-muted mono text-xs">SW_BOOT</span></span></li>
+        <li class="flex gap-3 py-1.5 border-b border-line2"><span class="mono text-muted w-6 flex-none text-right">9</span><span>microSD <span class="text-muted mono text-xs">J_MICROSD</span></span></li>
+        <li class="flex gap-3 py-1.5 border-b border-line2"><span class="mono text-muted w-6 flex-none text-right">10</span><span>Glow strip, 8 &times; SK6812</span></li>
+        <li class="flex gap-3 py-1.5 border-b border-line2"><span class="mono text-muted w-6 flex-none text-right">11</span><span>RJ45 2.5G + PoE in <span class="text-muted mono text-xs">J_RJ45</span></span></li>
+        <li class="flex gap-3 py-1.5 border-b border-line2"><span class="mono text-muted w-6 flex-none text-right">12</span><span>DC in, 2.0&nbsp;mm <span class="text-muted mono text-xs">J_DCIN</span></span></li>
+        <li class="flex gap-3 py-1.5 border-b border-line2"><span class="mono text-muted w-6 flex-none text-right">13</span><span>DC out, 2.5&nbsp;mm <span class="text-muted mono text-xs">J_DCOUT</span></span></li>
+        <li class="flex gap-3 py-1.5 border-b border-line2"><span class="mono text-muted w-6 flex-none text-right">14</span><span>Fan grille, 30&nbsp;mm fan</span></li>
+        <li class="flex gap-3 py-1.5 border-b border-line2"><span class="mono text-muted w-6 flex-none text-right">15</span><span>Flashlight optic, XP&#8209;G3</span></li>
+        <li class="flex gap-3 py-1.5 border-b border-line2"><span class="mono text-muted w-6 flex-none text-right">16</span><span>Red night LED</span></li>
+        <li class="flex gap-3 py-1.5 border-b border-line2"><span class="mono text-muted w-6 flex-none text-right">17</span><span>LoRa SMA antenna</span></li>
+        <li class="flex gap-3 py-1.5 border-b border-line2"><span class="mono text-muted w-6 flex-none text-right">18</span><span>Qi pad window, non-metal</span></li>
+        <li class="flex gap-3 py-1.5 border-b border-line2"><span class="mono text-muted w-6 flex-none text-right">19</span><span>Speaker grille, 40&nbsp;mm</span></li>
+        <li class="flex gap-3 py-1.5 border-b border-line2"><span class="mono text-muted w-6 flex-none text-right">20</span><span>Battery cartridge door</span></li>
+      </ol>
+    </div>
+
+    <div class="grid gap-4 lg:grid-cols-2 mt-8 items-start">
+      <details class="pl min-w-0">
+        <summary><span class="q">Plain words</span><span>Why 90&nbsp;Wh, in a swappable cartridge?</span><span class="chev" aria-hidden="true">+</span></summary>
+        <div class="pl-b">
+          <p>Airlines let you carry lithium batteries under 100&nbsp;Wh without asking for approval. Five Samsung 50S cells in series give 90&nbsp;Wh, comfortably under that line, and every cartridge is labelled with its Wh rating. Always check your airline's rules before you fly.</p>
+          <p>The cells, BMS, fuse, temperature sensor and ID chip all live in a 112 &times; 82 &times; 25&nbsp;mm cartridge that slides in from the right-hand end, so the battery's own protection always travels with the cells.</p>
+        </div>
+      </details>
+      <details class="pl min-w-0">
+        <summary><span class="q">Plain words</span><span>Why two boards instead of one?</span><span class="chev" aria-hidden="true">+</span></summary>
+        <div class="pl-b">
+          <p>Six 100&nbsp;W-class power stages, each with a 17 &times; 17&nbsp;mm inductor, fill most of one 124 &times; 86&nbsp;mm board. So the power stages get their own board (A, with thicker 2&nbsp;oz outer copper for current), and the networking, router module, radios and logic sit on board B above it, joined by a 2 &times; 20 stacking header.</p>
+          <p>Both boards, the case and the website's 3D model read one file, <span class="net">mech_spec.json</span>, so they can't drift apart.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3D ============ -->
+<section id="model" class="sec" aria-labelledby="model-h">
+  <div class="wrap">
+    <div class="grid gap-4 md:grid-cols-[6rem_minmax(0,1fr)] mb-8">
+      <p class="lbl pt-2">Sheet 05</p>
+      <div class="min-w-0">
+        <h2 id="model-h" class="disp font-bold text-3xl md:text-[2.4rem] leading-tight">The device in 3D</h2>
+        <p class="mt-3 text-ink2 max-w-[46rem]">The same enclosure and boards, built from the mechanical spec. Drag to turn it.</p>
+      </div>
+    </div>
+    <div id="device-3d" class="device-3d corner" aria-label="Interactive 3D model of the device">
+      <div class="absolute inset-0 flex items-center justify-center p-6">
+        <div class="max-w-md text-center">
+          <svg width="120" height="76" viewBox="0 0 120 76" class="mx-auto" aria-hidden="true"><path d="M10 26L50 8h60L70 26z M10 26v42h60V26 M70 68l40-18V8" fill="none" stroke="rgb(var(--ink2))" stroke-width="1.5" stroke-linejoin="round"/><path d="M20 50h6M30 50h6M40 50h6M50 50h6" stroke="rgb(var(--copper))" stroke-width="3" stroke-linecap="round"/><path d="M14 30h52" stroke="rgb(var(--enig))" stroke-width="2.5"/></svg>
+          <p class="mt-4 text-ink2">The interactive model loads here.</p>
+          <p class="mt-1 text-sm text-muted">Until it does, the <a class="lnk" href="#case">enclosure drawing</a> shows the same 150 &times; 94 &times; 70&nbsp;mm case and every port.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SAFETY ============ -->
+<section id="safety" class="sec" aria-labelledby="safety-h">
+  <div class="wrap">
+    <div class="grid gap-4 md:grid-cols-[6rem_minmax(0,1fr)] mb-8">
+      <p class="lbl pt-2">Sheet 06</p>
+      <div class="min-w-0">
+        <h2 id="safety-h" class="disp font-bold text-3xl md:text-[2.4rem] leading-tight">Safety by design: 3:1</h2>
+        <p class="mt-3 text-ink2 max-w-[46rem]">Every part that carries current or dissipates power is rated for at least three times its worst-case operating current or power, and junctions run at least 40&nbsp;&deg;C below their maximum. That is why the pack gives 125&nbsp;W and not 187&nbsp;W, and why the Qi pad is 5&nbsp;W. Each row is drawn to its own scale: the full bar is the part's rating.</p>
+      </div>
+    </div>
+    <div class="grid gap-8 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)]">
+      <div class="panel p-4 md:p-6 min-w-0">
+        <div class="hidden sm:grid grid-cols-[minmax(0,13rem)_minmax(0,1fr)_4.5rem] gap-4 pb-2 border-b border-strong">
+          <span class="lbl">Part</span><span class="lbl">Operating vs rated <span class="normal-case tracking-normal">(dashed line = &#8531;)</span></span><span class="lbl text-right">Ratio</span>
+        </div>
+        <ul id="sb-list" class="divide-y divide-line2"></ul>
+        <noscript><p class="py-3 text-sm text-muted">Cell 25 A / 8.3 A; port inductor 22 A / 7 A RMS; XT60 30 A / 8.3 A; DC jack 5 A / 1.67 A; Qi 15 W / 5 W; amp 3.2 W / 1 W; LED driver 1.5 A / 0.5 A; exceptions: USB-C contacts 5 A / 5 A, USB-A connector 2 A / 1.5 A.</p></noscript>
+        <p class="mt-3 pt-3 border-t border-line2 text-xs text-muted">Cell row: 8.3&nbsp;A is the 3:1 ceiling the parts are sized for. Firmware holds the pack to 8.0&nbsp;A, and the cartridge's BQ77915 protector trips in hardware above 8.3&nbsp;A but below the 25&nbsp;A cell rating. Striped bars are the documented exceptions, explained under &ldquo;Documented exceptions&rdquo;.</p>
+      </div>
+      <div class="min-w-0 space-y-8">
+        <div class="aside">
+          <p class="lbl text-copper">In plain words</p>
+          <p class="mt-2 text-[0.95rem] text-ink2">A 3:1 safety buffer means no part is ever asked for more than a third of what it is rated to do. A cell rated for 25&nbsp;A is never asked for more than 8.3&nbsp;A. An inductor rated for 22&nbsp;A carries about 7&nbsp;A.</p>
+          <p class="mt-2 text-[0.95rem] text-ink2">Parts working well inside their ratings run cooler and leave room for what a datasheet can't predict: a hot car, a blocked fan, a worn cable. The cost is power on paper: 125&nbsp;W from the battery instead of 187&nbsp;W, a 5&nbsp;W Qi pad, a ~1.5&nbsp;W flashlight. The design takes that trade on purpose.</p>
+        </div>
+        <div>
+          <p class="lbl text-ink">Voltage is different</p>
+          <p class="mt-2 text-sm text-ink2">3:1 does not apply to voltage. Voltage uses standard derating against the worst-case net voltage.</p>
+          <table class="tbl mt-3">
+            <thead><tr><th>Part</th><th>Rule</th><th>Example</th></tr></thead>
+            <tbody>
+              <tr><td>Ceramic caps</td><td class="c">&ge; 2&times;</td><td class="text-sm text-muted">DC-bias loss</td></tr>
+              <tr><td>MOSFET V<sub>DS</sub></td><td class="c">&ge; 1.5&times;</td><td class="text-sm text-muted"><span class="net">VBAT</span> 21&nbsp;V &rarr; &ge; 40&nbsp;V; <span class="net">VBUS</span> 28&nbsp;V &rarr; &ge; 60&nbsp;V</td></tr>
+              <tr><td>Diodes V<sub>R</sub></td><td class="c">&ge; 1.5&times;</td><td class="text-sm text-muted">working voltage</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <p class="lbl text-ink">Documented exceptions</p>
+          <ul class="mt-2 space-y-2 text-sm text-ink2">
+            <li><b class="font-semibold text-ink">USB&#8209;C contacts.</b> USB PD defines 5&nbsp;A; no 15&nbsp;A USB&#8209;C exists. 5&nbsp;A receptacles, the negotiated contract is never exceeded, and an NTC at each connector folds back on heat.</li>
+            <li><b class="font-semibold text-ink">USB&#8209;A connector.</b> No high-current USB&#8209;A is stocked, so the 2&nbsp;A part runs at 1.5&nbsp;A.</li>
+            <li><b class="font-semibold text-ink">PoE pairs.</b> 802.3bt sets the per-pair current; magnetics are bt-rated.</li>
+          </ul>
+        </div>
+        <div class="border-l-2 border-copper pl-4">
+          <p class="lbl text-ink">Enforced in hardware</p>
+          <p class="mt-2 text-sm text-ink2">The cartridge BMS, fuses, resistor-set charger ceilings and an independent over-temperature cutoff hold the limits. Open firmware can't make the pack unsafe.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ARCHITECTURE ============ -->
+<section id="architecture" class="sec" aria-labelledby="arch-h">
+  <div class="wrap">
+    <div class="grid gap-4 md:grid-cols-[6rem_minmax(0,1fr)] mb-8">
+      <p class="lbl pt-2">Sheet 07</p>
+      <div class="min-w-0">
+        <h2 id="arch-h" class="disp font-bold text-3xl md:text-[2.4rem] leading-tight">Architecture</h2>
+        <p class="mt-3 text-ink2 max-w-[46rem]">Three planes share one board pair: the power path around <span class="net">VBAT</span>, the 2.5G network, and the control and radio bus. Stacked boxes mean one per USB&#8209;C port.</p>
+      </div>
+    </div>
+    <figure class="panel corner">
+      <div class="scrollx" tabindex="0" role="region" aria-label="Block diagram, scrolls sideways on small screens">
+        <svg class="block min-w-[880px] w-full h-auto" viewBox="0 0 1120 612" role="img" aria-labelledby="arch-t arch-d">
+          <title id="arch-t">Block diagram</title>
+          <desc id="arch-d">Power path: each USB-C port goes through a TPD4S480 protector, a TPS26750 PD controller and a BQ25756 bidirectional stage to the VBAT bus. The DC jack goes through a TPS26631 eFuse with a 24.3 V over-voltage cutoff, and PoE through a TPS2373-4 with an isolated LM5155 flyback; both go into LM74700 ideal-diode ORing and a forward-only BQ25756 stage. The bus feeds the cartridge, aux bucks, USB-A, DC out (a reverse-only BQ25756 plus eFuse) and Qi. Network: each USB-C port has an HD3SS3212 mux and an RTL8156BG, all into an RTL8372N switch, which links to the router module and an RTL8221B PHY for the RJ45. Control: an ESP32 on a shared bus with the I2C mux, gauge, NFC, audio amp, LED driver and glow LEDs; a separate nRF52840 and SX1262 LoRa node.</desc>
+          <defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" style="fill:rgb(var(--ink2))"/></marker></defs>
+          <g style="font-size:11px;letter-spacing:.12em;font-weight:600">
+            <text x="20" y="26" class="s-cu">POWER PATH</text>
+            <text x="20" y="306" style="fill:rgb(var(--net))">NETWORK</text>
+            <text x="20" y="466" class="s-in">CONTROL + RADIOS</text>
+          </g>
+          <line x1="20" y1="284" x2="1100" y2="284" class="s-hid" style="opacity:.6"/>
+          <line x1="20" y1="444" x2="1100" y2="444" class="s-hid" style="opacity:.6"/>
+          <!-- power row A -->
+          <g>
+            <rect x="28" y="39" width="130" height="46" class="s-stk"/><rect x="24" y="43" width="130" height="46" class="s-stk"/><rect x="20" y="47" width="130" height="46" class="s-box"/>
+            <text x="30" y="66" style="font-size:12px;font-weight:600" class="s-ink">USB-C C1&#8211;C4</text><text x="30" y="82" style="font-size:10px" class="s-mut">5 A contacts</text>
+            <rect x="188" y="39" width="122" height="46" class="s-stk"/><rect x="184" y="43" width="122" height="46" class="s-stk"/><rect x="180" y="47" width="122" height="46" class="s-box"/>
+            <text x="190" y="66" style="font-size:12px;font-weight:600" class="s-ink">TPD4S480</text><text x="190" y="82" style="font-size:10px" class="s-mut">48 V CC/SBU protect</text>
+            <rect x="348" y="39" width="140" height="46" class="s-stk"/><rect x="344" y="43" width="140" height="46" class="s-stk"/><rect x="340" y="47" width="140" height="46" class="s-box"/>
+            <text x="350" y="66" style="font-size:12px;font-weight:600" class="s-ink">TPS26750</text><text x="350" y="82" style="font-size:10px" class="s-mut">PD 3.x EPR + M24512</text>
+            <rect x="518" y="39" width="132" height="46" class="s-stk"/><rect x="514" y="43" width="132" height="46" class="s-stk"/><rect x="510" y="47" width="132" height="46" class="s-box" style="stroke:rgb(var(--copper))"/>
+            <text x="520" y="66" style="font-size:12px;font-weight:600" class="s-ink">BQ25756</text><text x="520" y="82" style="font-size:10px" class="s-mut">buck-boost, 100 W</text>
+            <path d="M150 70H178M302 70H338M480 70H508" class="s-arrow" marker-end="url(#ah)"/>
+            <path d="M644 70H794" class="s-arrow" marker-start="url(#ah)" marker-end="url(#ah)"/>
+            <text x="660" y="62" style="font-size:9.5px" class="s-mut">bidirectional</text>
+          </g>
+          <!-- power row B, C -->
+          <g>
+            <rect x="20" y="128" width="130" height="46" class="s-box"/><text x="30" y="147" style="font-size:12px;font-weight:600" class="s-ink">DC jack in</text><text x="30" y="163" style="font-size:10px" class="s-mut">12&#8211;24 V, 40 W</text>
+            <rect x="180" y="128" width="122" height="46" class="s-box"/><text x="190" y="147" style="font-size:12px;font-weight:600" class="s-ink">TPS26631 eFuse</text><text x="190" y="163" style="font-size:10px" class="s-mut">OV 24.3 V, 1.65 A</text>
+            <rect x="20" y="198" width="130" height="46" class="s-box"/><text x="30" y="217" style="font-size:12px;font-weight:600" class="s-ink">PoE in (RJ45)</text><text x="30" y="233" style="font-size:10px" class="s-mut">802.3bt Type 3</text>
+            <rect x="180" y="198" width="300" height="46" class="s-box"/><text x="190" y="217" style="font-size:12px;font-weight:600" class="s-ink">TPS2373-4 + LM5155 flyback</text><text x="190" y="233" style="font-size:10px" class="s-mut">isolated, ~51 W in, ~46 W out</text>
+            <rect x="510" y="128" width="132" height="116" class="s-box"/><text x="520" y="180" style="font-size:12px;font-weight:600" class="s-ink">LM74700</text><text x="520" y="196" style="font-size:10px" class="s-mut">ideal-diode OR</text>
+            <rect x="668" y="163" width="104" height="46" class="s-box"/><text x="678" y="182" style="font-size:12px;font-weight:600" class="s-ink">BQ25756</text><text x="678" y="198" style="font-size:10px" class="s-mut">forward only</text>
+            <path d="M150 151H178M302 151H508M150 221H178M480 221H508M642 186H666M772 186H794" class="s-arrow" marker-end="url(#ah)"/>
+          </g>
+          <!-- bus -->
+          <rect x="796" y="40" width="8" height="226" style="fill:rgb(var(--enig))"/>
+          <text x="800" y="32" text-anchor="middle" style="font-size:11px;font-weight:600" class="s-ink">VBAT</text>
+          <g>
+            <rect x="840" y="40" width="260" height="38" class="s-box" style="stroke:rgb(var(--enig))"/><text x="850" y="56" style="font-size:11.5px;font-weight:600" class="s-ink">Cartridge: 5S1P Samsung 50S</text><text x="850" y="71" style="font-size:9.5px" class="s-mut">90 Wh &#183; BQ77915 &#183; BQ34Z100 gauge</text>
+            <rect x="840" y="86" width="260" height="38" class="s-box"/><text x="850" y="102" style="font-size:11.5px;font-weight:600" class="s-ink">Aux bucks</text><text x="850" y="117" style="font-size:9.5px" class="s-mut">TPS62933 rails &#183; TPS56A37 switch core</text>
+            <rect x="840" y="132" width="260" height="38" class="s-box"/><text x="850" y="148" style="font-size:11.5px;font-weight:600" class="s-ink">IP6525S &#8594; USB-A</text><text x="850" y="163" style="font-size:9.5px" class="s-mut">1.5 A, QC up to 12 V</text>
+            <rect x="840" y="178" width="260" height="38" class="s-box"/><text x="850" y="194" style="font-size:11.5px;font-weight:600" class="s-ink">BQ25756 + eFuse &#8594; DC out</text><text x="850" y="209" style="font-size:9.5px" class="s-mut">12&#8211;24 V, off by default, never charges</text>
+            <rect x="840" y="224" width="260" height="38" class="s-box"/><text x="850" y="240" style="font-size:11.5px;font-weight:600" class="s-ink">IP6826 &#8594; Qi pad</text><text x="850" y="255" style="font-size:9.5px" class="s-mut">5 W</text>
+            <path d="M806 59H838" class="s-arrow" marker-start="url(#ah)" marker-end="url(#ah)"/>
+            <path d="M806 105H838M806 151H838M806 197H838M806 243H838" class="s-arrow" marker-end="url(#ah)"/>
+          </g>
+          <!-- network -->
+          <g>
+            <rect x="28" y="329" width="130" height="46" class="s-stk"/><rect x="24" y="333" width="130" height="46" class="s-stk"/><rect x="20" y="337" width="130" height="46" class="s-box"/>
+            <text x="30" y="356" style="font-size:12px;font-weight:600" class="s-ink">USB-C data</text><text x="30" y="372" style="font-size:10px" class="s-mut">USB 3, DR_Swap</text>
+            <rect x="188" y="329" width="122" height="46" class="s-stk"/><rect x="184" y="333" width="122" height="46" class="s-stk"/><rect x="180" y="337" width="122" height="46" class="s-box"/>
+            <text x="190" y="356" style="font-size:12px;font-weight:600" class="s-ink">HD3SS3212</text><text x="190" y="372" style="font-size:10px" class="s-mut">orientation mux</text>
+            <rect x="348" y="329" width="140" height="46" class="s-stk"/><rect x="344" y="333" width="140" height="46" class="s-stk"/><rect x="340" y="337" width="140" height="46" class="s-box" style="stroke:rgb(var(--net))"/>
+            <text x="350" y="356" style="font-size:12px;font-weight:600" class="s-ink">RTL8156BG</text><text x="350" y="372" style="font-size:10px" class="s-mut">USB to 2.5GbE</text>
+            <rect x="510" y="337" width="132" height="46" class="s-box" style="stroke:rgb(var(--net))"/>
+            <text x="520" y="356" style="font-size:12px;font-weight:600" class="s-ink">RTL8372N</text><text x="520" y="372" style="font-size:10px" class="s-mut">4 &#215; 2.5G switch</text>
+            <rect x="700" y="306" width="230" height="46" class="s-box"/><text x="710" y="325" style="font-size:12px;font-weight:600" class="s-ink">Router module</text><text x="710" y="341" style="font-size:10px" class="s-mut">SM81 &#183; MT7981 &#183; Wi-Fi 6 &#183; OpenWrt</text>
+            <rect x="700" y="374" width="130" height="46" class="s-box"/><text x="710" y="393" style="font-size:12px;font-weight:600" class="s-ink">RTL8221B</text><text x="710" y="409" style="font-size:10px" class="s-mut">2.5G PHY</text>
+            <rect x="860" y="374" width="120" height="46" class="s-box"/><text x="870" y="393" style="font-size:12px;font-weight:600" class="s-ink">RJ45</text><text x="870" y="409" style="font-size:10px" class="s-mut">WAN, PoE in</text>
+            <path d="M150 360H178M302 360H338M480 360H508M830 397H858" class="s-arrow" marker-end="url(#ah)"/>
+            <path d="M642 352H670V329H698M642 368H670V397H698" class="s-arrow" marker-end="url(#ah)"/>
+            <text x="648" y="345" style="font-size:9.5px" class="s-mut">SerDes</text>
+            <text x="340" y="410" style="font-size:9.5px" class="s-mut">0.95 V cores: one buck per NIC, TPS56A37 for the switch</text>
+          </g>
+          <!-- control -->
+          <g>
+            <rect x="20" y="490" width="190" height="58" class="s-box" style="stroke:rgb(var(--input))"/>
+            <text x="30" y="510" style="font-size:12px;font-weight:600" class="s-ink">ESP32-WROOM-32UE</text><text x="30" y="526" style="font-size:10px" class="s-mut">control, Bluetooth, Wi-Fi</text><text x="30" y="540" style="font-size:10px" class="s-mut">always on</text>
+            <path d="M210 519H1090" class="s-line" style="stroke-width:2"/>
+            <text x="222" y="511" style="font-size:9.5px" class="s-mut">I&#178;C &#183; I&#178;S &#183; GPIO</text>
+            <path d="M305 519V546M450 519V546M590 519V546M735 519V546M880 519V546M1025 519V546" class="s-line"/>
+            <rect x="240" y="546" width="130" height="46" class="s-box"/><text x="250" y="565" style="font-size:11.5px;font-weight:600" class="s-ink">TCA9548A</text><text x="250" y="581" style="font-size:9.5px" class="s-mut">I&#178;C mux to BQ25756s</text>
+            <rect x="390" y="546" width="120" height="46" class="s-box"/><text x="400" y="565" style="font-size:11.5px;font-weight:600" class="s-ink">BQ34Z100</text><text x="400" y="581" style="font-size:9.5px" class="s-mut">fuel gauge</text>
+            <rect x="530" y="546" width="120" height="46" class="s-box"/><text x="540" y="565" style="font-size:11.5px;font-weight:600" class="s-ink">NT3H2111</text><text x="540" y="581" style="font-size:9.5px" class="s-mut">NFC tap-to-pair</text>
+            <rect x="670" y="546" width="130" height="46" class="s-box"/><text x="680" y="565" style="font-size:11.5px;font-weight:600" class="s-ink">MAX98357A</text><text x="680" y="581" style="font-size:9.5px" class="s-mut">amp + PDM mic</text>
+            <rect x="820" y="546" width="120" height="46" class="s-box"/><text x="830" y="565" style="font-size:11.5px;font-weight:600" class="s-ink">AL8860</text><text x="830" y="581" style="font-size:9.5px" class="s-mut">flashlight, 0.5 A</text>
+            <rect x="960" y="546" width="130" height="46" class="s-box"/><text x="970" y="565" style="font-size:11.5px;font-weight:600" class="s-ink">SK6812 &#215;8</text><text x="970" y="581" style="font-size:9.5px" class="s-mut">glow LEDs</text>
+            <rect x="640" y="456" width="450" height="44" class="s-box" style="stroke:rgb(var(--input))"/>
+            <text x="650" y="474" style="font-size:12px;font-weight:600" class="s-ink">LoRa node: nRF52840 + SX1262</text><text x="650" y="490" style="font-size:10px" class="s-mut">Meshtastic, phones over Bluetooth, can stay on as a relay</text>
+          </g>
+        </svg>
+      </div>
+      <figcaption class="px-4 py-3 text-[0.8rem] text-muted border-t border-line2">Simplified from <a class="lnk" href="architecture.html">architecture.md</a> and the generated schematic. The router module vendor still has to confirm 2.5G interoperability with the switch.</figcaption>
+    </figure>
+    <div class="grid gap-x-8 gap-y-6 md:grid-cols-3 mt-8">
+      <div class="min-w-0 border-t-2 border-copper pt-3">
+        <p class="lbl text-copper">Power path, in short</p>
+        <p class="mt-2 text-sm text-ink2">Six BQ25756 buck-boost converters do the heavy lifting: one per USB&#8209;C port in both directions, one forward-only for the DC jack and PoE, one reverse-only for DC out. They all meet at <span class="net">VBAT</span>, where the cartridge sits.</p>
+      </div>
+      <div class="min-w-0 border-t-2 border-net pt-3">
+        <p class="lbl" style="color:rgb(var(--net))">Network, in short</p>
+        <p class="mt-2 text-sm text-ink2">Each USB&#8209;C port is also a 2.5G network adapter. The four port adapters and the RJ45 all meet at one RTL8372N switch, and the Wi&#8209;Fi&nbsp;6 router module sits on that switch, so wired and wireless devices share one network.</p>
+      </div>
+      <div class="min-w-0 border-t-2 border-input pt-3">
+        <p class="lbl text-input">Control, in short</p>
+        <p class="mt-2 text-sm text-ink2">The ESP32 is always on. It runs the app and the power allocator, and talks to each power stage on its own I&sup2;C branch, because every BQ25756 has the same fixed address. The LoRa node is a separate chip so it can relay with everything else off.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARTS ============ -->
+<section id="parts" class="sec" aria-labelledby="parts-h">
+  <div class="wrap">
+    <div class="grid gap-4 md:grid-cols-[6rem_minmax(0,1fr)] mb-8">
+      <p class="lbl pt-2">Sheet 08</p>
+      <div class="min-w-0">
+        <h2 id="parts-h" class="disp font-bold text-3xl md:text-[2.4rem] leading-tight">Key parts and the board</h2>
+        <p class="mt-3 text-ink2 max-w-[46rem]">Mostly TI power silicon and Realtek networking, all orderable from JLCPCB's catalogue so the boards can be assembled there. Parts are picked by script against the derating rules, with Basic parts preferred to keep Extended-part loading fees down. <a class="lnk" href="#process">How the picking works</a></p>
+      </div>
+    </div>
+    <div class="grid gap-8 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
+      <div class="min-w-0">
+        <div class="scrollx panel" tabindex="0" role="region" aria-label="Key parts table">
+          <table class="tbl min-w-[520px]">
+            <caption class="sr-only">Key parts with their job and JLCPCB part number</caption>
+            <thead><tr><th scope="col">Part</th><th scope="col">Job</th><th scope="col">JLCPCB</th></tr></thead>
+            <tbody>
+              <tr class="grp"><td colspan="3">Power</td></tr>
+              <tr><td class="font-medium">TI BQ25756</td><td>Buck-boost: one per USB&#8209;C port (bidirectional), plus DC in and DC out</td><td class="c">C19272232</td></tr>
+              <tr><td class="font-medium">TI TPS26750</td><td>USB PD 3.x EPR controller, one per port <span class="text-limit text-xs mono">low stock</span></td><td class="c">C42166327</td></tr>
+              <tr><td class="font-medium">ST M24512</td><td>64&nbsp;KB PD config EEPROM, one per port</td><td class="c">C79991</td></tr>
+              <tr><td class="font-medium">TI TPD4S480</td><td>48&nbsp;V EPR CC/SBU protector</td><td class="c">C43131250</td></tr>
+              <tr><td class="font-medium">TI TPS26631</td><td>eFuse for DC in and DC out: 24.3&nbsp;V cutoff, 1.65&nbsp;A limit</td><td class="c">C2866319</td></tr>
+              <tr><td class="font-medium">TI LM74700</td><td>Ideal-diode OR for the DC jack and PoE</td><td class="c">C2941042</td></tr>
+              <tr><td class="font-medium">TI TPS2373-4</td><td>PoE powered-device interface</td><td class="c">C470963</td></tr>
+              <tr><td class="font-medium">TI LM5155</td><td>Isolated PoE flyback controller</td><td class="c">C545416</td></tr>
+              <tr><td class="font-medium">TI TPS62933P</td><td>3&nbsp;A aux buck, ten of them: logic rails and NIC cores</td><td class="c">C5219254</td></tr>
+              <tr><td class="font-medium">TI TPS56A37</td><td>10&nbsp;A buck, switch and PHY cores</td><td class="c">C22392669</td></tr>
+              <tr><td class="font-medium">TI BQ77915</td><td>5S battery protector (-00), on the cartridge PCB</td><td class="c">C2876946</td></tr>
+              <tr><td class="font-medium">TI BQ34Z100-G1</td><td>Fuel gauge, on the cartridge PCB</td><td class="c">C91302</td></tr>
+              <tr class="grp"><td colspan="3">Network</td></tr>
+              <tr><td class="font-medium">Realtek RTL8156BG</td><td>USB to 2.5GbE, one per port</td><td class="c">C41376388</td></tr>
+              <tr><td class="font-medium">Realtek RTL8372N</td><td>4 &times; 2.5G switch</td><td class="c">C46546780</td></tr>
+              <tr><td class="font-medium">Realtek RTL8221B</td><td>2.5G PHY for the RJ45</td><td class="c">C5155988</td></tr>
+              <tr><td class="font-medium">TI HD3SS3212</td><td>USB&#8209;C SuperSpeed mux</td><td class="c">C544517</td></tr>
+              <tr><td class="font-medium">Acelink SM81</td><td>OpenWrt Wi&#8209;Fi&nbsp;6 router module</td><td class="c text-muted">not stocked</td></tr>
+              <tr class="grp"><td colspan="3">Control and radios</td></tr>
+              <tr><td class="font-medium">ESP32&#8209;WROOM&#8209;32UE</td><td>Control MCU, Bluetooth, Wi&#8209;Fi</td><td class="c">C701344</td></tr>
+              <tr><td class="font-medium">TI TCA9548A</td><td>I&sup2;C mux: one branch per BQ25756, all at fixed address 0x6B</td><td class="c">C130026</td></tr>
+              <tr><td class="font-medium">Ebyte E73 (nRF52840)</td><td>Meshtastic MCU</td><td class="c">C2764963</td></tr>
+              <tr><td class="font-medium">Ebyte E22&#8209;900M22S</td><td>SX1262 LoRa radio</td><td class="c">C411293</td></tr>
+              <tr><td class="font-medium">NXP NT3H2111</td><td>NFC tag</td><td class="c">C710403</td></tr>
+              <tr class="grp"><td colspan="3">Audio, light, charging</td></tr>
+              <tr><td class="font-medium">MAX98357A</td><td>I&sup2;S audio amp</td><td class="c">C910544</td></tr>
+              <tr><td class="font-medium">MMICT390200012</td><td>PDM microphone</td><td class="c">C3171752</td></tr>
+              <tr><td class="font-medium">AL8860QMP-13</td><td>Flashlight LED driver</td><td class="c">C2678649</td></tr>
+              <tr><td class="font-medium">SK6812MINI&#8209;E</td><td>RGB glow LED</td><td class="c">C5149201</td></tr>
+              <tr><td class="font-medium">IP6826</td><td>Qi transmitter</td><td class="c">C2921390</td></tr>
+              <tr><td class="font-medium">IP6525S</td><td>USB&#8209;A fast charge</td><td class="c">C46550236</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-3 text-xs text-muted">JLCPCB snapshot 2026&#8209;11&#8209;21. TPS26750 had 66 in stock against 4 per board; the TPS26750A (C54891596) is the alternative. The cartridge PCB is a separate project, still to do. Three parts have no LCSC number and will be consigned: the PoE RJ45, the router module and the PoE transformer. Full list with stock and price: <a class="lnk" href="parts.html">parts</a> and <a class="lnk" href="chip-metadata.html">chip metadata</a>.</p>
+      </div>
+      <div class="min-w-0">
+        <p class="lbl text-ink">Board stackup</p>
+        <svg class="block w-full h-auto mt-3 max-w-[420px]" viewBox="0 0 360 230" role="img" aria-labelledby="stk-t">
+          <title id="stk-t">Six-layer board cross-section: ENIG finish, solder mask, 2 oz outer copper and 1 oz inner copper on the power board</title>
+          <rect x="20" y="20" width="200" height="6" style="fill:rgb(var(--strong))"/>
+          <rect x="40" y="26" width="50" height="7" style="fill:rgb(var(--enig))"/><rect x="120" y="26" width="70" height="7" style="fill:rgb(var(--enig))"/>
+          <rect x="20" y="33" width="200" height="8" style="fill:rgb(var(--copper))"/>
+          <rect x="20" y="41" width="200" height="26" style="fill:rgb(var(--surface2))"/>
+          <rect x="20" y="67" width="200" height="4" style="fill:rgb(var(--copper))"/>
+          <rect x="20" y="71" width="200" height="26" style="fill:rgb(var(--surface2))"/>
+          <rect x="20" y="97" width="200" height="4" style="fill:rgb(var(--copper))"/>
+          <rect x="20" y="101" width="200" height="26" style="fill:rgb(var(--surface2))"/>
+          <rect x="20" y="127" width="200" height="4" style="fill:rgb(var(--copper))"/>
+          <rect x="20" y="131" width="200" height="26" style="fill:rgb(var(--surface2))"/>
+          <rect x="20" y="157" width="200" height="4" style="fill:rgb(var(--copper))"/>
+          <rect x="20" y="161" width="200" height="26" style="fill:rgb(var(--surface2))"/>
+          <rect x="20" y="187" width="200" height="8" style="fill:rgb(var(--copper))"/>
+          <rect x="20" y="195" width="200" height="6" style="fill:rgb(var(--strong))"/>
+          <rect x="150" y="33" width="10" height="162" style="fill:rgb(var(--copper) / .55)"/>
+          <g style="font-size:10px">
+            <text x="232" y="25" class="s-mut">mask</text>
+            <text x="232" y="35" class="s-cu" style="font-weight:600">ENIG pads</text>
+            <text x="232" y="48" class="s-ink">L1 &#183; 2 oz</text>
+            <text x="232" y="72" class="s-ink2">L2 &#183; 1 oz</text>
+            <text x="232" y="102" class="s-ink2">L3 &#183; 1 oz</text>
+            <text x="232" y="132" class="s-ink2">L4 &#183; 1 oz</text>
+            <text x="232" y="162" class="s-ink2">L5 &#183; 1 oz</text>
+            <text x="232" y="194" class="s-ink">L6 &#183; 2 oz</text>
+            <text x="20" y="220" class="s-mut">1.6 mm &#183; via-in-pad, filled and capped</text>
+          </g>
+        </svg>
+        <dl class="mt-5 text-sm divide-y divide-line2 border-y border-line2">
+          <div class="flex justify-between gap-4 py-2"><dt class="text-muted">Layers</dt><dd class="text-right">6, impedance-controlled</dd></div>
+          <div class="flex justify-between gap-4 py-2"><dt class="text-muted">Impedance</dt><dd class="text-right mono text-[0.8rem]">USB3 90&nbsp;&Omega; &middot; ETH/SerDes 100&nbsp;&Omega; &middot; RF 50&nbsp;&Omega;</dd></div>
+          <div class="flex justify-between gap-4 py-2"><dt class="text-muted">Finish</dt><dd class="text-right">ENIG, matte black mask</dd></div>
+          <div class="flex justify-between gap-4 py-2"><dt class="text-muted">Assembly</dt><dd class="text-right">JLCPCB standard PCBA, top side</dd></div>
+          <div class="flex justify-between gap-4 py-2"><dt class="text-muted">Part lookup</dt><dd class="text-right mono text-[0.8rem]">hardware/tools/jlc.py</dd></div>
+        </dl>
+        <p class="mt-3 text-xs text-muted">Copper weights shown are the power board's; the logic board uses 1&nbsp;oz outer. See <a class="lnk" href="jlcpcb-rules.html">JLCPCB rules</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section id="process" class="sec" aria-labelledby="process-h">
+  <div class="wrap">
+    <div class="grid gap-4 md:grid-cols-[6rem_minmax(0,1fr)] mb-10">
+      <p class="lbl pt-2">Sheet 09</p>
+      <div class="min-w-0">
+        <h2 id="process-h" class="disp font-bold text-3xl md:text-[2.4rem] leading-tight">How it's being built</h2>
+        <p class="mt-3 text-ink2 max-w-[46rem]">A battery that charges four laptops deserves more trust than &ldquo;it worked on my bench&rdquo;. So the process is built to be checked by someone else: every rule is written down, every part choice is a script you can re-run, every datasheet value has a citation, and every change is in a public dev log.</p>
+      </div>
+    </div>
+    <div class="grid gap-10 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)]">
+      <ol class="min-w-0">
+        <li class="step"><span class="n" aria-hidden="true">1</span>
+          <p class="font-semibold">Rules first</p>
+          <p class="mt-1 text-[0.95rem] text-ink2">The 3:1 buffer, voltage derating, test points and isolation jumpers are written into the <a class="lnk" href="design-rules.html">design rules</a> before parts are chosen, so the parts have to fit the rules and not the other way round.</p>
+        </li>
+        <li class="step"><span class="n" aria-hidden="true">2</span>
+          <p class="font-semibold">Parts picked by script from JLCPCB's catalogue</p>
+          <p class="mt-1 text-[0.95rem] text-ink2"><span class="net">jlc.py</span> searches the public JLCPCB parts library. <span class="net">pick_passives.py</span> picks every resistor and capacitor with voltage margin over its worst-case net, prefers Basic, then Preferred, then Extended parts, and requires enough stock for a small build.</p>
+        </li>
+        <li class="step"><span class="n" aria-hidden="true">3</span>
+          <p class="font-semibold">Datasheet values, cited</p>
+          <p class="mt-1 text-[0.95rem] text-ink2">38 datasheets and app notes are downloaded and indexed. Each value taken from one, such as a resistor ratio, an address strap or a capacitor minimum, is quoted in the code next to where it is used.</p>
+        </li>
+        <li class="step"><span class="n" aria-hidden="true">4</span>
+          <p class="font-semibold">Schematic generated from Python</p>
+          <p class="mt-1 text-[0.95rem] text-ink2">Thirteen block scripts write 16 KiCad sheets. Every connection is a line of code that can be reviewed, diffed and re-run, and nothing is hand-edited in the generated files.</p>
+        </li>
+        <li class="step"><span class="n" aria-hidden="true">5</span>
+          <p class="font-semibold">Automatic checks on every build</p>
+          <p class="mt-1 text-[0.95rem] text-ink2">A checker tests voltage derating, the 3:1 rule, single-pin nets and missing LCSC numbers, then KiCad's own ERC runs. The build fails on any error.</p>
+        </li>
+        <li class="step"><span class="n" aria-hidden="true">6</span>
+          <p class="font-semibold">Adversarial review, then repair, then review again</p>
+          <p class="mt-1 text-[0.95rem] text-ink2">Three reviewers try to break the design, one each for power and safety; high-speed and networking; and control, radios and DFM. Findings are logged by severity and fixed in the Python, never in the output. Layout waits until no critical or major finding is open. <a class="lnk" href="review-process.html">Review process</a></p>
+        </li>
+      </ol>
+      <div class="min-w-0">
+        <div class="panel corner p-5 md:p-6">
+          <p class="lbl text-ink">Caught by the process so far</p>
+          <p class="mt-1 text-sm text-muted">Real corrections from the <a class="lnk" href="devlog.html">dev log</a>, each made before any copper was ordered.</p>
+          <div class="mt-3">
+            <div class="catch"><p class="font-medium text-[0.95rem]">PD config memory was too small</p><p class="text-sm text-ink2">The TPS26750 datasheet requires at least 36&nbsp;KB. The planned 32&nbsp;KB EEPROM became a 64&nbsp;KB M24512.</p></div>
+            <div class="catch"><p class="font-medium text-[0.95rem]">A buck that couldn't reach its voltage</p><p class="text-sm text-ink2">The NIC core converter's 70&nbsp;ns minimum on-time rules out 21&nbsp;V &rarr; 0.95&nbsp;V at 500&nbsp;kHz, so it now runs at 310&nbsp;kHz.</p></div>
+            <div class="catch"><p class="font-medium text-[0.95rem]">DC input cutoff lowered to the jack's rating</p><p class="text-sm text-ink2">26.1&nbsp;V became 24.3&nbsp;V, which also lets 50&nbsp;V capacitors meet the 2&times; voltage rule.</p></div>
+            <div class="catch"><p class="font-medium text-[0.95rem]">Four PHY chips that weren't needed</p><p class="text-sm text-ink2">The RTL8372N switch integrates its PHYs, so four RTL8221B chips came out of the plan.</p></div>
+            <div class="catch"><p class="font-medium text-[0.95rem]">An antenna the case would detune</p><p class="text-sm text-ink2">The ESP32 module moved to the U.FL-antenna version because the aluminium case would detune a PCB antenna.</p></div>
+          </div>
+        </div>
+        <p class="mt-4 text-sm text-ink2">Read the details in <a class="lnk" href="design-flow.html">Design flow</a>, <a class="lnk" href="review-process.html">Review process</a> and the <a class="lnk" href="devlog.html">Dev log</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATUS ============ -->
+<section id="status" class="sec" aria-labelledby="status-h">
+  <div class="wrap">
+    <div class="grid gap-4 md:grid-cols-[6rem_minmax(0,1fr)] mb-8">
+      <p class="lbl pt-2">Sheet 10</p>
+      <div class="min-w-0">
+        <h2 id="status-h" class="disp font-bold text-3xl md:text-[2.4rem] leading-tight">Build status</h2>
+        <p class="mt-3 text-ink2 max-w-[46rem]">The full first-pass schematic is generated and passes its automatic checks. The adversarial design review is running now. Layout starts only when the review has no open critical or major findings, so the order is: review, repair, review again, then layout.</p>
+      </div>
+    </div>
+
+    <div class="fig4 mb-10" role="list" aria-label="Schematic size">
+      <div role="listitem"><div class="disp font-bold text-2xl md:text-3xl tnum leading-none">16</div><p class="mt-1.5 text-sm text-ink2">schematic sheets</p></div>
+      <div role="listitem"><div class="disp font-bold text-2xl md:text-3xl tnum leading-none">1,114</div><p class="mt-1.5 text-sm text-ink2">parts</p></div>
+      <div role="listitem"><div class="disp font-bold text-2xl md:text-3xl tnum leading-none">159</div><p class="mt-1.5 text-sm text-ink2">BOM lines, 957 placements</p></div>
+      <div role="listitem"><div class="disp font-bold text-2xl md:text-3xl tnum leading-none text-ok" style="color:rgb(var(--ok))">0</div><p class="mt-1.5 text-sm text-ink2">design-check errors</p></div>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-3">
+      <div class="st-col done pt-4 min-w-0">
+        <p class="lbl" style="color:rgb(var(--ok))">Done</p>
+        <ul class="mt-3 space-y-2.5 text-[0.93rem] text-ink2">
+          <li class="st-li">Requirements, decisions and the 3:1 policy</li>
+          <li class="st-li">Design rules, power budget, chip metadata, JLCPCB rules; 38 datasheets indexed</li>
+          <li class="st-li">Generator, part picker and automatic design checks</li>
+          <li class="st-li">All 13 blocks generated: USB&#8209;C &times;4, power input, PoE, battery, aux rails, Ethernet and router, MCU, LoRa, audio, lighting, DC out, USB&#8209;A, Qi</li>
+          <li class="st-li">Design check 0 errors; KiCad ERC 0 errors</li>
+          <li class="st-li">Mechanical spec Rev&nbsp;A</li>
+        </ul>
+      </div>
+      <div class="st-col prog pt-4 min-w-0">
+        <p class="lbl text-copper">In progress</p>
+        <ul class="mt-3 space-y-2.5 text-[0.93rem] text-ink2">
+          <li class="st-li">Adversarial review by three reviewers: power and safety; high-speed and networking; control, radios and DFM</li>
+          <li class="st-li">Open VERIFY items: PoE flyback compensation and snubber, IP6826 crystal, IP6525S enable pin, TPS56A37 FB/MODE, RTL8156BG RSET, router module pinout</li>
+          <li class="st-li">The 21 cosmetic ERC warnings</li>
+        </ul>
+      </div>
+      <div class="st-col next pt-4 min-w-0">
+        <p class="lbl text-input">Next</p>
+        <ul class="mt-3 space-y-2.5 text-[0.93rem] text-ink2">
+          <li class="st-li">Repair the findings in the Python blocks, then re-review</li>
+          <li class="st-li">Layout in KiCad 10</li>
+          <li class="st-li">Cartridge PCB, a separate project</li>
+          <li class="st-li">JLCPCB BOM/CPL export and order</li>
+          <li class="st-li">Bring-up block by block, then all together</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.3fr)] mt-12">
+      <div class="panel p-4 md:p-5 min-w-0">
+        <p class="lbl text-ink">Latest build check</p>
+        <p class="mt-2 text-sm text-ink2">From the full build in dev log entry 9.</p>
+        <div class="scrollx" tabindex="0" role="region" aria-label="Build check results">
+          <table class="tbl mt-3 min-w-[320px]">
+            <thead><tr><th scope="col">Check</th><th scope="col" class="text-right">Count</th><th scope="col">What it means</th></tr></thead>
+            <tbody>
+              <tr><td class="c">Errors</td><td class="c text-right" style="color:rgb(var(--ok))">0</td><td class="text-sm text-ink2">Every rule in the checker passes: derating, 3:1, nets, LCSC numbers.</td></tr>
+              <tr><td class="c">Warnings</td><td class="c text-right">3</td><td class="text-sm text-ink2">Consigned parts with no LCSC number: the PoE RJ45, the router module and the PoE transformer.</td></tr>
+              <tr><td class="c">Exceptions</td><td class="c text-right">7</td><td class="text-sm text-ink2">Documented 3:1 exceptions, recorded instead of failed: four USB&#8209;C connectors, USB&#8209;A, the PoE pairs, the TPS2373 internal FET.</td></tr>
+              <tr><td class="c">KiCad ERC</td><td class="c text-right">0 / 21</td><td class="text-sm text-ink2">0 errors. 21 warnings, all library-copy mismatches on 2-pin EasyEDA inductor and jack symbols: cosmetic, still being investigated.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="mt-3 text-xs text-muted">These numbers change with every build. The <a class="lnk" href="status.html">status page</a> can lag behind the dev log.</p>
+      </div>
+      <div class="min-w-0">
+        <p class="lbl text-ink">From the dev log</p>
+        <ol class="mt-3 border-l border-line">
+          <li class="relative pl-5 pb-6"><span class="absolute -left-[5px] top-2 w-[9px] h-[9px] bg-copper"></span>
+            <p class="mono text-xs text-muted">2026&#8209;11&#8209;21 &middot; Entry 9</p>
+            <p class="font-semibold mt-0.5">Full first-pass schematic, 0 checker errors</p>
+            <p class="text-sm text-ink2 mt-1">All 13 blocks written: 16 sheets, 1,114 parts, 159 BOM lines. The checker drove real fixes, such as the DC input cutoff dropping to the jack's 24.3&nbsp;V and the PoE primary FET's stress held to 125&nbsp;V by a clamp so its 200&nbsp;V rating meets the 1.5&times; rule.</p>
+          </li>
+          <li class="relative pl-5 pb-6"><span class="absolute -left-[5px] top-2 w-[9px] h-[9px] border border-copper bg-bg"></span>
+            <p class="mono text-xs text-muted">2026&#8209;11&#8209;21 &middot; Entry 8</p>
+            <p class="font-semibold mt-0.5">Mechanical spec, custom site, 3D model</p>
+            <p class="text-sm text-ink2 mt-1">One <span class="net">mech_spec.json</span> now defines the 150 &times; 94 &times; 70&nbsp;mm case, the cartridge, two stacked boards and every connector, and both the layout and this site's 3D model read it.</p>
+          </li>
+          <li class="relative pl-5"><span class="absolute -left-[5px] top-2 w-[9px] h-[9px] border border-copper bg-bg"></span>
+            <p class="mono text-xs text-muted">2026&#8209;11&#8209;21 &middot; Entry 7</p>
+            <p class="font-semibold mt-0.5">Schematic pipeline online, USB&#8209;C port sheets generated</p>
+            <p class="text-sm text-ink2 mt-1">The generator, checker and KiCad project came online. Wiring the first block against its datasheets caught the undersized PD config EEPROM.</p>
+          </li>
+        </ol>
+        <p class="mt-4 text-sm"><a class="lnk" href="devlog.html">Read the full dev log</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CALL TO ACTION ============ -->
+<section class="wrap pb-16 md:pb-20" aria-labelledby="cta-h">
+  <div class="cta-band corner">
+    <div class="p-5 md:p-7 border-b border-line">
+      <p class="lbl text-copper">Get involved</p>
+      <h2 id="cta-h" class="disp font-bold text-2xl md:text-[2rem] leading-tight mt-1">Watch it come together, or try to break it</h2>
+      <p class="mt-2 text-ink2 max-w-[44rem]">The design is open while it is still on paper, which is the cheapest time to find a mistake. If you know power electronics, PoE, USB&#8209;C or RF in metal boxes, the rules and the parts list are the best places to start.</p>
+    </div>
+    <div class="cta-grid">
+      <a href="devlog.html"><span class="lbl">Dev log</span><span class="ct disp font-bold text-lg leading-snug">Follow the build</span><span class="text-sm text-ink2">Every change, why it was made, and what is still open.</span><span class="ar">devlog &rarr;</span></a>
+      <a href="design-rules.html"><span class="lbl">Rules</span><span class="ct disp font-bold text-lg leading-snug">Read the design rules</span><span class="text-sm text-ink2">The 3:1 buffer, voltage derating and debuggability rules.</span><span class="ar">design-rules &rarr;</span></a>
+      <a href="parts.html"><span class="lbl">Parts</span><span class="ct disp font-bold text-lg leading-snug">Browse the parts</span><span class="text-sm text-ink2">Every key part with its JLCPCB number and stock.</span><span class="ar">parts &rarr;</span></a>
+      <a class="js-repo" href="../README.md"><span class="lbl">Repository</span><span class="ct disp font-bold text-lg leading-snug">Watch the repo</span><span class="text-sm text-ink2">Source, generator scripts and how to regenerate the schematic.</span><span class="ar">README &rarr;</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GLOSSARY ============ -->
+<section id="glossary" class="sec" aria-labelledby="gloss-h">
+  <div class="wrap">
+    <div class="grid gap-4 md:grid-cols-[6rem_minmax(0,1fr)] mb-6">
+      <p class="lbl pt-2">Sheet 11</p>
+      <div class="min-w-0">
+        <h2 id="gloss-h" class="disp font-bold text-3xl md:text-[2.4rem] leading-tight">Glossary</h2>
+        <p class="mt-3 text-ink2 max-w-[46rem]">The short words used on this page, in plain language.</p>
+      </div>
+    </div>
+    <dl class="gl">
+      <div><dt>VBAT <span>battery node</span></dt><dd>The one power rail that the cartridge, every input stage and every load connect to. 15.0&nbsp;V when the pack is empty, 21.0&nbsp;V when full.</dd></div>
+      <div><dt>3:1 <span>safety buffer</span></dt><dd>Every part that carries current or makes heat is rated for at least three times what it will ever do here. It applies to current, power and heat, not voltage.</dd></div>
+      <div><dt>Pass-through</dt><dd>Using the bank while it charges. Input power serves the running loads first; the surplus charges the cells.</dd></div>
+      <div><dt>USB PD <span>Power Delivery</span></dt><dd>How USB&#8209;C chargers and devices agree on voltage and current before power flows. Up to 20&nbsp;V &times; 5&nbsp;A, 100&nbsp;W, in the standard range.</dd></div>
+      <div><dt>EPR <span>Extended Power Range</span></dt><dd>The part of USB PD that adds higher voltages such as 28&nbsp;V. Here 28&nbsp;V runs at 3.57&nbsp;A so each port stays at 100&nbsp;W.</dd></div>
+      <div><dt>PPS <span>Programmable Power Supply</span></dt><dd>A USB PD mode where the phone asks for its voltage in small steps. OnePlus phones fast-charge this way.</dd></div>
+      <div><dt>PoE <span>Power over Ethernet</span></dt><dd>Power and network on one Ethernet cable. 802.3bt Type 3 gives about 51&nbsp;W at the device; about 46&nbsp;W remains after the isolated converter.</dd></div>
+      <div><dt>BMS <span>battery management system</span></dt><dd>The protector in the cartridge (BQ77915) that disconnects the cells on over-voltage, under-voltage, over-current or over-temperature, plus a fuel gauge (BQ34Z100).</dd></div>
+      <div><dt>DFM <span>design for manufacturing</span></dt><dd>Making sure the boards can actually be made and assembled: stocked parts, correct footprints, spacing and assembly side. One of the three reviewers covers it.</dd></div>
+      <div><dt>JLCPCB</dt><dd>The PCB fabrication and assembly service the boards are designed for. Its parts catalogue is searched by script, and parts are identified by LCSC numbers.</dd></div>
+      <div><dt>Basic / Extended part</dt><dd>JLCPCB's part classes. Each unique Extended part adds a loading fee, so the picker prefers Basic, then Preferred, then Extended.</dd></div>
+      <div><dt>ERC <span>electrical rules check</span></dt><dd>KiCad's own check of the schematic for things like unconnected pins and mismatched symbols. It runs on every build alongside the project's design check.</dd></div>
+      <div><dt>OpenWrt</dt><dd>Open-source router firmware. It runs on the Wi&#8209;Fi&nbsp;6 router module inside the bank.</dd></div>
+      <div><dt>Meshtastic / LoRa</dt><dd>LoRa is a long-range, low-power radio. Meshtastic is open firmware that turns LoRa radios into an off-grid text-messaging mesh that phones join over Bluetooth.</dd></div>
+      <div><dt>NIC / PHY</dt><dd>A NIC is a network adapter (here one RTL8156BG per USB&#8209;C port). A PHY is the chip that drives the actual Ethernet cable.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ DOCS ============ -->
+<section id="docs" class="sec" aria-labelledby="docs-h">
+  <div class="wrap">
+    <div class="grid gap-4 md:grid-cols-[6rem_minmax(0,1fr)] mb-6">
+      <p class="lbl pt-2">Sheet 12</p>
+      <div class="min-w-0">
+        <h2 id="docs-h" class="disp font-bold text-3xl md:text-[2.4rem] leading-tight">Documentation</h2>
+        <p class="mt-3 text-ink2 max-w-[46rem]">Reference documents for the design. Start with the overview, or go straight to the rules and the budget.</p>
+      </div>
+    </div>
+    <div class="border-t-[1.5px] border-strong">
+      <a class="doc-row" href="overview.html"><span class="mono text-sm text-muted truncate">overview.md</span><span class="df text-sm text-muted min-w-0"><b class="dt font-semibold text-ink text-base">Overview</b> &middot; highlights, key specs, block diagram</span><span class="text-copper" aria-hidden="true">&rarr;</span></a>
+      <a class="doc-row" href="architecture.html"><span class="mono text-sm text-muted truncate">architecture.md</span><span class="df text-sm text-muted min-w-0"><b class="dt font-semibold text-ink text-base">Architecture</b> &middot; power path, networking, wireless</span><span class="text-copper" aria-hidden="true">&rarr;</span></a>
+      <a class="doc-row" href="design-rules.html"><span class="mono text-sm text-muted truncate">design-rules.md</span><span class="df text-sm text-muted min-w-0"><b class="dt font-semibold text-ink text-base">Design rules</b> &middot; 3:1 buffer, voltage derating, debuggability</span><span class="text-copper" aria-hidden="true">&rarr;</span></a>
+      <a class="doc-row" href="power-budget.html"><span class="mono text-sm text-muted truncate">power-budget.md</span><span class="df text-sm text-muted min-w-0"><b class="dt font-semibold text-ink text-base">Power budget</b> &middot; everything-on profile, allocator, thermal</span><span class="text-copper" aria-hidden="true">&rarr;</span></a>
+      <a class="doc-row" href="chip-metadata.html"><span class="mono text-sm text-muted truncate">chip-metadata.md</span><span class="df text-sm text-muted min-w-0"><b class="dt font-semibold text-ink text-base">Chip metadata</b> &middot; pins, supplies and stock per chip</span><span class="text-copper" aria-hidden="true">&rarr;</span></a>
+      <a class="doc-row" href="jlcpcb-rules.html"><span class="mono text-sm text-muted truncate">jlcpcb-rules.md</span><span class="df text-sm text-muted min-w-0"><b class="dt font-semibold text-ink text-base">JLCPCB rules</b> &middot; stackup, geometry, assembly</span><span class="text-copper" aria-hidden="true">&rarr;</span></a>
+      <a class="doc-row" href="design-flow.html"><span class="mono text-sm text-muted truncate">design-flow.md</span><span class="df text-sm text-muted min-w-0"><b class="dt font-semibold text-ink text-base">Design flow</b> &middot; how the schematic is generated and checked</span><span class="text-copper" aria-hidden="true">&rarr;</span></a>
+      <a class="doc-row" href="review-process.html"><span class="mono text-sm text-muted truncate">review-process.md</span><span class="df text-sm text-muted min-w-0"><b class="dt font-semibold text-ink text-base">Review process</b> &middot; the adversarial review gate</span><span class="text-copper" aria-hidden="true">&rarr;</span></a>
+      <a class="doc-row" href="devlog.html"><span class="mono text-sm text-muted truncate">devlog.md</span><span class="df text-sm text-muted min-w-0"><b class="dt font-semibold text-ink text-base">Dev log</b> &middot; every change, with datasheet citations</span><span class="text-copper" aria-hidden="true">&rarr;</span></a>
+      <a class="doc-row" href="roadmap.html"><span class="mono text-sm text-muted truncate">roadmap.md</span><span class="df text-sm text-muted min-w-0"><b class="dt font-semibold text-ink text-base">Roadmap</b> &middot; open decisions and risks</span><span class="text-copper" aria-hidden="true">&rarr;</span></a>
+      <a class="doc-row" href="datasheets/INDEX.html"><span class="mono text-sm text-muted truncate">datasheets/INDEX.md</span><span class="df text-sm text-muted min-w-0"><b class="dt font-semibold text-ink text-base">Datasheet index</b> &middot; the PDFs the design cites</span><span class="text-copper" aria-hidden="true">&rarr;</span></a>
+      <a class="doc-row js-repo" id="readme-link" href="../README.md"><span class="mono text-sm text-muted truncate">README.md</span><span class="df text-sm text-muted min-w-0"><b class="dt font-semibold text-ink text-base">Repository README</b> &middot; layout, tools, how to regenerate</span><span class="text-copper" aria-hidden="true">&rarr;</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="border-t-[1.5px] border-strong">
+  <div class="wrap py-8 flex flex-wrap gap-x-8 gap-y-3 items-baseline justify-between text-sm text-muted">
+    <p><span class="disp font-bold text-ink">Battery Bank / Travel Router</span> &middot; open hardware, license not chosen yet.</p>
+    <nav aria-label="Footer" class="flex flex-wrap gap-x-5 gap-y-1"><a class="navl" href="devlog.html">Dev log</a><a class="navl" href="design-rules.html">Design rules</a><a class="navl" href="parts.html">Parts</a><a class="navl" href="roadmap.html">Roadmap</a><a class="navl js-repo" href="../README.md">Repository</a></nav>
+    <p class="mono text-xs w-full">KiCad 10 &middot; JLCPCB &middot; design in progress, not for construction</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  /* ---------- theme ---------- */
+  var root=document.documentElement, btn=document.getElementById('theme-btn'), lbl=document.getElementById('theme-lbl');
+  var mq=window.matchMedia?window.matchMedia('(prefers-color-scheme: dark)'):null;
+  function eff(){var t=root.getAttribute('data-theme');if(t)return t;return mq&&mq.matches?'dark':'light';}
+  function sync(){var e=eff();lbl.textContent=e==='dark'?'Light':'Dark';btn.setAttribute('aria-label','Switch to '+(e==='dark'?'light':'dark')+' theme');}
+  btn.addEventListener('click',function(){var n=eff()==='dark'?'light':'dark';root.setAttribute('data-theme',n);try{localStorage.setItem('bb-theme',n);}catch(e){}sync();});
+  if(mq&&mq.addEventListener)mq.addEventListener('change',sync);
+  sync();
+
+  /* ---------- README link on GitHub Pages ---------- */
+  try{var h=location.hostname;if(/\.github\.io$/.test(h)){var u=h.split('.')[0];var seg=location.pathname.split('/').filter(Boolean)[0];var gh='https://github.com/'+u+(seg&&!/\.html?$/.test(seg)?'/'+seg+'#readme':'');Array.prototype.forEach.call(document.querySelectorAll('.js-repo'),function(a){a.href=gh;});}}catch(e){}
+
+  /* ---------- safety bars ---------- */
+  var SB=[
+    ['Cell current','Samsung 50S',25,8.3,'A','A'],
+    ['Port inductor','TMPA1707SP-6R8MN-D, RMS',22,7,'A','A'],
+    ['XT60 battery connector','contact rating',30,8.3,'A','A'],
+    ['DC barrel jack','in or out',5,1.67,'A','A'],
+    ['Qi transmitter','IP6826',15,5,'W','W'],
+    ['Audio amp','MAX98357A, 4 Ω',3.2,1,'W','W'],
+    ['LED driver','AL8860',1.5,0.5,'A','A'],
+    ['USB-C contacts','exception: USB PD standard',5,5,'A','A',1],
+    ['USB-A connector','exception: 2 A part',2,1.5,'A','A',1]
+  ];
+  var sl=document.getElementById('sb-list');
+  SB.forEach(function(r){
+    var pct=Math.min(100,r[3]/r[2]*100), ratio=(r[2]/r[3]).toFixed(1)+':1', ex=r[6];
+    var li=document.createElement('li');
+    li.className='grid grid-cols-[minmax(0,1fr)_4.5rem] sm:grid-cols-[minmax(0,13rem)_minmax(0,1fr)_4.5rem] gap-x-4 gap-y-2 py-3 items-center';
+    li.innerHTML='<div class="min-w-0 row-start-1 col-start-1"><p class="font-medium text-[0.93rem] leading-snug">'+r[0]+'</p><p class="text-xs text-muted">'+r[1]+'</p></div>'+
+      '<div class="min-w-0 col-span-2 row-start-2 sm:col-span-1 sm:row-start-1 sm:col-start-2"><div class="sb-track" role="img" aria-label="'+r[0]+': '+r[3]+' '+r[5]+' operating of '+r[2]+' '+r[4]+' rated"><div class="sb-fill'+(ex?' ex':'')+'" style="width:'+pct.toFixed(1)+'%"></div><div class="sb-third"></div></div>'+
+      '<p class="mono text-[0.72rem] text-muted mt-1 flex justify-between gap-2"><span><b class="text-ink font-semibold">'+r[3]+' '+r[5]+'</b> operating</span><span>'+r[2]+' '+r[4]+' rated</span></p></div>'+
+      '<p class="mono text-right text-[0.95rem] font-semibold row-start-1 col-start-2 sm:col-start-3 '+(ex?'text-limit':'text-copper')+'">'+(ex?(ratio==='1.0:1'?'1:1':ratio):ratio)+'</p>';
+    sl.appendChild(li);
+  });
+
+  /* ---------- power flow ---------- */
+  var NS='http://www.w3.org/2000/svg';
+  var LOSS=7/118, LIMIT=125, WH=90;
+  var LOADS=[
+    {id:'c1',name:'C1 out',net:'VBUS_C1 · BQ25756',w:18,g:'usb',port:'1'},
+    {id:'c2',name:'C2 out',net:'VBUS_C2 · BQ25756',w:18,g:'usb',port:'2'},
+    {id:'c3',name:'C3 out',net:'VBUS_C3 · BQ25756',w:18,g:'usb',port:'3'},
+    {id:'c4',name:'C4 out',net:'VBUS_C4 · BQ25756',w:18,g:'usb',port:'4'},
+    {id:'usba',name:'USB-A',net:'IP6525S · 5 V 1.5 A',w:7.5,g:'pwr'},
+    {id:'dco',name:'DC out',net:'VDCOUT · 12 V 1 A',w:12,g:'pwr'},
+    {id:'qi',name:'Qi pad',net:'12V_QI · IP6826 · 5 W out ≈ 7 W in',w:5,g:'pwr'},
+    {id:'rtr',name:'Router',net:'12V_RTR · SM81 Wi-Fi 6',w:8,g:'net'},
+    {id:'eth',name:'Ethernet',net:'3V3_ETH · RTL8372N + 4 NICs',w:7,g:'net'},
+    {id:'ctl',name:'Control + radios',net:'ESP32 · LoRa · NFC · gauge',w:2,g:'misc',locked:1},
+    {id:'aud',name:'Audio',net:'MAX98357A',w:1,g:'misc'},
+    {id:'lit',name:'Flashlight',net:'AL8860 · 0.5 A',w:1.5,g:'misc'},
+    {id:'glow',name:'Glow + fan',net:'8 × SK6812 + fan',w:2,g:'misc'}
+  ];
+  var INS=[
+    {id:'i1',name:'C1 in',w:100,y:70,port:'1',net:'USB-C charger'},
+    {id:'i2',name:'C2 in',w:100,y:116,port:'2',net:'USB-C charger'},
+    {id:'i3',name:'C3 in',w:100,y:162,port:'3',net:'USB-C charger'},
+    {id:'i4',name:'C4 in',w:100,y:208,port:'4',net:'USB-C charger'},
+    {id:'dci',name:'DC in',w:40,y:290,net:'VDCIN 12–24 V'},
+    {id:'poe',name:'PoE in',w:46,y:350,net:'802.3bt Type 3'}
+  ];
+  var st={on:{},demand:18};
+  function reset(){LOADS.forEach(function(l){st.on[l.id]=true;});INS.forEach(function(i){st.on[i.id]=false;});st.demand=18;}
+  reset();
+  function el(n,a,p){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e;}
+  function tw(w){return w>0?(1.4+Math.sqrt(w)*0.72):1.4;}
+  function fmt(n){var r=Math.round(n*10)/10;return Math.abs(r-Math.round(r))<0.05?String(Math.round(r)):r.toFixed(1);}
+  var links=document.getElementById('pf-links'), nodes=document.getElementById('pf-nodes'), R={};
+  function mkLink(id,d,cls){var g=el('g',{'class':'link '+cls},links);var t=el('path',{d:d,'class':'tr'},g);var f=el('path',{d:d,'class':'fl'},g);R[id]={g:g,t:t,f:f};return R[id];}
+  LOADS.forEach(function(l,i){
+    var y=40+i*33; l.y=y;
+    mkLink(l.id,'M470 '+y+'H760','out');
+    el('circle',{cx:470,cy:y,r:2.6,'class':'via'},nodes);
+    var nl=el('text',{x:486,y:y-6,'class':'nl'},nodes);nl.textContent=l.net;
+    var g=el('g',{'class':'node out'+(l.locked?' locked':''),'data-id':l.id},nodes);
+    el('rect',{x:760,y:y-12,width:184,height:24,rx:1.5},g);
+    var nm=el('text',{x:772,y:y+4,'class':'nm'},g);nm.textContent=l.name;
+    var wt=el('text',{x:934,y:y+4,'class':'wt'},g);
+    R[l.id].n=g;R[l.id].wt=wt;
+  });
+  INS.forEach(function(p){
+    var d=p.id==='dci'||p.id==='poe'?'M156 '+p.y+'H340':'M156 '+p.y+'H470';
+    mkLink(p.id,d,'in');
+    if(d.indexOf('470')>0)el('circle',{cx:470,cy:p.y,r:2.6,'class':'via'},nodes);
+    var nl=el('text',{x:20,y:p.y-19,'class':'nl'},nodes);nl.textContent=p.net;
+    var g=el('g',{'class':'node in','data-id':p.id},nodes);
+    el('rect',{x:16,y:p.y-14,width:140,height:28,rx:1.5},g);
+    var nm=el('text',{x:28,y:p.y+4,'class':'nm'},g);nm.textContent=p.name;
+    var wt=el('text',{x:146,y:p.y+4,'class':'wt'},g);
+    R[p.id].n=g;R[p.id].wt=wt;
+  });
+  mkLink('fwd','M424 320H470','in');el('circle',{cx:470,cy:320,r:2.6,'class':'via'},nodes);
+  mkLink('bat','M424 426H470','bat');el('circle',{cx:470,cy:426,r:2.6,'class':'via'},nodes);
+  /* move the stage boxes above the links: links group is first child already */
+
+  function partner(id){var m=/^c(\d)$/.exec(id);if(m)return 'i'+m[1];m=/^i(\d)$/.exec(id);if(m)return 'c'+m[1];return null;}
+  function toggle(id){
+    var l=LOADS.filter(function(x){return x.id===id;})[0];if(l&&l.locked)return;
+    st.on[id]=!st.on[id];
+    var p=partner(id);if(p&&st.on[id])st.on[p]=false;
+    render();
+  }
+  nodes.addEventListener('click',function(e){var g=e.target.closest('.node');if(g)toggle(g.getAttribute('data-id'));});
+
+  /* chips */
+  var inC=document.getElementById('pf-in-chips'), ldC=document.getElementById('pf-load-chips'), CH={};
+  function chip(o,box,isIn){var b=document.createElement('button');b.type='button';b.className='tg'+(isIn?' in':'');b.setAttribute('data-id',o.id);
+    b.innerHTML='<span class="led" aria-hidden="true"></span><span>'+o.name+'</span><span class="w"></span>';
+    if(o.locked){b.setAttribute('aria-disabled','true');b.title='Always on: the ESP32 is the always-on controller';}
+    b.addEventListener('click',function(){toggle(o.id);});box.appendChild(b);CH[o.id]=b;}
+  INS.forEach(function(i){chip(i,inC,1);});LOADS.forEach(function(l){chip(l,ldC,0);});
+  document.getElementById('pf-reset').addEventListener('click',function(){reset();render();});
+  var segBtns=document.querySelectorAll('[data-demand]');
+  Array.prototype.forEach.call(segBtns,function(b){b.addEventListener('click',function(){st.demand=+b.getAttribute('data-demand');render();});});
+
+  function setLink(id,on,w,rev){var k=R[id];k.g.classList.toggle('on',!!on);k.g.classList.toggle('rev',!!rev);var sw=on?tw(w):1.4;k.t.style.strokeWidth=sw;k.f.style.strokeWidth=Math.max(1,sw*0.45);}
+  var bar=document.getElementById('bar-segs'), ticks=document.getElementById('bar-ticks');
+  function $(i){return document.getElementById(i);}
+  function runtime(d){if(d<0.5)return['—','battery not draining'];var m=WH/d*60;var s;if(m<90)s=Math.round(m)+' min';else{var h=Math.floor(m/60),mm=Math.round(m-h*60);if(mm===60){h++;mm=0;}s=h+' h '+(mm?mm+' min':'');}return[s,'90 Wh ÷ '+fmt(d)+' W'];}
+
+  function render(){
+    var sub=0, segs=[];
+    LOADS.forEach(function(l){
+      var w=l.g==='usb'?st.demand:l.w, on=st.on[l.id];
+      if(on){sub+=w;segs.push({g:l.g,w:w,n:l.name});}
+      setLink(l.id,on,w);
+      R[l.id].n.classList.toggle('on',on);
+      var isIn=l.port&&st.on['i'+l.port];
+      R[l.id].wt.textContent=on?fmt(w)+' W':(isIn?'input':'off');
+      var c=CH[l.id];c.setAttribute('aria-pressed',on?'true':'false');c.querySelector('.w').textContent=on?fmt(w)+' W':(isIn?'input':'off');
+      c.setAttribute('aria-label',l.name+', '+(on?fmt(w)+' watts, on':(isIn?'off, port used as input':'off')));
+    });
+    var loss=sub*LOSS, total=sub+loss;
+    var usbIn=0, dc=st.on.dci, poe=st.on.poe;
+    INS.forEach(function(p){
+      var on=st.on[p.id];
+      if(on&&p.port)usbIn+=p.w;
+      setLink(p.id,on,p.w);
+      R[p.id].n.classList.toggle('on',on);
+      R[p.id].wt.textContent=on?'+'+p.w+' W':'off';
+      var c=CH[p.id];c.setAttribute('aria-pressed',on?'true':'false');c.querySelector('.w').textContent=(on?'+':'')+p.w+' W';
+      c.setAttribute('aria-label',p.name+', up to '+p.w+' watts, '+(on?'connected':'not connected'));
+    });
+    var fwd=Math.max(dc?40:0,poe?46:0);
+    setLink('fwd',fwd>0,fwd);
+    var inp=usbIn+fwd, avail=LIMIT+inp, bat=total-inp, draw=Math.max(0,bat), surplus=Math.max(0,-bat), over=bat>LIMIT+0.5;
+    setLink('bat',draw>0.5||surplus>0.5,draw>0.5?Math.min(draw,LIMIT):surplus,surplus>0.5);
+    $('pf-batw').textContent=draw>0.5?fmt(Math.min(draw,LIMIT))+' W':(surplus>0.5?'+'+fmt(surplus)+' W':'0 W');
+    Array.prototype.forEach.call(segBtns,function(b){b.setAttribute('aria-pressed',+b.getAttribute('data-demand')===st.demand?'true':'false');});
+
+    $('r-load').textContent=fmt(total)+' W';
+    $('r-load-s').textContent=fmt(sub)+' W + '+fmt(loss)+' W losses';
+    $('r-in').textContent=fmt(inp)+' W';
+    $('r-in-s').textContent=inp>0?('pass-through'+(dc&&poe?', DC/PoE shared':'')):'battery only';
+    var bd=Math.min(draw,LIMIT);
+    $('r-bat').textContent=draw>0.5?fmt(bd)+' W':(surplus>0.5?'+'+fmt(surplus)+' W':'0 W');
+    $('r-bat').style.color=over?'rgb(var(--limit))':'';
+    $('r-bat-s').textContent=draw>0.5?('out · '+(bd/15).toFixed(1)+' A at 15 V'):(surplus>0.5?'surplus to charge':'idle');
+    var rt=runtime(bd);$('r-run').textContent=rt[0];$('r-run-s').textContent=rt[1];
+
+    var msg;
+    if(over)msg='Over budget by '+fmt(bat-LIMIT)+' W. The firmware allocator lowers the USB-C offers first, by re-advertising PD offers, until the battery draw is back inside its limit: 8.0 A in firmware, under the 8.3 A (125 W at 15 V) ceiling.';
+    else if(inp>0&&surplus>0.5)msg='The inputs cover the load. Up to '+fmt(surplus)+' W of surplus is available to charge the pack.';
+    else if(inp>0)msg='Inputs supply '+fmt(inp)+' W; the battery covers the remaining '+fmt(draw)+' W.';
+    else if(Math.abs(total-LIMIT)<0.5)msg='At the 125 W battery limit with everything on. This is the design case: every block at its 3:1-derated maximum.';
+    else msg='Battery only, '+fmt(LIMIT-total)+' W of headroom under the 125 W limit.';
+    if(dc&&poe)msg+=' The DC jack and PoE share one forward charger through an ideal-diode OR, so only one feeds the bus at a time; the larger, 46 W, is counted.';
+    $('r-msg').textContent=msg;
+
+    /* bar, to scale */
+    var top=Math.max(150,avail,total), step=top<=200?25:top<=420?50:100, sc=Math.ceil(top/step)*step;
+    function pc(v){return (v/sc*100)+'%';}
+    bar.innerHTML='';
+    segs.push({g:'loss',w:loss,n:'losses'});
+    segs.forEach(function(s){var d=document.createElement('div');d.className='sg '+s.g;d.style.width=pc(s.w);d.title=s.n+': '+fmt(s.w)+' W';bar.appendChild(d);});
+    $('bar-mk').style.left=pc(LIMIT);
+    var pt=$('bar-pt');pt.style.left=pc(LIMIT);pt.style.width=pc(inp);
+    var mk2=$('bar-mk2');if(inp>0){mk2.style.display='';mk2.style.left=pc(avail);}else mk2.style.display='none';
+    ticks.innerHTML='';
+    for(var v=0;v<=sc+0.1;v+=step){var t=document.createElement('span');t.style.left=pc(v);if(v===0)t.style.transform='none';else if(v+step>sc+0.1)t.style.transform='translateX(-100%)';t.textContent=v+(v===sc?' W':'');ticks.appendChild(t);}
+  }
+  render();
+})();
+</script>
+<script type="module" src="assets/device3d.js"></script>
+</body>
+</html>

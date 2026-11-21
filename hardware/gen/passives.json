@@ -1,0 +1,2848 @@
+{
+ "C_100n_16V": {
+  "code": "C1525",
+  "mpn": "CL05B104KO5NNNC",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "0402",
+  "desc": "100nF 16V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 33501152,
+  "price1": 0.0025,
+  "attrs": {
+   "Voltage Rating": "16V",
+   "Tolerance": "±10%",
+   "Capacitance": "100nF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
+ "C_1u_16V": {
+  "code": "C15849",
+  "mpn": "CL10A105KB8NNNC",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "0603",
+  "desc": "1uF 50V X5R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 12245347,
+  "price1": 0.0092,
+  "attrs": {
+   "Voltage Rating": "50V",
+   "Tolerance": "±10%",
+   "Capacitance": "1uF",
+   "Temperature Coefficient": "X5R"
+  }
+ },
+ "C_2u2_16V": {
+  "code": "C23630",
+  "mpn": "CL10A225KO8NNNC",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "0603",
+  "desc": "16V 2.2uF X5R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 2569862,
+  "price1": 0.0097,
+  "attrs": {
+   "Voltage Rating": "16V",
+   "Tolerance": "±10%",
+   "Capacitance": "2.2uF",
+   "Temperature Coefficient": "X5R"
+  }
+ },
+ "C_4u7_16V": {
+  "code": "C19666",
+  "mpn": "CL10A475KO8NNNC",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "0603",
+  "desc": "16V 4.7uF X5R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 3150931,
+  "price1": 0.0144,
+  "attrs": {
+   "Voltage Rating": "16V",
+   "Tolerance": "±10%",
+   "Capacitance": "4.7uF",
+   "Temperature Coefficient": "X5R"
+  }
+ },
+ "C_10u_16V": {
+  "code": "C15850",
+  "mpn": "CL21A106KAYNNNE",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "0805",
+  "desc": "10uF 25V X5R ±10% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 8805990,
+  "price1": 0.0311,
+  "attrs": {
+   "Voltage Rating": "25V",
+   "Tolerance": "±10%",
+   "Capacitance": "10uF",
+   "Temperature Coefficient": "X5R"
+  }
+ },
+ "C_22u_10V": {
+  "code": "C45783",
+  "mpn": "CL21A226MAQNNNE",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "0805",
+  "desc": "22uF 25V X5R ±20% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 4383984,
+  "price1": 0.1084,
+  "attrs": {
+   "Voltage Rating": "25V",
+   "Tolerance": "±20%",
+   "Capacitance": "22uF",
+   "Temperature Coefficient": "X5R"
+  }
+ },
+ "C_47u_10V": {
+  "code": "C96123",
+  "mpn": "CL31A476MPHNNNE",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "1206",
+  "desc": "10V 47uF X5R ±20% 1206 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 416079,
+  "price1": 0.1628,
+  "attrs": {
+   "Voltage Rating": "10V",
+   "Tolerance": "±20%",
+   "Capacitance": "47uF",
+   "Temperature Coefficient": "X5R"
+  }
+ },
+ "C_22u_6V3": {
+  "code": "C59461",
+  "mpn": "CL10A226MQ8NRNC",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "0603",
+  "desc": "22uF 6.3V X5R ±20% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 5589121,
+  "price1": 0.0221,
+  "attrs": {
+   "Voltage Rating": "6.3V",
+   "Tolerance": "±20%",
+   "Capacitance": "22uF",
+   "Temperature Coefficient": "X5R"
+  }
+ },
+ "C_10n_50V": {
+  "code": "C15195",
+  "mpn": "CL05B103KB5NNNC",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "0402",
+  "desc": "10nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 5376067,
+  "price1": 0.0037,
+  "attrs": {
+   "Voltage Rating": "50V",
+   "Tolerance": "±10%",
+   "Capacitance": "10nF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
+ "C_1n_50V": {
+  "code": "C1523",
+  "mpn": "0402B102K500NT",
+  "brand": "FH (Guangdong Fenghua Advanced Tech)",
+  "package": "0402",
+  "desc": "1nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 3925720,
+  "price1": 0.0017,
+  "attrs": {
+   "Voltage Rating": "50V",
+   "Tolerance": "±10%",
+   "Capacitance": "1nF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
+ "C_4n7_50V": {
+  "code": "C1538",
+  "mpn": "0402B472K500NT",
+  "brand": "FH (Guangdong Fenghua Advanced Tech)",
+  "package": "0402",
+  "desc": "4.7nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 822922,
+  "price1": 0.0038,
+  "attrs": {
+   "Voltage Rating": "50V",
+   "Tolerance": "±10%",
+   "Capacitance": "4.7nF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
+ "C_33n_50V": {
+  "code": "C880608",
+  "mpn": "TCC0402X7R333K500AT",
+  "brand": "CCTC",
+  "package": "0402",
+  "desc": "33nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 450099,
+  "price1": 0.0032,
+  "attrs": {
+   "Voltage Rating": "50V",
+   "Tolerance": "±10%",
+   "Capacitance": "33nF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
+ "C_47n_50V": {
+  "code": "C272875",
+  "mpn": "CC0402KRX7R9BB473",
+  "brand": "YAGEO",
+  "package": "0402",
+  "desc": "47nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 486042,
+  "price1": 0.0037,
+  "attrs": {
+   "Voltage Rating": "50V",
+   "Tolerance": "±10%",
+   "Capacitance": "47nF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
+ "C_220n_16V": {
+  "code": "C16772",
+  "mpn": "CL05B224KO5NNNC",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "0402",
+  "desc": "16V 220nF X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 547215,
+  "price1": 0.0045,
+  "attrs": {
+   "Voltage Rating": "16V",
+   "Tolerance": "±10%",
+   "Capacitance": "220nF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
+ "C_470n_16V": {
+  "code": "C1623",
+  "mpn": "CL10B474KA8NNNC",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "0603",
+  "desc": "25V 470nF X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 1150386,
+  "price1": 0.0092,
+  "attrs": {
+   "Voltage Rating": "25V",
+   "Tolerance": "±10%",
+   "Capacitance": "470nF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
+ "C_10p_50V": {
+  "code": "C32949",
+  "mpn": "CL05C100JB5NNNC",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "0402",
+  "desc": "10pF 50V C0G ±5% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 1863806,
+  "price1": 0.0057,
+  "attrs": {
+   "Voltage Rating": "50V",
+   "Tolerance": "±5%",
+   "Capacitance": "10pF",
+   "Temperature Coefficient": "C0G"
+  }
+ },
+ "C_12p_50V": {
+  "code": "C1547",
+  "mpn": "0402CG120J500NT",
+  "brand": "FH (Guangdong Fenghua Advanced Tech)",
+  "package": "0402",
+  "desc": "12pF 50V C0G ±5% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 1578306,
+  "price1": 0.0025,
+  "attrs": {
+   "Voltage Rating": "50V",
+   "Tolerance": "±5%",
+   "Capacitance": "12pF",
+   "Temperature Coefficient": "C0G"
+  }
+ },
+ "C_18p_50V": {
+  "code": "C1549",
+  "mpn": "0402CG180J500NT",
+  "brand": "FH (Guangdong Fenghua Advanced Tech)",
+  "package": "0402",
+  "desc": "18pF 50V C0G ±5% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 1045691,
+  "price1": 0.0017,
+  "attrs": {
+   "Voltage Rating": "50V",
+   "Tolerance": "±5%",
+   "Capacitance": "18pF",
+   "Temperature Coefficient": "C0G"
+  }
+ },
+ "C_330p_50V": {
+  "code": "C13533",
+  "mpn": "CL05C331JB5NNNC",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "0402",
+  "desc": "330pF 50V C0G ±5% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "expand",
+  "preferred": true,
+  "stock": 217761,
+  "price1": 0.0111,
+  "attrs": {
+   "Voltage Rating": "50V",
+   "Tolerance": "±5%",
+   "Capacitance": "330pF",
+   "Temperature Coefficient": "C0G"
+  }
+ },
+ "C_22n_50V": {
+  "code": "C1532",
+  "mpn": "0402B223K500NT",
+  "brand": "FH (Guangdong Fenghua Advanced Tech)",
+  "package": "0402",
+  "desc": "22nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 566461,
+  "price1": 0.0034,
+  "attrs": {
+   "Voltage Rating": "50V",
+   "Tolerance": "±10%",
+   "Capacitance": "22nF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
+ "C_100p_50V": {
+  "code": "C1546",
+  "mpn": "0402CG101J500NT",
+  "brand": "FH (Guangdong Fenghua Advanced Tech)",
+  "package": "0402",
+  "desc": "100pF 50V C0G ±5% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 3989864,
+  "price1": 0.0018,
+  "attrs": {
+   "Voltage Rating": "50V",
+   "Tolerance": "±5%",
+   "Capacitance": "100pF",
+   "Temperature Coefficient": "C0G"
+  }
+ },
+ "C_100u_10V": {
+  "code": "C7432784",
+  "mpn": "HGC1206R5107M100NSPJ",
+  "brand": "Chinocera",
+  "package": "1206",
+  "desc": "100uF 10V X5R ±20% 1206 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 180516,
+  "price1": 0.1885,
+  "attrs": {
+   "Voltage Rating": "10V",
+   "Tolerance": "±20%",
+   "Capacitance": "100uF",
+   "Temperature Coefficient": "X5R"
+  }
+ },
+ "C_10u_25V": {
+  "code": "C15850",
+  "mpn": "CL21A106KAYNNNE",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "0805",
+  "desc": "10uF 25V X5R ±10% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 8805990,
+  "price1": 0.0311,
+  "attrs": {
+   "Voltage Rating": "25V",
+   "Tolerance": "±10%",
+   "Capacitance": "10uF",
+   "Temperature Coefficient": "X5R"
+  }
+ },
+ "C_22u_25V": {
+  "code": "C12891",
+  "mpn": "CL31A226KAHNNNE",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "1206",
+  "desc": "22uF 25V X5R ±10% 1206 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 2570882,
+  "price1": 0.1028,
+  "attrs": {
+   "Voltage Rating": "25V",
+   "Tolerance": "±10%",
+   "Capacitance": "22uF",
+   "Temperature Coefficient": "X5R"
+  }
+ },
+ "C_100n_50V": {
+  "code": "C14663",
+  "mpn": "CC0603KRX7R9BB104",
+  "brand": "YAGEO",
+  "package": "0603",
+  "desc": "100nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 53169346,
+  "price1": 0.0056,
+  "attrs": {
+   "Voltage Rating": "50V",
+   "Tolerance": "±10%",
+   "Capacitance": "100nF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
+ "C_1u_50V": {
+  "code": "C15849",
+  "mpn": "CL10A105KB8NNNC",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "0603",
+  "desc": "1uF 50V X5R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 12245347,
+  "price1": 0.0092,
+  "attrs": {
+   "Voltage Rating": "50V",
+   "Tolerance": "±10%",
+   "Capacitance": "1uF",
+   "Temperature Coefficient": "X5R"
+  }
+ },
+ "C_4u7_50V": {
+  "code": "C29823",
+  "mpn": "1206B475K500NT",
+  "brand": "FH (Guangdong Fenghua Advanced Tech)",
+  "package": "1206",
+  "desc": "4.7uF 50V X7R ±10% 1206 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 934733,
+  "price1": 0.0796,
+  "attrs": {
+   "Voltage Rating": "50V",
+   "Tolerance": "±10%",
+   "Capacitance": "4.7uF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
+ "C_10u_50V": {
+  "code": "C13585",
+  "mpn": "CL31A106KBHNNNE",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "1206",
+  "desc": "10uF 50V X5R ±10% 1206 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 4050925,
+  "price1": 0.1226,
+  "attrs": {
+   "Voltage Rating": "50V",
+   "Tolerance": "±10%",
+   "Capacitance": "10uF",
+   "Temperature Coefficient": "X5R"
+  }
+ },
+ "C_470n_50V": {
+  "code": "C77572",
+  "mpn": "0603B474K500NT",
+  "brand": "FH (Guangdong Fenghua Advanced Tech)",
+  "package": "0603",
+  "desc": "470nF 50V X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 117300,
+  "price1": 0.0266,
+  "attrs": {
+   "Voltage Rating": "50V",
+   "Tolerance": "±10%",
+   "Capacitance": "470nF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
+ "C_100n_100V": {
+  "code": "C28233",
+  "mpn": "CL21B104KCFNNNE",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "0805",
+  "desc": "100V 100nF X7R ±10% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 2587331,
+  "price1": 0.016,
+  "attrs": {
+   "Voltage Rating": "100V",
+   "Tolerance": "±10%",
+   "Capacitance": "100nF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
+ "C_1u_100V": {
+  "code": "C13832",
+  "mpn": "CL31B105KCHNNNE",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "1206",
+  "desc": "100V 1uF X7R ±10% 1206 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 210151,
+  "price1": 0.0619,
+  "attrs": {
+   "Voltage Rating": "100V",
+   "Tolerance": "±10%",
+   "Capacitance": "1uF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
+ "C_2u2_100V": {
+  "code": "C170101",
+  "mpn": "CL31B225KCHSNNE",
+  "brand": "Samsung Electro-Mechanics",
+  "package": "1206",
+  "desc": "100V 2.2uF X7R ±10% 1206 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 167091,
+  "price1": 0.1203,
+  "attrs": {
+   "Voltage Rating": "100V",
+   "Tolerance": "±10%",
+   "Capacitance": "2.2uF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
+ "C_4u7_100V": {
+  "code": "C381466",
+  "mpn": "FS32X475K101EGG",
+  "brand": "PSA(Prosperity Dielectrics)",
+  "package": "1210",
+  "desc": "100V 4.7uF X7R ±10% 1210 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 47835,
+  "price1": 0.2206,
+  "attrs": {
+   "Voltage Rating": "100V",
+   "Tolerance": "±10%",
+   "Capacitance": "4.7uF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
+ "C_470n_100V": {
+  "code": "C97926",
+  "mpn": "GRM21BR72A474KA73L",
+  "brand": "Murata Electronics",
+  "package": "0805",
+  "desc": "100V 470nF X7R ±10% 0805 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 31978,
+  "price1": 0.2489,
+  "attrs": {
+   "Voltage Rating": "100V",
+   "Tolerance": "±10%",
+   "Capacitance": "470nF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
+ "C_10n_100V": {
+  "code": "C107059",
+  "mpn": "CC0603KRX7R0BB103",
+  "brand": "YAGEO",
+  "package": "0603",
+  "desc": "100V 10nF X7R ±10% 0603 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 712901,
+  "price1": 0.0055,
+  "attrs": {
+   "Voltage Rating": "100V",
+   "Tolerance": "±10%",
+   "Capacitance": "10nF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
+ "C_100n_250V": {
+  "code": "C282822",
+  "mpn": "TCC1206X7R104M251FT",
+  "brand": "CCTC",
+  "package": "1206",
+  "desc": "100nF 250V X7R ±20% 1206 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 145134,
+  "price1": 0.0144,
+  "attrs": {
+   "Voltage Rating": "250V",
+   "Tolerance": "±20%",
+   "Capacitance": "100nF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
+ "C_1u_250V": null,
+ "C_1n_2kV": {
+  "code": "C9196",
+  "mpn": "1206B102K202NT",
+  "brand": "FH (Guangdong Fenghua Advanced Tech)",
+  "package": "1206",
+  "desc": "1nF 2kV X7R ±10% 1206 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 1785616,
+  "price1": 0.0171,
+  "attrs": {
+   "Voltage Rating": "2kV",
+   "Tolerance": "±10%",
+   "Capacitance": "1nF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
+ "R_0_0402": {
+  "code": "C17168",
+  "mpn": "0402WGF0000TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 0Ω 50V 62.5mW Thick Film Resistor ±1% ±800ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 13941878,
+  "price1": 0.0012,
+  "attrs": {
+   "Resistance": "0Ω",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±800ppm/℃"
+  }
+ },
+ "R_10_0402": {
+  "code": "C25077",
+  "mpn": "0402WGF100JTCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 10Ω 50V 62.5mW Thick Film Resistor ±1% ±200ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 3476926,
+  "price1": 0.0011,
+  "attrs": {
+   "Resistance": "10Ω",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±200ppm/℃"
+  }
+ },
+ "R_22_0402": {
+  "code": "C25092",
+  "mpn": "0402WGF220JTCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 22Ω 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 7137383,
+  "price1": 0.0011,
+  "attrs": {
+   "Resistance": "22Ω",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_33_0402": {
+  "code": "C25105",
+  "mpn": "0402WGF330JTCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 33Ω 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 4472703,
+  "price1": 0.001,
+  "attrs": {
+   "Resistance": "33Ω",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_49.9_0402": {
+  "code": "C25120",
+  "mpn": "0402WGF499JTCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 49.9Ω 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 1196179,
+  "price1": 0.0012,
+  "attrs": {
+   "Resistance": "49.9Ω",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_100_0402": {
+  "code": "C25076",
+  "mpn": "0402WGF1000TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 100Ω 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 9903496,
+  "price1": 0.0011,
+  "attrs": {
+   "Resistance": "100Ω",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_220_0402": {
+  "code": "C25091",
+  "mpn": "0402WGF2200TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 220Ω 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 1619704,
+  "price1": 0.0018,
+  "attrs": {
+   "Resistance": "220Ω",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_330_0402": {
+  "code": "C25104",
+  "mpn": "0402WGF3300TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 330Ω 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 2144024,
+  "price1": 0.0011,
+  "attrs": {
+   "Resistance": "330Ω",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_470_0402": {
+  "code": "C25117",
+  "mpn": "0402WGF4700TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 470Ω 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 2267104,
+  "price1": 0.001,
+  "attrs": {
+   "Resistance": "470Ω",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_1k_0402": {
+  "code": "C11702",
+  "mpn": "0402WGF1001TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 1kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 29483962,
+  "price1": 0.0011,
+  "attrs": {
+   "Resistance": "1kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_1.5k_0402": {
+  "code": "C25867",
+  "mpn": "0402WGF1501TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 1.5kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 1479225,
+  "price1": 0.0029,
+  "attrs": {
+   "Resistance": "1.5kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_2.2k_0402": {
+  "code": "C25879",
+  "mpn": "0402WGF2201TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 2.2kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 2775985,
+  "price1": 0.0011,
+  "attrs": {
+   "Resistance": "2.2kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_2.49k_0402": {
+  "code": "C2933083",
+  "mpn": "FRC0402F2491TS",
+  "brand": "FOJAN",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 2.49kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 1713002,
+  "price1": 0.0011,
+  "attrs": {
+   "Resistance": "2.49kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_4.7k_0402": {
+  "code": "C25900",
+  "mpn": "0402WGF4701TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 4.7kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 12470592,
+  "price1": 0.0017,
+  "attrs": {
+   "Resistance": "4.7kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_5.1k_0402": {
+  "code": "C25905",
+  "mpn": "0402WGF5101TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 5.1kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 4003656,
+  "price1": 0.0014,
+  "attrs": {
+   "Resistance": "5.1kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_10k_0402": {
+  "code": "C25744",
+  "mpn": "0402WGF1002TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 10kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 34950906,
+  "price1": 0.001,
+  "attrs": {
+   "Resistance": "10kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_12k_0402": {
+  "code": "C25752",
+  "mpn": "0402WGF1202TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 12kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 693176,
+  "price1": 0.0013,
+  "attrs": {
+   "Resistance": "12kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_15k_0402": {
+  "code": "C25756",
+  "mpn": "0402WGF1502TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 15kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 1950149,
+  "price1": 0.0011,
+  "attrs": {
+   "Resistance": "15kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_20k_0402": {
+  "code": "C25765",
+  "mpn": "0402WGF2002TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 20kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 2577168,
+  "price1": 0.001,
+  "attrs": {
+   "Resistance": "20kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_22k_0402": {
+  "code": "C25768",
+  "mpn": "0402WGF2202TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 22kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 1477489,
+  "price1": 0.001,
+  "attrs": {
+   "Resistance": "22kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_24k_0402": {
+  "code": "C25769",
+  "mpn": "0402WGF2402TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 24kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": true,
+  "stock": 1510849,
+  "price1": 0.0012,
+  "attrs": {
+   "Resistance": "24kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_33k_0402": {
+  "code": "C25779",
+  "mpn": "0402WGF3302TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 33kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 2039596,
+  "price1": 0.0019,
+  "attrs": {
+   "Resistance": "33kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_40.2k_0402": {
+  "code": "C137983",
+  "mpn": "RC0402FR-0740K2L",
+  "brand": "YAGEO",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 40.2kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 1134635,
+  "price1": 0.0025,
+  "attrs": {
+   "Resistance": "40.2kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_47k_0402": {
+  "code": "C25792",
+  "mpn": "0402WGF4702TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 47kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 5334446,
+  "price1": 0.0019,
+  "attrs": {
+   "Resistance": "47kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_49.9k_0402": {
+  "code": "C25897",
+  "mpn": "0402WGF4992TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 49.9kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": true,
+  "stock": 767800,
+  "price1": 0.0013,
+  "attrs": {
+   "Resistance": "49.9kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_56k_0402": {
+  "code": "C25796",
+  "mpn": "0402WGF5602TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 50V 56kΩ 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": true,
+  "stock": 553594,
+  "price1": 0.0012,
+  "attrs": {
+   "Resistance": "56kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_68k_0402": {
+  "code": "C36871",
+  "mpn": "0402WGF6802TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 50V 62.5mW 68kΩ Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": true,
+  "stock": 1039228,
+  "price1": 0.0012,
+  "attrs": {
+   "Resistance": "68kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_80.6k_0402": {
+  "code": "C25921",
+  "mpn": "0402WGF8062TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 50V 62.5mW 80.6kΩ Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 128816,
+  "price1": 0.0017,
+  "attrs": {
+   "Resistance": "80.6kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_100k_0402": {
+  "code": "C25741",
+  "mpn": "0402WGF1003TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 100kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 12004194,
+  "price1": 0.0009,
+  "attrs": {
+   "Resistance": "100kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_120k_0402": {
+  "code": "C25750",
+  "mpn": "0402WGF1203TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 120kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": true,
+  "stock": 308089,
+  "price1": 0.0012,
+  "attrs": {
+   "Resistance": "120kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_150k_0402": {
+  "code": "C25755",
+  "mpn": "0402WGF1503TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 150kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": true,
+  "stock": 963403,
+  "price1": 0.0011,
+  "attrs": {
+   "Resistance": "150kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_200k_0402": {
+  "code": "C25764",
+  "mpn": "0402WGF2003TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 200kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 3232723,
+  "price1": 0.0013,
+  "attrs": {
+   "Resistance": "200kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_220k_0402": {
+  "code": "C25767",
+  "mpn": "0402WGF2203TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 220kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": true,
+  "stock": 350081,
+  "price1": 0.0013,
+  "attrs": {
+   "Resistance": "220kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_330k_0402": {
+  "code": "C25778",
+  "mpn": "0402WGF3303TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 330kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": true,
+  "stock": 702152,
+  "price1": 0.0013,
+  "attrs": {
+   "Resistance": "330kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_470k_0402": {
+  "code": "C25790",
+  "mpn": "0402WGF4703TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 470kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": true,
+  "stock": 1176827,
+  "price1": 0.0012,
+  "attrs": {
+   "Resistance": "470kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_1M_0402": {
+  "code": "C26083",
+  "mpn": "0402WGF1004TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 1MΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 3463739,
+  "price1": 0.001,
+  "attrs": {
+   "Resistance": "1MΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_6.04k_0402": {
+  "code": "C2998182",
+  "mpn": "FRC0402F6041TS",
+  "brand": "FOJAN",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 50V 6.04kΩ 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 170317,
+  "price1": 0.0011,
+  "attrs": {
+   "Resistance": "6.04kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_12.4k_0402": {
+  "code": "C2929935",
+  "mpn": "FRC0402F1242TS",
+  "brand": "FOJAN",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 12.4kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 499486,
+  "price1": 0.0012,
+  "attrs": {
+   "Resistance": "12.4kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_124k_0402": {
+  "code": "C2933070",
+  "mpn": "FRC0402F1243TS",
+  "brand": "FOJAN",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 124kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 261276,
+  "price1": 0.0012,
+  "attrs": {
+   "Resistance": "124kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_249k_0402": {
+  "code": "C163476",
+  "mpn": "RC0402FR-07249KL",
+  "brand": "YAGEO",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 249kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 299931,
+  "price1": 0.0018,
+  "attrs": {
+   "Resistance": "249kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_5.23k_0402": {
+  "code": "C25907",
+  "mpn": "0402WGF5231TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 5.23kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 209044,
+  "price1": 0.0036,
+  "attrs": {
+   "Resistance": "5.23kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_30.1k_0402": {
+  "code": "C138009",
+  "mpn": "RC0402FR-0730K1L",
+  "brand": "YAGEO",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 30.1kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 227157,
+  "price1": 0.0016,
+  "attrs": {
+   "Resistance": "30.1kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_4.02k_0402": {
+  "code": "C43251",
+  "mpn": "0402WGF4021TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 4.02kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 701652,
+  "price1": 0.0013,
+  "attrs": {
+   "Resistance": "4.02kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_7.5k_0402": {
+  "code": "C25918",
+  "mpn": "0402WGF7501TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 50V 62.5mW 7.5kΩ Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": true,
+  "stock": 867088,
+  "price1": 0.0021,
+  "attrs": {
+   "Resistance": "7.5kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_11k_0402": {
+  "code": "C324778",
+  "mpn": "RC-02K1102FT",
+  "brand": "FH (Guangdong Fenghua Advanced Tech)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 11kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 277035,
+  "price1": 0.0015,
+  "attrs": {
+   "Resistance": "11kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_191k_0402": {
+  "code": "C2998070",
+  "mpn": "FRC0402F1913TS",
+  "brand": "FOJAN",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 191kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 45490,
+  "price1": 0.0011,
+  "attrs": {
+   "Resistance": "191kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_16.2k_0402": {
+  "code": "C27176",
+  "mpn": "0402WGF1622TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 16.2kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 64508,
+  "price1": 0.0013,
+  "attrs": {
+   "Resistance": "16.2kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_31.6k_0402": {
+  "code": "C2998091",
+  "mpn": "FRC0402F3162TS",
+  "brand": "FOJAN",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 31.6kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 121222,
+  "price1": 0.0011,
+  "attrs": {
+   "Resistance": "31.6kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_52.3k_0402": {
+  "code": "C26982",
+  "mpn": "0402WGF5232TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 50V 52.3kΩ 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 589985,
+  "price1": 0.0011,
+  "attrs": {
+   "Resistance": "52.3kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_140k_0402": {
+  "code": "C2998127",
+  "mpn": "FRC0402F1403TS",
+  "brand": "FOJAN",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 140kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 171034,
+  "price1": 0.0011,
+  "attrs": {
+   "Resistance": "140kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_1.87k_0402": {
+  "code": "C270633",
+  "mpn": "0402WGF1871TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 1.87kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 44558,
+  "price1": 0.0014,
+  "attrs": {
+   "Resistance": "1.87kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_3.92k_0402": {
+  "code": "C2960797",
+  "mpn": "FRC0402F3921TS",
+  "brand": "FOJAN",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 3.92kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 86906,
+  "price1": 0.0013,
+  "attrs": {
+   "Resistance": "3.92kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_1.2k_0402": {
+  "code": "C25862",
+  "mpn": "0402WGF1201TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 1.2kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": true,
+  "stock": 726748,
+  "price1": 0.0012,
+  "attrs": {
+   "Resistance": "1.2kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_680_0402": {
+  "code": "C25130",
+  "mpn": "0402WGF6800TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 50V 62.5mW 680Ω Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": true,
+  "stock": 381880,
+  "price1": 0.0012,
+  "attrs": {
+   "Resistance": "680Ω",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_300k_0402": {
+  "code": "C25774",
+  "mpn": "0402WGF3003TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 300kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": true,
+  "stock": 1926758,
+  "price1": 0.0012,
+  "attrs": {
+   "Resistance": "300kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_2k_0402": {
+  "code": "C4109",
+  "mpn": "0402WGF2001TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 2kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 9551443,
+  "price1": 0.0019,
+  "attrs": {
+   "Resistance": "2kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_3.3k_0402": {
+  "code": "C25890",
+  "mpn": "0402WGF3301TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 3.3kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 1473360,
+  "price1": 0.0036,
+  "attrs": {
+   "Resistance": "3.3kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_39k_0402": {
+  "code": "C25783",
+  "mpn": "0402WGF3902TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 39kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": true,
+  "stock": 541294,
+  "price1": 0.0013,
+  "attrs": {
+   "Resistance": "39kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_71.5k_0402": {
+  "code": "C43534",
+  "mpn": "0402WGF7152TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 50V 62.5mW 71.5kΩ Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 131980,
+  "price1": 0.0013,
+  "attrs": {
+   "Resistance": "71.5kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_178k_0402": {
+  "code": "C3013156",
+  "mpn": "FRC0402F1783TS",
+  "brand": "FOJAN",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 178kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 32413,
+  "price1": 0.001,
+  "attrs": {
+   "Resistance": "178kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_14.3k_0402": {
+  "code": "C25855",
+  "mpn": "0402WGF1432TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 14.3kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 103693,
+  "price1": 0.001,
+  "attrs": {
+   "Resistance": "14.3kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_6.8k_0402": {
+  "code": "C25917",
+  "mpn": "0402WGF6801TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 50V 6.8kΩ 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": true,
+  "stock": 963244,
+  "price1": 0.0012,
+  "attrs": {
+   "Resistance": "6.8kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_27k_0402": {
+  "code": "C25771",
+  "mpn": "0402WGF2702TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 27kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": true,
+  "stock": 447620,
+  "price1": 0.001,
+  "attrs": {
+   "Resistance": "27kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_2.7k_0402": {
+  "code": "C25885",
+  "mpn": "0402WGF2701TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 2.7kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 871573,
+  "price1": 0.0013,
+  "attrs": {
+   "Resistance": "2.7kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_1.5M_0402": {
+  "code": "C22276",
+  "mpn": "0402WGF1504TCE",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 1.5MΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 642066,
+  "price1": 0.0011,
+  "attrs": {
+   "Resistance": "1.5MΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_13k_0402": {
+  "code": "C138057",
+  "mpn": "RC0402FR-0713KL",
+  "brand": "YAGEO",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 13kΩ 50V 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 550732,
+  "price1": 0.002,
+  "attrs": {
+   "Resistance": "13kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_59k_0402": {
+  "code": "C3013182",
+  "mpn": "FRC0402F5902TS",
+  "brand": "FOJAN",
+  "package": "0402",
+  "desc": "-55℃~+155℃ 50V 59kΩ 62.5mW Thick Film Resistor ±1% ±100ppm/℃ 0402 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 153955,
+  "price1": 0.001,
+  "attrs": {
+   "Resistance": "59kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "62.5mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "50V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_0_0603": {
+  "code": "C21189",
+  "mpn": "0603WAF0000T5E",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0603",
+  "desc": "-55℃~+155℃ 0Ω 100mW 75V Thick Film Resistor ±1% 0603 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 15601289,
+  "price1": 0.0021,
+  "attrs": {
+   "Resistance": "0Ω",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "100mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "75V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "-"
+  }
+ },
+ "R_10k_0603": {
+  "code": "C25804",
+  "mpn": "0603WAF1002T5E",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0603",
+  "desc": "-55℃~+155℃ 100mW 10kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 42579609,
+  "price1": 0.0017,
+  "attrs": {
+   "Resistance": "10kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "100mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "75V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_100k_0603": {
+  "code": "C25803",
+  "mpn": "0603WAF1003T5E",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0603",
+  "desc": "-55℃~+155℃ 100kΩ 100mW 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 13048755,
+  "price1": 0.0029,
+  "attrs": {
+   "Resistance": "100kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "100mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "75V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_200k_0603": {
+  "code": "C25811",
+  "mpn": "0603WAF2003T5E",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0603",
+  "desc": "-55℃~+155℃ 100mW 200kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 1656755,
+  "price1": 0.0019,
+  "attrs": {
+   "Resistance": "200kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "100mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "75V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_1M_0603": {
+  "code": "C22935",
+  "mpn": "0603WAF1004T5E",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0603",
+  "desc": "-55℃~+155℃ 100mW 1MΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 5662265,
+  "price1": 0.0018,
+  "attrs": {
+   "Resistance": "1MΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "100mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "75V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_330k_0603": {
+  "code": "C23137",
+  "mpn": "0603WAF3303T5E",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0603",
+  "desc": "-55℃~+155℃ 100mW 330kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 751916,
+  "price1": 0.0017,
+  "attrs": {
+   "Resistance": "330kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "100mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "75V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_470k_0603": {
+  "code": "C23178",
+  "mpn": "0603WAF4703T5E",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0603",
+  "desc": "-55℃~+155℃ 100mW 470kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 960620,
+  "price1": 0.003,
+  "attrs": {
+   "Resistance": "470kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "100mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "75V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_1k_0603": {
+  "code": "C21190",
+  "mpn": "0603WAF1001T5E",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0603",
+  "desc": "-55℃~+155℃ 100mW 1kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 40561670,
+  "price1": 0.0016,
+  "attrs": {
+   "Resistance": "1kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "100mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "75V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_4.7k_0603": {
+  "code": "C23162",
+  "mpn": "0603WAF4701T5E",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0603",
+  "desc": "-55℃~+155℃ 100mW 4.7kΩ 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 19311928,
+  "price1": 0.0028,
+  "attrs": {
+   "Resistance": "4.7kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "100mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "75V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_470_0603": {
+  "code": "C23179",
+  "mpn": "0603WAF4700T5E",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0603",
+  "desc": "-55℃~+155℃ 100mW 470Ω 75V Thick Film Resistor ±1% ±100ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 4052483,
+  "price1": 0.0019,
+  "attrs": {
+   "Resistance": "470Ω",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "100mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "75V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_0_0805": {
+  "code": "C17477",
+  "mpn": "0805W8F0000T5E",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0805",
+  "desc": "-55℃~+155℃ 0Ω 125mW 150V Thick Film Resistor ±1% ±800ppm/℃ 0805 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 4114252,
+  "price1": 0.0033,
+  "attrs": {
+   "Resistance": "0Ω",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "125mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "150V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±800ppm/℃"
+  }
+ },
+ "R_10k_0805": {
+  "code": "C17414",
+  "mpn": "0805W8F1002T5E",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0805",
+  "desc": "-55℃~+155℃ 10kΩ 125mW 150V Thick Film Resistor ±1% ±100ppm/℃ 0805 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 45514611,
+  "price1": 0.0032,
+  "attrs": {
+   "Resistance": "10kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "125mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "150V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_100k_0805": {
+  "code": "C149504",
+  "mpn": "0805W8F1003T5E",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0805",
+  "desc": "-55℃~+155℃ 100kΩ 125mW 150V Thick Film Resistor ±1% ±100ppm/℃ 0805 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 2953141,
+  "price1": 0.004,
+  "attrs": {
+   "Resistance": "100kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "125mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "150V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_1M_0805": {
+  "code": "C17514",
+  "mpn": "0805W8F1004T5E",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0805",
+  "desc": "-55℃~+155℃ 125mW 150V 1MΩ Thick Film Resistor ±1% ±100ppm/℃ 0805 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 1415296,
+  "price1": 0.0044,
+  "attrs": {
+   "Resistance": "1MΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "125mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "150V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_24.9k_0805": {
+  "code": "C2930185",
+  "mpn": "FRC0805F2492TS",
+  "brand": "FOJAN",
+  "package": "0805",
+  "desc": "-55℃~+155℃ 125mW 150V 24.9kΩ Thick Film Resistor ±1% ±100ppm/℃ 0805 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 348039,
+  "price1": 0.0026,
+  "attrs": {
+   "Resistance": "24.9kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "125mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "150V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_63.4_0805": {
+  "code": "C5159721",
+  "mpn": "FRC0805F63R4TS",
+  "brand": "FOJAN",
+  "package": "0805",
+  "desc": "-55℃~+155℃ 125mW 150V 63.4Ω Thick Film Resistor ±1% ±100ppm/℃ 0805 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 33320,
+  "price1": 0.0024,
+  "attrs": {
+   "Resistance": "63.4Ω",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "125mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "150V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_90.9_0805": {
+  "code": "C55373058",
+  "mpn": "RR0805-90R9FT",
+  "brand": "Millimeter Electronics",
+  "package": "0805",
+  "desc": "0805 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 15000,
+  "price1": 0.0047,
+  "attrs": {
+   "Resistance": "90.9Ω",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "125mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "3.37V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_33.2k_0805": {
+  "code": "C2933418",
+  "mpn": "FRC0805F3322TS",
+  "brand": "FOJAN",
+  "package": "0805",
+  "desc": "-55℃~+155℃ 125mW 150V 33.2kΩ Thick Film Resistor ±1% ±100ppm/℃ 0805 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 101756,
+  "price1": 0.003,
+  "attrs": {
+   "Resistance": "33.2kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "125mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "150V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_249_0805": {
+  "code": "C32281",
+  "mpn": "0805W8F2490T5E",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0805",
+  "desc": "-55℃~+155℃ 125mW 150V 249Ω Thick Film Resistor ±1% ±100ppm/℃ 0805 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 154443,
+  "price1": 0.003,
+  "attrs": {
+   "Resistance": "249Ω",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "125mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "150V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_49.9k_0805": {
+  "code": "C17719",
+  "mpn": "0805W8F4992T5E",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0805",
+  "desc": "-55℃~+155℃ 125mW 150V 49.9kΩ Thick Film Resistor ±1% ±100ppm/℃ 0805 Chip Resistor - Surface Mount ROHS",
+  "lib": "expand",
+  "preferred": true,
+  "stock": 198616,
+  "price1": 0.0036,
+  "attrs": {
+   "Resistance": "49.9kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "125mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "150V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_1k_0805": {
+  "code": "C17513",
+  "mpn": "0805W8F1001T5E",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0805",
+  "desc": "-55℃~+155℃ 125mW 150V 1kΩ Thick Film Resistor ±1% ±100ppm/℃ 0805 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 38545971,
+  "price1": 0.003,
+  "attrs": {
+   "Resistance": "1kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "125mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "150V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_4.7k_0805": {
+  "code": "C17673",
+  "mpn": "0805W8F4701T5E",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0805",
+  "desc": "-55℃~+155℃ 125mW 150V 4.7kΩ Thick Film Resistor ±1% ±100ppm/℃ 0805 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 5511420,
+  "price1": 0.0025,
+  "attrs": {
+   "Resistance": "4.7kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "125mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "150V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_2.2k_0805": {
+  "code": "C17520",
+  "mpn": "0805W8F2201T5E",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0805",
+  "desc": "-55℃~+155℃ 125mW 150V 2.2kΩ Thick Film Resistor ±1% ±100ppm/℃ 0805 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 3010040,
+  "price1": 0.0049,
+  "attrs": {
+   "Resistance": "2.2kΩ",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "125mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "150V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "RS_5m_2512": {
+  "code": "C500739",
+  "mpn": "LR2512D-3W-5mR-1%",
+  "brand": "Milliohm",
+  "package": "2512",
+  "desc": "25ppm/℃~+50ppm/℃ 3W 5mΩ Current Sense Resistor SMD ±1% 2512 Current Sense Resistors / Shunt Resistors ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 11853,
+  "price1": 0.1206,
+  "attrs": {
+   "Resistance": "5mΩ",
+   "Power(Watts)": "3W",
+   "Type": "Current Sense Resistor",
+   "Tolerance": "±1%",
+   "Mounting Type": "Surface Mount",
+   "Temperature Coefficient": "25ppm/℃~+50ppm/℃"
+  }
+ },
+ "Q_AO3400A": {
+  "code": "C20917",
+  "mpn": "AO3400A",
+  "brand": "Alpha & Omega Semicon",
+  "package": "SOT-23",
+  "desc": "-55℃~+150℃ 1 N-channel 1.45V 1.4W 30V 48mΩ@2.5V 5.7A 50pF 630pF 75pF 7nC@10V N-Channel SOT-23 MOSFETs ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 1521442,
+  "price1": 0.0796,
+  "attrs": {
+   "Operating Temperature": "-55℃~+150℃",
+   "Vgs": "±12V",
+   "Configuration": "-",
+   "Gate Charge(Qg)": "7nC@10V",
+   "Reverse Transfer Capacitance (Crss@Vds)": "50pF",
+   "Current - Continuous Drain(Id)": "5.7A",
+   "Drain to Source Voltage": "30V",
+   "Output Capacitance(Coss)": "75pF",
+   "RDS(on)": "48mΩ@2.5V",
+   "Input Capacitance(Ciss)": "630pF",
+   "Type": "N-Channel",
+   "Gate Threshold Voltage (Vgs(th))": "1.45V",
+   "Number": "1 N-channel",
+   "Pd - Power Dissipation": "1.4W"
+  }
+ },
+ "LED_G_0603": {
+  "code": "C12624",
+  "mpn": "KT-0603G",
+  "brand": "Hubei KENTO Elec",
+  "package": "0603",
+  "desc": "-40℃~+85℃ 1.6mm x 0.8mm square LED 100mW 120° 3.1V 430mcd 513nm~528nm 525nm 5mA Discrete Diode Emerald Green Water Clear 0603 LED Indication - Discrete ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 205035,
+  "price1": 0.0119,
+  "attrs": {
+   "Mounting Style": "-",
+   "Wavelength - Dominant": "513nm~528nm",
+   "Operating Temperature": "-40℃~+85℃",
+   "Color Temperature": "-",
+   "Test Current": "5mA",
+   "Viewing Angle": "120°",
+   "Lamp Holder Type": "1.6mm x 0.8mm square LED",
+   "Luminous Intensity": "430mcd",
+   "Power(Watts)": "100mW",
+   "Diode Configuration": "Discrete Diode",
+   "Illumination Color": "Emerald Green",
+   "Lens Color": "Water Clear",
+   "Peak Wavelength": "525nm",
+   "Voltage - Forward(Vf)": "3.1V"
+  }
+ },
+ "LED_R_0603": {
+  "code": "C2286",
+  "mpn": "KT-0603R",
+  "brand": "Hubei KENTO Elec",
+  "package": "0603",
+  "desc": "-40℃~+85℃ 1.6mm x 0.8mm square LED 1.8V~2.4V 120° 20mA 300mcd 40mW 615nm~630nm 645nm Discrete Diode Red Water Clear 0603 LED Indication - Discrete ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 8412922,
+  "price1": 0.0077,
+  "attrs": {
+   "Mounting Style": "-",
+   "Wavelength - Dominant": "615nm~630nm",
+   "Operating Temperature": "-40℃~+85℃",
+   "Color Temperature": "-",
+   "Test Current": "20mA",
+   "Viewing Angle": "120°",
+   "Lamp Holder Type": "1.6mm x 0.8mm square LED",
+   "Luminous Intensity": "300mcd",
+   "Power(Watts)": "40mW",
+   "Diode Configuration": "Discrete Diode",
+   "Illumination Color": "Red",
+   "Lens Color": "Water Clear",
+   "Peak Wavelength": "645nm",
+   "Voltage - Forward(Vf)": "1.8V~2.4V"
+  }
+ },
+ "TVS_SMBJ24A": {
+  "code": "C87268",
+  "mpn": "SMBJ24A",
+  "brand": "Brightking",
+  "package": "SMB(DO-214AA)",
+  "desc": "15.5A 1uA 24V 26.7V 38.9V 600W@10/1000us TVS Unidirectional SMB(DO-214AA) ESD and Surge Protection (TVS/ESD) ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 16047,
+  "price1": 0.0549,
+  "attrs": {
+   "Operating Temperature": "-55℃~+150℃",
+   "Type": "TVS",
+   "Peak Pulse Power Dissipation (Ppp)": "600W@10/1000us",
+   "Number of Channels": "Single-channel",
+   "Clamping Voltage": "38.9V",
+   "Polarity": "Unidirectional",
+   "Peak Pulse Current (Ipp)": "15.5A@10/1000us",
+   "Voltage - Breakdown": "29.5V",
+   "Reverse Stand-Off Voltage (Vrwm)": "24V",
+   "Reverse Leakage Current (Ir)": "1uA"
+  }
+ },
+ "TVS_SMBJ33A": {
+  "code": "C10219",
+  "mpn": "SMBJ33A",
+  "brand": "RUILON(Shenzhen Ruilongyuan Elec)",
+  "package": "DO-214AA(SMB)",
+  "desc": "-55℃~+150℃ 11.3A@10/1000us 1uA 33V 42.2V 53.3V 600W@10/1000us IEC 61000-4-2、IEC 61000-4-4 TVS Unidirectional DO-214AA(SMB) ESD and Surge Protection (TVS/ESD) ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 12901,
+  "price1": 0.0945,
+  "attrs": {
+   "Operating Temperature": "-55℃~+150℃",
+   "Type": "TVS",
+   "Peak Pulse Power Dissipation (Ppp)": "600W@10/1000us",
+   "Number of Channels": "Single-channel",
+   "level of protection": "IEC 61000-4-2、IEC 61000-4-4",
+   "Clamping Voltage": "53.3V",
+   "Polarity": "Unidirectional",
+   "Peak Pulse Current (Ipp)": "11.3A@10/1000us",
+   "Voltage - Breakdown": "42.2V",
+   "Reverse Stand-Off Voltage (Vrwm)": "33V",
+   "Reverse Leakage Current (Ir)": "1uA"
+  }
+ },
+ "TVS_SMBJ26A": {
+  "code": "C123820",
+  "mpn": "SMBJ26A",
+  "brand": "MDD(Microdiode Semiconductor)",
+  "package": "DO-214AA(SMB)",
+  "desc": "-65℃~+150℃ 14.3A 1uA 26V 31.9V 42.1V 600W@10/1000us TVS Unidirectional DO-214AA(SMB) ESD and Surge Protection (TVS/ESD) ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 54036,
+  "price1": 0.0601,
+  "attrs": {
+   "Operating Temperature": "-65℃~+150℃",
+   "Type": "TVS",
+   "Junction Capacitance": "-",
+   "Peak Pulse Power Dissipation (Ppp)": "600W@10/1000us",
+   "Number of Channels": "Single-channel",
+   "level of protection": "-",
+   "Clamping Voltage": "42.1V",
+   "Polarity": "Unidirectional",
+   "Voltage - Breakdown": "31.9V",
+   "Peak Pulse Current (Ipp)": "14.3A",
+   "Reverse Stand-Off Voltage (Vrwm)": "26V",
+   "Reverse Leakage Current (Ir)": "1uA"
+  }
+ },
+ "TVS_SMAJ58A": {
+  "code": "C10762",
+  "mpn": "SMAJ58A",
+  "brand": "RUILON(Shenzhen Ruilongyuan Elec)",
+  "package": "DO-214AC(SMA)",
+  "desc": "-55℃~+150℃ 1uA 4.3A 400W@10/1000us 58V 74.1V 93.6V IEC 61000-4-2、IEC 61000-4-4 TVS Unidirectional DO-214AC(SMA) ESD and Surge Protection (TVS/ESD) ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 10094,
+  "price1": 0.081,
+  "attrs": {
+   "Operating Temperature": "-55℃~+150℃",
+   "Type": "TVS",
+   "Peak Pulse Power Dissipation (Ppp)": "400W@10/1000us",
+   "Number of Channels": "Single-channel",
+   "level of protection": "IEC 61000-4-2、IEC 61000-4-4",
+   "Clamping Voltage": "93.6V",
+   "Polarity": "Unidirectional",
+   "Voltage - Breakdown": "74.1V",
+   "Peak Pulse Current (Ipp)": "4.3A",
+   "Reverse Stand-Off Voltage (Vrwm)": "58V",
+   "Reverse Leakage Current (Ir)": "1uA"
+  }
+ },
+ "TVS_SMF5V0A": {
+  "code": "C151296",
+  "mpn": "SMF5.0A",
+  "brand": "Littelfuse",
+  "package": "SOD-123FL",
+  "desc": "-65℃~+150℃ 200W@10/1000us 21.7A 400uA 5V 7V 9.2V IEC 61000-4-2 TVS Unidirectional SOD-123FL ESD and Surge Protection (TVS/ESD) ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 57297,
+  "price1": 0.1144,
+  "attrs": {
+   "Operating Temperature": "-65℃~+150℃",
+   "Type": "TVS",
+   "Junction Capacitance": "-",
+   "Peak Pulse Power Dissipation (Ppp)": "200W@10/1000us",
+   "Number of Channels": "Single-channel",
+   "level of protection": "IEC 61000-4-2、IEC 61000-4-4",
+   "Clamping Voltage": "9.2V",
+   "Polarity": "Unidirectional",
+   "Peak Pulse Current (Ipp)": "21.7A",
+   "Voltage - Breakdown": "6.4V",
+   "Reverse Stand-Off Voltage (Vrwm)": "5V",
+   "Reverse Leakage Current (Ir)": "400uA"
+  }
+ },
+ "D_B5819W": {
+  "code": "C8598",
+  "mpn": "B5819W SL",
+  "brand": "Jiangsu Changjing Electronics Technology Co., Ltd.",
+  "package": "SOD-123",
+  "desc": "1A 40V 600mV@1A 9A Independent SOD-123 Schottky Diodes ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 820298,
+  "price1": 0.0251,
+  "attrs": {
+   "Voltage - Forward(Vf@If)": "600mV@1A",
+   "Non-Repetitive Peak Forward Surge Current": "9A",
+   "Voltage - DC Reverse(Vr)": "40V",
+   "Diode Configuration": "Standalone",
+   "Current - Rectified": "1A",
+   "Reverse Leakage Current (Ir)": "-"
+  }
+ },
+ "SW_TACT": {
+  "code": "C318884",
+  "mpn": "TS-1187A-B-A-B",
+  "brand": "XKB Connection",
+  "package": "SMD-4P,5.1x5.1mm",
+  "desc": "-30℃~+85℃ 1.5mm 1.6N 100,000 cycles 12V 5.1mm 5.1mm 50mA Gold No Round Button SPST Surface Mount,Vertical Without Bracket SMD-4P,5.1x5.1mm Tactile Switches ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 714364,
+  "price1": 0.0212,
+  "attrs": {
+   "Operating Temperature": "-30℃~+85℃",
+   "Contact Current": "50mA",
+   "Voltage Rating": "12V",
+   "Actuator Style": "Round Button",
+   "with Bracket": "Without Bracket",
+   "Switch Height": "1.5mm",
+   "Circuit": "SPST",
+   "Mounting Type": "Surface Mount,Vertical",
+   "Actuator/Cap Color": "Gold",
+   "Operating Force": "1.6N",
+   "Length": "5.1mm",
+   "Life": "100,000 cycles",
+   "With Lamp": "No",
+   "Width": "5.1mm"
+  }
+ },
+ "FB_600R_0603": {
+  "code": "C1002",
+  "mpn": "GZ1608D601TF",
+  "brand": "Sunlord",
+  "package": "0603",
+  "desc": "-55℃~+125℃ 1 200mA 450mΩ 600Ω@100MHz ±25% 0603 Ferrite Beads ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 1326785,
+  "price1": 0.0105,
+  "attrs": {
+   "Operating Temperature": "-55℃~+125℃",
+   "Impedance @ Frequency": "600Ω@100MHz",
+   "Tolerance": "±25%",
+   "Current Rating": "200mA",
+   "Number of Circuits": "1",
+   "DC Resistance(DCR)": "450mΩ"
+  }
+ },
+ "NTC_10k_0603": {
+  "code": "C13564",
+  "mpn": "NCP18XH103F03RB",
+  "brand": "Murata Electronics",
+  "package": "0603",
+  "desc": "-40℃~+125℃ 0.8mm 1.6mm 100mW 10kΩ 1mW/℃ 310uA 3380K 3434K 3455K ±1% ±1% 0603 NTC Thermistors ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 253081,
+  "price1": 0.0387,
+  "attrs": {
+   "Operating Temperature": "-40℃~+125℃",
+   "Steady State Current (Max)": "310uA",
+   "Thermal Time Constant": "-",
+   "Resistance Tolerance": "±1%",
+   "B Constant Tolerance": "±1%",
+   "B Constant (25℃/75℃)": "-",
+   "B Constant (25℃/85℃)": "3434K",
+   "B Constant (25℃/50℃)": "3380K",
+   "Dissipation Factor": "1mW/℃",
+   "Power(Watts)": "100mW",
+   "B Constant (25℃/100℃)": "3455K",
+   "Resistance @ 25℃": "10kΩ",
+   "Length": "1.6mm",
+   "Diameter (φD)": "-",
+   "Pitch": "-",
+   "Height": "-",
+   "Width": "0.8mm"
+  }
+ },
+ "FB_3A_0603": {
+  "code": "C96995",
+  "mpn": "UPZ1608E101-3R0TF",
+  "brand": "Sunlord",
+  "package": "0603",
+  "desc": "-55℃~+125℃ 1 100Ω@100MHz 30mΩ 3A ±25% 0603 Ferrite Beads ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 183065,
+  "price1": 0.0156,
+  "attrs": {
+   "Operating Temperature": "-55℃~+125℃",
+   "Impedance @ Frequency": "100Ω@100MHz",
+   "Tolerance": "±25%",
+   "Current Rating": "3A",
+   "Number of Circuits": "1",
+   "DC Resistance(DCR)": "30mΩ"
+  }
+ },
+ "Q_BSC016N06NS": {
+  "code": "C454269",
+  "mpn": "BSC016N06NS",
+  "brand": "Infineon Technologies",
+  "package": "TDSON-8FL",
+  "desc": "-55℃~+150℃ 1 N-channel 1.6mΩ@10V 100A 139W 3.3V 6.5nF 60V 96pF TDSON-8FL MOSFETs ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 7962,
+  "price1": 1.0831,
+  "attrs": {
+   "Operating Temperature": "-55℃~+150℃",
+   "Vgs": "±20V",
+   "Configuration": "-",
+   "Gate Charge(Qg)": "71nC",
+   "Reverse Transfer Capacitance (Crss@Vds)": "96pF",
+   "Current - Continuous Drain(Id)": "100A",
+   "Drain to Source Voltage": "60V",
+   "Output Capacitance(Coss)": "1.2nF",
+   "RDS(on)": "1.6mΩ@10V",
+   "Input Capacitance(Ciss)": "6.5nF",
+   "Type": "N-Channel",
+   "Gate Threshold Voltage (Vgs(th))": "3.3V",
+   "Number": "1 N-channel",
+   "Pd - Power Dissipation": "139W"
+  }
+ },
+ "Q_NTMFS5C628NL": {
+  "code": "C145537",
+  "mpn": "NTMFS5C628NLT1G",
+  "brand": "onsemi",
+  "package": "SO-8FL",
+  "desc": "-55℃~+175℃ 1 N-channel 1.7nF 110W 150A 28pF 2V 3.3mΩ@4.5V 3.6nF 52nC@10V 60V N-Channel SO-8FL MOSFETs ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 5512,
+  "price1": 0.7657,
+  "attrs": {
+   "Operating Temperature": "-55℃~+175℃",
+   "Vgs": "±20V",
+   "Configuration": "-",
+   "Gate Charge(Qg)": "52nC@10V",
+   "Reverse Transfer Capacitance (Crss@Vds)": "28pF",
+   "Current - Continuous Drain(Id)": "150A",
+   "Drain to Source Voltage": "60V",
+   "Output Capacitance(Coss)": "1.7nF",
+   "RDS(on)": "3.3mΩ@4.5V",
+   "Input Capacitance(Ciss)": "3.6nF",
+   "Type": "N-Channel",
+   "Gate Threshold Voltage (Vgs(th))": "2V",
+   "Number": "1 N-channel",
+   "Pd - Power Dissipation": "110W"
+  }
+ },
+ "Q_BSC034N06NS": {
+  "code": "C534325",
+  "mpn": "BSC034N06NS",
+  "brand": "Infineon Technologies",
+  "package": "TDSON-8(5x6)",
+  "desc": "-55℃~+150℃ 1 N-channel 100A 3.3V 3.4mΩ@10V 33nC 3nF 54pF 60V 74W TDSON-8(5x6) MOSFETs ROHS",
+  "lib": "expand",
+  "preferred": false,
+  "stock": 4396,
+  "price1": 1.569,
+  "attrs": {
+   "Operating Temperature": "-55℃~+150℃",
+   "Vgs": "±20V",
+   "Configuration": "-",
+   "Gate Charge(Qg)": "33nC",
+   "Reverse Transfer Capacitance (Crss@Vds)": "54pF",
+   "Current - Continuous Drain(Id)": "100A",
+   "Drain to Source Voltage": "60V",
+   "Output Capacitance(Coss)": "560pF",
+   "RDS(on)": "3.4mΩ@10V",
+   "Input Capacitance(Ciss)": "3nF",
+   "Type": "N-Channel",
+   "Gate Threshold Voltage (Vgs(th))": "3.3V",
+   "Number": "1 N-channel",
+   "Pd - Power Dissipation": "74W"
+  }
+ }
+}

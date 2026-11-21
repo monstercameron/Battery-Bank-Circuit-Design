@@ -1,0 +1,6685 @@
+(kicad_sch
+  (version 20231120)
+  (generator "bb_gen")
+  (generator_version "1.0")
+  (uuid "9db256eb-5f9b-5f03-a768-e5e0b2eabfa0")
+  (paper "A1")
+  (title_block
+    (title "Battery cartridge: 5S protector, FETs, fuse, gauge")
+    (company "Battery Bank")
+    (rev "A"))
+  (lib_symbols
+    (symbol "bb:CELL_TABS"
+      (pin_numbers hide)
+      (pin_names
+        (offset 0.254))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "CELL_TABS"
+        (at 0 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "CELL_TABS_0_1"
+        (rectangle
+          (start -5.08 -8.89)
+          (end 5.08 8.89)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "CELL_TABS_1_1"
+        (pin passive line
+          (at -7.62 6.35 0)
+          (length 2.54)
+          (name "B0"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -7.62 3.81 0)
+          (length 2.54)
+          (name "B1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -7.62 1.27 0)
+          (length 2.54)
+          (name "B2"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -7.62 -1.27 0)
+          (length 2.54)
+          (name "B3"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "4"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -7.62 -3.81 0)
+          (length 2.54)
+          (name "B4"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "5"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -7.62 -6.35 0)
+          (length 2.54)
+          (name "B5"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "6"
+            (effects
+              (font
+                (size 1.27 1.27)))))))
+    (symbol "lcsc:STS2250"
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "F"
+        (id 0)
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "STS2250"
+        (id 1)
+        (at 0 -6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "lcsc:FUSE-SMD_L6.1-W2.5"
+        (id 2)
+        (at 0 -8.89 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://www.lcsc.com/datasheet/C2762484.pdf"
+        (id 3)
+        (at 0 -11.43 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Manufacturer" "Reomax(瑞迈)"
+        (id 4)
+        (at 0 -13.97 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "MPN" "STS2250"
+        (id 5)
+        (at 0 -16.51 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "LCSC Part" "C2762484"
+        (id 6)
+        (at 0 -19.05 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "ki_keywords" "Fuses"
+        (id 8)
+        (at 0 -21.59 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "STS2250_0_1"
+        (rectangle
+          (start -3.81 -0.00)
+          (end 4.06 -2.54)
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type background)))
+        (polyline
+          (pts
+            (xy -5.08 -1.27)
+            (xy 5.08 -1.27))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (pin passive line
+          (at 10.16 -1.27 180)
+          (length 5.08)
+          (name "2"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -10.16 -1.27 0)
+          (length 5.08)
+          (name "1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))))
+    (symbol "lcsc:BQ7791500PWR"
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (id 0)
+        (at 0 19.05 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "BQ7791500PWR"
+        (id 1)
+        (at 0 -19.05 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "lcsc:TSSOP-24_L7.8-W4.4-P0.65-LS6.4-BL"
+        (id 2)
+        (at 0 -21.59 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://www.lcsc.com/datasheet/C2876946.pdf"
+        (id 3)
+        (at 0 -24.13 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Manufacturer" "TI(德州仪器)"
+        (id 4)
+        (at 0 -26.67 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "MPN" "BQ7791500PWR"
+        (id 5)
+        (at 0 -29.21 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "LCSC Part" "C2876946"
+        (id 6)
+        (at 0 -31.75 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "ki_keywords" "Battery Management ICs"
+        (id 8)
+        (at 0 -34.29 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "BQ7791500PWR_0_1"
+        (rectangle
+          (start -8.89 16.51)
+          (end 8.89 -16.51)
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type background)))
+        (circle
+          (center -7.62 15.24)
+          (radius 0.38)
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (pin passive line
+          (at -11.43 13.97 0)
+          (length 2.54)
+          (name "VDD"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -11.43 11.43 0)
+          (length 2.54)
+          (name "AVDD"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -11.43 8.89 0)
+          (length 2.54)
+          (name "VC5"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -11.43 6.35 0)
+          (length 2.54)
+          (name "VC4"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "4"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -11.43 3.81 0)
+          (length 2.54)
+          (name "VC3"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "5"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -11.43 1.27 0)
+          (length 2.54)
+          (name "VC2"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "6"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -11.43 -1.27 0)
+          (length 2.54)
+          (name "VC1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "7"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -11.43 -3.81 0)
+          (length 2.54)
+          (name "VC0"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "8"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -11.43 -6.35 0)
+          (length 2.54)
+          (name "VSS"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "9"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -11.43 -8.89 0)
+          (length 2.54)
+          (name "SRP"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "10"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -11.43 -11.43 0)
+          (length 2.54)
+          (name "SRN"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "11"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -11.43 -13.97 0)
+          (length 2.54)
+          (name "DSG"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "12"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 11.43 -13.97 180)
+          (length 2.54)
+          (name "CHG"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "13"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 11.43 -11.43 180)
+          (length 2.54)
+          (name "LD"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "14"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 11.43 -8.89 180)
+          (length 2.54)
+          (name "LPWR"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "15"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 11.43 -6.35 180)
+          (length 2.54)
+          (name "CBI"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "16"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 11.43 -3.81 180)
+          (length 2.54)
+          (name "OCDP"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "17"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 11.43 -1.27 180)
+          (length 2.54)
+          (name "TS"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "18"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 11.43 1.27 180)
+          (length 2.54)
+          (name "VTB"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "19"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 11.43 3.81 180)
+          (length 2.54)
+          (name "CCFG"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "20"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 11.43 6.35 180)
+          (length 2.54)
+          (name "CBO"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "21"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 11.43 8.89 180)
+          (length 2.54)
+          (name "PRES"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "22"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 11.43 11.43 180)
+          (length 2.54)
+          (name "CTRC"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "23"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 11.43 13.97 180)
+          (length 2.54)
+          (name "CTRD"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "24"
+            (effects
+              (font
+                (size 1.27 1.27)))))))
+    (symbol "bb:R"
+      (pin_numbers hide)
+      (pin_names
+        (offset 0.254) hide)
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "2"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))))
+    (symbol "bb:C"
+      (pin_numbers hide)
+      (pin_names
+        (offset 0.254) hide)
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "C"
+        (at 0 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "C_0_1"
+        (polyline
+          (pts
+            (xy -2.032 0.762)
+            (xy 2.032 0.762))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -2.032 -0.762)
+            (xy 2.032 -0.762))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "2"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))))
+    (symbol "bb:NTC"
+      (pin_numbers hide)
+      (pin_names
+        (offset 0.254) hide)
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "TH"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "NTC"
+        (at 0 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "NTC_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.778 -1.778)
+            (xy 1.778 1.778))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "NTC_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "2"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))))
+    (symbol "lcsc:NTMFS5C628NLT1G"
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (id 0)
+        (at 0 12.70 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "NTMFS5C628NLT1G"
+        (id 1)
+        (at 0 -12.70 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "lcsc:DFN-5_L4.9-W5.9-P1.27-LS6.2-BL"
+        (id 2)
+        (at 0 -15.24 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://lcsc.com/product-detail/MOSFET_ON_NTMFS5C628NLT1G_NTMFS5C628NLT1G_C145537.html"
+        (id 3)
+        (at 0 -17.78 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Manufacturer" "onsemi(安森美)"
+        (id 4)
+        (at 0 -20.32 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "MPN" "NTMFS5C628NLT1G"
+        (id 5)
+        (at 0 -22.86 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "LCSC Part" "C145537"
+        (id 6)
+        (at 0 -25.40 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "ki_keywords" "MOSFETs"
+        (id 8)
+        (at 0 -27.94 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "NTMFS5C628NLT1G_0_1"
+        (rectangle
+          (start -6.35 5.08)
+          (end 6.35 -5.08)
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type background)))
+        (circle
+          (center -5.08 -3.81)
+          (radius 0.38)
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (pin passive line
+          (at -3.81 -7.62 90)
+          (length 2.54)
+          (name "S"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -1.27 -7.62 90)
+          (length 2.54)
+          (name "S"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 1.27 -7.62 90)
+          (length 2.54)
+          (name "S"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 -7.62 90)
+          (length 2.54)
+          (name "G"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "4"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 3.81 7.62 270)
+          (length 2.54)
+          (name "D"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "5"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -3.81 7.62 270)
+          (length 2.54)
+          (name "D"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "5"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -8.89 -0.00 0)
+          (length 2.54)
+          (name "D"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "5"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 8.89 -0.00 180)
+          (length 2.54)
+          (name "D"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "5"
+            (effects
+              (font
+                (size 1.27 1.27)))))))
+    (symbol "lcsc:XT60PW-F_C428722"
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (id 0)
+        (at 0 11.43 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "XT60PW-F_C428722"
+        (id 1)
+        (at 0 -11.43 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "lcsc:TH_2P-XT60PW-F"
+        (id 2)
+        (at 0 -13.97 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://www.lcsc.com/datasheet/C428722.pdf"
+        (id 3)
+        (at 0 -16.51 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Manufacturer" "AMASS(艾迈斯)"
+        (id 4)
+        (at 0 -19.05 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "MPN" "XT60PW-F"
+        (id 5)
+        (at 0 -21.59 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "LCSC Part" "C428722"
+        (id 6)
+        (at 0 -24.13 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "ki_keywords" "Power Connectors"
+        (id 8)
+        (at 0 -26.67 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "XT60PW-F_C428722_0_1"
+        (rectangle
+          (start -2.54 3.81)
+          (end 6.35 -3.81)
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type background)))
+        (circle
+          (center -1.27 2.54)
+          (radius 0.38)
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (pin passive line
+          (at 5.08 -6.35 90)
+          (length 2.54)
+          (name "2"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 5.08 6.35 270)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 -1.27 0)
+          (length 2.54)
+          (name "-"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "4"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 1.27 0)
+          (length 2.54)
+          (name "+"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)))))))
+    (symbol "bb:TP"
+      (pin_numbers hide)
+      (pin_names
+        (offset 0.254) hide)
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "TP"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "TP"
+        (at 0 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "TP_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 1.27))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (circle
+          (center 0 1.778)
+          (radius 0.508)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "TP_1_1"
+        (pin passive line
+          (at 0 -2.54 90)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))))
+    (symbol "lcsc:TLV70433DBVR"
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (id 0)
+        (at 0 11.43 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "TLV70433DBVR"
+        (id 1)
+        (at 0 -13.97 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "lcsc:SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BR"
+        (id 2)
+        (at 0 -16.51 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://lcsc.com/product-detail/Low-Dropout-Regulators-LDO_TI_TLV70433DBVR_TLV70433DBVR_C94917.html"
+        (id 3)
+        (at 0 -19.05 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Manufacturer" "TI(德州仪器)"
+        (id 4)
+        (at 0 -21.59 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "MPN" "TLV70433DBVR"
+        (id 5)
+        (at 0 -24.13 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "LCSC Part" "C94917"
+        (id 6)
+        (at 0 -26.67 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "ki_keywords" "Linear Voltage Regulators (LDO)"
+        (id 8)
+        (at 0 -29.21 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "TLV70433DBVR_0_1"
+        (rectangle
+          (start -7.62 8.89)
+          (end 7.62 -3.81)
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type background)))
+        (text "GND"
+          (at -2.54 -3.30 0)
+          (effects
+            (font
+              (size 3.53 3.53))))
+        (pin power_in line
+          (at 0.00 -8.89 90)
+          (length 5.08)
+          (name "GND"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin power_in line
+          (at 12.70 6.35 180)
+          (length 5.08)
+          (name "OUT"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin power_in line
+          (at -12.70 6.35 0)
+          (length 5.08)
+          (name "IN"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -12.70 1.27 0)
+          (length 5.08)
+          (name "NC"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "4"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 12.70 1.27 180)
+          (length 5.08)
+          (name "NC"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "5"
+            (effects
+              (font
+                (size 1.27 1.27)))))))
+    (symbol "lcsc:BQ34Z100PWR-G1"
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U"
+        (id 0)
+        (at 0 12.70 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "BQ34Z100PWR-G1"
+        (id 1)
+        (at 0 -12.70 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "lcsc:TSSOP-14_L5.0-W4.4-P0.65-LS6.4-BL"
+        (id 2)
+        (at 0 -15.24 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://lcsc.com/product-detail/PMIC-Battery-Management_Texas-Instruments_BQ34Z100PWR-G1_Texas-Instruments-TI-BQ34Z100PWR-G1_C91302.html"
+        (id 3)
+        (at 0 -17.78 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Manufacturer" "TI(德州仪器)"
+        (id 4)
+        (at 0 -20.32 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "MPN" "BQ34Z100PWR-G1"
+        (id 5)
+        (at 0 -22.86 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "LCSC Part" "C91302"
+        (id 6)
+        (at 0 -25.40 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "ki_keywords" "Battery Management ICs"
+        (id 8)
+        (at 0 -27.94 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "BQ34Z100PWR-G1_0_1"
+        (rectangle
+          (start -12.70 10.16)
+          (end 12.70 -10.16)
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type background)))
+        (circle
+          (center -12.06 9.53)
+          (radius 0.38)
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (pin passive line
+          (at -15.24 7.62 0)
+          (length 2.54)
+          (name "P2"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -15.24 5.08 0)
+          (length 2.54)
+          (name "VEN"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -15.24 2.54 0)
+          (length 2.54)
+          (name "P1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -15.24 -0.00 0)
+          (length 2.54)
+          (name "BAT"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "4"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -15.24 -2.54 0)
+          (length 2.54)
+          (name "CE"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "5"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -15.24 -5.08 0)
+          (length 2.54)
+          (name "REGIN"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "6"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -15.24 -7.62 0)
+          (length 2.54)
+          (name "REG25"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "7"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 15.24 -7.62 180)
+          (length 2.54)
+          (name "VSS"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "8"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 15.24 -5.08 180)
+          (length 2.54)
+          (name "SRP"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "9"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 15.24 -2.54 180)
+          (length 2.54)
+          (name "SRN"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "10"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 15.24 -0.00 180)
+          (length 2.54)
+          (name "P6/TS"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "11"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 15.24 2.54 180)
+          (length 2.54)
+          (name "P5/HDQ"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "12"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 15.24 5.08 180)
+          (length 2.54)
+          (name "P4/SCL"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "13"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 15.24 7.62 180)
+          (length 2.54)
+          (name "P3/SDA"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "14"
+            (effects
+              (font
+                (size 1.27 1.27)))))))
+    (symbol "lcsc:AO3400A"
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (id 0)
+        (at 0 10.16 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "AO3400A"
+        (id 1)
+        (at 0 -10.16 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "lcsc:SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR"
+        (id 2)
+        (at 0 -12.70 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://lcsc.com/product-detail/MOSFET_AOS_AO3400A_AO3400A_C20917.html"
+        (id 3)
+        (at 0 -15.24 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Manufacturer" "AOS"
+        (id 4)
+        (at 0 -17.78 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "MPN" "AO3400A"
+        (id 5)
+        (at 0 -20.32 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "LCSC Part" "C20917"
+        (id 6)
+        (at 0 -22.86 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "ki_keywords" "MOSFETs"
+        (id 8)
+        (at 0 -25.40 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "ki_description" "AO3400A"
+        (id 9)
+        (at 0 -27.94 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "AO3400A_0_1"
+        (polyline
+          (pts
+            (xy 0.00 1.78)
+            (xy 2.54 1.78)
+            (xy 2.54 2.54)
+            (xy 5.08 2.54)
+            (xy 5.08 0.51))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0.00 -0.00)
+            (xy 2.54 -0.00)
+            (xy 2.54 -2.54)
+            (xy 5.08 -2.54)
+            (xy 5.08 -0.76))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 2.54 -1.78)
+            (xy 0.00 -1.78))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -0.51 2.29)
+            (xy -0.51 -2.29))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0.00 2.29)
+            (xy 0.00 1.27))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0.00 -0.51)
+            (xy 0.00 0.51))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0.00 -2.29)
+            (xy 0.00 -1.27))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -2.54 -0.00)
+            (xy -0.51 -0.00))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 6.10 0.51)
+            (xy 5.59 0.51)
+            (xy 4.57 0.51)
+            (xy 4.06 0.51))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0.00 -0.00)
+            (xy 1.52 -0.51)
+            (xy 1.52 0.51)
+            (xy 0.00 -0.00))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type background)))
+        (polyline
+          (pts
+            (xy 5.08 0.51)
+            (xy 4.32 -0.76)
+            (xy 5.84 -0.76)
+            (xy 5.08 0.51))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type background)))
+        (pin passive line
+          (at 2.54 5.08 270)
+          (length 2.54)
+          (name "D"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 -0.00 0)
+          (length 2.54)
+          (name "G"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 -5.08 90)
+          (length 2.54)
+          (name "S"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27))))))))
+  (text "Battery cartridge: 5S protector, FETs, fuse, gauge"
+    (exclude_from_sim no)
+    (at 20 20 0)
+    (effects
+      (font
+        (size 2 2))
+      (justify left))
+    (uuid "b11b0afb-4d3e-56e3-a4bb-0a93f95ffddc"))
+  (text "Presence loop: pogo PRES_A (pack top via 100k) is shorted to PRES_B on the main board. Removed cartridge = PRES low = HIBERNATE."
+    (exclude_from_sim no)
+    (at 20 23.5 0)
+    (effects
+      (font
+        (size 1.5 1.5))
+      (justify left))
+    (uuid "267d798b-17c9-5e4b-8e79-ac63ed2408c6"))
+  (text "Ground: VSS = BAT- (cell 0). PACK- (main-board GND) is after the CHG/DSG FETs."
+    (exclude_from_sim no)
+    (at 20 27 0)
+    (effects
+      (font
+        (size 1.5 1.5))
+      (justify left))
+    (uuid "78de889a-ef72-5dd1-a149-fe786320db6d"))
+  (symbol
+    (lib_id "bb:CELL_TABS")
+    (at 46.99 50.8 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "7a1aa243-c5b2-56d6-a006-a8b73e0b7cea")
+    (property "Reference" "BT1"
+      (at 46.99 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "CELL_TABS"
+      (at 46.99 60.15 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at 46.99 50.8 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 46.99 50.8 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "nickel-strip tab pads for 5x Samsung 50S (spot-welded). Wide copper: 8.3 A x3"
+      (at 46.99 50.8 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "afd90a54-4082-56b3-b632-8f35fbe7c7f4"))
+    (pin "2"
+      (uuid "abdc39d3-f116-510f-aedb-a8454724a2ca"))
+    (pin "3"
+      (uuid "7e990e11-fbe0-5922-8b67-a2ca5ecb6adc"))
+    (pin "4"
+      (uuid "7d292cb7-c779-57b5-b67b-0cee7fc3fb76"))
+    (pin "5"
+      (uuid "f3ffe24e-bef2-5336-b999-142e72f7af37"))
+    (pin "6"
+      (uuid "2bc0ed49-aeec-5a34-aaad-d714a6f3449e"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "BT1")
+          (unit 1)))))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 39.37 44.45 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "ffed70ee-0368-5e18-9429-7038db181b96"))
+  (global_label "CELL1"
+    (shape bidirectional)
+    (at 39.37 46.99 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "b3620cf7-9432-5743-957e-aa6e1a8deb5f"))
+  (global_label "CELL2"
+    (shape bidirectional)
+    (at 39.37 49.53 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "92afb4c8-f423-5526-9629-c7d0f58e4935"))
+  (global_label "CELL3"
+    (shape bidirectional)
+    (at 39.37 52.07 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "94861d80-bfd6-563e-bba4-99721716efab"))
+  (global_label "CELL4"
+    (shape bidirectional)
+    (at 39.37 54.61 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "57140244-7b61-577b-9f05-039c898c940b"))
+  (global_label "CELL5"
+    (shape bidirectional)
+    (at 39.37 57.15 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "032412d0-b90f-5961-8ea2-06b21c5ce26e"))
+  (symbol
+    (lib_id "lcsc:STS2250")
+    (at 73.66 43.18 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "6105cbc9-a977-52fd-ba45-432ab7a11866")
+    (property "Reference" "F1"
+      (at 73.66 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "25A 72V"
+      (at 73.66 47.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:FUSE-SMD_L6.1-W2.5"
+      (at 73.66 43.18 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 73.66 43.18 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C2762484"
+      (at 73.66 43.18 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "STS2250"
+      (at 73.66 43.18 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_I" "8.3"
+      (at 73.66 43.18 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_I" "25.0"
+      (at 73.66 43.18 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "500 A @72 VDC interrupt. Fault current of 5x 50S TBD (VERIFY interrupt margin)"
+      (at 73.66 43.18 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "2"
+      (uuid "b188f74c-f747-5bb4-972f-daefbbc26b36"))
+    (pin "1"
+      (uuid "47660d10-2fc8-50d4-8ccf-a7b49e2cc617"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "F1")
+          (unit 1)))))
+  (global_label "CELL5"
+    (shape bidirectional)
+    (at 63.5 44.45 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "e05b4dbd-811c-58bb-8c03-cc174ff3fbb5"))
+  (global_label "PACK_P"
+    (shape bidirectional)
+    (at 83.82 44.45 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "f2f051bb-8814-5d8d-ad86-4948fb239826"))
+  (symbol
+    (lib_id "lcsc:BQ7791500PWR")
+    (at 123.19 58.42 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "47972733-bbaf-518f-8b7b-486788a37127")
+    (property "Reference" "U1"
+      (at 123.19 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "BQ7791500PWR"
+      (at 123.19 75.39 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:TSSOP-24_L7.8-W4.4-P0.65-LS6.4-BL"
+      (at 123.19 58.42 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 123.19 58.42 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C2876946"
+      (at 123.19 58.42 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "BQ7791500PWR"
+      (at 123.19 58.42 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "CCFG floating = 5S. LPWR/CBI to VSS for a single device (VERIFY). SRP/SRN polarity VERIFY."
+      (at 123.19 58.42 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "96baeb78-f72a-5060-a53c-1d21b9f61ac7"))
+    (pin "2"
+      (uuid "35802aee-82f9-57ea-8457-a6bca575de88"))
+    (pin "3"
+      (uuid "5ab5e4f0-73f2-560d-8eb3-74950522730b"))
+    (pin "4"
+      (uuid "e1f0bfda-cbdf-562a-bad4-52676fc285b5"))
+    (pin "5"
+      (uuid "10e1c141-6ab3-5a89-977a-bb2da1fa3900"))
+    (pin "6"
+      (uuid "8e570137-7e27-5d00-9605-06f816029066"))
+    (pin "7"
+      (uuid "1ea74ac5-24df-52ef-8f4e-7dc2a5e6cf2d"))
+    (pin "8"
+      (uuid "aac717cf-407b-5846-8186-500e90b23d1e"))
+    (pin "9"
+      (uuid "f3882829-a5e7-5acb-b665-16388a69947d"))
+    (pin "10"
+      (uuid "221abff4-d8d5-5d16-ba6b-b94c1fff734f"))
+    (pin "11"
+      (uuid "eb1e0e71-9e04-5546-aeb7-aa06561dce26"))
+    (pin "12"
+      (uuid "84711e65-f55d-5642-a8d4-bbecf2f2236e"))
+    (pin "13"
+      (uuid "b6b394bc-e07b-5af3-be2f-edbbef762d50"))
+    (pin "14"
+      (uuid "8b39cbd0-9296-5ff3-a61f-e7ff452a27dc"))
+    (pin "15"
+      (uuid "7af7f548-050c-52cc-b61e-06afd06c5373"))
+    (pin "16"
+      (uuid "03dc61b7-aa2e-5a3e-82d5-e71b99681766"))
+    (pin "17"
+      (uuid "b0856a6d-7b57-578d-86bd-00c7b7856507"))
+    (pin "18"
+      (uuid "916eee78-8504-50aa-adf7-91e277a99f4e"))
+    (pin "19"
+      (uuid "df38a889-4d08-50bb-ae5d-28306e0bbd9c"))
+    (pin "20"
+      (uuid "625c426d-5c8c-556e-9231-507058602a5d"))
+    (pin "21"
+      (uuid "fe780ce2-da85-5121-8261-e9db2fe54c7e"))
+    (pin "22"
+      (uuid "27ca659a-6a17-553c-96fe-d692ade9141b"))
+    (pin "23"
+      (uuid "24e3be87-2c72-5e3c-9595-1e32161eee80"))
+    (pin "24"
+      (uuid "29dfd3e9-74fe-55f7-9d72-c1096d6c29ee"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "U1")
+          (unit 1)))))
+  (global_label "CRT_VDDF"
+    (shape bidirectional)
+    (at 111.76 44.45 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "2ab78ee0-14e1-54c5-91ca-ab9a98602bc3"))
+  (global_label "CRT_AVDD"
+    (shape bidirectional)
+    (at 111.76 46.99 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "b7c0832c-4311-5fdb-9928-a0d496a5ccba"))
+  (global_label "VC5F"
+    (shape bidirectional)
+    (at 111.76 49.53 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "a9b94c37-6057-571e-b286-c70603d0d862"))
+  (global_label "VC4F"
+    (shape bidirectional)
+    (at 111.76 52.07 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "2acd044d-7a5e-53a1-a493-99b089370c30"))
+  (global_label "VC3F"
+    (shape bidirectional)
+    (at 111.76 54.61 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "69bdb331-6a5e-570d-be51-963fe6a67459"))
+  (global_label "VC2F"
+    (shape bidirectional)
+    (at 111.76 57.15 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "22a944ce-49cb-5305-85b0-70e109983c53"))
+  (global_label "VC1F"
+    (shape bidirectional)
+    (at 111.76 59.69 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "1e9885fb-f8d3-5b8a-8cea-e45c7d215ff5"))
+  (global_label "VC0F"
+    (shape bidirectional)
+    (at 111.76 62.23 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "85df3382-2681-5bd8-965a-13d17550c5e0"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 111.76 64.77 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "0b302b8e-1b82-5ac5-865f-8b659142ac91"))
+  (global_label "CRT_SRP"
+    (shape bidirectional)
+    (at 111.76 67.31 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "4051514d-dc3e-5c3e-bba5-5284a6fb77a8"))
+  (global_label "CRT_SRN"
+    (shape bidirectional)
+    (at 111.76 69.85 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "c738f53f-26d5-5d6f-9800-7f953d93e65d"))
+  (global_label "CRT_DSG"
+    (shape bidirectional)
+    (at 111.76 72.39 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "475fadc2-6568-5a94-95e3-c2f7fa2da2c6"))
+  (global_label "CRT_CHG"
+    (shape bidirectional)
+    (at 134.62 72.39 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "9f6a1cda-763f-5fc7-b240-ceb6f5e5ab82"))
+  (global_label "CRT_LD"
+    (shape bidirectional)
+    (at 134.62 69.85 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "1538d271-4384-56fb-a9c0-ce28dcd12fa4"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 134.62 67.31 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "de4230c8-31bb-5912-ba6c-de947439c2ed"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 134.62 64.77 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "92153e07-fb13-549d-8010-8e7eb91174e6"))
+  (global_label "CRT_OCDP"
+    (shape bidirectional)
+    (at 134.62 62.23 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "b8c5d821-7299-5c59-8279-33d1b38c37b1"))
+  (global_label "CRT_TS"
+    (shape bidirectional)
+    (at 134.62 59.69 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "910a93bf-39ba-5de0-91ed-9c5d5aad3293"))
+  (global_label "CRT_VTB"
+    (shape bidirectional)
+    (at 134.62 57.15 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "b4af6649-27ed-5084-a5b8-bff9e9b066a7"))
+  (global_label "PRES_B"
+    (shape bidirectional)
+    (at 134.62 49.53 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "c03324a0-4583-5ad1-ae42-ff8fd01cd764"))
+  (global_label "CRT_CTRC"
+    (shape bidirectional)
+    (at 134.62 46.99 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "82e6c3ec-3f89-5527-b3f2-92138480e7b7"))
+  (global_label "CRT_CTRD"
+    (shape bidirectional)
+    (at 134.62 44.45 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "273ef003-09f6-5fe0-8486-667e2d1d56d2"))
+  (no_connect
+    (at 134.62 54.61)
+    (uuid "a0142f20-9bd4-5478-b69b-47e51ba1d0f5"))
+  (no_connect
+    (at 134.62 52.07)
+    (uuid "0e77f02d-0972-5a24-8796-4dc9999c87e9"))
+  (symbol
+    (lib_id "bb:R")
+    (at 162.56 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "556c9139-df8f-5240-b854-1a47605f4b45")
+    (property "Reference" "R1"
+      (at 162.56 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "1k"
+      (at 162.56 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 162.56 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 162.56 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C11702"
+      (at 162.56 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1001TCE"
+      (at 162.56 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 162.56 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 162.56 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 162.56 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.005"
+      (at 162.56 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "V_across" "4.2"
+      (at 162.56 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "f68bbc2a-f79e-5dc3-b12c-617c08229cb1"))
+    (pin "2"
+      (uuid "9c1e992b-d3ad-5bb9-ab10-1f59894373f8"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R1")
+          (unit 1)))))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 162.56 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "10ac03f1-dbb1-5643-b960-447d6a0587fb"))
+  (global_label "VC0F"
+    (shape bidirectional)
+    (at 162.56 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "5b49b76d-8ed2-5717-b257-d0109e8b44ec"))
+  (symbol
+    (lib_id "bb:C")
+    (at 186.69 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "1c434667-ba8d-550d-bb7a-f2ed788a646a")
+    (property "Reference" "C1"
+      (at 186.69 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 16V"
+      (at 186.69 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 186.69 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 186.69 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C1525"
+      (at 186.69 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL05B104KO5NNNC"
+      (at 186.69 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 186.69 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "16.0"
+      (at 186.69 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "52e9ab9a-ecc9-52e7-952e-ab0b801f5e01"))
+    (pin "2"
+      (uuid "51007be4-42fc-5e39-a83e-4dc2c565c835"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "C1")
+          (unit 1)))))
+  (global_label "VC0F"
+    (shape bidirectional)
+    (at 186.69 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "f2f8c2a8-8571-5028-839f-7cf86d98823b"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 186.69 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "c76d9a39-32a2-5421-95b7-74290aee6fe4"))
+  (symbol
+    (lib_id "bb:R")
+    (at 209.55 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "3e8e4366-6658-5991-b3d4-2b439e20cb42")
+    (property "Reference" "R2"
+      (at 209.55 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "1k"
+      (at 209.55 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 209.55 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 209.55 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C11702"
+      (at 209.55 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1001TCE"
+      (at 209.55 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 209.55 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 209.55 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 209.55 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.005"
+      (at 209.55 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "V_across" "4.2"
+      (at 209.55 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "563cdfd5-fd76-54c6-bbfe-d234816fe364"))
+    (pin "2"
+      (uuid "4dab6ef8-b136-50ba-b4a0-10feecaa9726"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R2")
+          (unit 1)))))
+  (global_label "CELL1"
+    (shape bidirectional)
+    (at 209.55 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "ec098f2b-3afd-5732-aecd-3c3a035df98d"))
+  (global_label "VC1F"
+    (shape bidirectional)
+    (at 209.55 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "54804c62-820a-5388-9e10-f1d87c738206"))
+  (symbol
+    (lib_id "bb:C")
+    (at 233.68 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "e6b46a76-bcee-543a-aef5-f2541ded9398")
+    (property "Reference" "C2"
+      (at 233.68 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 50V"
+      (at 233.68 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 233.68 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 233.68 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C14663"
+      (at 233.68 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CC0603KRX7R9BB104"
+      (at 233.68 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 233.68 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50.0"
+      (at 233.68 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "0f231b82-feac-5138-bd9b-41ad71fd4897"))
+    (pin "2"
+      (uuid "324dab0f-b577-5dcd-8222-563f5e4294aa"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "C2")
+          (unit 1)))))
+  (global_label "VC1F"
+    (shape bidirectional)
+    (at 233.68 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "c4d30361-50a2-52ab-86da-16b8fdce901e"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 233.68 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "200c6b36-e379-511d-bca3-1205e5ba5be5"))
+  (symbol
+    (lib_id "bb:R")
+    (at 257.81 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "22fe683f-6fc0-5547-92a6-f9477460d1e4")
+    (property "Reference" "R3"
+      (at 257.81 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "1k"
+      (at 257.81 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 257.81 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 257.81 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C11702"
+      (at 257.81 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1001TCE"
+      (at 257.81 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 257.81 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 257.81 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 257.81 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.005"
+      (at 257.81 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "V_across" "4.2"
+      (at 257.81 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "ddc1fe74-6faa-53e7-8985-23d377dcf9e0"))
+    (pin "2"
+      (uuid "f0241065-6960-532f-a1ea-069be338ef90"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R3")
+          (unit 1)))))
+  (global_label "CELL2"
+    (shape bidirectional)
+    (at 257.81 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "1465a18f-11ab-59b6-b4c5-842e5e0a1db7"))
+  (global_label "VC2F"
+    (shape bidirectional)
+    (at 257.81 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "0bb26503-ecaf-5855-9698-b9d36683946f"))
+  (symbol
+    (lib_id "bb:C")
+    (at 281.94 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "c056cbcd-055e-5908-9899-d79811f7b26d")
+    (property "Reference" "C3"
+      (at 281.94 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 50V"
+      (at 281.94 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 281.94 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 281.94 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C14663"
+      (at 281.94 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CC0603KRX7R9BB104"
+      (at 281.94 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 281.94 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50.0"
+      (at 281.94 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "d8998b9d-4e71-5fd2-bc93-9bfa3f18a646"))
+    (pin "2"
+      (uuid "15af5d4e-d6b3-58f9-a963-8d3ee5da7928"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "C3")
+          (unit 1)))))
+  (global_label "VC2F"
+    (shape bidirectional)
+    (at 281.94 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "3d7ed0eb-9af5-5a63-bc6c-77330d993be4"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 281.94 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "6f9e6e3c-1df0-5025-ad82-4438e00e6766"))
+  (symbol
+    (lib_id "bb:R")
+    (at 306.07 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "3e52eb1d-2665-54b1-a400-ecc00e0a192d")
+    (property "Reference" "R4"
+      (at 306.07 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "1k"
+      (at 306.07 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 306.07 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 306.07 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C11702"
+      (at 306.07 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1001TCE"
+      (at 306.07 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 306.07 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 306.07 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 306.07 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.005"
+      (at 306.07 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "V_across" "4.2"
+      (at 306.07 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "9e18e3a1-2e99-50da-b1bd-720ef10f8503"))
+    (pin "2"
+      (uuid "d9795240-56ac-512c-aca8-30a92cf8920e"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R4")
+          (unit 1)))))
+  (global_label "CELL3"
+    (shape bidirectional)
+    (at 306.07 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "d0ca26c6-b02b-55a5-9bb0-89ba9d31e786"))
+  (global_label "VC3F"
+    (shape bidirectional)
+    (at 306.07 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "dd8a448c-645a-5e07-b0ee-60be062006ed"))
+  (symbol
+    (lib_id "bb:C")
+    (at 330.2 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "646a7d55-e8ed-5745-92ff-91e83197ba29")
+    (property "Reference" "C4"
+      (at 330.2 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 50V"
+      (at 330.2 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 330.2 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 330.2 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C14663"
+      (at 330.2 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CC0603KRX7R9BB104"
+      (at 330.2 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 330.2 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50.0"
+      (at 330.2 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "1fe24d83-f825-5e3b-9f58-a68deb39441d"))
+    (pin "2"
+      (uuid "a8d1ceb9-794d-58f9-9bc2-4642bee26f89"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "C4")
+          (unit 1)))))
+  (global_label "VC3F"
+    (shape bidirectional)
+    (at 330.2 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "864525ee-f020-5dca-ae46-b798dcd03b9a"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 330.2 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "762ba767-d4b7-5ac1-9581-71a2f45e674c"))
+  (symbol
+    (lib_id "bb:R")
+    (at 354.33 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "9f1a7f0c-4f86-5218-b1c9-4fe28fac0dc7")
+    (property "Reference" "R5"
+      (at 354.33 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "1k"
+      (at 354.33 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 354.33 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 354.33 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C11702"
+      (at 354.33 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1001TCE"
+      (at 354.33 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 354.33 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 354.33 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 354.33 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.005"
+      (at 354.33 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "V_across" "4.2"
+      (at 354.33 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "dfe4b0d1-a5b2-5366-8ad3-d02b70415fb4"))
+    (pin "2"
+      (uuid "880136ed-0f17-5d81-b3d3-3b942a713b89"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R5")
+          (unit 1)))))
+  (global_label "CELL4"
+    (shape bidirectional)
+    (at 354.33 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "ff8f9353-d342-54d8-b1f9-c1a3eec6c1c2"))
+  (global_label "VC4F"
+    (shape bidirectional)
+    (at 354.33 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "a5daa2b4-3616-5b4d-905c-0bb91e2c4771"))
+  (symbol
+    (lib_id "bb:C")
+    (at 378.46 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "be93290a-fc8d-53e4-8c6e-71060a1d6e3b")
+    (property "Reference" "C5"
+      (at 378.46 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 50V"
+      (at 378.46 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 378.46 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 378.46 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C14663"
+      (at 378.46 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CC0603KRX7R9BB104"
+      (at 378.46 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 378.46 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50.0"
+      (at 378.46 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "685828df-996d-5bbe-a6dd-91c8656ee954"))
+    (pin "2"
+      (uuid "641e723f-f1a4-5e25-b6f7-41b8069fe4e6"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "C5")
+          (unit 1)))))
+  (global_label "VC4F"
+    (shape bidirectional)
+    (at 378.46 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "0b370cbd-bbd6-552b-a614-a225f239e59b"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 378.46 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "d53fca7a-8bb6-5f63-bc1d-962a443c8bae"))
+  (symbol
+    (lib_id "bb:R")
+    (at 402.59 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "1b7f29e9-28f5-565d-adee-b33ff37512a7")
+    (property "Reference" "R6"
+      (at 402.59 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "1k"
+      (at 402.59 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 402.59 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 402.59 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C11702"
+      (at 402.59 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1001TCE"
+      (at 402.59 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 402.59 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 402.59 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 402.59 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.005"
+      (at 402.59 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "V_across" "4.2"
+      (at 402.59 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "513dd38d-87fe-5a47-8192-2ce3b3f90e14"))
+    (pin "2"
+      (uuid "588e0a6f-592a-53a5-a89a-c063890196fc"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R6")
+          (unit 1)))))
+  (global_label "CELL5"
+    (shape bidirectional)
+    (at 402.59 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "e33a76c6-0233-5f3c-9666-6c59abaa770a"))
+  (global_label "VC5F"
+    (shape bidirectional)
+    (at 402.59 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "c702e389-b8c7-5f1a-b857-b2d61c25b973"))
+  (symbol
+    (lib_id "bb:C")
+    (at 426.72 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "ad719691-9ec9-5aad-b084-3674436b194f")
+    (property "Reference" "C6"
+      (at 426.72 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 50V"
+      (at 426.72 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 426.72 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 426.72 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C14663"
+      (at 426.72 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CC0603KRX7R9BB104"
+      (at 426.72 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 426.72 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50.0"
+      (at 426.72 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "b005bfd6-f937-587f-b23c-c0f3f94eab9d"))
+    (pin "2"
+      (uuid "0d229611-49d6-5cc6-99e2-94a969cc9352"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "C6")
+          (unit 1)))))
+  (global_label "VC5F"
+    (shape bidirectional)
+    (at 426.72 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "c61daab3-ff36-5852-95b0-3c76defea93c"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 426.72 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "a7d8f638-d009-5fbf-90c7-6223fa3ea158"))
+  (symbol
+    (lib_id "bb:R")
+    (at 453.39 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "fa142a7f-f49b-5c63-ac81-c44217cee4d9")
+    (property "Reference" "R7"
+      (at 453.39 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "1k"
+      (at 453.39 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 453.39 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 453.39 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C11702"
+      (at 453.39 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1001TCE"
+      (at 453.39 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 453.39 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 453.39 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 453.39 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 453.39 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "V_across" "1.0"
+      (at 453.39 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "98809f80-4d0b-540e-a837-c459d2978acc"))
+    (pin "2"
+      (uuid "59f8d06a-84d8-5775-8fc7-efd4a3adad0f"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R7")
+          (unit 1)))))
+  (global_label "CELL5"
+    (shape bidirectional)
+    (at 453.39 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "31712b43-0f00-5ce5-a3b8-408c9247a62e"))
+  (global_label "CRT_VDDF"
+    (shape bidirectional)
+    (at 453.39 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "0159f850-132a-5d70-a387-034edc510f2b"))
+  (symbol
+    (lib_id "bb:C")
+    (at 482.6 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "694c3c15-456e-5a5f-9be9-b220474bbe56")
+    (property "Reference" "C7"
+      (at 482.6 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "1uF 50V"
+      (at 482.6 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 482.6 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 482.6 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C15849"
+      (at 482.6 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL10A105KB8NNNC"
+      (at 482.6 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 482.6 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50.0"
+      (at 482.6 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "a4de2abe-b1d9-566e-a594-150a4f72b988"))
+    (pin "2"
+      (uuid "3ef04cd0-e380-523f-8b63-d3f3bbe095be"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "C7")
+          (unit 1)))))
+  (global_label "CRT_VDDF"
+    (shape bidirectional)
+    (at 482.6 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "81bcac31-5382-5928-9b86-9ff2f0b8d608"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 482.6 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "e788aab2-5d6d-5054-b3fa-1cd83e0a8190"))
+  (symbol
+    (lib_id "bb:C")
+    (at 513.08 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "eb3afc53-fa02-53ac-94bd-ff3a78c746c1")
+    (property "Reference" "C8"
+      (at 513.08 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "1uF 50V"
+      (at 513.08 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 513.08 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 513.08 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C15849"
+      (at 513.08 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL10A105KB8NNNC"
+      (at 513.08 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 513.08 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50.0"
+      (at 513.08 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "AVDD regulator cap VERIFY value"
+      (at 513.08 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "4979aec6-1542-5908-a52d-16e62824ea2b"))
+    (pin "2"
+      (uuid "9961a9fa-fe0d-5ae3-af73-57eeb95c2161"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "C8")
+          (unit 1)))))
+  (global_label "CRT_AVDD"
+    (shape bidirectional)
+    (at 513.08 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "9c9a791a-a78b-5df3-b9c4-41cdf6f82f74"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 513.08 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "4308e13b-b4cb-5891-947d-0c7d2c9c74c3"))
+  (symbol
+    (lib_id "bb:R")
+    (at 543.56 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "8b2855f4-6fa7-559d-8954-b85970032064")
+    (property "Reference" "R8"
+      (at 543.56 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "1M"
+      (at 543.56 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 543.56 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 543.56 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C26083"
+      (at 543.56 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1004TCE"
+      (at 543.56 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 543.56 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 543.56 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 543.56 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 543.56 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "OCD1/2 delay programming VERIFY"
+      (at 543.56 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "be664ea9-9faf-5127-9a22-dcf47bf3a4d1"))
+    (pin "2"
+      (uuid "b8460f05-7678-536e-959c-cd28f7571746"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R8")
+          (unit 1)))))
+  (global_label "CRT_OCDP"
+    (shape bidirectional)
+    (at 543.56 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "60c2e75b-4d6b-564d-b990-282078ed3da7"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 543.56 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "19c95e57-11bb-5094-af8d-6a97699e2cb0"))
+  (symbol
+    (lib_id "bb:R")
+    (at 572.77 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "42a95e96-0a95-5fd1-9db7-89418d34c143")
+    (property "Reference" "R9"
+      (at 572.77 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "10k"
+      (at 572.77 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 572.77 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 572.77 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C25744"
+      (at 572.77 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1002TCE"
+      (at 572.77 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 572.77 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 572.77 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 572.77 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 572.77 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "46ce70d2-2b76-5307-9299-ab9e9627a8d4"))
+    (pin "2"
+      (uuid "beeed5c6-2317-54c4-88bc-c67d1bacae9e"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R9")
+          (unit 1)))))
+  (global_label "CRT_CTRC"
+    (shape bidirectional)
+    (at 572.77 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "bcd1e6d4-22fd-5ed5-aa69-5da9abbac419"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 572.77 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "fbca986e-2f82-5703-a09c-47fff05d31e9"))
+  (symbol
+    (lib_id "bb:R")
+    (at 603.25 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "03513d75-4860-5142-bd1c-e4efb811f1b7")
+    (property "Reference" "R10"
+      (at 603.25 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "10k"
+      (at 603.25 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 603.25 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 603.25 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C25744"
+      (at 603.25 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1002TCE"
+      (at 603.25 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 603.25 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 603.25 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 603.25 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 603.25 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "e4ce487f-8106-5a01-9b9c-a900ea7b2a52"))
+    (pin "2"
+      (uuid "e4ab3f11-2b3a-57c5-a5c8-514e5525c5a1"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R10")
+          (unit 1)))))
+  (global_label "CRT_CTRD"
+    (shape bidirectional)
+    (at 603.25 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "aa1ba657-86bd-5ba4-aff1-f52b6dd4074d"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 603.25 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "996731dd-d44a-5942-89ec-6bd75448bbf6"))
+  (symbol
+    (lib_id "bb:R")
+    (at 632.46 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "8412189d-40f0-5b7a-aaa8-8d74d0753073")
+    (property "Reference" "R11"
+      (at 632.46 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "10k"
+      (at 632.46 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 632.46 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 632.46 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C25744"
+      (at 632.46 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1002TCE"
+      (at 632.46 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 632.46 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 632.46 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 632.46 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 632.46 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "a69374f9-76fe-543f-8c95-5871f10fcc12"))
+    (pin "2"
+      (uuid "7f1cef12-3e20-5b40-bbf7-9644dc172fd9"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R11")
+          (unit 1)))))
+  (global_label "CRT_VTB"
+    (shape bidirectional)
+    (at 632.46 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "e5a5e455-0df4-562a-b2c5-7e3bf05ce598"))
+  (global_label "CRT_TS"
+    (shape bidirectional)
+    (at 632.46 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "3d8cfd8f-f2d4-50fd-b98d-de4b9ebc46f5"))
+  (symbol
+    (lib_id "bb:NTC")
+    (at 659.13 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "03aa7c7e-d2b2-5dd9-b509-ad18abd01e08")
+    (property "Reference" "TH1"
+      (at 659.13 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "10k NTC cells (protector)"
+      (at 659.13 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+      (at 659.13 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 659.13 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C13564"
+      (at 659.13 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "NCP18XH103F03RB"
+      (at 659.13 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Extended"
+      (at 659.13 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "b63c7627-6869-5985-a36d-1ca3c75e3043"))
+    (pin "2"
+      (uuid "d6247d1f-036e-5f7f-925e-ccdbc30e92af"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "TH1")
+          (unit 1)))))
+  (global_label "CRT_TS"
+    (shape bidirectional)
+    (at 659.13 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "9bde0ca5-731b-5dcd-88ca-97cb388fee24"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 659.13 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "f5ec8ec7-7960-5d3d-948d-8818ab557a7a"))
+  (symbol
+    (lib_id "bb:R")
+    (at 685.8 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "34e7539c-ed4c-5b67-b3ff-5db24011f6d6")
+    (property "Reference" "R12"
+      (at 685.8 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100k"
+      (at 685.8 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+      (at 685.8 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 685.8 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C25803"
+      (at 685.8 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0603WAF1003T5E"
+      (at 685.8 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 685.8 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "75"
+      (at 685.8 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.1"
+      (at 685.8 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 685.8 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "1116c914-c785-5752-830f-1230902c1f24"))
+    (pin "2"
+      (uuid "256aeb77-9928-500b-91a5-24fe8fae4501"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R12")
+          (unit 1)))))
+  (global_label "CELL5"
+    (shape bidirectional)
+    (at 685.8 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "1c1541f9-0461-5c71-b14f-1bdbc8b9ff5d"))
+  (global_label "PRES_A"
+    (shape bidirectional)
+    (at 685.8 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "7cb45e7b-b7d2-5c4f-89ae-db0db9f3ccd9"))
+  (symbol
+    (lib_id "bb:R")
+    (at 711.2 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "7c7493e8-3a41-5b2e-ae33-1e50d97df19d")
+    (property "Reference" "R13"
+      (at 711.2 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "1M"
+      (at 711.2 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+      (at 711.2 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 711.2 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C22935"
+      (at 711.2 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0603WAF1004T5E"
+      (at 711.2 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 711.2 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "75"
+      (at 711.2 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.1"
+      (at 711.2 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 711.2 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "PRES low (HIBERNATE) when the cartridge is out"
+      (at 711.2 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "53e93890-0e2f-5bcf-b4de-40c2c24ce310"))
+    (pin "2"
+      (uuid "d93805e5-0a4f-59f3-b356-6dd1f740d649"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R13")
+          (unit 1)))))
+  (global_label "PRES_B"
+    (shape bidirectional)
+    (at 711.2 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "c1275dfe-e28c-57b5-9da4-e57a1a3d2709"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 711.2 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "25c12dc0-6b4c-5f26-9968-4ea0dddfe098"))
+  (symbol
+    (lib_id "bb:R")
+    (at 736.6 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "72177aad-58a6-5b34-9966-f5d5656cc842")
+    (property "Reference" "R14"
+      (at 736.6 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "5m 1% 3W"
+      (at 736.6 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_2512_6332Metric"
+      (at 736.6 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 736.6 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C500739"
+      (at 736.6 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "LR2512D-3W-5mR-1%"
+      (at 736.6 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Extended"
+      (at 736.6 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "3.0"
+      (at 736.6 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.344"
+      (at 736.6 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "200"
+      (at 736.6 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "d0234909-84aa-5efd-ad68-d9a414c54411"))
+    (pin "2"
+      (uuid "5b527ba9-92aa-5e0a-80d1-8f64a0688c49"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R14")
+          (unit 1)))))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 736.6 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "e1088e99-16e2-5983-9e18-b9f92c84f607"))
+  (global_label "SNS"
+    (shape bidirectional)
+    (at 736.6 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "a236d3d3-a0c5-57bb-9983-8901c8704911"))
+  (symbol
+    (lib_id "bb:R")
+    (at 762 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "949f0c14-1995-547d-b7e2-9cba7f932790")
+    (property "Reference" "R15"
+      (at 762 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100"
+      (at 762 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 762 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 762 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C25076"
+      (at 762 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1000TCE"
+      (at 762 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 762 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 762 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 762 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 762 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "V_across" "0.2"
+      (at 762 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "19509545-90b6-575b-a31f-e0375bfc72b7"))
+    (pin "2"
+      (uuid "3430b67f-7e46-51a3-81a3-0f22ccd0ec4c"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R15")
+          (unit 1)))))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 762 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "3dd36d68-61a3-567c-b8eb-3308dfa92204"))
+  (global_label "CRT_SRN"
+    (shape bidirectional)
+    (at 762 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "d97c92cb-fada-5a48-9edc-bd3412709b21"))
+  (symbol
+    (lib_id "bb:R")
+    (at 40.64 95.25 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "c2a6163d-4700-5c36-96f6-642e173d5d2f")
+    (property "Reference" "R16"
+      (at 40.64 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100"
+      (at 40.64 102.06 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 40.64 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 40.64 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C25076"
+      (at 40.64 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1000TCE"
+      (at 40.64 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 40.64 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 40.64 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 40.64 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 40.64 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "V_across" "0.2"
+      (at 40.64 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "ea08cb74-fc84-5c12-a05c-6d71bd99dd06"))
+    (pin "2"
+      (uuid "b5ea03ce-603f-53ae-8e0a-ffd434cbcbc7"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R16")
+          (unit 1)))))
+  (global_label "SNS"
+    (shape bidirectional)
+    (at 40.64 91.44 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "2e604aec-3ab1-538e-9a5d-1ef9b2a684e7"))
+  (global_label "CRT_SRP"
+    (shape bidirectional)
+    (at 40.64 99.06 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "93a4e013-6c90-5878-981c-8491eb395224"))
+  (symbol
+    (lib_id "bb:C")
+    (at 68.58 95.25 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "42ebd3a9-a508-56e0-8a1c-074d31cdb2bf")
+    (property "Reference" "C9"
+      (at 68.58 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 16V"
+      (at 68.58 102.06 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 68.58 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 68.58 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C1525"
+      (at 68.58 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL05B104KO5NNNC"
+      (at 68.58 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 68.58 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "16.0"
+      (at 68.58 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "V_across" "0.2"
+      (at 68.58 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "77b2275f-3e1c-5b3c-9666-aeb3617220ca"))
+    (pin "2"
+      (uuid "579e7675-9aea-5380-b714-5e37b9c22896"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "C9")
+          (unit 1)))))
+  (global_label "CRT_SRP"
+    (shape bidirectional)
+    (at 68.58 91.44 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "85157f88-373c-5d50-901e-f2a132177e2d"))
+  (global_label "CRT_SRN"
+    (shape bidirectional)
+    (at 68.58 99.06 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "bfc8ff06-7e28-592b-b52f-1afc5b4bada4"))
+  (symbol
+    (lib_id "lcsc:NTMFS5C628NLT1G")
+    (at 105.41 99.06 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "0afe8969-693f-5efe-a6fd-08c9c2c59d35")
+    (property "Reference" "Q1"
+      (at 105.41 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "NTMFS5C628NLT1G"
+      (at 105.41 109.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:DFN-5_L4.9-W5.9-P1.27-LS6.2-BL"
+      (at 105.41 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 105.41 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C145537"
+      (at 105.41 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "NTMFS5C628NLT1G"
+      (at 105.41 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Vds_rated" "60"
+      (at 105.41 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_I" "100"
+      (at 105.41 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_Irms" "4.2"
+      (at 105.41 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "84608baa-594c-5eb1-b35b-ec3ef5224f29"))
+    (pin "2"
+      (uuid "ef3ce367-6c22-54df-957b-1cedbec2b65b"))
+    (pin "3"
+      (uuid "f3d449aa-8ee5-5d76-b558-a284ab178eb0"))
+    (pin "4"
+      (uuid "0d743f76-6642-55bd-99df-d826059b858f"))
+    (pin "5"
+      (uuid "89f25977-39ec-5c4c-a94f-d9b4a0281ef6"))
+    (pin "5"
+      (uuid "89f25977-39ec-5c4c-a94f-d9b4a0281ef6"))
+    (pin "5"
+      (uuid "89f25977-39ec-5c4c-a94f-d9b4a0281ef6"))
+    (pin "5"
+      (uuid "89f25977-39ec-5c4c-a94f-d9b4a0281ef6"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "Q1")
+          (unit 1)))))
+  (global_label "CRT_DSG"
+    (shape bidirectional)
+    (at 109.22 106.68 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "595f3d63-f177-514c-abdc-77613fc1b20b"))
+  (global_label "FET_MID"
+    (shape bidirectional)
+    (at 109.22 91.44 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "f5a443cd-7431-519b-8cf7-9a84f31b28f1"))
+  (global_label "FET_MID"
+    (shape bidirectional)
+    (at 101.6 91.44 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "276d4082-26e4-5b66-9d7e-20b0c70df42b"))
+  (global_label "FET_MID"
+    (shape bidirectional)
+    (at 96.52 99.06 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "969b6da4-a1ec-5ce4-a9c2-b7894a337efa"))
+  (global_label "FET_MID"
+    (shape bidirectional)
+    (at 114.3 99.06 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "3c57d611-eaa5-5bbf-93a4-0210112f1427"))
+  (global_label "SNS"
+    (shape bidirectional)
+    (at 101.6 106.68 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "83416045-0294-58ad-b438-7bfcb9ff3539"))
+  (global_label "SNS"
+    (shape bidirectional)
+    (at 104.14 106.68 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "8104c7b4-2315-5605-9ee8-bfa97c8602d0"))
+  (global_label "SNS"
+    (shape bidirectional)
+    (at 106.68 106.68 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "5e6394c0-5d1d-5cc3-a325-497e5483c0b7"))
+  (symbol
+    (lib_id "lcsc:NTMFS5C628NLT1G")
+    (at 151.13 99.06 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "12c68a9d-1ba1-5418-b385-4868900c5830")
+    (property "Reference" "Q2"
+      (at 151.13 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "NTMFS5C628NLT1G"
+      (at 151.13 109.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:DFN-5_L4.9-W5.9-P1.27-LS6.2-BL"
+      (at 151.13 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 151.13 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C145537"
+      (at 151.13 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "NTMFS5C628NLT1G"
+      (at 151.13 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Vds_rated" "60"
+      (at 151.13 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_I" "100"
+      (at 151.13 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_Irms" "4.2"
+      (at 151.13 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "44c6cc99-6ce8-536a-8463-327e2f65a125"))
+    (pin "2"
+      (uuid "206f965d-71e2-56e6-a382-da59ff55162d"))
+    (pin "3"
+      (uuid "ffee3229-af3c-5e47-83c9-cc39f3838cd5"))
+    (pin "4"
+      (uuid "ecfe3e19-80f4-53df-86dd-e85a5c38035e"))
+    (pin "5"
+      (uuid "34f8f70f-4c83-5ed9-a303-4bf0aeb3e9bc"))
+    (pin "5"
+      (uuid "34f8f70f-4c83-5ed9-a303-4bf0aeb3e9bc"))
+    (pin "5"
+      (uuid "34f8f70f-4c83-5ed9-a303-4bf0aeb3e9bc"))
+    (pin "5"
+      (uuid "34f8f70f-4c83-5ed9-a303-4bf0aeb3e9bc"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "Q2")
+          (unit 1)))))
+  (global_label "CRT_CHG"
+    (shape bidirectional)
+    (at 154.94 106.68 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "758ec876-a70e-5823-82e8-b9cb4993a8d8"))
+  (global_label "FET_MID"
+    (shape bidirectional)
+    (at 154.94 91.44 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "cec8a447-823c-5be7-823a-3bb22bf25b27"))
+  (global_label "FET_MID"
+    (shape bidirectional)
+    (at 147.32 91.44 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "685859e0-2757-53d9-81e6-3b2198a9c673"))
+  (global_label "FET_MID"
+    (shape bidirectional)
+    (at 142.24 99.06 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "dc90dd98-8ac5-5352-be4d-085857e1aa5c"))
+  (global_label "FET_MID"
+    (shape bidirectional)
+    (at 160.02 99.06 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "6cdb9916-9c01-55d0-b5e0-6c92682f1d1b"))
+  (global_label "PACK_N"
+    (shape bidirectional)
+    (at 147.32 106.68 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "99bd12fd-3e6b-55b2-accb-47e59fa33604"))
+  (global_label "PACK_N"
+    (shape bidirectional)
+    (at 149.86 106.68 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "4a61e40e-dc92-5e06-88bf-01e33f8d51bc"))
+  (global_label "PACK_N"
+    (shape bidirectional)
+    (at 152.4 106.68 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "3aa0d65f-3d12-54ca-a1b1-979801e93ed6"))
+  (symbol
+    (lib_id "lcsc:NTMFS5C628NLT1G")
+    (at 196.85 99.06 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "9b5b76b6-3ef6-5679-809f-b9d7de220426")
+    (property "Reference" "Q3"
+      (at 196.85 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "NTMFS5C628NLT1G"
+      (at 196.85 109.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:DFN-5_L4.9-W5.9-P1.27-LS6.2-BL"
+      (at 196.85 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 196.85 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C145537"
+      (at 196.85 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "NTMFS5C628NLT1G"
+      (at 196.85 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Vds_rated" "60"
+      (at 196.85 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_I" "100"
+      (at 196.85 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_Irms" "4.2"
+      (at 196.85 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "9faf37fb-0f9a-58ce-8767-d5b854393a8c"))
+    (pin "2"
+      (uuid "0484df69-d7b2-5e14-96ca-96ff0c0694c1"))
+    (pin "3"
+      (uuid "b1ea8df1-4d9d-593e-b366-98b92aadc85c"))
+    (pin "4"
+      (uuid "459acd1b-1ff9-56ac-b0cf-3dd80d59bef6"))
+    (pin "5"
+      (uuid "db534e06-7650-5846-a25b-578155300b28"))
+    (pin "5"
+      (uuid "db534e06-7650-5846-a25b-578155300b28"))
+    (pin "5"
+      (uuid "db534e06-7650-5846-a25b-578155300b28"))
+    (pin "5"
+      (uuid "db534e06-7650-5846-a25b-578155300b28"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "Q3")
+          (unit 1)))))
+  (global_label "CRT_DSG"
+    (shape bidirectional)
+    (at 200.66 106.68 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "5facc7c0-9423-54ac-8d35-33a9e3091a19"))
+  (global_label "FET_MID"
+    (shape bidirectional)
+    (at 200.66 91.44 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "b490bb71-fb10-5685-b657-fa7122cfa646"))
+  (global_label "FET_MID"
+    (shape bidirectional)
+    (at 193.04 91.44 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "8cdb6dd7-c34d-5be8-9804-0110b7fba8f3"))
+  (global_label "FET_MID"
+    (shape bidirectional)
+    (at 187.96 99.06 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "344a0f81-5b6d-56e6-aeb5-b9d4e9d4a92b"))
+  (global_label "FET_MID"
+    (shape bidirectional)
+    (at 205.74 99.06 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "415c16d3-f87b-5e9b-b445-b19bc72be9bf"))
+  (global_label "SNS"
+    (shape bidirectional)
+    (at 193.04 106.68 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "c006972e-9a08-5b47-84e5-af712c390065"))
+  (global_label "SNS"
+    (shape bidirectional)
+    (at 195.58 106.68 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "2757f023-ed37-5fde-a60c-378827b66df6"))
+  (global_label "SNS"
+    (shape bidirectional)
+    (at 198.12 106.68 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "47240f00-6ada-5820-ad10-5510ba914bd7"))
+  (symbol
+    (lib_id "lcsc:NTMFS5C628NLT1G")
+    (at 243.84 99.06 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "15873bc6-a6f1-597e-a742-08b4d48e0c27")
+    (property "Reference" "Q4"
+      (at 243.84 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "NTMFS5C628NLT1G"
+      (at 243.84 109.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:DFN-5_L4.9-W5.9-P1.27-LS6.2-BL"
+      (at 243.84 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 243.84 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C145537"
+      (at 243.84 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "NTMFS5C628NLT1G"
+      (at 243.84 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Vds_rated" "60"
+      (at 243.84 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_I" "100"
+      (at 243.84 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_Irms" "4.2"
+      (at 243.84 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "9f86c701-8940-54bd-94c3-00b200126afd"))
+    (pin "2"
+      (uuid "d659c24f-eca4-524a-85a4-9bad0a603de5"))
+    (pin "3"
+      (uuid "c6f0e5d3-f248-561f-98a5-dd37664ddf14"))
+    (pin "4"
+      (uuid "87bfefbe-17a9-5fd4-a40a-8697ca180ef4"))
+    (pin "5"
+      (uuid "a4cbd08a-ec04-5bb5-a0fc-d617670bea9e"))
+    (pin "5"
+      (uuid "a4cbd08a-ec04-5bb5-a0fc-d617670bea9e"))
+    (pin "5"
+      (uuid "a4cbd08a-ec04-5bb5-a0fc-d617670bea9e"))
+    (pin "5"
+      (uuid "a4cbd08a-ec04-5bb5-a0fc-d617670bea9e"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "Q4")
+          (unit 1)))))
+  (global_label "CRT_CHG"
+    (shape bidirectional)
+    (at 247.65 106.68 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "279dd1d5-e5bf-51e8-8d3b-7cf34fbe079a"))
+  (global_label "FET_MID"
+    (shape bidirectional)
+    (at 247.65 91.44 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "ccd20143-cd93-5160-a137-3014e286b1f1"))
+  (global_label "FET_MID"
+    (shape bidirectional)
+    (at 240.03 91.44 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "d0b13f56-905d-5424-950c-ae13aa723e58"))
+  (global_label "FET_MID"
+    (shape bidirectional)
+    (at 234.95 99.06 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "2a08d6d1-642b-5a9b-948b-28532203be9e"))
+  (global_label "FET_MID"
+    (shape bidirectional)
+    (at 252.73 99.06 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "c6afd13d-6fcf-5015-be61-541083313687"))
+  (global_label "PACK_N"
+    (shape bidirectional)
+    (at 240.03 106.68 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "87736db3-2383-54ca-ac78-7cdfbba2808f"))
+  (global_label "PACK_N"
+    (shape bidirectional)
+    (at 242.57 106.68 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "929b5d9e-ed87-5ce2-922b-1b680c8715d4"))
+  (global_label "PACK_N"
+    (shape bidirectional)
+    (at 245.11 106.68 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "843171d3-e992-5ae3-98ef-e8362e014d34"))
+  (symbol
+    (lib_id "bb:R")
+    (at 279.4 95.25 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "424dc420-1db9-5700-83e5-f54d8f90227a")
+    (property "Reference" "R17"
+      (at 279.4 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100k"
+      (at 279.4 102.06 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 279.4 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 279.4 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C25741"
+      (at 279.4 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1003TCE"
+      (at 279.4 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 279.4 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 279.4 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 279.4 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 279.4 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "load-removal detect VERIFY value"
+      (at 279.4 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "e7a14488-1028-5f37-8f25-76fd122f4c49"))
+    (pin "2"
+      (uuid "803cbed0-ada2-508d-85b8-c15e34768b11"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R17")
+          (unit 1)))))
+  (global_label "CRT_LD"
+    (shape bidirectional)
+    (at 279.4 91.44 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "56c9dc2e-5257-502d-9c7a-3ea3c4d698f6"))
+  (global_label "PACK_N"
+    (shape bidirectional)
+    (at 279.4 99.06 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "c2c216d1-80c0-52db-aeb3-5ad826814007"))
+  (symbol
+    (lib_id "lcsc:XT60PW-F_C428722")
+    (at 309.88 97.79 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "cfa764c8-3709-5caf-947d-c9b04565bac4")
+    (property "Reference" "J1"
+      (at 309.88 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "XT60 female"
+      (at 309.88 107.14 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:TH_2P-XT60PW-F"
+      (at 309.88 97.79 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 309.88 97.79 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C428722"
+      (at 309.88 97.79 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "XT60PW-F"
+      (at 309.88 97.79 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_I" "8.3"
+      (at 309.88 97.79 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_I" "30.0"
+      (at 309.88 97.79 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "2"
+      (uuid "026c5db8-d409-50ba-aa49-e890b54c4599"))
+    (pin "1"
+      (uuid "c04bc328-8662-510e-9737-7f99b4cde65a"))
+    (pin "4"
+      (uuid "96fb350f-f73b-53f2-9e1d-9c14f6f2cefd"))
+    (pin "3"
+      (uuid "b1bc0915-37d0-5509-a35d-6f02f89ff01a"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "J1")
+          (unit 1)))))
+  (global_label "PACK_P"
+    (shape bidirectional)
+    (at 304.8 96.52 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "7d00700a-a7f5-58b4-88b4-4ae74afeb64c"))
+  (global_label "PACK_N"
+    (shape bidirectional)
+    (at 304.8 99.06 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "7f767da3-7822-5c91-8de6-c0004a9eb472"))
+  (no_connect
+    (at 314.96 104.14)
+    (uuid "72c6cb18-74cd-5bae-b002-9dbfa250137c"))
+  (no_connect
+    (at 314.96 91.44)
+    (uuid "edcf235a-f031-5835-bef9-547e71b13650"))
+  (symbol
+    (lib_id "bb:TP")
+    (at 341.63 88.9 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "be178c7f-dffc-56bd-a047-bd03b46b8a66")
+    (property "Reference" "P1"
+      (at 341.63 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "POGO GND"
+      (at 341.63 94.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+      (at 341.63 88.9 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 341.63 88.9 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "45327527-96b1-503e-9ee9-1e3eca6a28b2"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "P1")
+          (unit 1)))))
+  (global_label "PACK_N"
+    (shape bidirectional)
+    (at 341.63 91.44 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "5dc9203a-dc80-54a9-8a15-0c7c7b46f6e2"))
+  (symbol
+    (lib_id "bb:TP")
+    (at 368.3 88.9 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "0370dc50-7b08-5073-a4d9-309b06f4209b")
+    (property "Reference" "P2"
+      (at 368.3 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "POGO SDA"
+      (at 368.3 94.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+      (at 368.3 88.9 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 368.3 88.9 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "f5c427a8-2888-59db-a2d7-5239f46f9ed8"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "P2")
+          (unit 1)))))
+  (global_label "CRT_SDA"
+    (shape bidirectional)
+    (at 368.3 91.44 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "3bdfe9a8-459b-5d82-bd3d-55e295dc41c8"))
+  (symbol
+    (lib_id "bb:TP")
+    (at 396.24 88.9 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "76418a25-8a09-540f-9379-d2e2eecfecfb")
+    (property "Reference" "P3"
+      (at 396.24 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "POGO SCL"
+      (at 396.24 94.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+      (at 396.24 88.9 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 396.24 88.9 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "f3eb6cfb-37f1-5b98-aadc-d2959b720757"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "P3")
+          (unit 1)))))
+  (global_label "CRT_SCL"
+    (shape bidirectional)
+    (at 396.24 91.44 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "47ffed7c-093c-5425-9fbc-8b2db8a42a75"))
+  (symbol
+    (lib_id "bb:TP")
+    (at 422.91 88.9 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "dc4b4824-656a-5c41-b5dd-6f8c7ae76453")
+    (property "Reference" "P4"
+      (at 422.91 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "POGO PRES_A"
+      (at 422.91 94.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+      (at 422.91 88.9 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 422.91 88.9 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "012e3df5-d946-5665-b5d4-883d77d35c36"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "P4")
+          (unit 1)))))
+  (global_label "PRES_A"
+    (shape bidirectional)
+    (at 422.91 91.44 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "95bc45b3-2151-5c7d-86b2-7621d6ba094b"))
+  (symbol
+    (lib_id "bb:TP")
+    (at 449.58 88.9 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "ddb72c4b-e4a3-53cd-a7d9-1bbc52176190")
+    (property "Reference" "P5"
+      (at 449.58 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "POGO PRES_B"
+      (at 449.58 94.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+      (at 449.58 88.9 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 449.58 88.9 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "baa6bc22-3e7c-5b82-8d9a-804f50a068f2"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "P5")
+          (unit 1)))))
+  (global_label "PRES_B"
+    (shape bidirectional)
+    (at 449.58 91.44 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "e26a8b5f-0b77-562e-b7dd-af5ec4557ab5"))
+  (symbol
+    (lib_id "lcsc:TLV70433DBVR")
+    (at 491.49 97.79 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "46eca4ed-daae-50b6-b659-bf0dad80f6bd")
+    (property "Reference" "U2"
+      (at 491.49 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "TLV70433DBVR"
+      (at 491.49 109.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BR"
+      (at 491.49 97.79 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 491.49 97.79 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C94917"
+      (at 491.49 97.79 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "TLV70433DBVR"
+      (at 491.49 97.79 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_I" "0.002"
+      (at 491.49 97.79 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_I" "0.15"
+      (at 491.49 97.79 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "24 V max in vs 21 V pack"
+      (at 491.49 97.79 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "cf1823c7-a64f-561b-9837-7c9b29772312"))
+    (pin "3"
+      (uuid "a1378b86-1dbc-55d3-af47-fd3b693af3b6"))
+    (pin "2"
+      (uuid "6a009d71-adcf-5f53-8890-cd416f0e6880"))
+    (pin "4"
+      (uuid "97506f11-3965-5de6-9da8-fb138c4d0990"))
+    (pin "5"
+      (uuid "f73b44e3-d6a8-5118-8c51-79c73e29654a"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "U2")
+          (unit 1)))))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 491.49 106.68 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "74981d4c-28a9-56fd-a65c-111296725973"))
+  (global_label "GAUGE_3V3"
+    (shape bidirectional)
+    (at 504.19 91.44 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "e8fdb681-3fc0-55b4-9eac-ee8dbca12057"))
+  (global_label "PACK_P"
+    (shape bidirectional)
+    (at 478.79 91.44 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "1dbee89f-1837-5af9-b602-6a3119696075"))
+  (no_connect
+    (at 478.79 96.52)
+    (uuid "973ec1d8-27ea-557f-8709-4e3eee1bc69c"))
+  (no_connect
+    (at 504.19 96.52)
+    (uuid "64fe0969-8714-58a2-8b42-7ec2e5d9fafd"))
+  (symbol
+    (lib_id "bb:C")
+    (at 532.13 95.25 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "9b265010-5251-5605-97d8-874e4ddff259")
+    (property "Reference" "C10"
+      (at 532.13 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "1uF 50V"
+      (at 532.13 102.06 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 532.13 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 532.13 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C15849"
+      (at 532.13 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL10A105KB8NNNC"
+      (at 532.13 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 532.13 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50.0"
+      (at 532.13 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "312703fa-145f-554f-8a67-1e7686e8628d"))
+    (pin "2"
+      (uuid "c9d429af-6516-536d-9241-7eb1871af0fa"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "C10")
+          (unit 1)))))
+  (global_label "PACK_P"
+    (shape bidirectional)
+    (at 532.13 91.44 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "d46c163b-181f-592d-8bc8-11185f40d2ec"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 532.13 99.06 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "8d528cf8-2a63-59a1-ab11-f7b7fa2a5e75"))
+  (symbol
+    (lib_id "bb:C")
+    (at 561.34 95.25 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "df7ced46-41f3-52c3-9fba-416ce75871e0")
+    (property "Reference" "C11"
+      (at 561.34 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "1uF 50V"
+      (at 561.34 102.06 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 561.34 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 561.34 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C15849"
+      (at 561.34 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL10A105KB8NNNC"
+      (at 561.34 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 561.34 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50.0"
+      (at 561.34 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "92c83fb7-86f4-5768-9203-7ce180b9e27e"))
+    (pin "2"
+      (uuid "db67523d-a65c-5501-95a5-781281e9c4a4"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "C11")
+          (unit 1)))))
+  (global_label "GAUGE_3V3"
+    (shape bidirectional)
+    (at 561.34 91.44 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "d1108571-fd57-58f6-b11c-f7b2917e28f3"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 561.34 99.06 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "bc748b76-0994-5d53-bcb8-b216c2f000c4"))
+  (symbol
+    (lib_id "lcsc:BQ34Z100PWR-G1")
+    (at 610.87 99.06 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "8e34bc51-45e4-5f4e-afe4-b2b507a2e96e")
+    (property "Reference" "U3"
+      (at 610.87 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "BQ34Z100PWR-G1"
+      (at 610.87 109.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:TSSOP-14_L5.0-W4.4-P0.65-LS6.4-BL"
+      (at 610.87 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 610.87 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C91302"
+      (at 610.87 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "BQ34Z100PWR-G1"
+      (at 610.87 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "0x55. Stores Qmax/cycle count = cartridge health record."
+      (at 610.87 99.06 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "001b0565-b57d-5ba1-bb0b-1201ace6106b"))
+    (pin "2"
+      (uuid "9f74d85b-34c3-59b4-b787-f59d663f8919"))
+    (pin "3"
+      (uuid "60ef21cc-e01c-5cb7-bfad-43d3d414bb46"))
+    (pin "4"
+      (uuid "ad314465-70b9-5740-9863-edcdb3f166e3"))
+    (pin "5"
+      (uuid "618d1cf8-8a46-55e8-a597-808790fa3531"))
+    (pin "6"
+      (uuid "34d87618-5c11-5695-953a-1b462f72ac85"))
+    (pin "7"
+      (uuid "26292b19-ed9b-5f27-9411-1b6f19ce4642"))
+    (pin "8"
+      (uuid "926095d2-2cf0-57d6-ba3a-1dd27c220c11"))
+    (pin "9"
+      (uuid "7b55ec57-c596-5a8f-ade5-4a0279f07390"))
+    (pin "10"
+      (uuid "1848cf4e-7217-5e5b-bc27-22ac8a88375a"))
+    (pin "11"
+      (uuid "ac567929-4d38-52e1-98ab-0cd5bef580c3"))
+    (pin "12"
+      (uuid "edab5a67-b538-5612-a758-cd4c81514600"))
+    (pin "13"
+      (uuid "75bde2fd-ea81-5a2e-8da5-b9208fa6c82e"))
+    (pin "14"
+      (uuid "9b8d3d15-bca1-5060-9940-34f4ff4b6371"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "U3")
+          (unit 1)))))
+  (global_label "GAUGE_VEN"
+    (shape bidirectional)
+    (at 595.63 93.98 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "8e89f56f-f762-52eb-a52e-7a1ef0153f24"))
+  (global_label "GAUGE_BAT"
+    (shape bidirectional)
+    (at 595.63 99.06 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "e1314ae4-8c2b-50b4-9c69-d6fc04f99d6d"))
+  (global_label "GAUGE_3V3"
+    (shape bidirectional)
+    (at 595.63 101.6 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "3b6d5856-474a-589b-955e-77f81f730759"))
+  (global_label "GAUGE_3V3"
+    (shape bidirectional)
+    (at 595.63 104.14 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "7361afb2-e972-51bc-80f7-8bc2013a260c"))
+  (global_label "GAUGE_REG25"
+    (shape bidirectional)
+    (at 595.63 106.68 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "8c5c94b7-2543-5032-b986-309183c239ad"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 626.11 106.68 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "8cf58de0-04dd-51b0-998c-c2c503231f49"))
+  (global_label "GAUGE_SRP"
+    (shape bidirectional)
+    (at 626.11 104.14 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "c9e8706c-f691-5d3a-ba3a-d67b35349d16"))
+  (global_label "GAUGE_SRN"
+    (shape bidirectional)
+    (at 626.11 101.6 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "2f287adf-bfdd-54ef-b71d-619e3e8f6c84"))
+  (global_label "GAUGE_TS"
+    (shape bidirectional)
+    (at 626.11 99.06 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "b8031ce8-c54f-5557-b4ff-11972423f810"))
+  (global_label "CRT_SCL"
+    (shape bidirectional)
+    (at 626.11 93.98 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "41d62b6a-0a3e-5284-872e-2c0935e4af09"))
+  (global_label "CRT_SDA"
+    (shape bidirectional)
+    (at 626.11 91.44 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "1500d538-7ba1-5606-af98-daf81c04aac9"))
+  (no_connect
+    (at 595.63 91.44)
+    (uuid "ceb07f45-d0d1-597d-bf69-743e3101905e"))
+  (no_connect
+    (at 626.11 96.52)
+    (uuid "cab98d00-9e23-5b46-a515-24e41c0b7b1c"))
+  (no_connect
+    (at 595.63 96.52)
+    (uuid "d8fcc1c7-d7f3-5620-b924-e4ee9fcbacbe"))
+  (symbol
+    (lib_id "bb:C")
+    (at 661.67 95.25 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "0508b51b-7c51-5cc3-ab93-2550959c7f27")
+    (property "Reference" "C12"
+      (at 661.67 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "1uF 50V"
+      (at 661.67 102.06 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 661.67 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 661.67 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C15849"
+      (at 661.67 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL10A105KB8NNNC"
+      (at 661.67 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 661.67 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50.0"
+      (at 661.67 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "a86addd7-18bd-540d-8a44-0fc7ccd406ce"))
+    (pin "2"
+      (uuid "33bafcef-73fa-5d91-bc01-71aea7739875"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "C12")
+          (unit 1)))))
+  (global_label "GAUGE_REG25"
+    (shape bidirectional)
+    (at 661.67 91.44 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "9992b6ae-2d7d-5e16-b2c2-01842b04f8c1"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 661.67 99.06 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "7a78d409-83b4-5657-b206-4fd30dd47bcf"))
+  (symbol
+    (lib_id "bb:R")
+    (at 695.96 95.25 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "416bde2e-28c6-5c2c-9784-00fe0f9c6a50")
+    (property "Reference" "R18"
+      (at 695.96 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "220k"
+      (at 695.96 102.06 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 695.96 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 695.96 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C25767"
+      (at 695.96 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF2203TCE"
+      (at 695.96 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Preferred"
+      (at 695.96 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 695.96 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 695.96 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 695.96 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "21 V -> 0.913 V with 10k"
+      (at 695.96 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "3580831c-1cf6-5171-986b-5bcbc8f964d8"))
+    (pin "2"
+      (uuid "67858048-613d-5568-b4b0-4024300a417b"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R18")
+          (unit 1)))))
+  (global_label "PACK_P"
+    (shape bidirectional)
+    (at 695.96 91.44 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "a87503fe-2441-5d7a-b23e-943e4f46eed3"))
+  (global_label "GAUGE_BAT"
+    (shape bidirectional)
+    (at 695.96 99.06 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "e7cdba1e-d9d8-5e6b-865b-71f747ade15a"))
+  (symbol
+    (lib_id "bb:R")
+    (at 730.25 95.25 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "6ebe1eb3-5012-5455-8b66-7b53d4c9cb49")
+    (property "Reference" "R19"
+      (at 730.25 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "10k"
+      (at 730.25 102.06 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 730.25 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 730.25 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C25744"
+      (at 730.25 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1002TCE"
+      (at 730.25 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 730.25 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 730.25 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 730.25 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 730.25 95.25 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "7bed16ba-7fdf-5bdb-8ee2-e2909cc14be5"))
+    (pin "2"
+      (uuid "031b05a7-1fe0-53d8-804b-a4a05ca1622c"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R19")
+          (unit 1)))))
+  (global_label "GAUGE_BAT"
+    (shape bidirectional)
+    (at 730.25 91.44 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "1473f955-3ca9-542b-a6db-b9777139013e"))
+  (global_label "GAUGE_DIVLO"
+    (shape bidirectional)
+    (at 730.25 99.06 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "58c2fa37-97cf-50ad-a609-a685132d4f7e"))
+  (symbol
+    (lib_id "lcsc:AO3400A")
+    (at 770.89 96.52 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "ac85d43c-c084-5a42-b1c3-29bf5a24538e")
+    (property "Reference" "Q5"
+      (at 770.89 88.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "AO3400A"
+      (at 770.89 104.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR"
+      (at 770.89 96.52 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 770.89 96.52 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C20917"
+      (at 770.89 96.52 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "AO3400A"
+      (at 770.89 96.52 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "divider switch (VEN)"
+      (at 770.89 96.52 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "3"
+      (uuid "4cb37ef5-af1c-5c8a-8630-050afb29930e"))
+    (pin "1"
+      (uuid "d6edea14-7b02-5f58-9d4c-72f203b22671"))
+    (pin "2"
+      (uuid "ef72971b-27ee-5671-84a0-871e1571681b"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "Q5")
+          (unit 1)))))
+  (global_label "GAUGE_DIVLO"
+    (shape bidirectional)
+    (at 773.43 91.44 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "29b17f52-a7c3-5832-846a-7613dbcab9d5"))
+  (global_label "GAUGE_VEN"
+    (shape bidirectional)
+    (at 765.81 96.52 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "a663bef3-e9fe-5ee1-9451-22c6ac3843c0"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 773.43 101.6 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "6a6ace3c-46fb-511f-96c6-7216e779cdfc"))
+  (symbol
+    (lib_id "bb:C")
+    (at 43.18 128.27 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "55354927-20fc-5c92-a672-013ea8fde21e")
+    (property "Reference" "C13"
+      (at 43.18 121.46 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 16V"
+      (at 43.18 135.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 43.18 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 43.18 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C1525"
+      (at 43.18 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL05B104KO5NNNC"
+      (at 43.18 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 43.18 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "16.0"
+      (at 43.18 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "12002712-0997-5c2e-a514-d607ab76c7bb"))
+    (pin "2"
+      (uuid "ac7466e4-c0ee-5c2c-a427-f86b5b245851"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "C13")
+          (unit 1)))))
+  (global_label "GAUGE_BAT"
+    (shape bidirectional)
+    (at 43.18 124.46 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "4e350363-3a05-56a7-a125-b67bf79917fa"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 43.18 132.08 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "f69e03c2-ac11-57ce-9b23-67053acd2a78"))
+  (symbol
+    (lib_id "bb:R")
+    (at 74.93 128.27 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "a5c5983a-6ac9-5c85-8610-f28b0650923c")
+    (property "Reference" "R20"
+      (at 74.93 121.46 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100"
+      (at 74.93 135.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 74.93 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 74.93 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C25076"
+      (at 74.93 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1000TCE"
+      (at 74.93 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 74.93 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 74.93 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 74.93 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 74.93 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "V_across" "0.2"
+      (at 74.93 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "41308b77-923d-5e2a-aaca-91f33ebbd4d5"))
+    (pin "2"
+      (uuid "38857bb3-953b-5b4d-995d-53f0d03be73d"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R20")
+          (unit 1)))))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 74.93 124.46 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "5ab4b307-eadb-5b9b-b54b-54f411a41a74"))
+  (global_label "GAUGE_SRN"
+    (shape bidirectional)
+    (at 74.93 132.08 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "afe824fd-69ee-5a75-a8a8-40066b864b6a"))
+  (symbol
+    (lib_id "bb:R")
+    (at 106.68 128.27 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "53872cd8-5bf0-5d0d-a560-24598aa8f76a")
+    (property "Reference" "R21"
+      (at 106.68 121.46 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100"
+      (at 106.68 135.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 106.68 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 106.68 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C25076"
+      (at 106.68 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1000TCE"
+      (at 106.68 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 106.68 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 106.68 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 106.68 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 106.68 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "V_across" "0.2"
+      (at 106.68 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "ffe853f3-3b02-5983-9df1-95dc60c5b8f3"))
+    (pin "2"
+      (uuid "199f855b-64b3-5369-8305-0bef8b0a0ee3"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "R21")
+          (unit 1)))))
+  (global_label "SNS"
+    (shape bidirectional)
+    (at 106.68 124.46 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "5715d395-397b-569b-b978-b70fe5d2e313"))
+  (global_label "GAUGE_SRP"
+    (shape bidirectional)
+    (at 106.68 132.08 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "02055283-4645-5d20-bd57-cd83a6083f9a"))
+  (symbol
+    (lib_id "bb:C")
+    (at 138.43 128.27 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "7dfe0ce9-d28f-59d5-9bd6-769c269674e5")
+    (property "Reference" "C14"
+      (at 138.43 121.46 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 16V"
+      (at 138.43 135.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 138.43 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 138.43 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C1525"
+      (at 138.43 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL05B104KO5NNNC"
+      (at 138.43 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 138.43 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "16.0"
+      (at 138.43 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "V_across" "0.2"
+      (at 138.43 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "8565bda9-91f8-5982-8f9a-fac61a7e5cdd"))
+    (pin "2"
+      (uuid "c9f3d852-8867-55d8-9074-a8a3923e413a"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "C14")
+          (unit 1)))))
+  (global_label "GAUGE_SRP"
+    (shape bidirectional)
+    (at 138.43 124.46 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "ecfa3662-5065-5652-b8cf-340b971f7874"))
+  (global_label "GAUGE_SRN"
+    (shape bidirectional)
+    (at 138.43 132.08 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "79889332-dc6c-5b28-9283-80b035c36b8e"))
+  (symbol
+    (lib_id "bb:NTC")
+    (at 170.18 128.27 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "c49498e2-263a-58c3-b5d9-197bb202db32")
+    (property "Reference" "TH2"
+      (at 170.18 121.46 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "10k NTC cells (gauge)"
+      (at 170.18 135.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+      (at 170.18 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 170.18 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C13564"
+      (at 170.18 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "NCP18XH103F03RB"
+      (at 170.18 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Extended"
+      (at 170.18 128.27 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "7f5ba6f7-a80d-548c-b378-2d57b7ec2222"))
+    (pin "2"
+      (uuid "52d56621-9eb1-595d-962e-160318731ddd"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "TH2")
+          (unit 1)))))
+  (global_label "GAUGE_TS"
+    (shape bidirectional)
+    (at 170.18 124.46 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "640d2180-6498-5dfd-a94a-852671d3cc8f"))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 170.18 132.08 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "63a3c095-f411-5b96-8b00-cbc14dffec3d"))
+  (symbol
+    (lib_id "bb:TP")
+    (at 198.12 121.92 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "7c727ca6-d701-5314-bc29-52adf610a028")
+    (property "Reference" "TP1"
+      (at 198.12 121.46 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "PACK_P"
+      (at 198.12 127.46 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+      (at 198.12 121.92 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 198.12 121.92 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "607a111a-d279-5100-af83-f60f8a8dd1ae"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "TP1")
+          (unit 1)))))
+  (global_label "PACK_P"
+    (shape bidirectional)
+    (at 198.12 124.46 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "2a2f3f19-92da-5819-aa2f-2b53f67aabea"))
+  (symbol
+    (lib_id "bb:TP")
+    (at 223.52 121.92 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "d9d13606-f330-59d6-a795-00144928f13c")
+    (property "Reference" "TP2"
+      (at 223.52 121.46 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "PACK_N"
+      (at 223.52 127.46 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+      (at 223.52 121.92 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 223.52 121.92 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "b8c0bda1-1718-52da-9ccf-e264787a1045"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "TP2")
+          (unit 1)))))
+  (global_label "PACK_N"
+    (shape bidirectional)
+    (at 223.52 124.46 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "8a318e3d-dcf9-5409-ad88-a5a05d60d38c"))
+  (symbol
+    (lib_id "bb:TP")
+    (at 248.92 121.92 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "99eee32c-f2b1-5c6d-818a-2dbd029a191e")
+    (property "Reference" "TP3"
+      (at 248.92 121.46 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "CELL5"
+      (at 248.92 127.46 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+      (at 248.92 121.92 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 248.92 121.92 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "72252790-25d1-533c-8a4d-d2f2974ec967"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "TP3")
+          (unit 1)))))
+  (global_label "CELL5"
+    (shape bidirectional)
+    (at 248.92 124.46 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "a7f73e69-692b-5f26-b3b6-67bb447d024f"))
+  (symbol
+    (lib_id "bb:TP")
+    (at 273.05 121.92 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "a3affcc3-c0f3-5be9-b66e-d7c84970c9a3")
+    (property "Reference" "TP4"
+      (at 273.05 121.46 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "CELL0"
+      (at 273.05 127.46 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+      (at 273.05 121.92 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 273.05 121.92 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "b3ff5e30-7ad6-5b12-bf19-35fdbd823cb3"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "TP4")
+          (unit 1)))))
+  (global_label "CELL0"
+    (shape bidirectional)
+    (at 273.05 124.46 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "4ce14336-d43e-5954-93a7-35190e0a1fea"))
+  (symbol
+    (lib_id "bb:TP")
+    (at 298.45 121.92 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "c720fbfb-8480-5c83-9583-1643c13c49db")
+    (property "Reference" "TP5"
+      (at 298.45 121.46 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "CRT_DSG"
+      (at 298.45 127.46 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+      (at 298.45 121.92 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 298.45 121.92 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "19a47795-38ba-58f9-a219-620abf5b653b"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "TP5")
+          (unit 1)))))
+  (global_label "CRT_DSG"
+    (shape bidirectional)
+    (at 298.45 124.46 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "8ec92416-da2d-5671-b7ae-b2d45a28db1f"))
+  (symbol
+    (lib_id "bb:TP")
+    (at 326.39 121.92 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "b0a54149-1d07-54c2-bbda-d9ae160fd4fd")
+    (property "Reference" "TP6"
+      (at 326.39 121.46 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "CRT_CHG"
+      (at 326.39 127.46 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+      (at 326.39 121.92 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 326.39 121.92 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "290b8ace-25a0-5005-89c3-24bb978f9161"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "TP6")
+          (unit 1)))))
+  (global_label "CRT_CHG"
+    (shape bidirectional)
+    (at 326.39 124.46 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "d794d84c-fc07-51c0-bb0f-f7fd78f94196"))
+  (symbol
+    (lib_id "bb:TP")
+    (at 351.79 121.92 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "6bf0e192-2a93-5531-acfe-f86fa71ed194")
+    (property "Reference" "TP7"
+      (at 351.79 121.46 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "SNS"
+      (at 351.79 127.46 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
+      (at 351.79 121.92 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 351.79 121.92 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "afabe2f8-620a-5de9-9da1-fb059c56c3f6"))
+    (instances
+      (project "battery-cartridge"
+        (path "/cf0b0499-3f41-5649-b3c8-4fd1b783efed/9db256eb-5f9b-5f03-a768-e5e0b2eabfa0"
+          (reference "TP7")
+          (unit 1)))))
+  (global_label "SNS"
+    (shape bidirectional)
+    (at 351.79 124.46 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "bce091ea-926d-58bd-9bb9-6e460b62a003")))

@@ -1,0 +1,403 @@
+{
+  "_comment": "Single source of truth for mechanical layout. Units: mm. Origin: front-left-bottom corner of the enclosure interior floor; +X along the length (left->right), +Y front->back, +Z up. PCB coordinates are in each board's own frame: origin at the board's front-left corner, top view, +X right, +Y toward the back edge. The PCB layout (KiCad) and the 3D site model both read this file; change it here only. Rev A, 2026-11-21, pre-layout estimate.",
+  "rev": "A",
+  "enclosure": {
+    "type": "extruded aluminium body with two ABS/PC end caps",
+    "outer": {
+      "length": 150.0,
+      "width": 94.0,
+      "height": 70.0
+    },
+    "wall": 2.0,
+    "corner_radius": 6.0,
+    "body_length": 126.0,
+    "end_cap_length": 12.0,
+    "end_caps": {
+      "left": {
+        "material": "PC, RF-transparent",
+        "contains": [
+          "flashlight optic D20",
+          "red night LED",
+          "Wi-Fi/BLE FPC antennas (RF window)",
+          "LoRa SMA bulkhead"
+        ]
+      },
+      "right": {
+        "material": "ABS",
+        "contains": [
+          "battery cartridge door / slot",
+          "cartridge latch"
+        ]
+      }
+    },
+    "top_window": {
+      "material": "PC/glass, non-metal (Qi)",
+      "center_x": 75.0,
+      "center_y": 47.0,
+      "size_x": 64.0,
+      "size_y": 64.0
+    },
+    "glow_strip": {
+      "edge": "front-top",
+      "x0": 20.0,
+      "x1": 130.0,
+      "height": 3.0
+    },
+    "speaker_grille": {
+      "face": "top",
+      "center_x": 28.0,
+      "center_y": 30.0,
+      "diameter": 40.0
+    },
+    "fan_grille": {
+      "face": "back",
+      "center_x": 118.0,
+      "center_z": 54.0,
+      "size": 30.0
+    },
+    "tripod_insert": {
+      "face": "bottom",
+      "thread": "1/4-20 UNC",
+      "center_x": 75.0,
+      "center_y": 47.0
+    }
+  },
+  "cartridge": {
+    "cells": "5S1P Samsung 50S 21700 (21.1 x 70.2 mm each), side by side along Y",
+    "outer": {
+      "length": 112.0,
+      "width": 82.0,
+      "height": 25.0
+    },
+    "position": {
+      "x": 14.0,
+      "y": 4.0,
+      "z": 0.0
+    },
+    "inserts_from": "right end cap (+X)",
+    "connector": {
+      "type": "XT60PW + 4 pogo pads (GND, SDA, SCL, PRES)",
+      "mates_at_x": 14.0,
+      "note": "blind-mate at the left (inner) end of the bay, on the power board's underside bracket"
+    },
+    "energy_wh": 90
+  },
+  "boards": [
+    {
+      "id": "power",
+      "name": "Power board (A)",
+      "outline": {
+        "x": 124.0,
+        "y": 86.0,
+        "corner_radius": 3.0
+      },
+      "thickness": 1.6,
+      "layers": 6,
+      "copper_outer_oz": 2,
+      "copper_inner_oz": 1,
+      "finish": "ENIG",
+      "mask": "matte black",
+      "position": {
+        "x": 11.0,
+        "y": 2.0,
+        "z": 28.0
+      },
+      "assembly": "SMT top side only + THT connectors",
+      "max_component_height_top": 14.0,
+      "mounting_holes": [
+        {
+          "x": 4.0,
+          "y": 4.0,
+          "d": 3.2
+        },
+        {
+          "x": 120.0,
+          "y": 4.0,
+          "d": 3.2
+        },
+        {
+          "x": 4.0,
+          "y": 82.0,
+          "d": 3.2
+        },
+        {
+          "x": 120.0,
+          "y": 82.0,
+          "d": 3.2
+        }
+      ],
+      "edge_connectors": [
+        {
+          "ref": "J_USBC1",
+          "type": "USB-C 24p mid-mount",
+          "edge": "front",
+          "x": 14.0,
+          "w": 9.0,
+          "h": 3.3
+        },
+        {
+          "ref": "J_USBC2",
+          "type": "USB-C 24p mid-mount",
+          "edge": "front",
+          "x": 30.0,
+          "w": 9.0,
+          "h": 3.3
+        },
+        {
+          "ref": "J_USBC3",
+          "type": "USB-C 24p mid-mount",
+          "edge": "front",
+          "x": 46.0,
+          "w": 9.0,
+          "h": 3.3
+        },
+        {
+          "ref": "J_USBC4",
+          "type": "USB-C 24p mid-mount",
+          "edge": "front",
+          "x": 62.0,
+          "w": 9.0,
+          "h": 3.3
+        },
+        {
+          "ref": "J_USBA",
+          "type": "USB-A THT",
+          "edge": "front",
+          "x": 80.0,
+          "w": 13.2,
+          "h": 5.8
+        },
+        {
+          "ref": "SW_SLOW",
+          "type": "slide switch",
+          "edge": "front",
+          "x": 98.0,
+          "w": 9.1,
+          "h": 3.5
+        },
+        {
+          "ref": "SW_FLASH",
+          "type": "tactile button (light-pipe cap)",
+          "edge": "front",
+          "x": 108.0,
+          "w": 5.1,
+          "h": 5.1
+        },
+        {
+          "ref": "SW_BOOT",
+          "type": "tactile button (recessed)",
+          "edge": "front",
+          "x": 116.0,
+          "w": 5.1,
+          "h": 5.1
+        },
+        {
+          "ref": "J_DCIN",
+          "type": "DC barrel 2.0 mm (input)",
+          "edge": "back",
+          "x": 50.0,
+          "w": 9.0,
+          "h": 11.0
+        },
+        {
+          "ref": "J_DCOUT",
+          "type": "DC barrel 2.5 mm (output)",
+          "edge": "back",
+          "x": 66.0,
+          "w": 9.0,
+          "h": 11.0
+        }
+      ],
+      "zones": [
+        {
+          "name": "USB-C port stages x4 (BQ25756 + 4 FETs + 17x17 inductor each)",
+          "x0": 4.0,
+          "y0": 8.0,
+          "x1": 74.0,
+          "y1": 52.0
+        },
+        {
+          "name": "Input + DC-out stages",
+          "x0": 40.0,
+          "y0": 54.0,
+          "x1": 86.0,
+          "y1": 84.0
+        },
+        {
+          "name": "Aux bucks, USB-A, eFuses",
+          "x0": 76.0,
+          "y0": 8.0,
+          "x1": 120.0,
+          "y1": 52.0
+        },
+        {
+          "name": "Fan 30x30x10 + heatsink",
+          "x0": 92.0,
+          "y0": 54.0,
+          "x1": 122.0,
+          "y1": 84.0
+        }
+      ]
+    },
+    {
+      "id": "logic",
+      "name": "Logic / network board (B)",
+      "outline": {
+        "x": 124.0,
+        "y": 86.0,
+        "corner_radius": 3.0
+      },
+      "thickness": 1.6,
+      "layers": 6,
+      "copper_outer_oz": 1,
+      "copper_inner_oz": 1,
+      "finish": "ENIG",
+      "mask": "matte black",
+      "position": {
+        "x": 11.0,
+        "y": 2.0,
+        "z": 48.0
+      },
+      "assembly": "SMT top side only + THT RJ45",
+      "max_component_height_top": 14.0,
+      "board_to_board": {
+        "type": "2x20 1.27 mm stacking header",
+        "height": 18.4,
+        "x": 62.0,
+        "y": 70.0
+      },
+      "mounting_holes": [
+        {
+          "x": 4.0,
+          "y": 4.0,
+          "d": 3.2
+        },
+        {
+          "x": 120.0,
+          "y": 4.0,
+          "d": 3.2
+        },
+        {
+          "x": 4.0,
+          "y": 82.0,
+          "d": 3.2
+        },
+        {
+          "x": 120.0,
+          "y": 82.0,
+          "d": 3.2
+        }
+      ],
+      "edge_connectors": [
+        {
+          "ref": "J_RJ45",
+          "type": "RJ45 2.5GBASE-T + PoE (bt)",
+          "edge": "back",
+          "x": 18.0,
+          "w": 16.0,
+          "h": 13.5
+        },
+        {
+          "ref": "J_MICROSD",
+          "type": "microSD push-push",
+          "edge": "front",
+          "x": 100.0,
+          "w": 14.0,
+          "h": 1.9
+        }
+      ],
+      "zones": [
+        {
+          "name": "RTL8372N switch + RTL8221B PHY + PoE PD/isolated flyback",
+          "x0": 4.0,
+          "y0": 50.0,
+          "x1": 56.0,
+          "y1": 84.0
+        },
+        {
+          "name": "Router module (MT7981, 70x58 edge-card or SM81 50x36)",
+          "x0": 54.0,
+          "y0": 4.0,
+          "x1": 124.0,
+          "y1": 62.0
+        },
+        {
+          "name": "ESP32-WROOM-32UE + I2C mux/expander + RTC/NFC",
+          "x0": 4.0,
+          "y0": 4.0,
+          "x1": 52.0,
+          "y1": 48.0
+        },
+        {
+          "name": "LoRa node (E73 + E22)",
+          "x0": 4.0,
+          "y0": 4.0,
+          "x1": 30.0,
+          "y1": 24.0
+        }
+      ]
+    },
+    {
+      "id": "led",
+      "name": "LED board (aluminium core)",
+      "outline": {
+        "x": 24.0,
+        "y": 24.0,
+        "corner_radius": 12.0
+      },
+      "thickness": 1.6,
+      "layers": 1,
+      "finish": "HASL",
+      "mask": "white",
+      "position": {
+        "x": 3.0,
+        "y": 35.0,
+        "z": 30.0
+      },
+      "orientation": "faces -X (out through left end cap)",
+      "parts": [
+        "Cree XP-G3 5700 K",
+        "red night LED"
+      ]
+    }
+  ],
+  "external_parts": [
+    {
+      "name": "Fan",
+      "size": [
+        30,
+        30,
+        10
+      ],
+      "position": {
+        "x": 103.0,
+        "y": 70.0,
+        "z": 30.0
+      }
+    },
+    {
+      "name": "Speaker 40 mm 4 ohm",
+      "diameter": 40,
+      "depth": 7.4,
+      "position": {
+        "x": 28.0,
+        "y": 30.0,
+        "z": 60.0
+      }
+    },
+    {
+      "name": "Qi coil A11 (50 mm)",
+      "diameter": 50,
+      "depth": 3.0,
+      "position": {
+        "x": 75.0,
+        "y": 47.0,
+        "z": 66.0
+      }
+    },
+    {
+      "name": "Glow light pipe + 8x SK6812MINI-E",
+      "position": "front-top edge"
+    }
+  ]
+}

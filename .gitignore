@@ -1,0 +1,62 @@
+# ---------------------------------------------------------------------------
+# Battery Bank / Travel Router - ignore generated, downloaded and local files.
+# Tracked: design sources (hardware/gen, hardware/checks, hardware/tools,
+# hardware/mechanical), symbol/footprint libraries, generated KiCad projects
+# and schematics, docs and the website.
+# ---------------------------------------------------------------------------
+
+# --- Build artifacts (regenerate with `python hardware/gen/build.py` / `--project cartridge`)
+hardware/kicad*/erc.rpt
+hardware/kicad*/design_check.txt
+hardware/kicad*/*-schematic.pdf
+hardware/kicad*/bom_jlcpcb.csv
+hardware/kicad*/*.net
+hardware/kicad*/*.xml
+hardware/kicad*/gerbers/
+hardware/kicad*/production/
+hardware/kicad*/jlcpcb/
+
+# --- KiCad local/user state, caches, backups, lock files
+*.kicad_prl
+*-backups/
+*.lck
+~*.lck
+_autosave-*
+*.bak
+*.bck
+fp-info-cache
+*.kicad_sch-bak
+*.kicad_pcb-bak
+/KiCad/
+
+# --- Downloaded / regenerable third-party files
+# Vendor datasheet PDFs: copyrighted, re-download from the links in docs/datasheets/INDEX.md
+docs/datasheets/*.pdf
+# Text extracted from the PDFs (regenerate with hardware/tools/pdftxt.py / flatpdf.py)
+docs/datasheets/text/
+# EasyEDA 3D models pulled by easyeda2kicad (~150 MB; re-pull with easyeda2kicad --3d)
+hardware/lib/lcsc.3dshapes/
+# JLCPCB parts-search cache and picker log (regenerate with hardware/tools/*.py)
+hardware/tools/jlc_cache.json
+hardware/tools/*.log
+
+# --- Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# --- Jekyll / GitHub Pages local build
+docs/_site/
+docs/.jekyll-cache/
+docs/.sass-cache/
+.jekyll-metadata
+docs/Gemfile.lock
+
+# --- Editors / OS / local tool settings
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+.claude/settings.local.json

@@ -1,0 +1,51 @@
+title: Battery Bank / Travel Router
+description: Open-hardware USB-C battery bank, 2.5G Ethernet dock and OpenWrt travel router. Design in progress.
+remote_theme: just-the-docs/just-the-docs
+plugins:
+  - jekyll-remote-theme
+  - jekyll-optional-front-matter
+search_enabled: true
+aux_links: {}
+heading_anchors: true
+exclude:
+  - datasheets/text/
+  - datasheets/text
+back_to_top: true
+back_to_top_text: "Back to top"
+mermaid:
+  version: "10.9.0"
+
+# These four pages and the datasheet index have no front matter (owned by other
+# processes); jekyll-optional-front-matter renders them and the defaults below
+# give them a layout and a title. They are reached from the Reference page.
+defaults:
+  - scope:
+      path: "chip-metadata.md"
+    values:
+      layout: default
+      title: "Chip metadata"
+      nav_exclude: true
+  - scope:
+      path: "design-rules.md"
+    values:
+      layout: default
+      title: "Design rules"
+      nav_exclude: true
+  - scope:
+      path: "jlcpcb-rules.md"
+    values:
+      layout: default
+      title: "JLCPCB rules"
+      nav_exclude: true
+  - scope:
+      path: "power-budget.md"
+    values:
+      layout: default
+      title: "Power budget"
+      nav_exclude: true
+  - scope:
+      path: "datasheets/INDEX.md"
+    values:
+      layout: default
+      title: "Datasheet index"
+      nav_exclude: true

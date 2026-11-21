@@ -1,0 +1,429 @@
+(kicad_sch
+  (version 20231120)
+  (generator "bb_gen")
+  (generator_version "1.0")
+  (uuid "ab655d0a-2672-54db-8ced-4d4843283f85")
+  (paper "A2")
+  (title_block
+    (title "Battery Bank / Travel Router - top level")
+    (rev "A"))
+  (lib_symbols)
+  (sheet
+    (at 25 40)
+    (size 60 12)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "8d8b9585-f8cc-5a3d-8449-1c276a49f741")
+    (property "Sheetname" "usbc_port_1"
+      (at 25 39.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "usbc_port_1.kicad_sch"
+      (at 25 52.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85"
+          (page "2")))))
+  (sheet
+    (at 100 40)
+    (size 60 12)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "87835b68-35e1-5da0-b808-eed497e572f0")
+    (property "Sheetname" "usbc_port_2"
+      (at 100 39.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "usbc_port_2.kicad_sch"
+      (at 100 52.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85"
+          (page "3")))))
+  (sheet
+    (at 175 40)
+    (size 60 12)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "4a61eec7-7e4d-59eb-8f1f-212338778d80")
+    (property "Sheetname" "usbc_port_3"
+      (at 175 39.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "usbc_port_3.kicad_sch"
+      (at 175 52.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85"
+          (page "4")))))
+  (sheet
+    (at 250 40)
+    (size 60 12)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "09e3eac1-b74d-5555-b350-095d586d164f")
+    (property "Sheetname" "usbc_port_4"
+      (at 250 39.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "usbc_port_4.kicad_sch"
+      (at 250 52.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85"
+          (page "5")))))
+  (sheet
+    (at 325 40)
+    (size 60 12)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "0be1ca6c-a07f-5cf8-8e16-20eaabf54d58")
+    (property "Sheetname" "power_input"
+      (at 325 39.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "power_input.kicad_sch"
+      (at 325 52.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85"
+          (page "6")))))
+  (sheet
+    (at 400 40)
+    (size 60 12)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "e4871ecd-460a-581a-9daf-77112db5d25f")
+    (property "Sheetname" "poe"
+      (at 400 39.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "poe.kicad_sch"
+      (at 400 52.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85"
+          (page "7")))))
+  (sheet
+    (at 475 40)
+    (size 60 12)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "c3a0830e-743b-5c57-aa92-cfcdc97222e1")
+    (property "Sheetname" "battery"
+      (at 475 39.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "battery.kicad_sch"
+      (at 475 52.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85"
+          (page "8")))))
+  (sheet
+    (at 550 40)
+    (size 60 12)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "4904fd96-fca4-529e-9af4-7a9796aaeea6")
+    (property "Sheetname" "aux_power"
+      (at 550 39.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "aux_power.kicad_sch"
+      (at 550 52.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85"
+          (page "9")))))
+  (sheet
+    (at 625 40)
+    (size 60 12)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "b557fac4-ed53-57d3-865b-90fa088aca94")
+    (property "Sheetname" "ethernet"
+      (at 625 39.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "ethernet.kicad_sch"
+      (at 625 52.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85"
+          (page "10")))))
+  (sheet
+    (at 700 40)
+    (size 60 12)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "8c616ead-e111-5151-ad82-6dec339ad6ed")
+    (property "Sheetname" "mcu"
+      (at 700 39.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "mcu.kicad_sch"
+      (at 700 52.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85"
+          (page "11")))))
+  (sheet
+    (at 25 65)
+    (size 60 12)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "d6f863f2-4974-5638-955a-a85dc769cdb9")
+    (property "Sheetname" "lora"
+      (at 25 64.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "lora.kicad_sch"
+      (at 25 77.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85"
+          (page "12")))))
+  (sheet
+    (at 100 65)
+    (size 60 12)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "64cab0f6-66c2-5baf-a623-5d043d9da308")
+    (property "Sheetname" "audio"
+      (at 100 64.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "audio.kicad_sch"
+      (at 100 77.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85"
+          (page "13")))))
+  (sheet
+    (at 175 65)
+    (size 60 12)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "34061c2b-85ae-5526-a709-3feadd481567")
+    (property "Sheetname" "lighting"
+      (at 175 64.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "lighting.kicad_sch"
+      (at 175 77.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85"
+          (page "14")))))
+  (sheet
+    (at 250 65)
+    (size 60 12)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "a6338c56-4f7e-5d5c-8894-f4cf77296d1f")
+    (property "Sheetname" "dc_output"
+      (at 250 64.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "dc_output.kicad_sch"
+      (at 250 77.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85"
+          (page "15")))))
+  (sheet
+    (at 325 65)
+    (size 60 12)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "13b44b88-b6c4-5cc3-b119-fb32b610eb58")
+    (property "Sheetname" "usb_a"
+      (at 325 64.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "usb_a.kicad_sch"
+      (at 325 77.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85"
+          (page "16")))))
+  (sheet
+    (at 400 65)
+    (size 60 12)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "d10caea1-1e99-53f8-97d8-41dd1c7d92cd")
+    (property "Sheetname" "qi"
+      (at 400 64.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "qi.kicad_sch"
+      (at 400 77.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85"
+          (page "17")))))
+  (sheet_instances
+    (path "/"
+      (page "1"))))
