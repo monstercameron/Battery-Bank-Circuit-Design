@@ -2222,7 +2222,7 @@
             (type default))
           (fill
             (type none)))
-        (pin unspecified line
+        (pin passive line
           (at -13.97 2.54 0)
           (length 2.54)
           (name "~{RESET}"
@@ -2233,7 +2233,7 @@
             (effects
               (font
                 (size 1.27 1.27)))))
-        (pin unspecified line
+        (pin passive line
           (at -13.97 -0.00 0)
           (length 2.54)
           (name "GND"
@@ -2244,7 +2244,7 @@
             (effects
               (font
                 (size 1.27 1.27)))))
-        (pin unspecified line
+        (pin passive line
           (at -13.97 -2.54 0)
           (length 2.54)
           (name "~{MR}"
@@ -2255,7 +2255,7 @@
             (effects
               (font
                 (size 1.27 1.27)))))
-        (pin unspecified line
+        (pin passive line
           (at 13.97 -2.54 180)
           (length 2.54)
           (name "CT"
@@ -2266,7 +2266,7 @@
             (effects
               (font
                 (size 1.27 1.27)))))
-        (pin unspecified line
+        (pin passive line
           (at 13.97 -0.00 180)
           (length 2.54)
           (name "SENSE"
@@ -2277,7 +2277,7 @@
             (effects
               (font
                 (size 1.27 1.27)))))
-        (pin unspecified line
+        (pin passive line
           (at 13.97 2.54 180)
           (length 2.54)
           (name "VDD"
@@ -2356,7 +2356,7 @@
             (type default))
           (fill
             (type none)))
-        (pin unspecified line
+        (pin passive line
           (at -13.97 2.54 0)
           (length 2.54)
           (name "~{RESET}"
@@ -2367,7 +2367,7 @@
             (effects
               (font
                 (size 1.27 1.27)))))
-        (pin unspecified line
+        (pin passive line
           (at -13.97 -0.00 0)
           (length 2.54)
           (name "GND"
@@ -2378,7 +2378,7 @@
             (effects
               (font
                 (size 1.27 1.27)))))
-        (pin unspecified line
+        (pin passive line
           (at -13.97 -2.54 0)
           (length 2.54)
           (name "~{MR}"
@@ -2389,7 +2389,7 @@
             (effects
               (font
                 (size 1.27 1.27)))))
-        (pin unspecified line
+        (pin passive line
           (at 13.97 -2.54 180)
           (length 2.54)
           (name "CT"
@@ -2400,7 +2400,7 @@
             (effects
               (font
                 (size 1.27 1.27)))))
-        (pin unspecified line
+        (pin passive line
           (at 13.97 -0.00 180)
           (length 2.54)
           (name "SENSE"
@@ -2411,7 +2411,7 @@
             (effects
               (font
                 (size 1.27 1.27)))))
-        (pin unspecified line
+        (pin passive line
           (at 13.97 2.54 180)
           (length 2.54)
           (name "VDD"

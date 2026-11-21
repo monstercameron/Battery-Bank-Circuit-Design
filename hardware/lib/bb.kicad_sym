@@ -3017,7 +3017,7 @@
       (pin passive line
         (at -7.62 41.91 0)
         (length 2.54)
-        (name "EXP_EN_ETH"
+        (name "ETH_SW_SMDC"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3028,7 +3028,7 @@
       (pin passive line
         (at -7.62 39.37 0)
         (length 2.54)
-        (name "EXP_LORA_RST_N"
+        (name "ETH_SW_SMDIO"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3039,7 +3039,7 @@
       (pin passive line
         (at -7.62 36.83 0)
         (length 2.54)
-        (name "EXP_PHY_RST_N"
+        (name "EXP_EN_ETH"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3050,7 +3050,7 @@
       (pin passive line
         (at -7.62 34.29 0)
         (length 2.54)
-        (name "EXP_RTR_RST_N"
+        (name "EXP_LORA_RST_N"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3061,7 +3061,7 @@
       (pin passive line
         (at -7.62 31.75 0)
         (length 2.54)
-        (name "GLOW_D5V"
+        (name "EXP_PHY_RST_N"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3072,7 +3072,7 @@
       (pin passive line
         (at -7.62 29.21 0)
         (length 2.54)
-        (name "LORA_RX"
+        (name "EXP_POE_CLASS"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3083,7 +3083,7 @@
       (pin passive line
         (at -7.62 26.67 0)
         (length 2.54)
-        (name "LORA_TX"
+        (name "EXP_POE_CLASS_TPL"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3094,7 +3094,7 @@
       (pin passive line
         (at -7.62 24.13 0)
         (length 2.54)
-        (name "MIC_CLK"
+        (name "EXP_RTR_RST_N"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3105,7 +3105,7 @@
       (pin passive line
         (at -7.62 21.59 0)
         (length 2.54)
-        (name "MIC_DATA"
+        (name "GLOW_D3V3"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3116,7 +3116,7 @@
       (pin passive line
         (at -7.62 19.05 0)
         (length 2.54)
-        (name "RTR_SMDC"
+        (name "GLOW_OE_N"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3127,7 +3127,7 @@
       (pin passive line
         (at -7.62 16.51 0)
         (length 2.54)
-        (name "RTR_SMDIO"
+        (name "LORA_RX"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3138,7 +3138,7 @@
       (pin passive line
         (at -7.62 13.97 0)
         (length 2.54)
-        (name "V12_QI"
+        (name "LORA_TX"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3149,7 +3149,7 @@
       (pin passive line
         (at -7.62 11.43 0)
         (length 2.54)
-        (name "V12_RTR"
+        (name "MIC_CLK"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3160,7 +3160,7 @@
       (pin passive line
         (at -7.62 8.89 0)
         (length 2.54)
-        (name "V3V3"
+        (name "MIC_DATA"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3171,7 +3171,7 @@
       (pin passive line
         (at -7.62 6.35 0)
         (length 2.54)
-        (name "V3V3_ETH"
+        (name "V3V3"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3182,7 +3182,7 @@
       (pin passive line
         (at -7.62 3.81 0)
         (length 2.54)
-        (name "V3V3_LORA"
+        (name "V3V3_ETH"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3193,7 +3193,7 @@
       (pin passive line
         (at -7.62 1.27 0)
         (length 2.54)
-        (name "V5_AUX"
+        (name "V3V3_LORA"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3204,7 +3204,7 @@
       (pin passive line
         (at -7.62 -1.27 0)
         (length 2.54)
-        (name "V5_ETH"
+        (name "V5_AUX"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3215,7 +3215,7 @@
       (pin passive line
         (at -7.62 -3.81 0)
         (length 2.54)
-        (name "V5_GLOW"
+        (name "V5_ETH"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3226,7 +3226,7 @@
       (pin passive line
         (at -7.62 -6.35 0)
         (length 2.54)
-        (name "VPOE#1"
+        (name "V5_GLOW"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3237,7 +3237,7 @@
       (pin passive line
         (at -7.62 -8.89 0)
         (length 2.54)
-        (name "VPOE#2"
+        (name "V5_QI"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3248,7 +3248,7 @@
       (pin passive line
         (at -7.62 -11.43 0)
         (length 2.54)
-        (name "VPOE#3"
+        (name "VPOE#1"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3259,7 +3259,7 @@
       (pin passive line
         (at -7.62 -13.97 0)
         (length 2.54)
-        (name "GND#1"
+        (name "VPOE#2"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3270,7 +3270,7 @@
       (pin passive line
         (at -7.62 -16.51 0)
         (length 2.54)
-        (name "GND#2"
+        (name "VPOE#3"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3281,7 +3281,7 @@
       (pin passive line
         (at -7.62 -19.05 0)
         (length 2.54)
-        (name "GND#3"
+        (name "GND#1"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3292,7 +3292,7 @@
       (pin passive line
         (at -7.62 -21.59 0)
         (length 2.54)
-        (name "GND#4"
+        (name "GND#2"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3303,7 +3303,7 @@
       (pin passive line
         (at -7.62 -24.13 0)
         (length 2.54)
-        (name "GND#5"
+        (name "GND#3"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3314,7 +3314,7 @@
       (pin passive line
         (at -7.62 -26.67 0)
         (length 2.54)
-        (name "GND#6"
+        (name "GND#4"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3325,7 +3325,7 @@
       (pin passive line
         (at -7.62 -29.21 0)
         (length 2.54)
-        (name "GND#7"
+        (name "GND#5"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3336,7 +3336,7 @@
       (pin passive line
         (at -7.62 -31.75 0)
         (length 2.54)
-        (name "GND#8"
+        (name "GND#6"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3347,7 +3347,7 @@
       (pin passive line
         (at -7.62 -34.29 0)
         (length 2.54)
-        (name "GND#9"
+        (name "GND#7"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3358,7 +3358,7 @@
       (pin passive line
         (at -7.62 -36.83 0)
         (length 2.54)
-        (name "GND#10"
+        (name "GND#8"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3369,7 +3369,7 @@
       (pin passive line
         (at -7.62 -39.37 0)
         (length 2.54)
-        (name "GND#11"
+        (name "GND#9"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3380,7 +3380,7 @@
       (pin passive line
         (at -7.62 -41.91 0)
         (length 2.54)
-        (name "GND#12"
+        (name "GND#10"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3391,7 +3391,7 @@
       (pin passive line
         (at -7.62 -44.45 0)
         (length 2.54)
-        (name "GND#13"
+        (name "GND#11"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3402,7 +3402,7 @@
       (pin passive line
         (at -7.62 -46.99 0)
         (length 2.54)
-        (name "GND#14"
+        (name "GND#12"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3413,7 +3413,7 @@
       (pin passive line
         (at -7.62 -49.53 0)
         (length 2.54)
-        (name "GND#15"
+        (name "GND#13"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3424,7 +3424,7 @@
       (pin passive line
         (at -7.62 -52.07 0)
         (length 2.54)
-        (name "GND#16"
+        (name "GND#14"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3435,7 +3435,7 @@
       (pin passive line
         (at -7.62 -54.61 0)
         (length 2.54)
-        (name "GND#17"
+        (name "GND#15"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3446,7 +3446,7 @@
       (pin passive line
         (at -7.62 -57.15 0)
         (length 2.54)
-        (name "GND#18"
+        (name "GND#16"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3457,7 +3457,7 @@
       (pin passive line
         (at -7.62 -59.69 0)
         (length 2.54)
-        (name "GND#19"
+        (name "GND#17"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3582,7 +3582,7 @@
       (pin passive line
         (at -7.62 41.91 0)
         (length 2.54)
-        (name "EXP_EN_ETH"
+        (name "ETH_SW_SMDC"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3593,7 +3593,7 @@
       (pin passive line
         (at -7.62 39.37 0)
         (length 2.54)
-        (name "EXP_LORA_RST_N"
+        (name "ETH_SW_SMDIO"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3604,7 +3604,7 @@
       (pin passive line
         (at -7.62 36.83 0)
         (length 2.54)
-        (name "EXP_PHY_RST_N"
+        (name "EXP_EN_ETH"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3615,7 +3615,7 @@
       (pin passive line
         (at -7.62 34.29 0)
         (length 2.54)
-        (name "EXP_RTR_RST_N"
+        (name "EXP_LORA_RST_N"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3626,7 +3626,7 @@
       (pin passive line
         (at -7.62 31.75 0)
         (length 2.54)
-        (name "GLOW_D5V"
+        (name "EXP_PHY_RST_N"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3637,7 +3637,7 @@
       (pin passive line
         (at -7.62 29.21 0)
         (length 2.54)
-        (name "LORA_RX"
+        (name "EXP_POE_CLASS"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3648,7 +3648,7 @@
       (pin passive line
         (at -7.62 26.67 0)
         (length 2.54)
-        (name "LORA_TX"
+        (name "EXP_POE_CLASS_TPL"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3659,7 +3659,7 @@
       (pin passive line
         (at -7.62 24.13 0)
         (length 2.54)
-        (name "MIC_CLK"
+        (name "EXP_RTR_RST_N"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3670,7 +3670,7 @@
       (pin passive line
         (at -7.62 21.59 0)
         (length 2.54)
-        (name "MIC_DATA"
+        (name "GLOW_D3V3"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3681,7 +3681,7 @@
       (pin passive line
         (at -7.62 19.05 0)
         (length 2.54)
-        (name "RTR_SMDC"
+        (name "GLOW_OE_N"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3692,7 +3692,7 @@
       (pin passive line
         (at -7.62 16.51 0)
         (length 2.54)
-        (name "RTR_SMDIO"
+        (name "LORA_RX"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3703,7 +3703,7 @@
       (pin passive line
         (at -7.62 13.97 0)
         (length 2.54)
-        (name "V12_QI"
+        (name "LORA_TX"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3714,7 +3714,7 @@
       (pin passive line
         (at -7.62 11.43 0)
         (length 2.54)
-        (name "V12_RTR"
+        (name "MIC_CLK"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3725,7 +3725,7 @@
       (pin passive line
         (at -7.62 8.89 0)
         (length 2.54)
-        (name "V3V3"
+        (name "MIC_DATA"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3736,7 +3736,7 @@
       (pin passive line
         (at -7.62 6.35 0)
         (length 2.54)
-        (name "V3V3_ETH"
+        (name "V3V3"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3747,7 +3747,7 @@
       (pin passive line
         (at -7.62 3.81 0)
         (length 2.54)
-        (name "V3V3_LORA"
+        (name "V3V3_ETH"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3758,7 +3758,7 @@
       (pin passive line
         (at -7.62 1.27 0)
         (length 2.54)
-        (name "V5_AUX"
+        (name "V3V3_LORA"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3769,7 +3769,7 @@
       (pin passive line
         (at -7.62 -1.27 0)
         (length 2.54)
-        (name "V5_ETH"
+        (name "V5_AUX"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3780,7 +3780,7 @@
       (pin passive line
         (at -7.62 -3.81 0)
         (length 2.54)
-        (name "V5_GLOW"
+        (name "V5_ETH"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3791,7 +3791,7 @@
       (pin passive line
         (at -7.62 -6.35 0)
         (length 2.54)
-        (name "VPOE#1"
+        (name "V5_GLOW"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3802,7 +3802,7 @@
       (pin passive line
         (at -7.62 -8.89 0)
         (length 2.54)
-        (name "VPOE#2"
+        (name "V5_QI"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3813,7 +3813,7 @@
       (pin passive line
         (at -7.62 -11.43 0)
         (length 2.54)
-        (name "VPOE#3"
+        (name "VPOE#1"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3824,7 +3824,7 @@
       (pin passive line
         (at -7.62 -13.97 0)
         (length 2.54)
-        (name "GND#1"
+        (name "VPOE#2"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3835,7 +3835,7 @@
       (pin passive line
         (at -7.62 -16.51 0)
         (length 2.54)
-        (name "GND#2"
+        (name "VPOE#3"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3846,7 +3846,7 @@
       (pin passive line
         (at -7.62 -19.05 0)
         (length 2.54)
-        (name "GND#3"
+        (name "GND#1"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3857,7 +3857,7 @@
       (pin passive line
         (at -7.62 -21.59 0)
         (length 2.54)
-        (name "GND#4"
+        (name "GND#2"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3868,7 +3868,7 @@
       (pin passive line
         (at -7.62 -24.13 0)
         (length 2.54)
-        (name "GND#5"
+        (name "GND#3"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3879,7 +3879,7 @@
       (pin passive line
         (at -7.62 -26.67 0)
         (length 2.54)
-        (name "GND#6"
+        (name "GND#4"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3890,7 +3890,7 @@
       (pin passive line
         (at -7.62 -29.21 0)
         (length 2.54)
-        (name "GND#7"
+        (name "GND#5"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3901,7 +3901,7 @@
       (pin passive line
         (at -7.62 -31.75 0)
         (length 2.54)
-        (name "GND#8"
+        (name "GND#6"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3912,7 +3912,7 @@
       (pin passive line
         (at -7.62 -34.29 0)
         (length 2.54)
-        (name "GND#9"
+        (name "GND#7"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3923,7 +3923,7 @@
       (pin passive line
         (at -7.62 -36.83 0)
         (length 2.54)
-        (name "GND#10"
+        (name "GND#8"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3934,7 +3934,7 @@
       (pin passive line
         (at -7.62 -39.37 0)
         (length 2.54)
-        (name "GND#11"
+        (name "GND#9"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3945,7 +3945,7 @@
       (pin passive line
         (at -7.62 -41.91 0)
         (length 2.54)
-        (name "GND#12"
+        (name "GND#10"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3956,7 +3956,7 @@
       (pin passive line
         (at -7.62 -44.45 0)
         (length 2.54)
-        (name "GND#13"
+        (name "GND#11"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3967,7 +3967,7 @@
       (pin passive line
         (at -7.62 -46.99 0)
         (length 2.54)
-        (name "GND#14"
+        (name "GND#12"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3978,7 +3978,7 @@
       (pin passive line
         (at -7.62 -49.53 0)
         (length 2.54)
-        (name "GND#15"
+        (name "GND#13"
           (effects
             (font
               (size 1.27 1.27))))
@@ -3989,7 +3989,7 @@
       (pin passive line
         (at -7.62 -52.07 0)
         (length 2.54)
-        (name "GND#16"
+        (name "GND#14"
           (effects
             (font
               (size 1.27 1.27))))
@@ -4000,7 +4000,7 @@
       (pin passive line
         (at -7.62 -54.61 0)
         (length 2.54)
-        (name "GND#17"
+        (name "GND#15"
           (effects
             (font
               (size 1.27 1.27))))
@@ -4011,7 +4011,7 @@
       (pin passive line
         (at -7.62 -57.15 0)
         (length 2.54)
-        (name "GND#18"
+        (name "GND#16"
           (effects
             (font
               (size 1.27 1.27))))
@@ -4022,7 +4022,7 @@
       (pin passive line
         (at -7.62 -59.69 0)
         (length 2.54)
-        (name "GND#19"
+        (name "GND#17"
           (effects
             (font
               (size 1.27 1.27))))
@@ -4637,7 +4637,7 @@
       (pin passive line
         (at -7.62 3.81 0)
         (length 2.54)
-        (name "3V3"
+        (name "VTREF"
           (effects
             (font
               (size 1.27 1.27))))

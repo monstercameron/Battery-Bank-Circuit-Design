@@ -9,6 +9,132 @@
     (company "Battery Bank")
     (rev "A"))
   (lib_symbols
+    (symbol "bb:JP"
+      (pin_numbers hide)
+      (pin_names
+        (offset 0.254) hide)
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "JP"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "JP"
+        (at 0 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "JP_0_1"
+        (polyline
+          (pts
+            (xy -1.016 1.016)
+            (xy 1.016 1.016))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.016 -1.016)
+            (xy 1.016 -1.016))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "JP_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "2"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))))
+    (symbol "bb:TP"
+      (pin_numbers hide)
+      (pin_names
+        (offset 0.254) hide)
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "TP"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "TP"
+        (at 0 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "TP_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 1.27))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (circle
+          (center 0 1.778)
+          (radius 0.508)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "TP_1_1"
+        (pin passive line
+          (at 0 -2.54 90)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))))
     (symbol "lcsc:AL8860QMP-13"
       (in_bom yes)
       (on_board yes)
@@ -1031,63 +1157,6 @@
             (effects
               (font
                 (size 1.27 1.27)))))))
-    (symbol "bb:TP"
-      (pin_numbers hide)
-      (pin_names
-        (offset 0.254) hide)
-      (exclude_from_sim no)
-      (in_bom yes)
-      (on_board yes)
-      (property "Reference" "TP"
-        (at 0 3.81 0)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (property "Value" "TP"
-        (at 0 -3.81 0)
-        (effects
-          (font
-            (size 1.27 1.27))))
-      (property "Footprint" ""
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27)) hide))
-      (property "Datasheet" ""
-        (at 0 0 0)
-        (effects
-          (font
-            (size 1.27 1.27)) hide))
-      (symbol "TP_0_1"
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 1.27))
-          (stroke
-            (width 0.254)
-            (type default))
-          (fill
-            (type none)))
-        (circle
-          (center 0 1.778)
-          (radius 0.508)
-          (stroke
-            (width 0.254)
-            (type default))
-          (fill
-            (type none))))
-      (symbol "TP_1_1"
-        (pin passive line
-          (at 0 -2.54 90)
-          (length 2.54)
-          (name "1"
-            (effects
-              (font
-                (size 1.27 1.27))))
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)))))))
     (symbol "lcsc:AO3400A"
       (in_bom yes)
       (on_board yes)
@@ -1146,6 +1215,208 @@
           (font
             (size 1.27 1.27)) hide))
       (symbol "AO3400A_0_1"
+        (polyline
+          (pts
+            (xy 0.00 1.78)
+            (xy 2.54 1.78)
+            (xy 2.54 2.54)
+            (xy 5.08 2.54)
+            (xy 5.08 0.51))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0.00 -0.00)
+            (xy 2.54 -0.00)
+            (xy 2.54 -2.54)
+            (xy 5.08 -2.54)
+            (xy 5.08 -0.76))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 2.54 -1.78)
+            (xy 0.00 -1.78))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -0.51 2.29)
+            (xy -0.51 -2.29))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0.00 2.29)
+            (xy 0.00 1.27))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0.00 -0.51)
+            (xy 0.00 0.51))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0.00 -2.29)
+            (xy 0.00 -1.27))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -2.54 -0.00)
+            (xy -0.51 -0.00))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 6.10 0.51)
+            (xy 5.59 0.51)
+            (xy 4.57 0.51)
+            (xy 4.06 0.51))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0.00 -0.00)
+            (xy 1.52 -0.51)
+            (xy 1.52 0.51)
+            (xy 0.00 -0.00))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type background)))
+        (polyline
+          (pts
+            (xy 5.08 0.51)
+            (xy 4.32 -0.76)
+            (xy 5.84 -0.76)
+            (xy 5.08 0.51))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type background)))
+        (pin passive line
+          (at 2.54 5.08 270)
+          (length 2.54)
+          (name "D"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -5.08 -0.00 0)
+          (length 2.54)
+          (name "G"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 -5.08 90)
+          (length 2.54)
+          (name "S"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))))
+    (symbol "lcsc:2N7002"
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Q"
+        (id 0)
+        (at 0 10.16 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "2N7002"
+        (id 1)
+        (at 0 -10.16 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "lcsc:SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR"
+        (id 2)
+        (at 0 -12.70 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://lcsc.com/product-detail/MOSFET_2N7002-7002_C8545.html"
+        (id 3)
+        (at 0 -15.24 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Manufacturer" "CJ(江苏长电/长晶)"
+        (id 4)
+        (at 0 -17.78 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "MPN" "2N7002"
+        (id 5)
+        (at 0 -20.32 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "LCSC Part" "C8545"
+        (id 6)
+        (at 0 -22.86 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "ki_keywords" "MOSFETs"
+        (id 8)
+        (at 0 -25.40 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "ki_description" "2N7002 7002"
+        (id 9)
+        (at 0 -27.94 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "2N7002_0_1"
         (polyline
           (pts
             (xy 0.00 1.78)
@@ -1439,315 +1710,383 @@
       (justify left))
     (uuid "ee5230f4-ca58-5230-a7c8-afa09fb3481d"))
   (symbol
+    (lib_id "bb:JP")
+    (at 40.64 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "cf33528e-548a-5694-9ccd-1b30f7727bab")
+    (property "Reference" "JP39"
+      (at 40.64 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "SJ ISO flashlight driver"
+      (at 40.64 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm"
+      (at 40.64 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 40.64 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_I" "0.15"
+      (at 40.64 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "47ec67a7-09c9-56b4-b30a-b24d796f7924"))
+    (pin "2"
+      (uuid "9a055d42-916a-5f23-a0ec-4ea8444b234e"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
+          (reference "JP39")
+          (unit 1)))))
+  (global_label "VBAT"
+    (shape bidirectional)
+    (at 40.64 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "8e20b89e-3460-5f65-8052-55d06809b004"))
+  (global_label "LED_VIN"
+    (shape bidirectional)
+    (at 40.64 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "549983e2-a5db-5ece-a67a-b1eea87085ea"))
+  (symbol
+    (lib_id "bb:TP")
+    (at 68.58 41.91 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "71b6ba8b-f84c-55d5-8d27-71527911c5a0")
+    (property "Reference" "TP217"
+      (at 68.58 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "LED_VIN"
+      (at 68.58 47.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+      (at 68.58 41.91 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 68.58 41.91 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "71454659-2eac-5f5c-b449-c6997e8a5f19"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
+          (reference "TP217")
+          (unit 1)))))
+  (global_label "LED_VIN"
+    (shape bidirectional)
+    (at 68.58 44.45 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "c27baca2-25a4-55b1-9e66-4dc68091fee9"))
+  (symbol
+    (lib_id "bb:TP")
+    (at 93.98 41.91 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "4dc98aa0-388a-57a9-b296-58808a7fc5d0")
+    (property "Reference" "TP218"
+      (at 93.98 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "GND"
+      (at 93.98 47.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+      (at 93.98 41.91 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 93.98 41.91 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "eb2239a5-f59f-5767-a765-370b74c642ff"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
+          (reference "TP218")
+          (unit 1)))))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 93.98 44.45 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "fcd0d947-b565-558e-bd0e-670720bcd2cd"))
+  (symbol
     (lib_id "lcsc:AL8860QMP-13")
-    (at 52.07 49.53 0)
+    (at 129.54 49.53 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "b3e4b77c-d1fd-55ed-a361-5d370215d588")
-    (property "Reference" "U87"
-      (at 52.07 41.45 0)
+    (uuid "40f854b2-6468-5988-a64a-c1e728c3aee6")
+    (property "Reference" "U89"
+      (at 129.54 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "AL8860QMP-13"
-      (at 52.07 57.61 0)
+      (at 129.54 57.61 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "lcsc:MSOP-8_L3.0-W3.0-P0.65-LS4.9-BL-EP"
-      (at 52.07 49.53 0)
+      (at 129.54 49.53 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 52.07 49.53 0)
+      (at 129.54 49.53 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "LCSC" "C2678649"
-      (at 52.07 49.53 0)
+      (at 129.54 49.53 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "MPN" "AL8860QMP-13"
-      (at 52.07 49.53 0)
+      (at 129.54 49.53 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Op_I" "0.5"
-      (at 52.07 49.53 0)
+      (at 129.54 49.53 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_I" "1.5"
-      (at 52.07 49.53 0)
+      (at 129.54 49.53 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "9"
-      (uuid "4dbdabb4-f52d-5d18-abc4-5832f203fc16"))
+      (uuid "bcd1f3fe-32a3-5592-9b1a-709393cdd972"))
     (pin "8"
-      (uuid "81d7b5e9-f526-5785-b7b5-441112555d5b"))
+      (uuid "f7b89a1f-a1c8-5f0a-8c04-ab559fa3922e"))
     (pin "7"
-      (uuid "eeb6e589-771b-5c39-8b19-fd454602ee02"))
+      (uuid "7d04ce17-0439-5bbc-b5c1-a52908d38f3f"))
     (pin "6"
-      (uuid "793f2d4e-9043-5ce5-bddd-ebbf63095413"))
+      (uuid "70ce48bf-cd2c-53c5-8a77-4a75d65303e4"))
     (pin "5"
-      (uuid "3d7d59bc-35db-5643-9c5c-3e5f3431a249"))
+      (uuid "dc91b995-836e-5413-8703-a0444e601889"))
     (pin "4"
-      (uuid "b90e9140-eff9-5c95-a1ce-f287ea812ab9"))
+      (uuid "0549cb6a-ec42-5c38-a5d0-f0609c69b879"))
     (pin "3"
-      (uuid "eb61ddca-6bc2-52bb-814f-57522a998057"))
+      (uuid "35236b0b-ab58-5354-8448-3283062d26ef"))
     (pin "2"
-      (uuid "d52dbf2a-c924-5f56-9081-6620ddcc5c4f"))
+      (uuid "5460d57e-cb26-5c81-b424-d06155fc8d11"))
     (pin "1"
-      (uuid "30a8b3f5-717d-5d58-a8c2-b7374a5c7ea1"))
+      (uuid "46e793c1-f6ac-5040-ad52-f0193a4ac874"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
-          (reference "U87")
+          (reference "U89")
           (unit 1)))))
   (global_label "GND"
     (shape bidirectional)
-    (at 62.23 44.45 0)
+    (at 139.7 44.45 0)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify left))
-    (uuid "a7d7d834-18b2-5cd0-81e8-3a996d4b7f3c"))
-  (global_label "VBAT"
+    (uuid "4a85ebae-d957-5acf-ab53-00950bdab9fe"))
+  (global_label "LED_VIN"
     (shape bidirectional)
-    (at 62.23 46.99 0)
+    (at 139.7 46.99 0)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify left))
-    (uuid "121b3ff8-ee6d-535c-a928-c5c561a16fb1"))
+    (uuid "b21f6573-8217-5dfa-9ada-3f00e26ecbf3"))
   (no_connect
-    (at 62.23 49.53)
-    (uuid "33145ea7-28c8-57fd-af41-57317ba1d999"))
+    (at 139.7 49.53)
+    (uuid "9092500f-ad20-5640-9e73-9f3054d42ef4"))
   (global_label "LED_SW"
     (shape bidirectional)
-    (at 62.23 52.07 0)
+    (at 139.7 52.07 0)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify left))
-    (uuid "9755f1bf-1bdb-58e1-900a-4ec755c7be6d"))
+    (uuid "fe0ea773-000f-5642-8eea-40b97dc75169"))
   (global_label "LED_SW"
     (shape bidirectional)
-    (at 62.23 54.61 0)
+    (at 139.7 54.61 0)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify left))
-    (uuid "cbefdb03-8737-5e47-813e-d1fbe44fe274"))
+    (uuid "1a06568f-b816-5cdd-a5dd-20488d7581c0"))
   (global_label "LED_CTRL"
     (shape bidirectional)
-    (at 41.91 54.61 180)
+    (at 119.38 54.61 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "95de81c6-a8c7-5286-81ae-7e8e31a30203"))
+    (uuid "87ac9fe7-4f09-5932-983c-5de05e17dd5a"))
   (global_label "GND"
     (shape bidirectional)
-    (at 41.91 52.07 180)
+    (at 119.38 52.07 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "503aefe4-a6d7-5bc7-99a4-bf5d3d0051ac"))
+    (uuid "dab7ed1c-c064-56a2-8f27-3b8596c21f0d"))
   (global_label "GND"
     (shape bidirectional)
-    (at 41.91 49.53 180)
+    (at 119.38 49.53 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "18169baa-f64a-56b2-ac10-163f237a1188"))
+    (uuid "08b73a72-0c8a-5765-b606-c53d77521de7"))
   (global_label "LED_RS"
     (shape bidirectional)
-    (at 41.91 46.99 180)
+    (at 119.38 46.99 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "0a1ec04f-4547-59b4-a00d-0ab05652e82d"))
+    (uuid "f5171186-1053-5787-8efd-7f605eb9f1f6"))
   (symbol
     (lib_id "lcsc:1206W4F200LT5E")
-    (at 95.25 44.45 0)
+    (at 173.99 44.45 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "69b5d0a9-0755-53b2-b73e-dc9c6e6b7d2f")
-    (property "Reference" "R393"
-      (at 95.25 41.45 0)
+    (uuid "fddd46ef-8885-56fe-bd7b-3f8813c04145")
+    (property "Reference" "R400"
+      (at 173.99 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "0.2R 1206"
-      (at 95.25 47.45 0)
+      (at 173.99 47.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "lcsc:R1206"
-      (at 95.25 44.45 0)
+      (at 173.99 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 95.25 44.45 0)
+      (at 173.99 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "LCSC" "C25335"
-      (at 95.25 44.45 0)
+      (at 173.99 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "MPN" "1206W4F200LT5E"
-      (at 95.25 44.45 0)
+      (at 173.99 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Op_P" "0.05"
-      (at 95.25 44.45 0)
+      (at 173.99 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_P" "0.25"
-      (at 95.25 44.45 0)
+      (at 173.99 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Note" "I = 0.1/0.2 = 0.5 A"
-      (at 95.25 44.45 0)
+      (at 173.99 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "2"
-      (uuid "5e3a29f0-6b75-5199-b9f8-334e400ceb63"))
+      (uuid "313e48fe-7c53-5d7c-8854-6c01cfb011ef"))
     (pin "1"
-      (uuid "682fc276-52f3-5646-aea9-a9473f2d34bd"))
+      (uuid "8bbcc278-98b5-5296-aaa9-399ead790820"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
-          (reference "R393")
+          (reference "R400")
           (unit 1)))))
   (global_label "LED_RS"
     (shape bidirectional)
-    (at 100.33 44.45 0)
+    (at 179.07 44.45 0)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify left))
-    (uuid "6815c55b-c99d-55f1-bd40-ba907342c9f1"))
-  (global_label "VBAT"
+    (uuid "9c5209b8-b3c3-5305-9fbc-47b9ec0e9f47"))
+  (global_label "LED_VIN"
     (shape bidirectional)
-    (at 90.17 44.45 180)
+    (at 168.91 44.45 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "33b3dfaa-edbb-5ced-bb34-c0f4619c9a2a"))
+    (uuid "009b8107-d3e7-5df4-85d2-9ea13167d24a"))
   (symbol
     (lib_id "bb:C")
-    (at 124.46 48.26 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "b5648c05-f491-5341-a3bb-bc971179c9ad")
-    (property "Reference" "C516"
-      (at 124.46 41.45 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Value" "10uF 50V"
-      (at 124.46 55.07 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
-      (at 124.46 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Datasheet" ""
-      (at 124.46 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "LCSC" "C13585"
-      (at 124.46 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "MPN" "CL31A106KBHNNNE"
-      (at 124.46 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "JLC_Class" "Basic"
-      (at 124.46 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Rated_V" "50.0"
-      (at 124.46 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Note" ">= 10 uF X7R at VIN (datasheet)"
-      (at 124.46 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "1"
-      (uuid "0bd6cce1-c32a-50dd-a1f4-9ab58336a076"))
-    (pin "2"
-      (uuid "00773b8c-9d73-5c57-89d8-ae9e1d3061cf"))
-    (instances
-      (project "battery-bank"
-        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
-          (reference "C516")
-          (unit 1)))))
-  (global_label "VBAT"
-    (shape bidirectional)
-    (at 124.46 44.45 90)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1)))
-    (uuid "6ed63a12-57e1-5c1e-9945-2b1a52c5ca5c"))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 124.46 52.07 270)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1)))
-    (uuid "8ecc33b1-d276-587f-ab3c-847f7d38c9aa"))
-  (symbol
-    (lib_id "bb:C")
-    (at 146.05 48.26 0)
+    (at 207.01 48.26 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
@@ -1755,42 +2094,47 @@
     (dnp no)
     (uuid "f19afeaa-5d68-58c9-90d7-84c24fcbf9c5")
     (property "Reference" "C517"
-      (at 146.05 41.45 0)
+      (at 207.01 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Value" "100nF 50V"
-      (at 146.05 55.07 0)
+    (property "Value" "10uF 50V"
+      (at 207.01 55.07 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-      (at 146.05 48.26 0)
+    (property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+      (at 207.01 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 146.05 48.26 0)
+      (at 207.01 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "LCSC" "C14663"
-      (at 146.05 48.26 0)
+    (property "LCSC" "C13585"
+      (at 207.01 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "CC0603KRX7R9BB104"
-      (at 146.05 48.26 0)
+    (property "MPN" "CL31A106KBHNNNE"
+      (at 207.01 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "JLC_Class" "Basic"
-      (at 146.05 48.26 0)
+      (at 207.01 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_V" "50.0"
-      (at 146.05 48.26 0)
+      (at 207.01 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" ">= 10 uF X7R at VIN (datasheet)"
+      (at 207.01 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
@@ -1803,25 +2147,99 @@
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
           (reference "C517")
           (unit 1)))))
-  (global_label "VBAT"
+  (global_label "LED_VIN"
     (shape bidirectional)
-    (at 146.05 44.45 90)
+    (at 207.01 44.45 90)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "1860c5d1-1415-5556-9888-e7b61498ff88"))
+    (uuid "4f62ab14-9348-55fa-b44f-081b2cff0149"))
   (global_label "GND"
     (shape bidirectional)
-    (at 146.05 52.07 270)
+    (at 207.01 52.07 270)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "13204bf8-79e9-5924-8210-c92f7241d960"))
+    (uuid "12d6a7fd-88bd-574b-aecb-37ebf548dbb0"))
+  (symbol
+    (lib_id "bb:C")
+    (at 234.95 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "d38db278-32d9-5691-ae6f-772ca50e79ed")
+    (property "Reference" "C518"
+      (at 234.95 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 50V"
+      (at 234.95 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 234.95 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 234.95 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C14663"
+      (at 234.95 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CC0603KRX7R9BB104"
+      (at 234.95 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 234.95 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50.0"
+      (at 234.95 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "06ccec37-8f18-50df-a92c-14685da83a9a"))
+    (pin "2"
+      (uuid "407f51ce-5903-574c-9855-61b1499579ac"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
+          (reference "C518")
+          (unit 1)))))
+  (global_label "LED_VIN"
+    (shape bidirectional)
+    (at 234.95 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "e82b69bd-b6f9-5300-8ef0-52682a33062a"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 234.95 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "5dbf2733-d69f-5f97-b2ba-e66447dae4e7"))
   (symbol
     (lib_id "lcsc:FNR8040S470MT")
-    (at 175.26 44.45 0)
+    (at 267.97 44.45 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
@@ -1829,52 +2247,52 @@
     (dnp no)
     (uuid "da4cb174-cfe7-5f08-ad76-5579a1695f07")
     (property "Reference" "L19"
-      (at 175.26 41.45 0)
+      (at 267.97 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "47uH 1.7A"
-      (at 175.26 47.45 0)
+      (at 267.97 47.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "lcsc:IND-SMD_L8.0-W8.0_FNR80XXS"
-      (at 175.26 44.45 0)
+      (at 267.97 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 175.26 44.45 0)
+      (at 267.97 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "LCSC" "C168137"
-      (at 175.26 44.45 0)
+      (at 267.97 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "MPN" "FNR8040S470MT"
-      (at 175.26 44.45 0)
+      (at 267.97 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_I" "1.7"
-      (at 175.26 44.45 0)
+      (at 267.97 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Isat" "2.0"
-      (at 175.26 44.45 0)
+      (at 267.97 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Op_Irms" "0.5"
-      (at 175.26 44.45 0)
+      (at 267.97 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Op_Ipk" "0.6"
-      (at 175.26 44.45 0)
+      (at 267.97 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
@@ -1889,25 +2307,25 @@
           (unit 1)))))
   (global_label "LED_SW"
     (shape bidirectional)
-    (at 180.34 44.45 0)
+    (at 273.05 44.45 0)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify left))
-    (uuid "5414500a-4b58-5caf-a934-58019f9f9654"))
+    (uuid "77a64c72-10ef-54ac-a538-5714f39a74ec"))
   (global_label "LED_K"
     (shape bidirectional)
-    (at 170.18 44.45 180)
+    (at 262.89 44.45 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "c3f4354b-1412-5a6c-8c11-7e6beae79fbd"))
+    (uuid "424fde6b-ae32-57b0-8c2e-ec785b1159c3"))
   (symbol
     (lib_id "lcsc:SS310SMA")
-    (at 212.09 44.45 0)
+    (at 304.8 44.45 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
@@ -1915,42 +2333,42 @@
     (dnp no)
     (uuid "b172263d-a626-58f5-a5d7-a2699c7a5f72")
     (property "Reference" "D53"
-      (at 212.09 41.45 0)
+      (at 304.8 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "SS310SMA"
-      (at 212.09 47.45 0)
+      (at 304.8 47.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "lcsc:SMA_L4.3-W2.6-LS5.0-RD"
-      (at 212.09 44.45 0)
+      (at 304.8 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 212.09 44.45 0)
+      (at 304.8 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "LCSC" "C511856"
-      (at 212.09 44.45 0)
+      (at 304.8 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "MPN" "SS310SMA"
-      (at 212.09 44.45 0)
+      (at 304.8 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Op_I" "0.5"
-      (at 212.09 44.45 0)
+      (at 304.8 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_I" "3.0"
-      (at 212.09 44.45 0)
+      (at 304.8 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
@@ -1963,27 +2381,27 @@
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
           (reference "D53")
           (unit 1)))))
-  (global_label "VBAT"
+  (global_label "LED_VIN"
     (shape bidirectional)
-    (at 207.01 44.45 180)
+    (at 299.72 44.45 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "c8c618d0-205b-54bf-a3b2-dd828aff1f8d"))
+    (uuid "c95fa897-e352-58f5-a4ab-77f92d2c11ca"))
   (global_label "LED_SW"
     (shape bidirectional)
-    (at 217.17 44.45 0)
+    (at 309.88 44.45 0)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify left))
-    (uuid "6fab7e79-cfcb-5815-87b6-7659299a5235"))
+    (uuid "82da66ce-a000-51c2-8369-ad806c0db16e"))
   (symbol
     (lib_id "bb:LED_BOARD")
-    (at 254 50.8 0)
+    (at 347.98 50.8 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
@@ -1991,52 +2409,52 @@
     (dnp no)
     (uuid "f40ea8bc-e2b9-514d-a577-4b9a03cb69be")
     (property "Reference" "J15"
-      (at 254 41.45 0)
+      (at 347.98 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "LED_BOARD"
-      (at 254 60.15 0)
+      (at 347.98 60.15 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "Connector_JST:JST_PH_B6B-PH-K_1x06_P2.00mm_Vertical"
-      (at 254 50.8 0)
+      (at 347.98 50.8 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 254 50.8 0)
+      (at 347.98 50.8 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "LCSC" "C131342"
-      (at 254 50.8 0)
+      (at 347.98 50.8 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "MPN" "B6B-PH-K-S(LF)(SN)"
-      (at 254 50.8 0)
+      (at 347.98 50.8 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "B2B" "True"
-      (at 254 50.8 0)
+      (at 347.98 50.8 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Op_I" "0.5"
-      (at 254 50.8 0)
+      (at 347.98 50.8 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_I" "2.0"
-      (at 254 50.8 0)
+      (at 347.98 50.8 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Note" "JST PH 6-pin harness to the aluminium LED board (2 A contacts -> 4:1)"
-      (at 254 50.8 0)
+      (at 347.98 50.8 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
@@ -2059,61 +2477,61 @@
           (unit 1)))))
   (global_label "LED_RS"
     (shape bidirectional)
-    (at 246.38 44.45 180)
+    (at 340.36 44.45 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "ba6264fa-b59a-5847-b27c-ccd215163c2e"))
+    (uuid "69cf3173-1787-5e64-8dc7-2a6a4e070d6e"))
   (global_label "LED_K"
     (shape bidirectional)
-    (at 246.38 46.99 180)
+    (at 340.36 46.99 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "ca1688ea-c655-5bab-924f-f9657293c405"))
+    (uuid "eb0dd953-64ad-5b7a-bbd9-16f2f02044a8"))
   (global_label "LED_RED_A"
     (shape bidirectional)
-    (at 246.38 49.53 180)
+    (at 340.36 49.53 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "7a5c8fa8-0f20-5cc9-a6a7-5bf9a95e7d3c"))
+    (uuid "8d9fdc4c-4f25-52e0-a2dd-6a369c1d69c4"))
   (global_label "LED_RED_K"
     (shape bidirectional)
-    (at 246.38 52.07 180)
+    (at 340.36 52.07 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "ba7f2085-9bbe-5fa9-b2e4-c7e871212f5b"))
+    (uuid "13188533-4dba-56d9-b961-b258055831ad"))
   (global_label "LED_NTC"
     (shape bidirectional)
-    (at 246.38 54.61 180)
+    (at 340.36 54.61 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "ec7a9158-688f-5062-9b65-917394d36bdd"))
+    (uuid "1f445b5e-5d0b-5d86-8b44-22baad74e8f4"))
   (global_label "GND"
     (shape bidirectional)
-    (at 246.38 57.15 180)
+    (at 340.36 57.15 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "4b31081b-5d1d-58da-9dcb-934d38c88cee"))
+    (uuid "c5f653cc-a101-5a06-8b5d-4a0507d011ea"))
   (symbol
     (lib_id "bb:LED_BOARD_HDR")
-    (at 285.75 50.8 0)
+    (at 379.73 50.8 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
@@ -2121,57 +2539,57 @@
     (dnp no)
     (uuid "7c88a5f7-05e7-565b-aefc-bddd75b6798e")
     (property "Reference" "J16"
-      (at 285.75 41.45 0)
+      (at 379.73 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "LED_BOARD_HDR"
-      (at 285.75 60.15 0)
+      (at 379.73 60.15 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "Connector_JST:JST_PH_B6B-PH-K_1x06_P2.00mm_Vertical"
-      (at 285.75 50.8 0)
+      (at 379.73 50.8 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 285.75 50.8 0)
+      (at 379.73 50.8 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "LCSC" "C131342"
-      (at 285.75 50.8 0)
+      (at 379.73 50.8 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "MPN" "B6B-PH-K-S(LF)(SN)"
-      (at 285.75 50.8 0)
+      (at 379.73 50.8 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Board" "LED"
-      (at 285.75 50.8 0)
+      (at 379.73 50.8 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "B2B" "True"
-      (at 285.75 50.8 0)
+      (at 379.73 50.8 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Op_I" "0.5"
-      (at 285.75 50.8 0)
+      (at 379.73 50.8 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_I" "2.0"
-      (at 285.75 50.8 0)
+      (at 379.73 50.8 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Note" "LED-board end of the 6-wire harness"
-      (at 285.75 50.8 0)
+      (at 379.73 50.8 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
@@ -2194,61 +2612,61 @@
           (unit 1)))))
   (global_label "LED_RS"
     (shape bidirectional)
-    (at 278.13 44.45 180)
+    (at 372.11 44.45 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "f8146c2b-cd0f-54ad-9529-d321b205a051"))
+    (uuid "197b164a-8a77-53e7-9530-f2e639645737"))
   (global_label "LED_K"
     (shape bidirectional)
-    (at 278.13 46.99 180)
+    (at 372.11 46.99 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "2025dfcc-e5c8-5e7d-8be7-b850f2a2abec"))
+    (uuid "4c3c74ff-0532-5bc2-b07d-1117410d9ace"))
   (global_label "LED_RED_A"
     (shape bidirectional)
-    (at 278.13 49.53 180)
+    (at 372.11 49.53 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "2871694c-2eb1-5d38-a190-8986f6b525a7"))
+    (uuid "9f720312-1d9e-5e28-9640-6c1263dda2f0"))
   (global_label "LED_RED_K"
     (shape bidirectional)
-    (at 278.13 52.07 180)
+    (at 372.11 52.07 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "6071ae76-6657-5b8b-b3c8-d23523232199"))
+    (uuid "15a53f4f-9c1d-5226-a909-9c871911e1fa"))
   (global_label "LED_NTC"
     (shape bidirectional)
-    (at 278.13 54.61 180)
+    (at 372.11 54.61 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "2800105b-5151-59eb-888f-f171be4632c4"))
+    (uuid "9f87e407-8810-532a-95dd-9f4058c5a591"))
   (global_label "GND"
     (shape bidirectional)
-    (at 278.13 57.15 180)
+    (at 372.11 57.15 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "f1839a15-3fd3-5caf-bc96-8e66e86ea025"))
+    (uuid "0149589e-8687-5e5b-83c0-54a79bb25d60"))
   (symbol
     (lib_id "lcsc:XPGDWT-01-0000-00ME2")
-    (at 312.42 44.45 0)
+    (at 406.4 44.45 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
@@ -2256,52 +2674,52 @@
     (dnp no)
     (uuid "024c5b8c-1f61-522b-bc85-2cb6d928805e")
     (property "Reference" "D54"
-      (at 312.42 41.45 0)
+      (at 406.4 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "XP-G3 5700K"
-      (at 312.42 52.53 0)
+      (at 406.4 52.53 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "lcsc:LED-SMD_3P-L3.5-W3.5-RD_IN-C33BTLRB"
-      (at 312.42 44.45 0)
+      (at 406.4 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 312.42 44.45 0)
+      (at 406.4 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "LCSC" "C17483992"
-      (at 312.42 44.45 0)
+      (at 406.4 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "MPN" "XPGDWT-01-0000-00ME2"
-      (at 312.42 44.45 0)
+      (at 406.4 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Board" "LED"
-      (at 312.42 44.45 0)
+      (at 406.4 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Op_I" "0.5"
-      (at 312.42 44.45 0)
+      (at 406.4 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_I" "2.0"
-      (at 312.42 44.45 0)
+      (at 406.4 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Note" "pad 3 = thermal (cathode-side) VERIFY"
-      (at 312.42 44.45 0)
+      (at 406.4 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
@@ -2318,33 +2736,33 @@
           (unit 1)))))
   (global_label "LED_K"
     (shape bidirectional)
-    (at 312.42 49.53 270)
+    (at 406.4 49.53 270)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "7c714c38-7249-572f-b48b-2c92a34a88bd"))
+    (uuid "c092cacb-1194-58cf-be35-aecb97ea45c7"))
   (global_label "LED_RS"
     (shape bidirectional)
-    (at 317.5 44.45 0)
+    (at 411.48 44.45 0)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify left))
-    (uuid "05097e40-9bba-5041-8640-6a9f083230d0"))
+    (uuid "14880324-7029-57f0-b5b5-d824418bcec3"))
   (global_label "LED_K"
     (shape bidirectional)
-    (at 307.34 44.45 180)
+    (at 401.32 44.45 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "18e6b35d-f846-5dff-813b-ecbbe2d085b5"))
+    (uuid "57da3229-f2a3-5332-a82a-3cecc14531c4"))
   (symbol
     (lib_id "bb:NTC")
-    (at 344.17 48.26 0)
+    (at 438.15 48.26 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
@@ -2352,42 +2770,42 @@
     (dnp no)
     (uuid "f384763b-a38f-5cc1-a951-731d81015d3a")
     (property "Reference" "TH6"
-      (at 344.17 41.45 0)
+      (at 438.15 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "10k NTC @LED"
-      (at 344.17 55.07 0)
+      (at 438.15 55.07 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-      (at 344.17 48.26 0)
+      (at 438.15 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 344.17 48.26 0)
+      (at 438.15 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "LCSC" "C13564"
-      (at 344.17 48.26 0)
+      (at 438.15 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "MPN" "NCP18XH103F03RB"
-      (at 344.17 48.26 0)
+      (at 438.15 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "JLC_Class" "Extended"
-      (at 344.17 48.26 0)
+      (at 438.15 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Board" "LED"
-      (at 344.17 48.26 0)
+      (at 438.15 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
@@ -2402,156 +2820,156 @@
           (unit 1)))))
   (global_label "LED_NTC"
     (shape bidirectional)
-    (at 344.17 44.45 90)
+    (at 438.15 44.45 90)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "769b7dcb-fb1a-5f45-985d-5adf0fca4ef4"))
+    (uuid "31aac9bc-b72f-5014-a662-846265757e6c"))
   (global_label "GND"
     (shape bidirectional)
-    (at 344.17 52.07 270)
+    (at 438.15 52.07 270)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "15eb7956-0f59-5b3b-877f-70275caed58c"))
+    (uuid "54183384-e0f1-5082-8c71-c9ee2bdc80b2"))
   (symbol
     (lib_id "bb:R")
-    (at 372.11 48.26 0)
+    (at 466.09 48.26 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "8ccd8484-c4e3-542a-9dd7-8c4f96c60974")
-    (property "Reference" "R394"
-      (at 372.11 41.45 0)
+    (uuid "9ac2be62-d0e3-5abd-8651-f11a5112b056")
+    (property "Reference" "R401"
+      (at 466.09 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "10k"
-      (at 372.11 55.07 0)
+      (at 466.09 55.07 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-      (at 372.11 48.26 0)
+      (at 466.09 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 372.11 48.26 0)
+      (at 466.09 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "LCSC" "C25744"
-      (at 372.11 48.26 0)
+      (at 466.09 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "MPN" "0402WGF1002TCE"
-      (at 372.11 48.26 0)
+      (at 466.09 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "JLC_Class" "Basic"
-      (at 372.11 48.26 0)
+      (at 466.09 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_V" "50"
-      (at 372.11 48.26 0)
+      (at 466.09 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_P" "0.0625"
-      (at 372.11 48.26 0)
+      (at 466.09 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Op_P" "0.0"
-      (at 372.11 48.26 0)
+      (at 466.09 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "Note" "read on an ESP32 ADC1 pin via the expander-free path TBD"
-      (at 372.11 48.26 0)
+    (property "Note" "read on ESP32 IO36 (SENSOR_VP, ADC1)"
+      (at 466.09 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "f3a80574-a5af-5b64-a629-2547cd3e0e53"))
+      (uuid "ef4dabfd-8625-5bd4-9024-a640ce3449ab"))
     (pin "2"
-      (uuid "0720b914-7a7a-57a5-926a-54ddf9c35da0"))
+      (uuid "6d560606-e7e4-5080-969e-d0ddff410458"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
-          (reference "R394")
+          (reference "R401")
           (unit 1)))))
   (global_label "LED_NTC"
     (shape bidirectional)
-    (at 372.11 44.45 90)
+    (at 466.09 44.45 90)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "341a51fa-6637-5577-adb1-89ac42e5f194"))
+    (uuid "ffd39274-1c53-5926-a454-aa8b0dbafae4"))
   (global_label "V3V3"
     (shape bidirectional)
-    (at 372.11 52.07 270)
+    (at 466.09 52.07 270)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "0141c859-0b2c-5565-8e9f-5c533749ff01"))
+    (uuid "ff92b87c-2333-57ec-bd86-cc430872257f"))
   (symbol
     (lib_id "bb:TP")
-    (at 400.05 41.91 0)
+    (at 494.03 41.91 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom no)
     (on_board yes)
     (dnp no)
-    (uuid "ff93fe38-8bcd-512a-98c5-d89ff9b34b89")
-    (property "Reference" "TP196"
-      (at 400.05 41.45 0)
+    (uuid "367b09a5-d9a7-54a6-895b-d5f4d74ebdb6")
+    (property "Reference" "TP219"
+      (at 494.03 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "LED_NTC"
-      (at 400.05 47.45 0)
+      (at 494.03 47.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-      (at 400.05 41.91 0)
+      (at 494.03 41.91 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 400.05 41.91 0)
+      (at 494.03 41.91 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "53d1e85d-9b92-58ed-8274-51e5fe716e25"))
+      (uuid "72c9f0e6-3adb-5221-a471-d514dce8bcaa"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
-          (reference "TP196")
+          (reference "TP219")
           (unit 1)))))
   (global_label "LED_NTC"
     (shape bidirectional)
-    (at 400.05 44.45 270)
+    (at 494.03 44.45 270)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "d3d4d0e4-9dfa-5548-9e2f-457354643c89"))
+    (uuid "e143b70a-1788-519d-acbf-6988bafb7db6"))
   (symbol
     (lib_id "lcsc:AO3400A")
-    (at 436.88 49.53 0)
+    (at 533.4 49.53 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
@@ -2559,32 +2977,37 @@
     (dnp no)
     (uuid "76dd56f0-f188-5c9a-a02f-4ba1c0675c94")
     (property "Reference" "Q63"
-      (at 436.88 41.45 0)
+      (at 533.4 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "AO3400A"
-      (at 436.88 57.61 0)
+      (at 533.4 57.61 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "lcsc:SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR"
-      (at 436.88 49.53 0)
+      (at 533.4 49.53 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 436.88 49.53 0)
+      (at 533.4 49.53 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "LCSC" "C20917"
-      (at 436.88 49.53 0)
+      (at 533.4 49.53 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "MPN" "AO3400A"
-      (at 436.88 49.53 0)
+      (at 533.4 49.53 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "X-39 CTRL clamp: on whenever LED_VIN >= 4.5 V (Vgs >= 1.82 V) -> LED off by default"
+      (at 533.4 49.53 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
@@ -2601,365 +3024,205 @@
           (unit 1)))))
   (global_label "LED_CTRL"
     (shape bidirectional)
-    (at 439.42 44.45 90)
+    (at 535.94 44.45 90)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "5d4f6d93-4808-5bd3-97a8-c9e0ee0b73c2"))
-  (global_label "FLASH_PWM_N"
+    (uuid "1fc3f87b-0c1c-55b9-9394-3c0f7743b826"))
+  (global_label "FLASH_CLAMP_G"
     (shape bidirectional)
-    (at 431.8 49.53 180)
+    (at 528.32 49.53 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "0f8284b8-2d4e-5966-9ed0-f76c8b68a844"))
+    (uuid "8cb46188-b7ec-59bb-bb9d-9b0b190a103c"))
   (global_label "GND"
     (shape bidirectional)
-    (at 439.42 54.61 270)
+    (at 535.94 54.61 270)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "a9ffdb7b-b7eb-57d5-96e8-aea95c526462"))
+    (uuid "2ba11335-a257-588f-9354-3f154a806144"))
   (symbol
     (lib_id "bb:R")
-    (at 474.98 48.26 0)
+    (at 575.31 48.26 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "fd4dcc24-587a-59f4-b086-d85524667edf")
-    (property "Reference" "R395"
-      (at 474.98 41.45 0)
+    (uuid "a0e46d6e-ee4b-511f-8cdb-2bffd587dbcf")
+    (property "Reference" "R402"
+      (at 575.31 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Value" "10k"
-      (at 474.98 55.07 0)
+    (property "Value" "220k"
+      (at 575.31 55.07 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-      (at 474.98 48.26 0)
+      (at 575.31 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 474.98 48.26 0)
+      (at 575.31 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "LCSC" "C25744"
-      (at 474.98 48.26 0)
+    (property "LCSC" "C25767"
+      (at 575.31 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "0402WGF1002TCE"
-      (at 474.98 48.26 0)
+    (property "MPN" "0402WGF2203TCE"
+      (at 575.31 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "JLC_Class" "Basic"
-      (at 474.98 48.26 0)
+    (property "JLC_Class" "Preferred"
+      (at 575.31 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_V" "50"
-      (at 474.98 48.26 0)
+      (at 575.31 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_P" "0.0625"
-      (at 474.98 48.26 0)
+      (at 575.31 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Op_P" "0.0"
-      (at 474.98 48.26 0)
+      (at 575.31 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "Note" "FET on = CTRL low = LED off by default"
-      (at 474.98 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "1"
-      (uuid "93d8f566-95b4-58ae-9652-23895e9399b5"))
-    (pin "2"
-      (uuid "f3504075-6aeb-5251-986c-aaa689f47f37"))
-    (instances
-      (project "battery-bank"
-        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
-          (reference "R395")
-          (unit 1)))))
-  (global_label "FLASH_PWM_N"
-    (shape bidirectional)
-    (at 474.98 44.45 90)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1)))
-    (uuid "70c664d4-b533-55d6-921a-d4a798ca2c7d"))
-  (global_label "V3V3"
-    (shape bidirectional)
-    (at 474.98 52.07 270)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1)))
-    (uuid "1bb03850-d176-5cc1-bf98-f7785fad8d9c"))
-  (symbol
-    (lib_id "bb:C")
-    (at 508 48.26 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "d38db278-32d9-5691-ae6f-772ca50e79ed")
-    (property "Reference" "C518"
-      (at 508 41.45 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Value" "1nF 50V"
-      (at 508 55.07 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-      (at 508 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Datasheet" ""
-      (at 508 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "LCSC" "C1523"
-      (at 508 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "MPN" "0402B102K500NT"
-      (at 508 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "JLC_Class" "Basic"
-      (at 508 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Rated_V" "50.0"
-      (at 508 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Note" "soft start ~1.5 ms/nF"
-      (at 508 48.26 0)
+    (property "Note" "Vgs = VIN x 150/370: 1.82 V @ 4.5 V, 8.51 V @ 21 V"
+      (at 575.31 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "06ccec37-8f18-50df-a92c-14685da83a9a"))
+      (uuid "a51854b8-d43d-54cb-9ef8-fb6053f963ad"))
     (pin "2"
-      (uuid "407f51ce-5903-574c-9855-61b1499579ac"))
+      (uuid "a4384bbd-a929-5186-b350-f6c810a78ae8"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
-          (reference "C518")
+          (reference "R402")
           (unit 1)))))
-  (global_label "LED_CTRL"
+  (global_label "LED_VIN"
     (shape bidirectional)
-    (at 508 44.45 90)
+    (at 575.31 44.45 90)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "e6bf8d63-8988-5bb5-ba99-e4b940b17b5c"))
-  (global_label "GND"
+    (uuid "3f4f3ab2-2d33-5cbb-bb08-022827993d6c"))
+  (global_label "FLASH_CLAMP_G"
     (shape bidirectional)
-    (at 508 52.07 270)
+    (at 575.31 52.07 270)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "2f5dce36-2efe-5b5d-8ac5-b0fff5055a95"))
-  (symbol
-    (lib_id "lcsc:KT-0603R")
-    (at 544.83 43.18 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "ab1a1137-63c4-5028-a697-5ada3b1093d3")
-    (property "Reference" "D55"
-      (at 544.83 41.45 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Value" "RED night"
-      (at 544.83 47.45 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" "lcsc:LED-SMD_L1.6-W0.8-R-RD"
-      (at 544.83 43.18 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Datasheet" ""
-      (at 544.83 43.18 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "LCSC" "C2286"
-      (at 544.83 43.18 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "MPN" "KT-0603R"
-      (at 544.83 43.18 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Board" "LED"
-      (at 544.83 43.18 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Op_I" "0.0066"
-      (at 544.83 43.18 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Rated_I" "0.02"
-      (at 544.83 43.18 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "2"
-      (uuid "0e22bda5-5892-560b-881e-29cfc0be687f"))
-    (pin "1"
-      (uuid "852dee84-2bea-5448-8d21-9ee9b4e9e6b2"))
-    (instances
-      (project "battery-bank"
-        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
-          (reference "D55")
-          (unit 1)))))
-  (global_label "LED_RED_K"
-    (shape bidirectional)
-    (at 539.75 44.45 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "81f4d698-64be-5a2c-962d-6c1af0d45133"))
-  (global_label "LED_RED_A"
-    (shape bidirectional)
-    (at 549.91 44.45 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "075896ca-c0d9-569e-a52d-bbd72919f3d6"))
+    (uuid "050712a7-9c38-5bac-a1e8-f8ed1e60c3c4"))
   (symbol
     (lib_id "bb:R")
-    (at 581.66 48.26 0)
+    (at 615.95 48.26 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "958aca19-d46a-57be-a89b-dcfe9be2b8a6")
-    (property "Reference" "R396"
-      (at 581.66 41.45 0)
+    (uuid "2f09c54f-5f49-5ff2-bad1-6e314d80a65c")
+    (property "Reference" "R403"
+      (at 615.95 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Value" "470"
-      (at 581.66 55.07 0)
+    (property "Value" "150k"
+      (at 615.95 55.07 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-      (at 581.66 48.26 0)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 615.95 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 581.66 48.26 0)
+      (at 615.95 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "LCSC" "C23179"
-      (at 581.66 48.26 0)
+    (property "LCSC" "C25755"
+      (at 615.95 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "0603WAF4700T5E"
-      (at 581.66 48.26 0)
+    (property "MPN" "0402WGF1503TCE"
+      (at 615.95 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "JLC_Class" "Basic"
-      (at 581.66 48.26 0)
+    (property "JLC_Class" "Preferred"
+      (at 615.95 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "Rated_V" "75"
-      (at 581.66 48.26 0)
+    (property "Rated_V" "50"
+      (at 615.95 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "Rated_P" "0.1"
-      (at 581.66 48.26 0)
+    (property "Rated_P" "0.0625"
+      (at 615.95 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "Op_P" "0.021"
-      (at 581.66 48.26 0)
+    (property "Op_P" "0.0"
+      (at 615.95 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "b097d872-bb44-5fc1-badb-1beb9d993fc1"))
+      (uuid "db6139f1-8cba-5388-a477-32f212830273"))
     (pin "2"
-      (uuid "14c2a38a-8290-5724-929d-1eef60aaf96c"))
+      (uuid "930454d0-be47-5569-b87f-0f12d619c217"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
-          (reference "R396")
+          (reference "R403")
           (unit 1)))))
-  (global_label "V5_AUX"
+  (global_label "FLASH_CLAMP_G"
     (shape bidirectional)
-    (at 581.66 44.45 90)
+    (at 615.95 44.45 90)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "b73065a5-017e-580a-9e54-78ffdadbb695"))
-  (global_label "LED_RED_A"
+    (uuid "ac8ef012-3ef2-59c1-975b-8dad6e90f702"))
+  (global_label "GND"
     (shape bidirectional)
-    (at 581.66 52.07 270)
+    (at 615.95 52.07 270)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "22425bf8-6d8e-5af4-a4db-fe9080435dff"))
+    (uuid "3723284f-685d-55e4-b7b8-b5c2726ff844"))
   (symbol
-    (lib_id "lcsc:AO3400A")
-    (at 618.49 49.53 0)
+    (lib_id "lcsc:2N7002")
+    (at 660.4 49.53 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
@@ -2967,32 +3230,37 @@
     (dnp no)
     (uuid "32d71b43-311d-55d7-88eb-fe1133a7e295")
     (property "Reference" "Q64"
-      (at 618.49 41.45 0)
+      (at 660.4 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Value" "AO3400A"
-      (at 618.49 57.61 0)
+    (property "Value" "2N7002"
+      (at 660.4 57.61 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "lcsc:SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR"
-      (at 618.49 49.53 0)
+      (at 660.4 49.53 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 618.49 49.53 0)
+      (at 660.4 49.53 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "LCSC" "C20917"
-      (at 618.49 49.53 0)
+    (property "LCSC" "C8545"
+      (at 660.4 49.53 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "AO3400A"
-      (at 618.49 49.53 0)
+    (property "MPN" "2N7002"
+      (at 660.4 49.53 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "X-39: IO13 high releases the clamp (LED on / PWM); 60 V part on an 8.6 V node"
+      (at 660.4 49.53 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
@@ -3007,28 +3275,529 @@
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
           (reference "Q64")
           (unit 1)))))
-  (global_label "LED_RED_K"
+  (global_label "FLASH_CLAMP_G"
     (shape bidirectional)
-    (at 621.03 44.45 90)
+    (at 662.94 44.45 90)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "0d27e46f-9fda-58b9-89b0-cda93617b099"))
-  (global_label "RED_LED"
+    (uuid "810b5802-8e7a-56f1-a478-496cfa214b8c"))
+  (global_label "FLASH_PWM"
     (shape bidirectional)
-    (at 613.41 49.53 180)
+    (at 655.32 49.53 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "676106b6-a59a-5de4-9f4c-fc93cada398d"))
+    (uuid "dcb81a53-3d30-5cf9-8934-8cd536c20bf3"))
   (global_label "GND"
     (shape bidirectional)
-    (at 621.03 54.61 270)
+    (at 662.94 54.61 270)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "7d42c579-edea-5811-89c8-236160751b64")))
+    (uuid "6a32a959-2c47-578a-af3d-8d72d9a7bdcf"))
+  (symbol
+    (lib_id "bb:R")
+    (at 699.77 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "ff1d5c48-8968-5548-ba5f-cc93bdf4c542")
+    (property "Reference" "R404"
+      (at 699.77 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100k"
+      (at 699.77 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 699.77 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 699.77 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C25741"
+      (at 699.77 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1003TCE"
+      (at 699.77 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 699.77 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 699.77 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 699.77 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 699.77 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "IO13 floating or ESP32 unpowered -> clamp stays on -> LED off"
+      (at 699.77 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "fd587208-cc9a-5d7f-954d-a2b66fc52130"))
+    (pin "2"
+      (uuid "cae5aea3-6cb3-5142-8b63-365989550318"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
+          (reference "R404")
+          (unit 1)))))
+  (global_label "FLASH_PWM"
+    (shape bidirectional)
+    (at 699.77 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "bc96e7bd-e236-5ecc-ac8c-c25bef755c70"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 699.77 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "334daec2-4e7d-526d-bd64-afecb3306615"))
+  (symbol
+    (lib_id "bb:TP")
+    (at 731.52 41.91 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "55aae421-7943-5b69-9b9d-176104f1286c")
+    (property "Reference" "TP220"
+      (at 731.52 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "FLASH_PWM"
+      (at 731.52 47.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+      (at 731.52 41.91 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 731.52 41.91 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "455befe9-1652-59bb-a606-ea2c6b638189"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
+          (reference "TP220")
+          (unit 1)))))
+  (global_label "FLASH_PWM"
+    (shape bidirectional)
+    (at 731.52 44.45 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "6c087840-2942-55e8-97a8-d99df1284ddf"))
+  (symbol
+    (lib_id "bb:TP")
+    (at 762 41.91 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "6267f526-d1fb-535d-be8c-3719ec323da2")
+    (property "Reference" "TP221"
+      (at 762 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "LED_CTRL"
+      (at 762 47.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+      (at 762 41.91 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 762 41.91 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "9b7cd34f-0dbb-51fc-ab79-10124a8cef9b"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
+          (reference "TP221")
+          (unit 1)))))
+  (global_label "LED_CTRL"
+    (shape bidirectional)
+    (at 762 44.45 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "83cdd9bf-0b53-58f6-9ffe-e460033651d1"))
+  (symbol
+    (lib_id "bb:C")
+    (at 41.91 80.01 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "75f7fe90-d1df-59e3-88d8-954735800f12")
+    (property "Reference" "C519"
+      (at 41.91 73.2 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "1nF 50V"
+      (at 41.91 86.82 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 41.91 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 41.91 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C1523"
+      (at 41.91 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402B102K500NT"
+      (at 41.91 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 41.91 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50.0"
+      (at 41.91 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "soft start ~1.5 ms/nF"
+      (at 41.91 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "77d690ae-d324-58a8-ac9f-a0a623431144"))
+    (pin "2"
+      (uuid "b148bce1-859a-5223-9822-990672e7cdb7"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
+          (reference "C519")
+          (unit 1)))))
+  (global_label "LED_CTRL"
+    (shape bidirectional)
+    (at 41.91 76.2 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "337dccf6-080e-5d98-931f-0be6e1737e7c"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 41.91 83.82 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "eff710ca-39b2-52ff-96c7-9f88d1738d0f"))
+  (symbol
+    (lib_id "lcsc:KT-0603R")
+    (at 77.47 74.93 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "ab1a1137-63c4-5028-a697-5ada3b1093d3")
+    (property "Reference" "D55"
+      (at 77.47 73.2 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "RED night"
+      (at 77.47 79.2 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:LED-SMD_L1.6-W0.8-R-RD"
+      (at 77.47 74.93 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 77.47 74.93 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C2286"
+      (at 77.47 74.93 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "KT-0603R"
+      (at 77.47 74.93 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Board" "LED"
+      (at 77.47 74.93 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_I" "0.004"
+      (at 77.47 74.93 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_I" "0.02"
+      (at 77.47 74.93 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "2"
+      (uuid "0e22bda5-5892-560b-881e-29cfc0be687f"))
+    (pin "1"
+      (uuid "852dee84-2bea-5448-8d21-9ee9b4e9e6b2"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
+          (reference "D55")
+          (unit 1)))))
+  (global_label "LED_RED_K"
+    (shape bidirectional)
+    (at 72.39 76.2 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "da3c8099-3461-5153-a868-6d40b09b014d"))
+  (global_label "LED_RED_A"
+    (shape bidirectional)
+    (at 82.55 76.2 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "b88d3ec1-3392-5939-b013-c4e25b2ed2c3"))
+  (symbol
+    (lib_id "bb:R")
+    (at 115.57 80.01 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "bdb3a3a7-115e-5890-9262-dd0aa1e62c81")
+    (property "Reference" "R405"
+      (at 115.57 73.2 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "1k"
+      (at 115.57 86.82 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+      (at 115.57 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 115.57 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C21190"
+      (at 115.57 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0603WAF1001T5E"
+      (at 115.57 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 115.57 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "75"
+      (at 115.57 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.1"
+      (at 115.57 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0156"
+      (at 115.57 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "X-39: (5.5 V - 1.6 V Vf min) / 990 ohm = 3.94 mA <= 6.67 mA (3:1 on 20 mA)"
+      (at 115.57 80.01 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "39c60806-a119-58c9-bda7-776fe48fccf5"))
+    (pin "2"
+      (uuid "972842d8-892e-5be0-8bff-709f954670f3"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
+          (reference "R405")
+          (unit 1)))))
+  (global_label "V5_AUX"
+    (shape bidirectional)
+    (at 115.57 76.2 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "b7dbbc15-9a5d-5b3d-877d-c970858c6e00"))
+  (global_label "LED_RED_A"
+    (shape bidirectional)
+    (at 115.57 83.82 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "eb5614d1-76d7-5255-9309-379dc3690cb7"))
+  (symbol
+    (lib_id "lcsc:AO3400A")
+    (at 152.4 81.28 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "fc55e540-bbd9-538e-9f76-b05b8d83ee58")
+    (property "Reference" "Q65"
+      (at 152.4 73.2 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "AO3400A"
+      (at 152.4 89.36 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:SOT-23-3_L2.9-W1.3-P1.90-LS2.4-BR"
+      (at 152.4 81.28 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 152.4 81.28 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C20917"
+      (at 152.4 81.28 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "AO3400A"
+      (at 152.4 81.28 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "3"
+      (uuid "482196a9-2851-58ce-bfa4-6c0e339f9af0"))
+    (pin "1"
+      (uuid "e43a05c3-5e6f-5547-8407-3f80523b00ed"))
+    (pin "2"
+      (uuid "6ddbe5cd-31ab-5205-a961-852db0e0fa19"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/34061c2b-85ae-5526-a709-3feadd481567"
+          (reference "Q65")
+          (unit 1)))))
+  (global_label "LED_RED_K"
+    (shape bidirectional)
+    (at 154.94 76.2 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "a20994f2-0ce2-5334-b266-c0caaf72ded6"))
+  (global_label "RED_LED"
+    (shape bidirectional)
+    (at 147.32 81.28 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "d3185bd0-37a6-542e-8b08-0433ffa5c6e5"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 154.94 86.36 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "57a718ad-9398-5e55-b9b1-6a618b2dedee")))

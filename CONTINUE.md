@@ -179,6 +179,35 @@ The XT60 still carries PACK_P/PACK_N.
   - Fuse I²t vs the nickel strip and XT60.
   - The design has not been tested on a cell simulator.
 
+### Logic-blocks agent: done, full build has 0 errors
+**Expander wiring:** all requested nets are connected. #1 P12 drives `EXP_DCI_DIS`. #2 P04–P12 carry ORING_DC/POE_DIS, INS_ILIM_A/B, INS_CHG_DIS and POE_CLASS/_TPL. Spares left: #1 P05 and P13; #2 P13–P17.
+
+**Fixes**
+- **X-29: Ethernet resets.** Each domain uses TPS3808 supervisors (3.3 V plus 0.95 V via a divider), wire-ANDed with the expander's MR input. Release delay is 68–194 ms, at least 6.5× the 10.5 ms requirement.
+- **X-30: power-state isolation.**
+  - The power-state table is in the `mcu.py` docstring.
+  - Router pull-ups are on the router's own rail, with 2N7002 pass gates on MDC, MDIO and INT.
+  - A TPS3808 interlock stops the router powering up before Ethernet.
+  - LoRa UART goes through LVC1G125 buffers with power-off isolation; the glow buffer moved to the glow rail.
+- **X-26: router module.** Acelink SM81 (3.3 V, 2.42 A typical / 3.33 A max). **No public pinout exists**, so every pin is a placeholder marked VERIFY.
+- **X-28: switch flash.** DNP 2×4 SPI programming header, 100 Ω series resistors, and DNP 0 Ω bypasses for the router-TX caps.
+- **X-38: E22 pad 12.** A 0 Ω to GND is fitted and a 0 Ω to NRST is DNP. This is the safe choice whichever pinout the module turns out to have.
+- **X-39: flashlight default-off.** The clamp gate is now biased from LED_VIN, so the light stays off even with 3.3 V dead. The ESP32 can only release the clamp. Red LED resistor is 1k.
+- **X-40: speaker ceiling.** Minimum gain, plus 0.56 Ω in each leg, gives at most 0.99 W even with a full-scale square wave.
+- **X-42: debug access.** GND pads beside every I²C pair, 12 isolation jumpers, and VTref sense on the debug headers.
+
+**Requests to the lead**
+1. **`aux_power.py`:** replace `V12_RTR` with **`V3V3_RTR`** (3.3 V, rated ≥ 10 A, TPS56A37-class), preferably on board B. Today `V3V3_RTR` has no source. Recheck the `VPROT_B` budget (+0.82 A at 15 V).
+2. **`build.py`:** in `NET_CURRENT_A`, change `V12_RTR: 0.92` to `V3V3_RTR: 3.33`, or avoid the crossing altogether by putting the buck on board B.
+
+**Unverified**
+- SM81 pinout and footprint.
+- RTL8221B reset figure.
+- RTL8372N SPI-flash pins Hi-Z during reset.
+- E22 module revision.
+- MAX98357A full-scale reference.
+- TCA9535 5 V tolerance.
+
 ### Mechanical spec rev C: open inconsistencies found by the 3D build
 These were left for the lead to fix in `hardware/mechanical/mech_spec.json`, then run `sync_mech_spec.py`.
 1. **No room for the LED optic.** The LED board sits at x −4 (the outer face), leaving 0 mm for the 20 mm TIR optic. Actually lengthen the left cap to 16 mm (both `end_caps.left.outer_length` and `outer_to_interior_offset.x`), or move the LED board inward.
