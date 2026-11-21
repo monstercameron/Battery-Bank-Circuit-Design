@@ -77,9 +77,14 @@ def build(D):
     D.v("POE_RTN", 0.0)  # primary-side reference (isolated)
     D.C(sh, "C_100n_250V", "POE_VDD", "POE_VSS")
     D.R(sh, "24.9k", "POE_VDD", "POE_DEN", pkg="0805", fields={"Note": "detection signature"})
-    D.R(sh, "63.4", "POE_CLSA", "POE_VSS", pkg="0805", fields={"Note": "class 4 events 1-2 (Class 6)"})
-    D.R(sh, "249", "POE_CLSB", "POE_VSS", pkg="0805", fields={"Note": "class 1 events 3+ (Class 6)"})
+    D.R(sh, "63.4", "POE_CLSA", "POE_VSS", pkg="0805", p_op=0.03,
+        fields={"Note": "class 4 events 1-2 (Class 6). ~2.5 V / 40 mA = 0.1 W only during class events (< 100 ms at power-up); ~0 W average"})
+    D.R(sh, "249", "POE_CLSB", "POE_VSS", pkg="0805", p_op=0.03,
+        fields={"Note": "class 1 events 3+ (Class 6). 25 mW during class events only"})
     D.R(sh, "49.9k", "POE_REF", "POE_VSS", pkg="0805")
+    D.v("POE_CLSA", 2.6)   # classification output ~2.5 V (abs max 6.5 V)
+    D.v("POE_CLSB", 2.6)
+    D.v("POE_REF", 1.5)    # internal 1.5 V reference
     # P-44: automatic MPS. 4 x 4.7k = 1.18k (DS: 1.3k typ, >= 1k). ~20 mA pulses at ~24 V, 12.5 % duty.
     for _ in range(4):
         D.R(sh, "4.7k", "POE_AMPS", "POE_VSS", pkg="0805", p_op=0.016,
@@ -188,16 +193,17 @@ def build(D):
     D.C(sh, "C_470n_50V", "VPOE", "SEC_SSX", fields={"Note": "secondary soft-start cap VERIFY"})
     D.IC(sh, "1N4148W_C81598", {"A": "SEC_SSX", "K": "SEC_REF"}, prefix="D", fields={"Note": "soft-start diode (Si, low leakage into REF)"})
     D.R(sh, "100k", "SEC_SSX", G, fields={"Note": "soft-start discharge"})
-    for n_ in ("SEC_REF", "SEC_OPTO_K", "SEC_OPTO_A", "SEC_FBZ", "SEC_SSX"):
+    for n_ in ("SEC_OPTO_K", "SEC_OPTO_A", "SEC_FBZ", "SEC_SSX"):
         D.v(n_, 22.0)
+    D.v("SEC_REF", 3.5)    # 2.5 V regulated; 3.4 V at a 28 V fault (TL431 REF abs max is well above)
     # ---------------------------------------------------------------- output OVP (P-21): zener + opto -> LM51551 UVLO low (hiccup)
     D.IC(sh, "BZT52C22", {"K": "VPOE", "A": "SEC_OVP_Z"}, prefix="D", fields={"Note": "P-21 OVP: trip ~23-26 V (20.8-23.3 V zener + LED)"})
     D.R(sh, "1k", "SEC_OVP_Z", "SEC_OVP_A", pkg="0805", p_op=0.036, fields={"Note": "OVP LED current limit; 6 mA at 28 V"})
     D.R(sh, "10k", "SEC_OVP_A", G, fields={"Note": "shunts zener leakage below the trip"})
     D.IC(sh, "PC817B_C2936042", {"AN": "SEC_OVP_A", "CAT": G, "COL": "PRI_UVLO", "EM": "POE_RTN"}, prefix="U",
          fields={"Note": "P-21 OVP opto: pulls LM51551 UVLO low -> stop; restarts when VPOE decays (hiccup)"})
-    for n_ in ("SEC_OVP_Z", "SEC_OVP_A"):
-        D.v(n_, 22.0)
+    D.v("SEC_OVP_Z", 22.0)
+    D.v("SEC_OVP_A", 1.5)  # opto LED anode: clamped by the LED forward voltage
     # ---------------------------------------------------------------- allocated power -> firmware (P-17, X-21)
     # TPH/TPL active-low open drain (DS 8.2.2.7): LED from VC_OUT via 10k (~1 mA) into TPx. Secondary active-low, 47k pull-up.
     # Decode: CLASS(TPH)=0 -> 40/51 W; CLASS_TPL=0 -> 25.5 W; both 1 -> 12.95 W or no PoE / not started (safe default).

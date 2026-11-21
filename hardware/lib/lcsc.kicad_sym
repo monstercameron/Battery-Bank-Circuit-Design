@@ -15575,4 +15575,615 @@
       )
     )
   )
+  (symbol "TPS3808G33DBVR"
+    (in_bom yes)
+    (on_board yes)
+    (property
+      "Reference"
+      "U"
+      (id 0)
+      (at 0 7.62 0)
+      (effects (font (size 1.27 1.27) ) )
+    )
+    (property
+      "Value"
+      "TPS3808G33DBVR"
+      (id 1)
+      (at 0 -7.62 0)
+      (effects (font (size 1.27 1.27) ) )
+    )
+    (property
+      "Footprint"
+      "lcsc:SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR"
+      (id 2)
+      (at 0 -10.16 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "Datasheet"
+      "https://lcsc.com/product-detail/Microprocessor-Microcontroller-Supervisors_TI_TPS3808G33DBVR_TPS3808G33DBVR_C43698.html"
+      (id 3)
+      (at 0 -12.70 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "Manufacturer"
+      "TI(德州仪器)"
+      (id 4)
+      (at 0 -15.24 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "MPN"
+      "TPS3808G33DBVR"
+      (id 5)
+      (at 0 -17.78 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "LCSC Part"
+      "C43698"
+      (id 6)
+      (at 0 -20.32 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "ki_keywords"
+      "Monitors & Reset Circuits"
+      (id 8)
+      (at 0 -22.86 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "ki_description"
+      "Low Quiescent Current, Programmable-Delay Supervisory Circuit, 1 Supply Monitored, -40 to 125 degC, 6-pin SOT-23 (DBV), Green (RoHS  no SbBr)"
+      (id 9)
+      (at 0 -25.40 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (symbol "TPS3808G33DBVR_0_1"
+      (rectangle
+        (start -11.43 5.08)
+        (end 11.43 -5.08)
+        (stroke (width 0) (type default))
+        (fill (type background))
+      )
+      (circle
+        (center -10.16 3.81)
+        (radius 0.38)
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (pin unspecified line
+        (at -13.97 2.54 0)
+        (length 2.54)
+        (name "~{RESET}" (effects (font (size 1.27 1.27))))
+        (number "1" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -13.97 -0.00 0)
+        (length 2.54)
+        (name "GND" (effects (font (size 1.27 1.27))))
+        (number "2" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -13.97 -2.54 0)
+        (length 2.54)
+        (name "~{MR}" (effects (font (size 1.27 1.27))))
+        (number "3" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 13.97 -2.54 180)
+        (length 2.54)
+        (name "CT" (effects (font (size 1.27 1.27))))
+        (number "4" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 13.97 -0.00 180)
+        (length 2.54)
+        (name "SENSE" (effects (font (size 1.27 1.27))))
+        (number "5" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 13.97 2.54 180)
+        (length 2.54)
+        (name "VDD" (effects (font (size 1.27 1.27))))
+        (number "6" (effects (font (size 1.27 1.27))))
+      )
+    )
+  )
+
+  (symbol "TPS3808G01DBVT"
+    (in_bom yes)
+    (on_board yes)
+    (property
+      "Reference"
+      "U"
+      (id 0)
+      (at 0 7.62 0)
+      (effects (font (size 1.27 1.27) ) )
+    )
+    (property
+      "Value"
+      "TPS3808G01DBVT"
+      (id 1)
+      (at 0 -7.62 0)
+      (effects (font (size 1.27 1.27) ) )
+    )
+    (property
+      "Footprint"
+      "lcsc:SOT-23-6_L2.9-W1.6-P0.95-LS2.8-BR"
+      (id 2)
+      (at 0 -10.16 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "Datasheet"
+      "https://www.lcsc.com/datasheet/C702161.pdf"
+      (id 3)
+      (at 0 -12.70 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "Manufacturer"
+      "TI(德州仪器)"
+      (id 4)
+      (at 0 -15.24 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "MPN"
+      "TPS3808G01DBVT"
+      (id 5)
+      (at 0 -17.78 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "LCSC Part"
+      "C702161"
+      (id 6)
+      (at 0 -20.32 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "ki_keywords"
+      "Monitors & Reset Circuits"
+      (id 8)
+      (at 0 -22.86 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (symbol "TPS3808G01DBVT_0_1"
+      (rectangle
+        (start -11.43 5.08)
+        (end 11.43 -5.08)
+        (stroke (width 0) (type default))
+        (fill (type background))
+      )
+      (circle
+        (center -10.16 3.81)
+        (radius 0.38)
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (pin unspecified line
+        (at -13.97 2.54 0)
+        (length 2.54)
+        (name "~{RESET}" (effects (font (size 1.27 1.27))))
+        (number "1" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -13.97 -0.00 0)
+        (length 2.54)
+        (name "GND" (effects (font (size 1.27 1.27))))
+        (number "2" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -13.97 -2.54 0)
+        (length 2.54)
+        (name "~{MR}" (effects (font (size 1.27 1.27))))
+        (number "3" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 13.97 -2.54 180)
+        (length 2.54)
+        (name "CT" (effects (font (size 1.27 1.27))))
+        (number "4" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 13.97 -0.00 180)
+        (length 2.54)
+        (name "SENSE" (effects (font (size 1.27 1.27))))
+        (number "5" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 13.97 2.54 180)
+        (length 2.54)
+        (name "VDD" (effects (font (size 1.27 1.27))))
+        (number "6" (effects (font (size 1.27 1.27))))
+      )
+    )
+  )
+
+  (symbol "SN74LVC1G07DBVR"
+    (in_bom yes)
+    (on_board yes)
+    (property
+      "Reference"
+      "U"
+      (id 0)
+      (at 0 10.16 0)
+      (effects (font (size 1.27 1.27) ) )
+    )
+    (property
+      "Value"
+      "SN74LVC1G07DBVR"
+      (id 1)
+      (at 0 -10.16 0)
+      (effects (font (size 1.27 1.27) ) )
+    )
+    (property
+      "Footprint"
+      "lcsc:SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BR"
+      (id 2)
+      (at 0 -12.70 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "Datasheet"
+      "https://lcsc.com/product-detail/74-Series_TI_SN74LVC1G07DBVR_SN74LVC1G07DBVR_C7829.html"
+      (id 3)
+      (at 0 -15.24 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "Manufacturer"
+      "TI(德州仪器)"
+      (id 4)
+      (at 0 -17.78 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "MPN"
+      "SN74LVC1G07DBVR"
+      (id 5)
+      (at 0 -20.32 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "LCSC Part"
+      "C7829"
+      (id 6)
+      (at 0 -22.86 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "ki_keywords"
+      "Buffers / Drivers"
+      (id 8)
+      (at 0 -25.40 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (symbol "SN74LVC1G07DBVR_0_1"
+      (rectangle
+        (start -7.62 7.62)
+        (end 7.62 -7.62)
+        (stroke (width 0) (type default))
+        (fill (type background))
+      )
+      (polyline
+        (pts
+          (xy -1.27 1.78) (xy -1.27 -1.78) (xy 1.78 -0.00) (xy -1.27 1.78) (xy -1.27 1.78)
+        )
+        (stroke (width 0) (type default))
+        (fill (type background))
+      )
+      (polyline
+        (pts
+          (xy -7.62 -0.00) (xy -1.27 -0.00)
+        )
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 1.78 -0.00) (xy 7.62 -0.00)
+        )
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -0.76 -0.00) (xy -0.25 0.51)
+        )
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 0.25 -0.00) (xy -0.25 0.51)
+        )
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 0.25 -0.00) (xy -0.25 -0.51)
+        )
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy -0.25 -0.51) (xy -0.76 -0.00)
+        )
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (polyline
+        (pts
+          (xy 0.25 -0.51) (xy -0.76 -0.51)
+        )
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (pin unspecified line
+        (at -12.70 -0.00 0)
+        (length 5.08)
+        (name "A" (effects (font (size 1.27 1.27))))
+        (number "2" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -12.70 -5.08 0)
+        (length 5.08)
+        (name "GND" (effects (font (size 1.27 1.27))))
+        (number "3" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 12.70 5.08 180)
+        (length 5.08)
+        (name "VCC" (effects (font (size 1.27 1.27))))
+        (number "5" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 12.70 -0.00 180)
+        (length 5.08)
+        (name "Y" (effects (font (size 1.27 1.27))))
+        (number "4" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -12.70 5.08 0)
+        (length 5.08)
+        (name "N.C." (effects (font (size 1.27 1.27))))
+        (number "1" (effects (font (size 1.27 1.27))))
+      )
+    )
+  )
+
+  (symbol "SN74LVC1G125DBVR"
+    (in_bom yes)
+    (on_board yes)
+    (property
+      "Reference"
+      "U"
+      (id 0)
+      (at 0 10.16 0)
+      (effects (font (size 1.27 1.27) ) )
+    )
+    (property
+      "Value"
+      "SN74LVC1G125DBVR"
+      (id 1)
+      (at 0 -10.16 0)
+      (effects (font (size 1.27 1.27) ) )
+    )
+    (property
+      "Footprint"
+      "lcsc:SOT-23-5_L3.0-W1.7-P0.95-LS2.8-BL"
+      (id 2)
+      (at 0 -12.70 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "Datasheet"
+      "https://lcsc.com/product-detail/74-Series_TI_SN74LVC1G125DBVR_SN74LVC1G125DBVR_C23654.html"
+      (id 3)
+      (at 0 -15.24 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "Manufacturer"
+      "TI(德州仪器)"
+      (id 4)
+      (at 0 -17.78 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "MPN"
+      "SN74LVC1G125DBVR"
+      (id 5)
+      (at 0 -20.32 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "LCSC Part"
+      "C23654"
+      (id 6)
+      (at 0 -22.86 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "ki_keywords"
+      "Buffers / Drivers"
+      (id 8)
+      (at 0 -25.40 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (symbol "SN74LVC1G125DBVR_0_1"
+      (rectangle
+        (start -2.54 7.62)
+        (end 5.84 -8.13)
+        (stroke (width 0) (type default))
+        (fill (type background))
+      )
+      (circle
+        (center -1.78 6.86)
+        (radius 0.38)
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (pin unspecified line
+        (at -5.08 5.08 0)
+        (length 2.54)
+        (name "OE" (effects (font (size 1.27 1.27))))
+        (number "1" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -5.08 2.54 0)
+        (length 2.54)
+        (name "A" (effects (font (size 1.27 1.27))))
+        (number "2" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -5.08 -0.00 0)
+        (length 2.54)
+        (name "GND" (effects (font (size 1.27 1.27))))
+        (number "3" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -5.08 -2.54 0)
+        (length 2.54)
+        (name "Y" (effects (font (size 1.27 1.27))))
+        (number "4" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -5.08 -5.08 0)
+        (length 2.54)
+        (name "VCC" (effects (font (size 1.27 1.27))))
+        (number "5" (effects (font (size 1.27 1.27))))
+      )
+    )
+  )
+
+  (symbol "ISO1540DR"
+    (in_bom yes)
+    (on_board yes)
+    (property
+      "Reference"
+      "U"
+      (id 0)
+      (at 0 8.89 0)
+      (effects (font (size 1.27 1.27) ) )
+    )
+    (property
+      "Value"
+      "ISO1540DR"
+      (id 1)
+      (at 0 -8.89 0)
+      (effects (font (size 1.27 1.27) ) )
+    )
+    (property
+      "Footprint"
+      "lcsc:SOIC-8_L4.9-W3.9-P1.27-LS6.0-BL"
+      (id 2)
+      (at 0 -11.43 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "Datasheet"
+      "https://lcsc.com/product-detail/Digital-Isolators_TI_ISO1540DR_ISO1540DR_C179739.html"
+      (id 3)
+      (at 0 -13.97 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "Manufacturer"
+      "TI(德州仪器)"
+      (id 4)
+      (at 0 -16.51 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "MPN"
+      "ISO1540DR"
+      (id 5)
+      (at 0 -19.05 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "LCSC Part"
+      "C179739"
+      (id 6)
+      (at 0 -21.59 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (property
+      "ki_keywords"
+      "Digital Isolators"
+      (id 8)
+      (at 0 -24.13 0)
+      (effects (font (size 1.27 1.27) ) hide)
+    )
+    (symbol "ISO1540DR_0_1"
+      (rectangle
+        (start -10.16 6.35)
+        (end 10.16 -6.35)
+        (stroke (width 0) (type default))
+        (fill (type background))
+      )
+      (circle
+        (center -8.89 5.08)
+        (radius 0.38)
+        (stroke (width 0) (type default))
+        (fill (type none))
+      )
+      (pin unspecified line
+        (at -12.70 3.81 0)
+        (length 2.54)
+        (name "VCC1" (effects (font (size 1.27 1.27))))
+        (number "1" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -12.70 1.27 0)
+        (length 2.54)
+        (name "SDA1" (effects (font (size 1.27 1.27))))
+        (number "2" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -12.70 -1.27 0)
+        (length 2.54)
+        (name "SCL1" (effects (font (size 1.27 1.27))))
+        (number "3" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at -12.70 -3.81 0)
+        (length 2.54)
+        (name "GND1" (effects (font (size 1.27 1.27))))
+        (number "4" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 12.70 -3.81 180)
+        (length 2.54)
+        (name "GND2" (effects (font (size 1.27 1.27))))
+        (number "5" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 12.70 -1.27 180)
+        (length 2.54)
+        (name "SCL2" (effects (font (size 1.27 1.27))))
+        (number "6" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 12.70 1.27 180)
+        (length 2.54)
+        (name "SDA2" (effects (font (size 1.27 1.27))))
+        (number "7" (effects (font (size 1.27 1.27))))
+      )
+      (pin unspecified line
+        (at 12.70 3.81 180)
+        (length 2.54)
+        (name "VCC2" (effects (font (size 1.27 1.27))))
+        (number "8" (effects (font (size 1.27 1.27))))
+      )
+    )
+  )
 )

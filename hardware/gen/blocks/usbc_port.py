@@ -181,7 +181,7 @@ def build(D, k):
     D.IC(sh, "1N4148W_C81598", {"A": VBUS, "K": SWVS}, prefix="D", fields={"Note": "VS supply from connector (sink), 75 V"})
     D.IC(sh, "1N4148W_C81598", {"A": VAC, "K": SWVS}, prefix="D", fields={"Note": "VS supply from BQ side (source), 75 V"})
     D.C(sh, "C_100n_100V", SWVS, G, fields={"Note": "VS cap (>= 22 nF)"})
-    D.C(sh, "C_470n_50V", SWCAP, SWVS, fields={"V_across": 14.0, "Note": "VCAP >= 10 x Ciss(2 x NTMFS5C628NL). VERIFY Ciss"})
+    D.C(sh, "C_470n_50V", SWCAP, SWVS, fields={"V_across": 14.0, "Note": "VCAP >= 10 x Ciss: 10 x 2 x 3.6 nF (LCSC listing) = 72 nF; 470 nF -> ~10 ms first enable"})
     D.IC(sh, "BZT52C13", {"K": SWG, "A": SWS}, prefix="D",
          fields={"Note": "GATE-SRC clamp 12.4-14.1 V < 15 V abs max (LM74502 DS 9.3.3 / 9.4: SRC can collapse on a short)"})
     D.R(sh, "1k", SWG, n("SWGC"), p_op=0.002,

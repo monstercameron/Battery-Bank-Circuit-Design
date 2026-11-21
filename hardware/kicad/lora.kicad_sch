@@ -1395,8 +1395,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "41b73146-4dfd-5e8d-8a3c-65be47279f63")
-    (property "Reference" "U67"
+    (uuid "a6161270-ab2c-531e-978d-cea472fa4fd5")
+    (property "Reference" "U84"
       (at 60.96 41.45 0)
       (effects
         (font
@@ -1432,96 +1432,108 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "ea722479-4d97-5a2b-aaca-51659bf7ae8e"))
+      (uuid "184b02d8-3ae2-5796-990f-0496ff101fc3"))
     (pin "2"
-      (uuid "57d8db46-dd25-55f0-b096-4b9c81faf51a"))
+      (uuid "f5509051-3bf3-56cc-8169-a0e88b6f2e9a"))
     (pin "3"
-      (uuid "2faef005-9a4c-5abd-a3ae-cc3904534ca4"))
+      (uuid "d02f02d8-b521-5990-b172-c889273fdbd7"))
     (pin "4"
-      (uuid "7d3480cc-221a-5d6e-abb4-d473951bb74a"))
+      (uuid "966f631e-34dd-5932-baa9-44577dd9224a"))
     (pin "5"
-      (uuid "0bc1e714-8635-5a2e-8b6f-cb652cbb4ed1"))
+      (uuid "f5118cfc-1b50-5a56-8a47-7acaa49392da"))
     (pin "6"
-      (uuid "d3eafb62-42ae-5f6f-86d4-b9ea89daac2b"))
+      (uuid "9321b3d3-9b49-50f4-a524-0713ace67c86"))
     (pin "7"
-      (uuid "df732cbf-0504-5b62-86a7-fe7ac8ba97bd"))
+      (uuid "05229722-9634-560e-8ac9-c327a1b15a8e"))
     (pin "8"
-      (uuid "6fa25199-cb2b-5047-b948-42e7566fdb2b"))
+      (uuid "bf5135c6-72c0-5476-a0ea-6c68a8d3f68b"))
     (pin "9"
-      (uuid "16a1aad1-3992-5245-a018-81401e1d327d"))
+      (uuid "e6e96b90-c1f6-5839-b015-58bf85072816"))
     (pin "10"
-      (uuid "6ef9a635-cd18-55f8-89e6-73a987489d24"))
+      (uuid "24a076bc-17c1-541a-92d5-7b159ba51d02"))
     (pin "11"
-      (uuid "87d21606-ac56-5c0e-8fd9-9e8d81529dd1"))
+      (uuid "b698f753-3104-55e2-a1de-e092af7cf7e7"))
     (pin "12"
-      (uuid "dbbcbe21-fa1a-58d1-90ac-fd5b877cfd58"))
+      (uuid "c8b54a2a-7856-5d57-b36c-15a539922331"))
     (pin "13"
-      (uuid "fdbbd64c-c3dc-514e-8441-a863bc246b44"))
+      (uuid "aa8dc74c-d780-5d8a-8b93-64b2231a6149"))
     (pin "14"
-      (uuid "5ac62184-deb5-587c-acb8-ba7d6c746181"))
+      (uuid "0fc93ab0-b217-5ab3-a69e-10a374baf6bd"))
     (pin "15"
-      (uuid "8bea7bfa-6dee-5d88-a070-ebdb5790ab14"))
+      (uuid "07c6b085-b4cc-51a1-8cfc-497994c6e4e8"))
     (pin "16"
-      (uuid "9c1bbf02-92db-570e-992d-c94e71014e40"))
+      (uuid "e20308fe-5151-5ed6-8813-1c73827a3e0e"))
     (pin "17"
-      (uuid "fe0950ef-2f3a-5509-81b9-c11ab607601b"))
+      (uuid "2aeabf7b-09c2-56eb-8a87-46c219c9b553"))
     (pin "18"
-      (uuid "26fe5350-f5cb-58da-a08c-750b3d4e1d61"))
+      (uuid "3222cd3a-2bfa-57d8-a033-2cb78b52f779"))
     (pin "19"
-      (uuid "5a6e8261-ef76-5033-8684-86bc2f2834a3"))
+      (uuid "550ad212-4d7d-524e-a43d-12269cd4f997"))
     (pin "20"
-      (uuid "5403d9fb-9b3a-5437-ba50-9e49d25fa594"))
+      (uuid "977180b7-bfe8-57cb-984b-2c3bce0181a0"))
     (pin "21"
-      (uuid "cf92b804-e5db-54a5-b3f3-f93c67229024"))
+      (uuid "c5287521-83f4-57c6-9560-352bcf649353"))
     (pin "22"
-      (uuid "532a83f5-b8d1-534c-8410-c3acb819a84d"))
+      (uuid "de6a88ba-aa5b-5c55-a8b7-2386fa92f103"))
     (pin "23"
-      (uuid "b28ab7ac-b209-5f26-9e9f-b0d0efd5748d"))
+      (uuid "2c8517e2-8290-5ea3-90fb-8978d594f8ee"))
     (pin "24"
-      (uuid "bbda1391-8393-5940-819f-6d1abdeec6ff"))
+      (uuid "65e445b9-d438-517e-bac0-fd660f860b20"))
     (pin "25"
-      (uuid "6622367a-2b39-5c73-8569-ce24d6d51734"))
+      (uuid "e316388a-594f-5701-a57f-b09df61886cc"))
     (pin "26"
-      (uuid "0f35b502-4a26-5b84-8e43-d650c3ccf161"))
+      (uuid "524f3d37-c495-5f6b-a140-e7c2c33e4032"))
     (pin "27"
-      (uuid "94909670-9186-5214-9b75-34e8f2b94c08"))
+      (uuid "bea4f3a1-b36f-5dfc-9506-d5cf624e3db1"))
     (pin "28"
-      (uuid "34e4c3f6-01c2-5485-afe3-949c455d28c7"))
+      (uuid "c68a82d6-0091-53ba-8dab-1dcf8c86bd97"))
     (pin "29"
-      (uuid "60834f7a-4391-5fc3-bd87-ea978cadf39d"))
+      (uuid "7628bcce-12ee-5064-bbac-679a63ec052c"))
     (pin "30"
-      (uuid "71a7ff81-b817-5d18-a0c6-69c4940c0890"))
+      (uuid "2fa24b28-2c12-551a-bf7a-a1fecdb4d35e"))
     (pin "31"
-      (uuid "8f693447-394c-5a4b-95cd-46c781ce1a0a"))
+      (uuid "4185ce2a-c8b1-5220-bd68-9c10a1c189b2"))
     (pin "32"
-      (uuid "b805c76d-7ef0-5fdf-b3c3-04f6070cf108"))
+      (uuid "422a1c5a-9975-539a-a194-6362bb783e99"))
     (pin "33"
-      (uuid "4b128fd2-7e0c-51c6-93a6-a9c8da350a5a"))
+      (uuid "2a7bd5c2-0d3d-5b12-b44d-362c18b8a12d"))
     (pin "34"
-      (uuid "e2a32e01-1b10-5492-910c-37e88c20c067"))
+      (uuid "3b8deefb-252e-5092-8892-f746d4bd7cf4"))
     (pin "35"
-      (uuid "5e979f7a-fa14-5aab-b83c-6af6b48b97a5"))
+      (uuid "e3b99f73-c619-5049-aed6-328136552076"))
     (pin "36"
-      (uuid "c36e39c9-0918-5f2b-84a2-2349d6812363"))
+      (uuid "32a90959-211e-5f54-8d84-f2e6846987ef"))
     (pin "37"
-      (uuid "9dd36538-0bc9-5a5d-8aa0-4ddaebff8f5e"))
+      (uuid "96978b68-7e33-5e21-adb2-9f803210d6b7"))
     (pin "38"
-      (uuid "c90b8899-a52c-5bf5-b1fd-a6f20cab5130"))
+      (uuid "1da665d6-23ce-5b8e-b514-b2534ee9a282"))
     (pin "39"
-      (uuid "d827d0ab-7d34-56ef-b1e4-50dd9296d6e2"))
+      (uuid "19f5f4ed-fe3b-57be-9d35-d1ee064af8fd"))
     (pin "40"
-      (uuid "c6e3e14e-44f3-571b-a8ae-8397431d5ae1"))
+      (uuid "0393ff8b-0a69-5aec-aea0-c8009eba4f47"))
     (pin "41"
-      (uuid "acbfa52d-9501-5dea-abd1-8f4f26977081"))
+      (uuid "cdd0fdd3-c595-575c-b565-542c3824ebe5"))
     (pin "42"
-      (uuid "b97b7224-7190-50ce-9acf-16bad340c9d2"))
+      (uuid "ac2a479f-6bb8-5c87-9734-56696bef4fc3"))
     (pin "43"
-      (uuid "10116d3b-3965-55b4-9949-2a04c13316cc"))
+      (uuid "e9cedcf5-c38d-5e6f-9345-f880a3bef839"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d6f863f2-4974-5638-955a-a85dc769cdb9"
-          (reference "U67")
+          (reference "U84")
           (unit 1)))))
+  (no_connect
+    (at 48.26 46.99)
+    (uuid "28a22d0c-3edc-54a8-81f2-1ecbfe2e0d60"))
+  (no_connect
+    (at 48.26 49.53)
+    (uuid "e9991acc-5bbf-5b8a-8624-c7894715ab96"))
+  (no_connect
+    (at 48.26 52.07)
+    (uuid "3d018e0d-443d-5f1c-b70b-5ae92c816cdd"))
+  (no_connect
+    (at 48.26 54.61)
+    (uuid "e364fed8-2d36-5b39-88e0-bfeedb8d8797"))
   (global_label "GND"
     (shape bidirectional)
     (at 48.26 57.15 180)
@@ -1530,133 +1542,25 @@
       (font
         (size 1 1))
       (justify right))
-    (uuid "a3652acf-56e8-576a-b630-b4d314b042f9"))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 48.26 97.79 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "8427f18d-ca96-5ba0-9de2-12b8cc081ea3"))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 73.66 92.71 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "2e503842-cfb3-5826-8ae0-227dcaba688b"))
-  (global_label "V3V3_LORA"
-    (shape bidirectional)
-    (at 48.26 92.71 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "da2a16e1-329e-5883-8122-345bff906e52"))
-  (global_label "V3V3_LORA"
-    (shape bidirectional)
-    (at 73.66 95.25 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "b75739bb-5f8d-5924-81c6-cabba9cb2091"))
-  (global_label "EXP_LORA_RST_N"
-    (shape bidirectional)
-    (at 73.66 87.63 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "8eac69be-49ca-5ceb-9a60-faaba6f370b0"))
-  (global_label "LORA_SWDIO"
-    (shape bidirectional)
-    (at 73.66 59.69 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "dc5507c4-ccd4-53fe-8138-3976a380b028"))
-  (global_label "LORA_SWCLK"
-    (shape bidirectional)
-    (at 73.66 54.61 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "2f3191e1-fa8b-5357-874f-55b5f8745256"))
-  (global_label "LORA_TXR"
-    (shape bidirectional)
-    (at 48.26 80.01 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "3f860bfe-3f1b-5310-ace1-24947e57d6a8"))
-  (global_label "LORA_RXR"
-    (shape bidirectional)
-    (at 48.26 85.09 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "97ed82ea-9f5b-5b2c-aba5-d07b6905844d"))
-  (global_label "LORA_SCK"
-    (shape bidirectional)
-    (at 73.66 72.39 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "da59e2e0-7658-587d-8421-fbbe7529ef4c"))
-  (global_label "LORA_MOSI"
-    (shape bidirectional)
-    (at 73.66 67.31 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "5007693e-47f4-51ac-85c8-46752e673646"))
-  (global_label "LORA_MISO"
-    (shape bidirectional)
-    (at 73.66 64.77 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "23750520-fd3f-565c-a9f6-c9afe81e6b1f"))
-  (global_label "LORA_NSS"
-    (shape bidirectional)
-    (at 73.66 62.23 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "4984edd8-7122-55f0-975f-7fae21826348"))
-  (global_label "LORA_BUSY"
-    (shape bidirectional)
-    (at 73.66 69.85 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "a2d3a175-f60c-59c0-997c-0a3fa1b3421f"))
+    (uuid "507432a1-b290-5c50-8b46-45ed0376cee1"))
+  (no_connect
+    (at 48.26 59.69)
+    (uuid "ec2d0ee7-cdd3-5666-a1a1-833e1d0325d9"))
+  (no_connect
+    (at 48.26 62.23)
+    (uuid "3818fd1f-d8f5-5fce-be8a-e0b290358a2f"))
+  (no_connect
+    (at 48.26 64.77)
+    (uuid "d19588b2-70f3-538e-b2b8-9eb30d44e535"))
+  (no_connect
+    (at 48.26 67.31)
+    (uuid "c5e45755-b852-56a6-b6bd-b740c2b3cf16"))
+  (no_connect
+    (at 48.26 69.85)
+    (uuid "c4ee2346-d333-5ac5-9c4d-aea78990b499"))
+  (no_connect
+    (at 48.26 72.39)
+    (uuid "8c00b7aa-46f9-5e9c-8c12-6f7b8f4c4c4d"))
   (global_label "LORA_DIO1"
     (shape bidirectional)
     (at 48.26 74.93 180)
@@ -1665,25 +1569,58 @@
       (font
         (size 1 1))
       (justify right))
-    (uuid "fe16bc6d-ed6f-53db-917b-829dedbc12fb"))
-  (global_label "LORA_NRST"
+    (uuid "7aa33417-2c2c-5149-beb6-e5d9ee41233d"))
+  (no_connect
+    (at 48.26 77.47)
+    (uuid "30d787c5-f7f8-590e-8534-17848c48e00b"))
+  (global_label "LORA_TXR"
     (shape bidirectional)
-    (at 73.66 57.15 0)
+    (at 48.26 80.01 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
-      (justify left))
-    (uuid "38bfd3e8-6e46-5c22-8fa2-d3a8fc9da681"))
-  (global_label "LORA_RXEN"
+      (justify right))
+    (uuid "962f97a8-7e2a-53cd-9c85-7cb6cd9a68aa"))
+  (no_connect
+    (at 48.26 82.55)
+    (uuid "ca417e78-7fb7-5a86-ac70-72cfd331679c"))
+  (global_label "LORA_RXR"
     (shape bidirectional)
-    (at 73.66 52.07 0)
+    (at 48.26 85.09 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
-      (justify left))
-    (uuid "eab7485d-fd2b-54c6-b3d8-eed58f19cb83"))
+      (justify right))
+    (uuid "dfa9f858-3ad6-54ea-a21e-b4319744adba"))
+  (no_connect
+    (at 48.26 87.63)
+    (uuid "a65bc96c-d09e-52b5-b131-9d8b3af68798"))
+  (no_connect
+    (at 48.26 90.17)
+    (uuid "121106d4-4700-54ce-a584-0ce142b11d87"))
+  (global_label "V3V3_LORA"
+    (shape bidirectional)
+    (at 48.26 92.71 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "8698a13d-dcb4-5e63-bd01-5a54406e2817"))
+  (no_connect
+    (at 48.26 95.25)
+    (uuid "d797a70b-dbc7-56af-b026-8ee8ab0f79c9"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 48.26 97.79 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "6f0acc25-f462-53a4-8d18-d0337a5900e7"))
   (global_label "LORA_LED"
     (shape bidirectional)
     (at 73.66 97.79 0)
@@ -1692,79 +1629,142 @@
       (font
         (size 1 1))
       (justify left))
-    (uuid "9568c3f3-fdde-5da9-a777-2940a3286fc8"))
-  (no_connect
-    (at 48.26 69.85)
-    (uuid "27e3b316-aded-52d1-9916-300cdd307a19"))
-  (no_connect
-    (at 48.26 90.17)
-    (uuid "fe777576-c790-58f5-84c9-0069d4dc91cf"))
-  (no_connect
-    (at 73.66 46.99)
-    (uuid "3835febd-82e9-5d06-b761-a1c83a961a7e"))
-  (no_connect
-    (at 73.66 44.45)
-    (uuid "e9895916-b058-5e07-bd86-f1818ff73e57"))
-  (no_connect
-    (at 48.26 72.39)
-    (uuid "29eba656-ca71-5ea6-888f-861c114d8041"))
-  (no_connect
-    (at 48.26 62.23)
-    (uuid "efb3c010-7a85-5f36-8c26-58f56c26b9be"))
-  (no_connect
-    (at 73.66 80.01)
-    (uuid "65bfe1f5-b1d5-53b5-b04d-49c50ca0cc96"))
-  (no_connect
-    (at 48.26 46.99)
-    (uuid "e56f2529-983f-5ce5-8084-be86f7049649"))
-  (no_connect
-    (at 48.26 54.61)
-    (uuid "61110871-1baa-5079-8844-5bc6c0db1d20"))
-  (no_connect
-    (at 48.26 87.63)
-    (uuid "5c822b30-7fb1-58a8-923f-2edbca77ad0d"))
-  (no_connect
-    (at 73.66 77.47)
-    (uuid "02802ad9-48ee-52f1-b18d-420bf877a776"))
-  (no_connect
-    (at 73.66 74.93)
-    (uuid "e2d63a4c-28e7-571e-aac6-e0db8f81698e"))
-  (no_connect
-    (at 73.66 82.55)
-    (uuid "63859507-53a2-5a37-b1fc-cbb9f1bf6f6e"))
-  (no_connect
-    (at 48.26 59.69)
-    (uuid "07e9fb2a-7d59-594c-a3b9-164403d7ecfc"))
-  (no_connect
-    (at 48.26 67.31)
-    (uuid "067ab694-e437-57fe-bb85-6772f37d0a51"))
-  (no_connect
-    (at 48.26 82.55)
-    (uuid "6aea090e-ec18-5925-bcb4-94a2c582afb2"))
-  (no_connect
-    (at 48.26 49.53)
-    (uuid "473175aa-cf62-5aa7-92ce-abee3fd70ef5"))
-  (no_connect
-    (at 48.26 52.07)
-    (uuid "17872a78-895f-51b8-9de8-b9e6c5e6bb83"))
-  (no_connect
-    (at 48.26 77.47)
-    (uuid "c4f99b16-9a89-5be9-bea6-87c050e322d0"))
-  (no_connect
-    (at 73.66 85.09)
-    (uuid "7626fe67-bfc3-5261-b52e-9eb4d6739e35"))
-  (no_connect
-    (at 48.26 64.77)
-    (uuid "073e03b9-a01c-5478-a56a-8832f9180cb3"))
-  (no_connect
-    (at 73.66 49.53)
-    (uuid "b783e55a-92b3-5cb5-8108-1766a9587aef"))
-  (no_connect
-    (at 48.26 95.25)
-    (uuid "6fbf40fa-536f-5bd6-afe4-6181a0835737"))
+    (uuid "aeb12c04-2b22-5fc6-8fa1-09e2a4e1f8df"))
+  (global_label "V3V3_LORA"
+    (shape bidirectional)
+    (at 73.66 95.25 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "6869fea9-da5c-5468-91d4-67119c7d9ea3"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 73.66 92.71 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "efa7386f-9374-5985-9519-7e5781fc00f9"))
   (no_connect
     (at 73.66 90.17)
-    (uuid "647d6c64-0928-5d28-ace4-e4897d1d3bba"))
+    (uuid "03299dff-88d9-5716-a7aa-061c0a9d42d9"))
+  (global_label "EXP_LORA_RST_N"
+    (shape bidirectional)
+    (at 73.66 87.63 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "9e1f3fa4-265b-5043-a832-ef1516b2333c"))
+  (no_connect
+    (at 73.66 85.09)
+    (uuid "733e3642-b070-5390-b41a-1465cf8df9d6"))
+  (no_connect
+    (at 73.66 82.55)
+    (uuid "b0d8a515-38fc-5057-b878-0b48814dc877"))
+  (no_connect
+    (at 73.66 80.01)
+    (uuid "9e81af6a-f0a0-522d-8136-921717ada2e6"))
+  (no_connect
+    (at 73.66 77.47)
+    (uuid "378e1edb-4fa7-54a7-bc51-74e3995bef0d"))
+  (no_connect
+    (at 73.66 74.93)
+    (uuid "cbfff80c-d32d-5295-8765-603107094dfd"))
+  (global_label "LORA_SCK"
+    (shape bidirectional)
+    (at 73.66 72.39 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "8d694cb0-f53c-5c31-9f13-94149e7c84c9"))
+  (global_label "LORA_BUSY"
+    (shape bidirectional)
+    (at 73.66 69.85 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "9c6bf917-8607-5906-b6a8-41316e2cc322"))
+  (global_label "LORA_MOSI"
+    (shape bidirectional)
+    (at 73.66 67.31 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "18d8a61d-71b2-5fef-a958-b6755fa93883"))
+  (global_label "LORA_MISO"
+    (shape bidirectional)
+    (at 73.66 64.77 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "6db005c2-8e10-54d3-8d63-eb0a9e2424d4"))
+  (global_label "LORA_NSS"
+    (shape bidirectional)
+    (at 73.66 62.23 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "874703b1-462c-5c0f-ba79-e84ae38cb32d"))
+  (global_label "LORA_SWDIO"
+    (shape bidirectional)
+    (at 73.66 59.69 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "3a700762-8e72-5763-9dd0-281ca87fd511"))
+  (global_label "LORA_NRST"
+    (shape bidirectional)
+    (at 73.66 57.15 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "31f96a0a-6b74-545e-be63-8c3d984344be"))
+  (global_label "LORA_SWCLK"
+    (shape bidirectional)
+    (at 73.66 54.61 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "3370baa5-1bdd-504b-bfaf-b7c78d6e98cf"))
+  (global_label "LORA_RXEN"
+    (shape bidirectional)
+    (at 73.66 52.07 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "cfce8e1e-d6af-52db-9086-277815fe3755"))
+  (no_connect
+    (at 73.66 49.53)
+    (uuid "b60585a3-d654-57a1-be55-c7acd4dbc491"))
+  (no_connect
+    (at 73.66 46.99)
+    (uuid "c1e6ab03-ad03-5460-a35e-9c18d7a9a09e"))
+  (no_connect
+    (at 73.66 44.45)
+    (uuid "678b7d77-507f-5e1e-817e-dec73174d47e"))
   (symbol
     (lib_id "bb:C")
     (at 110.49 48.26 0)
@@ -1773,8 +1773,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "d5d888ec-f3cd-58d3-a0ff-89f8fb0c4db1")
-    (property "Reference" "C437"
+    (uuid "bcc16b5f-48cb-5dc1-89ab-8fa1c5f33165")
+    (property "Reference" "C508"
       (at 110.49 41.45 0)
       (effects
         (font
@@ -1815,13 +1815,13 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "f3736301-be51-52c6-b41b-e18b5a45bd03"))
+      (uuid "e0a2922d-4c30-5ff1-b1c6-e9a7d1ceafcc"))
     (pin "2"
-      (uuid "cb618062-94b9-5bbe-b9a3-66991615e216"))
+      (uuid "33eb0260-9020-54f8-a542-0c589e16e3c5"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d6f863f2-4974-5638-955a-a85dc769cdb9"
-          (reference "C437")
+          (reference "C508")
           (unit 1)))))
   (global_label "V3V3_LORA"
     (shape bidirectional)
@@ -1830,7 +1830,7 @@
     (effects
       (font
         (size 1 1)))
-    (uuid "bd7e95e6-e089-5483-92df-8a9de63dcef5"))
+    (uuid "e2ad7029-39b6-57b8-9edd-3969830610e8"))
   (global_label "GND"
     (shape bidirectional)
     (at 110.49 52.07 270)
@@ -1838,7 +1838,7 @@
     (effects
       (font
         (size 1 1)))
-    (uuid "59777b52-1e82-5934-88ea-9f73fa3ffc9d"))
+    (uuid "7d0a972a-cc74-5497-b831-b9d44265f919"))
   (symbol
     (lib_id "bb:C")
     (at 142.24 48.26 0)
@@ -1847,8 +1847,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "e0b81c55-e8b3-5f30-bb52-ebd8214c7b7a")
-    (property "Reference" "C438"
+    (uuid "58ec5abb-7889-5057-8a21-54ec2effd97b")
+    (property "Reference" "C509"
       (at 142.24 41.45 0)
       (effects
         (font
@@ -1889,13 +1889,13 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "8df37947-fe30-5965-8f21-e1bf0556cedc"))
+      (uuid "2de5cdc8-787f-51d5-88d8-4b54b55fab97"))
     (pin "2"
-      (uuid "ee5197f8-725f-5026-87b5-e05e61958058"))
+      (uuid "f0820fa4-c662-5bc1-ad66-27aac2f1e159"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d6f863f2-4974-5638-955a-a85dc769cdb9"
-          (reference "C438")
+          (reference "C509")
           (unit 1)))))
   (global_label "V3V3_LORA"
     (shape bidirectional)
@@ -1904,7 +1904,7 @@
     (effects
       (font
         (size 1 1)))
-    (uuid "eda995d5-51d5-5193-9b24-bf353b25cc0e"))
+    (uuid "bea650bd-5729-5f5b-a36e-c81ccf45e13e"))
   (global_label "GND"
     (shape bidirectional)
     (at 142.24 52.07 270)
@@ -1912,7 +1912,7 @@
     (effects
       (font
         (size 1 1)))
-    (uuid "528adadf-12ef-57fd-9d04-6fc957412b0f"))
+    (uuid "9c5e900a-452b-5551-97aa-75081dd7337e"))
   (symbol
     (lib_id "bb:R")
     (at 179.07 48.26 0)
@@ -1921,8 +1921,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "c0fff35b-3baa-52d8-8850-c99dec55aa49")
-    (property "Reference" "R244"
+    (uuid "612998df-288e-5c78-8cf8-3dcbae1de554")
+    (property "Reference" "R388"
       (at 179.07 41.45 0)
       (effects
         (font
@@ -1978,13 +1978,13 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "589ec36d-3d2d-53f7-9116-eef5df610837"))
+      (uuid "ebf6668f-6957-5460-8c8b-9b9d12bf8406"))
     (pin "2"
-      (uuid "e9d3cbe1-8485-509c-93e7-a523bc95ef5e"))
+      (uuid "231392a1-f249-5553-8a00-2d019d1c0a14"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d6f863f2-4974-5638-955a-a85dc769cdb9"
-          (reference "R244")
+          (reference "R388")
           (unit 1)))))
   (global_label "EXP_LORA_RST_N"
     (shape bidirectional)
@@ -1993,7 +1993,7 @@
     (effects
       (font
         (size 1 1)))
-    (uuid "054a279d-8e1f-514d-ae09-4e3a41aaf6cd"))
+    (uuid "ec2f13de-e77d-559f-a0fa-42069325159b"))
   (global_label "V3V3_LORA"
     (shape bidirectional)
     (at 179.07 52.07 270)
@@ -2001,7 +2001,7 @@
     (effects
       (font
         (size 1 1)))
-    (uuid "f16f1240-741a-54fb-8ee1-5561d86b3224"))
+    (uuid "6e84590c-17e1-5964-8e17-0981fe8a85bc"))
   (symbol
     (lib_id "bb:R")
     (at 215.9 48.26 0)
@@ -2010,8 +2010,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "e9983761-3355-59d2-a961-7baeddb5599b")
-    (property "Reference" "R245"
+    (uuid "d8acd663-3db3-592c-8b85-ebdd09cbd673")
+    (property "Reference" "R389"
       (at 215.9 41.45 0)
       (effects
         (font
@@ -2067,13 +2067,13 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "11880ce6-fff7-5a72-a05c-1e8b789417aa"))
+      (uuid "5f9721aa-7912-5da2-bfa1-3f39b1f5ed28"))
     (pin "2"
-      (uuid "eeae3a45-59d8-54de-8b7f-d31aba8894f5"))
+      (uuid "bb1288a8-b9c6-5d4b-b413-b608638f5bde"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d6f863f2-4974-5638-955a-a85dc769cdb9"
-          (reference "R245")
+          (reference "R389")
           (unit 1)))))
   (global_label "LORA_TX"
     (shape bidirectional)
@@ -2082,7 +2082,7 @@
     (effects
       (font
         (size 1 1)))
-    (uuid "68ccd61f-dea8-5aae-af05-25dab442ff44"))
+    (uuid "5ea1adf2-bb8e-5829-8d5a-c36982bc6f27"))
   (global_label "LORA_TXR"
     (shape bidirectional)
     (at 215.9 52.07 270)
@@ -2090,7 +2090,7 @@
     (effects
       (font
         (size 1 1)))
-    (uuid "91397e68-25ba-5512-b939-a3f26a3a9374"))
+    (uuid "fcc2e59a-66ec-53cf-be0e-b6489611e856"))
   (symbol
     (lib_id "bb:R")
     (at 245.11 48.26 0)
@@ -2099,8 +2099,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "08498cfe-7ddd-5a76-a250-6d4c80e61587")
-    (property "Reference" "R246"
+    (uuid "cba50ea9-4f9a-5ee2-946f-3751d510bb9a")
+    (property "Reference" "R390"
       (at 245.11 41.45 0)
       (effects
         (font
@@ -2151,13 +2151,13 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "557e1e01-9324-5321-892d-da725d666fc7"))
+      (uuid "4d108241-7008-5354-b816-90d99fda7d36"))
     (pin "2"
-      (uuid "2c1da9e6-92ec-59e4-b477-636df72b8c9d"))
+      (uuid "35b748f3-b754-58e6-834c-f314e889c0f2"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d6f863f2-4974-5638-955a-a85dc769cdb9"
-          (reference "R246")
+          (reference "R390")
           (unit 1)))))
   (global_label "LORA_RX"
     (shape bidirectional)
@@ -2166,7 +2166,7 @@
     (effects
       (font
         (size 1 1)))
-    (uuid "40088557-3e19-522f-b123-f58b863463c2"))
+    (uuid "c7a3d90a-16fd-59f6-8ab6-9df0b67fab5f"))
   (global_label "LORA_RXR"
     (shape bidirectional)
     (at 245.11 52.07 270)
@@ -2174,7 +2174,7 @@
     (effects
       (font
         (size 1 1)))
-    (uuid "de02d26f-74c5-5fb1-88fd-6566e9be1d60"))
+    (uuid "06f8d5ce-fb82-59d4-af63-aefbcb3af71e"))
   (symbol
     (lib_id "bb:R")
     (at 276.86 48.26 0)
@@ -2183,8 +2183,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "e4a08f17-2cd3-5bc7-940c-274afc8deda4")
-    (property "Reference" "R247"
+    (uuid "6d3cc99d-ee19-5118-a0bb-b0d522e9b98d")
+    (property "Reference" "R391"
       (at 276.86 41.45 0)
       (effects
         (font
@@ -2235,13 +2235,13 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "7b77174e-fbd2-52c1-8bac-2df3c35e7cb8"))
+      (uuid "d56149f5-521c-5a03-b439-ef97e0634290"))
     (pin "2"
-      (uuid "71ff18ac-b82c-5aa1-b4de-80e88e5ddef1"))
+      (uuid "682a4f2f-330b-5a11-8729-a86b240ab714"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d6f863f2-4974-5638-955a-a85dc769cdb9"
-          (reference "R247")
+          (reference "R391")
           (unit 1)))))
   (global_label "LORA_LED"
     (shape bidirectional)
@@ -2250,7 +2250,7 @@
     (effects
       (font
         (size 1 1)))
-    (uuid "960e4788-b4a1-5993-a66e-fda1bfbf54d3"))
+    (uuid "902509b6-c619-5f4d-ab30-29005e0fb9ca"))
   (global_label "LORA_LEDA"
     (shape bidirectional)
     (at 276.86 52.07 270)
@@ -2258,7 +2258,7 @@
     (effects
       (font
         (size 1 1)))
-    (uuid "7f0e8f6c-a8c1-5e88-9282-95639889095f"))
+    (uuid "fc5cf1af-11cd-5e19-952a-d0db3b2eb42c"))
   (symbol
     (lib_id "lcsc:KT-0603R")
     (at 313.69 43.18 0)
@@ -2267,8 +2267,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "50198bff-278a-52b9-9b73-7597e172cb69")
-    (property "Reference" "D35"
+    (uuid "95a646bf-a8db-53f5-9df1-5ce7eb77aa2b")
+    (property "Reference" "D52"
       (at 313.69 41.45 0)
       (effects
         (font
@@ -2299,23 +2299,14 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "2"
-      (uuid "2be71ba9-2f27-5c2f-9feb-de189fd61732"))
+      (uuid "3b571794-b590-5e95-80e9-edbd6eefaef3"))
     (pin "1"
-      (uuid "f28b9691-71df-52e8-9a1b-1c81366d6158"))
+      (uuid "d1b4527c-502e-50f0-9e8a-0d30dc322e71"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d6f863f2-4974-5638-955a-a85dc769cdb9"
-          (reference "D35")
+          (reference "D52")
           (unit 1)))))
-  (global_label "V3V3_LORA"
-    (shape bidirectional)
-    (at 318.77 44.45 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "28f46a2a-42b0-59da-88fb-2c9219279dcf"))
   (global_label "LORA_LEDA"
     (shape bidirectional)
     (at 308.61 44.45 180)
@@ -2324,7 +2315,16 @@
       (font
         (size 1 1))
       (justify right))
-    (uuid "5480c577-675f-5203-911c-96e3b253244d"))
+    (uuid "8b3d6682-0cf5-5aba-9ed7-8fe2849be9e2"))
+  (global_label "V3V3_LORA"
+    (shape bidirectional)
+    (at 318.77 44.45 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "56560820-10d9-5456-b448-1230a212c709"))
   (symbol
     (lib_id "bb:DEBUG_NRF52_SWD")
     (at 363.22 50.8 0)
@@ -2379,7 +2379,7 @@
       (font
         (size 1 1))
       (justify right))
-    (uuid "52249f78-2e9b-51ef-b987-4cfb40b640ff"))
+    (uuid "a4fb51c8-895c-5b02-87b7-73dc9e6bb940"))
   (global_label "V3V3_LORA"
     (shape bidirectional)
     (at 355.6 46.99 180)
@@ -2388,7 +2388,7 @@
       (font
         (size 1 1))
       (justify right))
-    (uuid "84803720-d6fa-582b-8541-0aae429705f1"))
+    (uuid "14097ae3-4b3d-57d2-86b6-33362ce62283"))
   (global_label "LORA_SWDIO"
     (shape bidirectional)
     (at 355.6 49.53 180)
@@ -2397,7 +2397,7 @@
       (font
         (size 1 1))
       (justify right))
-    (uuid "43c2c8f8-a14e-5843-ada6-45484319fd50"))
+    (uuid "0c67abcf-2040-5947-af11-e9fb12e52115"))
   (global_label "LORA_SWCLK"
     (shape bidirectional)
     (at 355.6 52.07 180)
@@ -2406,7 +2406,7 @@
       (font
         (size 1 1))
       (justify right))
-    (uuid "b4ad6779-cd89-590b-bd63-25a27904fa4a"))
+    (uuid "20188cb8-5ed2-5913-823b-76508a1e424e"))
   (global_label "EXP_LORA_RST_N"
     (shape bidirectional)
     (at 355.6 54.61 180)
@@ -2415,7 +2415,7 @@
       (font
         (size 1 1))
       (justify right))
-    (uuid "2140782f-74e3-504e-a21e-1461503a2b53"))
+    (uuid "97b524a0-0c64-54ac-b8b4-75ae874409b5"))
   (global_label "LORA_TXR"
     (shape bidirectional)
     (at 355.6 57.15 180)
@@ -2424,7 +2424,7 @@
       (font
         (size 1 1))
       (justify right))
-    (uuid "9984b893-ba62-5c80-8cb8-fd3720dad752"))
+    (uuid "99d83a53-db58-56b4-8de1-c2325822c5e5"))
   (symbol
     (lib_id "lcsc:E22-900M22S")
     (at 410.21 59.69 0)
@@ -2433,8 +2433,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "7d8f3346-6cd2-551e-adf0-f954971000dd")
-    (property "Reference" "U68"
+    (uuid "c3532497-deb7-5c03-99a3-3f123df48e93")
+    (property "Reference" "U85"
       (at 410.21 41.45 0)
       (effects
         (font
@@ -2480,53 +2480,53 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "22"
-      (uuid "c3dd0a2a-f391-53ea-a863-aa3739e226da"))
+      (uuid "fe7d63d4-5e20-54f4-942a-dbd8aeda479a"))
     (pin "21"
-      (uuid "a267cc4f-f650-5e01-b5d0-3933a146fd77"))
+      (uuid "f66ef810-7c33-5bc5-a78e-0604b8652411"))
     (pin "20"
-      (uuid "c25f9c01-a485-52dc-8797-606e163ac89b"))
+      (uuid "7dc8e7cc-9f6e-5bfb-a0e5-5af702a7c9e4"))
     (pin "19"
-      (uuid "72390e80-4c0a-5cab-966a-45848dd436c3"))
+      (uuid "1e1137fd-3296-5abd-ace4-c965885e1faa"))
     (pin "18"
-      (uuid "7259542b-0aa5-53dc-81e9-80961c27284f"))
+      (uuid "affb32b6-00ab-53a7-b801-7a8fda90ae99"))
     (pin "17"
-      (uuid "3807eb41-6935-5735-a582-d43ea9302574"))
+      (uuid "0188a060-17a8-5191-9190-f7c214f0e0d8"))
     (pin "16"
-      (uuid "06d08ad9-b511-57b2-8e30-695c05033868"))
+      (uuid "869ac299-ca20-51a9-b1e0-e9d5113b2df7"))
     (pin "15"
-      (uuid "1b147938-3958-5a02-a4d4-c7cf23f171d7"))
+      (uuid "cc15fbb2-930f-5698-8d76-177fb7c10fd9"))
     (pin "14"
-      (uuid "04834483-2e5d-54b1-bf1b-df91fa4c5624"))
+      (uuid "2cb65a6a-4a59-5c6f-aeda-f1f61d07b7ce"))
     (pin "13"
-      (uuid "77429991-e839-531d-8b8b-8957c3cbf5c2"))
+      (uuid "5d9c8f1d-4d8a-54fa-9e27-670561abcfdc"))
     (pin "12"
-      (uuid "09fe0325-20cd-5f5f-a537-2300f77f3d41"))
+      (uuid "1c6dacb7-53dc-558b-98a0-eefe66cc459b"))
     (pin "11"
-      (uuid "edbbe5d6-2d4b-5b2c-97a4-519a8f2290fe"))
+      (uuid "34129d40-bac5-5bf8-9909-28515bf7e73a"))
     (pin "10"
-      (uuid "13e2f23c-3ae3-52c1-bd2e-8160dfe051cc"))
+      (uuid "62f3f981-50bb-5c68-8e57-5b632e915314"))
     (pin "9"
-      (uuid "5c848123-b95c-57df-baa1-39f401a2acfe"))
+      (uuid "a1b3097e-c947-5279-b539-21f6abe5b88c"))
     (pin "8"
-      (uuid "2416eda2-ecaf-560f-ad13-6042e9aca610"))
+      (uuid "63258663-ddf1-58c7-be56-7291ff3daf7c"))
     (pin "7"
-      (uuid "8dc520c8-9b4b-596a-a031-d09e82659d6e"))
+      (uuid "68fd8b81-0e37-5a04-a43f-344fb31be7ae"))
     (pin "6"
-      (uuid "403c9956-9da5-59bd-b15d-6221a35d0bb7"))
+      (uuid "55674cf3-03d9-58ef-b6ca-664272bb20e3"))
     (pin "5"
-      (uuid "4283533f-ef25-5656-94a8-4ee4bc605d5b"))
+      (uuid "2b4e96e5-064b-5418-b01b-c3d924d6adcd"))
     (pin "4"
-      (uuid "5972a600-2e0e-5db4-9754-60f3d668e3c4"))
+      (uuid "a82e730f-ce38-5837-b78a-2c3c14e536b3"))
     (pin "3"
-      (uuid "31091f32-7af1-561d-a152-28c4194e526c"))
+      (uuid "3e3eb193-54ec-5c9c-8efc-36529c64e022"))
     (pin "2"
-      (uuid "a69143fc-efdf-5f83-8e4d-9e6738cbfd21"))
+      (uuid "eed70658-2bca-5ef2-862b-991f5774e10a"))
     (pin "1"
-      (uuid "83b9b241-22c5-5a06-96db-416fc7284588"))
+      (uuid "6c3123cf-6c03-5fd8-969f-fad8239a7a73"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d6f863f2-4974-5638-955a-a85dc769cdb9"
-          (reference "U68")
+          (reference "U85")
           (unit 1)))))
   (global_label "GND"
     (shape bidirectional)
@@ -2536,187 +2536,7 @@
       (font
         (size 1 1))
       (justify right))
-    (uuid "45d2e202-8cb3-509a-b5fd-362d81bc0053"))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 392.43 67.31 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "4c735e05-9a03-5f41-8ddf-86f36e805212"))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 392.43 44.45 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "da7c71c6-83a2-5890-80da-dc7823f9183c"))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 427.99 44.45 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "4457da6f-da12-5f3d-b3a8-92d99de76e57"))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 427.99 46.99 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "94a13e4a-2dcd-50a2-a4fe-f0980071ce58"))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 427.99 59.69 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "ea537414-f412-58bc-a226-2cff11cd8a82"))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 427.99 62.23 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "cd49edd9-d161-5116-b826-066453095361"))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 427.99 67.31 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "8a305100-8a11-5212-8fb4-c358faa9a6d8"))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 427.99 69.85 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "a8327898-8dea-5258-b5f9-4ee470264671"))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 427.99 72.39 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "005dcc8c-6cf2-5b97-b694-79f093046eb0"))
-  (global_label "LORA_RXEN"
-    (shape bidirectional)
-    (at 427.99 57.15 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "d8cacde7-3ac0-5b94-b4da-9d3dc317ae35"))
-  (global_label "LORA_DIO2"
-    (shape bidirectional)
-    (at 427.99 54.61 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "1d7d49d2-c350-503d-acb4-0af31dea055a"))
-  (global_label "LORA_DIO2"
-    (shape bidirectional)
-    (at 427.99 52.07 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "4f147b80-83e8-5977-a055-b4d3a0e77db9"))
-  (global_label "V3V3_LORA"
-    (shape bidirectional)
-    (at 427.99 49.53 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "1f9e4be5-3c34-5ac5-b74b-357c9122d584"))
-  (global_label "LORA_DIO1"
-    (shape bidirectional)
-    (at 392.43 46.99 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "82eed826-f672-5ee1-a38b-60119535d193"))
-  (global_label "LORA_BUSY"
-    (shape bidirectional)
-    (at 392.43 49.53 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "710bbc08-6364-5c8a-ae3c-30786392517b"))
-  (global_label "LORA_NRST"
-    (shape bidirectional)
-    (at 392.43 52.07 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "f1257d02-e69a-5b8f-a246-efd461947871"))
-  (global_label "LORA_MISO"
-    (shape bidirectional)
-    (at 392.43 54.61 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "6d91c784-52a8-5459-96fe-87d819c53ba8"))
-  (global_label "LORA_MOSI"
-    (shape bidirectional)
-    (at 392.43 57.15 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "ea44e0d7-795f-5cda-8976-bdc2dcea2d47"))
-  (global_label "LORA_SCK"
-    (shape bidirectional)
-    (at 392.43 59.69 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "faf46320-a82e-5dd0-b9e4-8c87ba4f8d0b"))
-  (global_label "LORA_NSS"
-    (shape bidirectional)
-    (at 392.43 62.23 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "4128c0b7-fe33-50d6-a927-310f40ecfb9b"))
+    (uuid "8f302efa-7d28-5d8d-a91d-08508a6dd05a"))
   (global_label "LORA_ANT"
     (shape bidirectional)
     (at 392.43 69.85 180)
@@ -2725,7 +2545,187 @@
       (font
         (size 1 1))
       (justify right))
-    (uuid "6b729f78-67be-51e3-ba15-c203c3edb9ac"))
+    (uuid "17eb9f9b-d3a9-5451-9c82-76df62ef57f6"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 392.43 67.31 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "9cb9273c-9401-53ca-ad7c-4a8f19c0d4be"))
+  (global_label "LORA_NSS"
+    (shape bidirectional)
+    (at 392.43 62.23 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "50f7aea9-2922-5616-9117-0ef215618d25"))
+  (global_label "LORA_SCK"
+    (shape bidirectional)
+    (at 392.43 59.69 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "df0f9a05-8f47-53eb-91d2-15563a0b70af"))
+  (global_label "LORA_MOSI"
+    (shape bidirectional)
+    (at 392.43 57.15 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "cc113355-d94e-56d7-a973-4f6a9e95def7"))
+  (global_label "LORA_MISO"
+    (shape bidirectional)
+    (at 392.43 54.61 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "03958cee-8642-555f-896d-2d39f0bda0ad"))
+  (global_label "LORA_NRST"
+    (shape bidirectional)
+    (at 392.43 52.07 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "4a98d705-4e83-5bc8-894c-36e42592344a"))
+  (global_label "LORA_BUSY"
+    (shape bidirectional)
+    (at 392.43 49.53 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "d4276b5d-a243-582d-bfbe-7d0c8a94ce1d"))
+  (global_label "LORA_DIO1"
+    (shape bidirectional)
+    (at 392.43 46.99 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "4042e9fa-8e84-5b0e-add1-26f69f22ff29"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 392.43 44.45 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "eccb98d1-0454-519c-9ea5-6d71831e7396"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 427.99 44.45 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "b4a35364-bf62-5745-b8b5-2b89db3585c8"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 427.99 46.99 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "0cf560a7-23ce-5cf8-9f27-8111746ee152"))
+  (global_label "V3V3_LORA"
+    (shape bidirectional)
+    (at 427.99 49.53 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "9dae78de-d6a3-553f-bfc2-7e0d1530c3a1"))
+  (global_label "LORA_DIO2"
+    (shape bidirectional)
+    (at 427.99 52.07 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "7efa2569-1733-505d-b948-2a12c3484d2f"))
+  (global_label "LORA_DIO2"
+    (shape bidirectional)
+    (at 427.99 54.61 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "0b6e30b1-3bb2-5e4e-a60c-926fb260812e"))
+  (global_label "LORA_RXEN"
+    (shape bidirectional)
+    (at 427.99 57.15 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "5159b919-fcca-58b5-9867-b08d009a693c"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 427.99 59.69 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "037d4ddd-cce0-572b-bce8-0822c64f74db"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 427.99 62.23 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "6e38987b-8e89-5960-9cf2-51311da2bdc6"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 427.99 67.31 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "9194795a-bc95-531a-b548-53ec793d2453"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 427.99 69.85 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "75e53716-8cea-5f97-97d5-a35e9ec5f660"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 427.99 72.39 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "c407d0d7-26cb-5728-9ef5-43723e9ba262"))
   (symbol
     (lib_id "bb:C")
     (at 459.74 48.26 0)
@@ -2734,8 +2734,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "a72a3ed4-6a89-5362-bdad-f680301cd725")
-    (property "Reference" "C439"
+    (uuid "724a095e-4fb3-5c2c-9bb3-e8b6bfe5243b")
+    (property "Reference" "C510"
       (at 459.74 41.45 0)
       (effects
         (font
@@ -2776,13 +2776,13 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "4d030f48-e7fd-5bd6-9b54-4b9c3642e814"))
+      (uuid "2736ebfa-6b04-5285-9eb2-1d3bd5be8784"))
     (pin "2"
-      (uuid "fcf1ac5d-8d5c-5d2e-86d7-13e8e5fb839c"))
+      (uuid "621da5bc-c468-5659-ba4b-2ec7b0bf754e"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d6f863f2-4974-5638-955a-a85dc769cdb9"
-          (reference "C439")
+          (reference "C510")
           (unit 1)))))
   (global_label "V3V3_LORA"
     (shape bidirectional)
@@ -2791,7 +2791,7 @@
     (effects
       (font
         (size 1 1)))
-    (uuid "e6537272-1e16-5906-a9c8-8637eec96fbe"))
+    (uuid "284f78c8-6d01-5c73-a38a-0d8ab2c130ec"))
   (global_label "GND"
     (shape bidirectional)
     (at 459.74 52.07 270)
@@ -2799,7 +2799,7 @@
     (effects
       (font
         (size 1 1)))
-    (uuid "9681ede0-a947-563f-a8dd-7d6e56ce2546"))
+    (uuid "324c7d1d-f638-5d0b-81d4-533e985fc587"))
   (symbol
     (lib_id "bb:C")
     (at 491.49 48.26 0)
@@ -2808,8 +2808,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "9e1edab7-55e2-53fc-ba5c-2f64d46eac0a")
-    (property "Reference" "C440"
+    (uuid "bbb1efaf-53b1-569d-bda5-a6a13e007b46")
+    (property "Reference" "C511"
       (at 491.49 41.45 0)
       (effects
         (font
@@ -2850,13 +2850,13 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "f828fc36-5e9e-5f81-8a7f-37fa01dcc157"))
+      (uuid "55365b13-1aef-59ed-8751-8039e6947afb"))
     (pin "2"
-      (uuid "a64efcf5-42bd-59d8-aec8-719a2dfc90a2"))
+      (uuid "6a57cb4c-06b4-5ffd-ab66-f40f5ec1874a"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d6f863f2-4974-5638-955a-a85dc769cdb9"
-          (reference "C440")
+          (reference "C511")
           (unit 1)))))
   (global_label "V3V3_LORA"
     (shape bidirectional)
@@ -2865,7 +2865,7 @@
     (effects
       (font
         (size 1 1)))
-    (uuid "574d8034-9117-56aa-84ca-45f42eea29be"))
+    (uuid "7b14c2f8-e3f6-54b7-9089-5c0fef12b68d"))
   (global_label "GND"
     (shape bidirectional)
     (at 491.49 52.07 270)
@@ -2873,7 +2873,7 @@
     (effects
       (font
         (size 1 1)))
-    (uuid "a93cfcf9-d721-5e6f-985c-28b328936bc5"))
+    (uuid "14947c8c-4d55-5f79-ad89-820552fc404c"))
   (symbol
     (lib_id "lcsc:U.FL-R-SMT-1")
     (at 535.94 46.99 0)
@@ -2937,7 +2937,15 @@
       (font
         (size 1 1))
       (justify right))
-    (uuid "daadf494-143c-570e-a6e1-cefccc8e3719"))
+    (uuid "bf6614e9-2f06-5e68-bb6f-00b632b796b9"))
+  (global_label "LORA_ANT"
+    (shape bidirectional)
+    (at 535.94 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "41be8149-abd5-5b5c-bb39-93e44a5afa25"))
   (global_label "GND"
     (shape bidirectional)
     (at 548.64 44.45 0)
@@ -2946,15 +2954,7 @@
       (font
         (size 1 1))
       (justify left))
-    (uuid "c39fcdcf-9d09-51a0-8c75-483833380145"))
-  (global_label "LORA_ANT"
-    (shape bidirectional)
-    (at 535.94 52.07 270)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1)))
-    (uuid "beb4c142-eaaa-5d45-add5-a4d19b0d6e8c"))
+    (uuid "7e3f4dc7-a9cb-544e-ab8a-98c7e379bfca"))
   (symbol
     (lib_id "bb:TP")
     (at 579.12 41.91 0)
@@ -2963,8 +2963,8 @@
     (in_bom no)
     (on_board yes)
     (dnp no)
-    (uuid "ba60f4e0-ac3f-5fe4-807c-8b6994e5d708")
-    (property "Reference" "TP124"
+    (uuid "e36109fb-9108-5ced-a5aa-a397a5bacace")
+    (property "Reference" "TP191"
       (at 579.12 41.45 0)
       (effects
         (font
@@ -2985,11 +2985,11 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "a09cb22e-6801-55f9-aaf6-2b67c5c28e25"))
+      (uuid "cb768a64-18e2-578c-a738-d41a84cece61"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d6f863f2-4974-5638-955a-a85dc769cdb9"
-          (reference "TP124")
+          (reference "TP191")
           (unit 1)))))
   (global_label "V3V3_LORA"
     (shape bidirectional)
@@ -2998,4 +2998,4 @@
     (effects
       (font
         (size 1 1)))
-    (uuid "c81cfab8-32ff-50ab-aaa4-9259748900bb")))
+    (uuid "6efa99c2-3720-5b68-9d27-6780d4db9697")))

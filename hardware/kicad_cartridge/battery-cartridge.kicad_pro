@@ -28,12 +28,33 @@
         "min_microvia_diameter": 0.2,
         "min_microvia_drill": 0.1
       },
-      "track_widths": [0.0, 0.1, 0.16, 0.25, 0.5, 1.0, 2.0, 3.0],
+      "track_widths": [
+        0.0,
+        0.1,
+        0.16,
+        0.25,
+        0.5,
+        1.0,
+        2.0,
+        3.0
+      ],
       "via_dimensions": [
-        {"diameter": 0.0, "drill": 0.0},
-        {"diameter": 0.4, "drill": 0.2},
-        {"diameter": 0.55, "drill": 0.3},
-        {"diameter": 0.8, "drill": 0.4}
+        {
+          "diameter": 0.0,
+          "drill": 0.0
+        },
+        {
+          "diameter": 0.4,
+          "drill": 0.2
+        },
+        {
+          "diameter": 0.55,
+          "drill": 0.3
+        },
+        {
+          "diameter": 0.8,
+          "drill": 0.4
+        }
       ]
     }
   },
@@ -43,46 +64,237 @@
   },
   "net_settings": {
     "classes": [
-      {"name": "Default", "clearance": 0.15, "track_width": 0.16, "via_diameter": 0.55, "via_drill": 0.3,
-       "diff_pair_width": 0.12, "diff_pair_gap": 0.12, "wire_width": 6, "bus_width": 12, "line_style": 0,
-       "microvia_diameter": 0.3, "microvia_drill": 0.1, "pcb_color": "rgba(0, 0, 0, 0.000)", "schematic_color": "rgba(0, 0, 0, 0.000)", "priority": 2147483647},
-      {"name": "Power_10A", "clearance": 0.3, "track_width": 3.0, "via_diameter": 0.8, "via_drill": 0.4,
-       "diff_pair_width": 0.2, "diff_pair_gap": 0.25, "wire_width": 6, "bus_width": 12, "line_style": 0,
-       "microvia_diameter": 0.3, "microvia_drill": 0.1, "pcb_color": "rgba(0, 0, 0, 0.000)", "schematic_color": "rgba(0, 0, 0, 0.000)", "priority": 0},
-      {"name": "Power_3A", "clearance": 0.25, "track_width": 1.0, "via_diameter": 0.8, "via_drill": 0.4,
-       "diff_pair_width": 0.2, "diff_pair_gap": 0.25, "wire_width": 6, "bus_width": 12, "line_style": 0,
-       "microvia_diameter": 0.3, "microvia_drill": 0.1, "pcb_color": "rgba(0, 0, 0, 0.000)", "schematic_color": "rgba(0, 0, 0, 0.000)", "priority": 1},
-      {"name": "USB3_90R", "clearance": 0.15, "track_width": 0.12, "via_diameter": 0.4, "via_drill": 0.2,
-       "diff_pair_width": 0.12, "diff_pair_gap": 0.15, "wire_width": 6, "bus_width": 12, "line_style": 0,
-       "microvia_diameter": 0.3, "microvia_drill": 0.1, "pcb_color": "rgba(0, 0, 0, 0.000)", "schematic_color": "rgba(0, 0, 0, 0.000)", "priority": 3},
-      {"name": "ETH_100R", "clearance": 0.15, "track_width": 0.12, "via_diameter": 0.4, "via_drill": 0.2,
-       "diff_pair_width": 0.12, "diff_pair_gap": 0.2, "wire_width": 6, "bus_width": 12, "line_style": 0,
-       "microvia_diameter": 0.3, "microvia_drill": 0.1, "pcb_color": "rgba(0, 0, 0, 0.000)", "schematic_color": "rgba(0, 0, 0, 0.000)", "priority": 4}
+      {
+        "name": "Default",
+        "clearance": 0.15,
+        "track_width": 0.16,
+        "via_diameter": 0.55,
+        "via_drill": 0.3,
+        "diff_pair_width": 0.12,
+        "diff_pair_gap": 0.12,
+        "wire_width": 6,
+        "bus_width": 12,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2147483647
+      },
+      {
+        "name": "Power_10A",
+        "clearance": 0.3,
+        "track_width": 3.0,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "diff_pair_width": 0.2,
+        "diff_pair_gap": 0.25,
+        "wire_width": 6,
+        "bus_width": 12,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0
+      },
+      {
+        "name": "Power_3A",
+        "clearance": 0.25,
+        "track_width": 1.0,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
+        "diff_pair_width": 0.2,
+        "diff_pair_gap": 0.25,
+        "wire_width": 6,
+        "bus_width": 12,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 1
+      },
+      {
+        "name": "USB3_90R",
+        "clearance": 0.15,
+        "track_width": 0.15,
+        "via_diameter": 0.4,
+        "via_drill": 0.2,
+        "diff_pair_width": 0.15,
+        "diff_pair_gap": 0.2,
+        "wire_width": 6,
+        "bus_width": 12,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 3
+      },
+      {
+        "name": "ETH_100R",
+        "clearance": 0.15,
+        "track_width": 0.15,
+        "via_diameter": 0.4,
+        "via_drill": 0.2,
+        "diff_pair_width": 0.15,
+        "diff_pair_gap": 0.25,
+        "wire_width": 6,
+        "bus_width": 12,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 4
+      },
+      {
+        "name": "SERDES_100R",
+        "clearance": 0.15,
+        "track_width": 0.15,
+        "via_diameter": 0.4,
+        "via_drill": 0.2,
+        "diff_pair_width": 0.15,
+        "diff_pair_gap": 0.25,
+        "wire_width": 6,
+        "bus_width": 12,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 5
+      },
+      {
+        "name": "USB2_90R",
+        "clearance": 0.15,
+        "track_width": 0.15,
+        "via_diameter": 0.4,
+        "via_drill": 0.2,
+        "diff_pair_width": 0.15,
+        "diff_pair_gap": 0.2,
+        "wire_width": 6,
+        "bus_width": 12,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 6
+      }
     ],
-    "meta": {"version": 3},
+    "meta": {
+      "version": 3
+    },
     "netclass_patterns": [
-      {"netclass": "Power_10A", "pattern": "VBAT"},
-      {"netclass": "Power_10A", "pattern": "VBUS_C*"},
-      {"netclass": "Power_10A", "pattern": "VIN_C*"},
-      {"netclass": "Power_10A", "pattern": "VOUT_C*"},
-      {"netclass": "Power_10A", "pattern": "SW?_C*"},
-      {"netclass": "Power_3A", "pattern": "V3V3*"},
-      {"netclass": "Power_3A", "pattern": "V5_*"},
-      {"netclass": "Power_3A", "pattern": "V12_*"},
-      {"netclass": "Power_3A", "pattern": "V0V95*"},
-      {"netclass": "Power_3A", "pattern": "VDCIN"},
-      {"netclass": "Power_3A", "pattern": "VDCOUT*"},
-      {"netclass": "Power_3A", "pattern": "VPOE"},
-      {"netclass": "USB3_90R", "pattern": "SS?X*_C*"},
-      {"netclass": "USB3_90R", "pattern": "TXC_?_C*"},
-      {"netclass": "USB3_90R", "pattern": "U3?X?_C*"},
-      {"netclass": "ETH_100R", "pattern": "MDI*"},
-      {"netclass": "ETH_100R", "pattern": "SW_P*MDI*"}
+      {
+        "netclass": "Power_10A",
+        "pattern": "VBAT"
+      },
+      {
+        "netclass": "Power_10A",
+        "pattern": "VBUS_C*"
+      },
+      {
+        "netclass": "Power_10A",
+        "pattern": "VIN_C*"
+      },
+      {
+        "netclass": "Power_10A",
+        "pattern": "VOUT_C*"
+      },
+      {
+        "netclass": "Power_10A",
+        "pattern": "SW?_C*"
+      },
+      {
+        "netclass": "Power_3A",
+        "pattern": "V3V3*"
+      },
+      {
+        "netclass": "Power_3A",
+        "pattern": "V5_*"
+      },
+      {
+        "netclass": "Power_3A",
+        "pattern": "V12_*"
+      },
+      {
+        "netclass": "Power_3A",
+        "pattern": "V0V95*"
+      },
+      {
+        "netclass": "Power_3A",
+        "pattern": "VDCIN"
+      },
+      {
+        "netclass": "Power_3A",
+        "pattern": "VDCOUT*"
+      },
+      {
+        "netclass": "Power_3A",
+        "pattern": "VPOE"
+      },
+      {
+        "netclass": "USB3_90R",
+        "pattern": "SS?X*_C*"
+      },
+      {
+        "netclass": "USB3_90R",
+        "pattern": "TXC_?_C*"
+      },
+      {
+        "netclass": "USB3_90R",
+        "pattern": "U3?X?_C*"
+      },
+      {
+        "netclass": "ETH_100R",
+        "pattern": "MDI*"
+      },
+      {
+        "netclass": "ETH_100R",
+        "pattern": "SW_P*MDI*"
+      },
+      {
+        "netclass": "ETH_100R",
+        "pattern": "RJ_TD*"
+      },
+      {
+        "netclass": "SERDES_100R",
+        "pattern": "ETH_S?[TR]X*"
+      },
+      {
+        "netclass": "SERDES_100R",
+        "pattern": "ETH_PHY_HS*"
+      },
+      {
+        "netclass": "SERDES_100R",
+        "pattern": "RTR_[TR]X?"
+      },
+      {
+        "netclass": "USB2_90R",
+        "pattern": "DPC_C*"
+      },
+      {
+        "netclass": "USB2_90R",
+        "pattern": "DNC_C*"
+      },
+      {
+        "netclass": "USB2_90R",
+        "pattern": "U2D?_C*"
+      }
     ]
   },
   "schematic": {
-    "meta": {"version": 1}
+    "meta": {
+      "version": 1
+    }
   },
   "sheets": [],
-  "text_variables": {"REV": "A", "NOTE": "Design in progress - not reviewed"}
+  "text_variables": {
+    "REV": "A",
+    "NOTE": "Design in progress - not reviewed",
+    "HS_ROUTING": "Route all diff pairs as inner-layer 1 oz stripline; set widths/gaps from the JLCPCB 6-layer impedance calculator before layout"
+  }
 }

@@ -42,6 +42,143 @@ Background repair agents were running. Each owns specific files exclusively. Eac
 | Logic blocks | `ethernet.py`, `mcu.py`, `lora.py`, `lighting.py`, `audio.py` | X-29: reset supervisors timed after the last rail. X-30: power-state table and Ioff buffers. X-26: choose a real router module and its supply. X-28: SPI-flash ISP header. X-38: E22 pad-12 option. X-39: flashlight default-off without 3V3. X-40: 1 W hardware audio cap. X-42: interrupts and test points. Also wires the expander nets above. |
 | 3D model | `docs/assets/device3d.js` | **DONE.** The model now follows rev B; preview rebuilt at `<scratchpad>/device3d_preview/index.html`, layout checker at `<scratchpad>/check_layout.mjs`. It has not been republished to the artifact yet. |
 
+### USB-C agent: done (report received after commit 5b62cbb; its last edits are uncommitted)
+**Result:** the four `usbc_port_k` sheets have 0 errors. A full build of the whole tree still had 2 errors, R215 (`power_input`) and R374 (`dc_output`), both from the new resistor-dissipation check, in other agents' files.
+
+**What changed in `usbc_port.py`:**
+- **VBUS switch:** PD-controlled bidirectional switch (LM74502 driving back-to-back NTMFS5C628NL), with dV/dt control, OV cut-off at about 31 V, and a 24.9k connector bleed.
+- **Charger I²C:** moved onto the TPS26750's private I2Cc bus (BQ at 0x6B, EEPROM at 0x50). The ESP32 now reaches each BQ only through TPS26750 I2Cr/I2Cw commands, and mux channels 0–3 are unused.
+- **Dead-battery start:** the protection, EEPROM and pull-ups are powered from the TPS26750 LDO_3V3 (4.1 mA of the 5 mA budget).
+- **Input current limit:** switched by GPIO. Default before a contract is 0.45 A max, then 3.54 A, then 4.94 A.
+- **Feedback:** 249k / 20.0k 0.1 % divider; high corner 20.90 V.
+- **Bulk:** about 89 µF effective per side, behind the switch. The connector side is about 2 µF.
+- **Inductor:** YSPIT1510A-8R2M (25 A rated, 32 A saturation), so 3:1 holds at 7.42 A RMS.
+- **Firmware duties:** GPIO map and firmware duty notes added to the sheet.
+- **VSYS rename prep:** `STAGE_BUS = "VBAT"` is a single constant.
+
+**Requests to the lead:**
+1. Apply the same 0.1 % feedback pair, 8.2 µH / 25 A inductor and polymer bulk to the `power_input`, `dc_output` and INS stages. They still have the old values.
+2. Hardware reverse-current ceiling (X-12, still open): INA190-class sense on the 5 mΩ input shunt, plus a comparator into the LM74502 OV pin. This needs new parts.
+3. Decide whether to free mux channels I2C0–3 in `mcu.py`.
+4. Optionally add `R_249k_0603_0.1%` and `R_20k_0402_0.1%` to `pick_passives`. They are currently `D.R` with LCSC overrides.
+5. VERIFY:
+   - TPS26750 GPIO events in TI's configuration tool
+   - LM74502 VS at a 4.75 V source
+   - polymer-cap footprint polarity
+   - dead-battery start-up on the EVM
+
+### PoE agent: done (uncommitted)
+**Result:** the `poe` sheet adds 0 errors. The only build errors left are R215 (`power_input`) and R374 (`dc_output`), both 10k resistors flagged by the 3TO1R dissipation check.
+
+**Design point:** 37–57 V in, about 20.3 V / 2.3 A out, 219 kHz, LM51551 (hiccup variant, placed on the LM5155 symbol via a field override). Transformer turns ratio 18:9:5, Lp 80 µH, Ipk 3.22 A.
+
+**What changed in `poe.py`:**
+- **Start-up / UVLO:** divider from VC_OUT. PG holds it low until inrush finishes. Start 9.0 V, stop 8.2 V (X-18).
+- **Current sense:** 25 mΩ 3 W shunt, limit 3.7–4.3 A (X-19).
+- **Clamp:** ES1G 400 V diode, 3 × 10k 2 W snubber resistors (X-20).
+- **Isolation cap:** Y1 TMY1102M across the barrier (X-8).
+- **Power class:** TPH and TPL each cross the barrier through an opto, as active-low `EXP_POE_CLASS` and `EXP_POE_CLASS_TPL` (X-21).
+- **Secondary protection:** OVP opto that triggers hiccup, plus an SMBJ26A clamp.
+- **Other parts:** 250 V FET IPD600N25N3G; 3 × 100 µF polymer output caps; MPS/AMPS settings; MagJack LED on ETH_PHY_LED2; DNP TVS footprints.
+- **Rejected:** the reviewer's fix for P-21 (FB divider). The datasheet requires FB grounded in a flyback. An independent OVP path was used instead.
+
+**Requests to the lead:**
+1. `ethernet.py`: map `"LED2/PHYAD2": "ETH_PHY_LED2"` and remove it from `nc`.
+2. `mcu.py`: wire `EXP_POE_CLASS` and `EXP_POE_CLASS_TPL` to two spare expander inputs.
+3. Firmware: pick the INS ILIM state from the two class bits.
+4. `check.py`: add a rule that a BOM part must have a footprint (C-22).
+
+**Still open:**
+- **Transformer:** no stocked 46 W / 20 V PoE flyback transformer at LCSC, so T1 stays consigned. It needs a custom part, now fully specified in its Note.
+- **Bench checks:** loop, slope compensation, f_sw and the snubber (depends on measured Llk).
+- **FET thermals:** confirm on our copper.
+- **Footprint polarity:** check pin 1 on the polymer and electrolytic caps.
+
+### Inputs/battery/rails agent: done, its build has 0 errors (uncommitted)
+**Files:** `power_input`, `dc_output`, `aux_power`, `usb_a`, `qi`, `battery`.
+
+**What changed:**
+- **DC jack input:**
+  - Reverse-polarity protection: a bidirectional SMBJ33CA clamp after a 4 A fuse (X-7).
+  - Overvoltage trip at 26.4–27.9 V, so a 24 V +5 % adapter no longer trips it (X-22). Every net downstream is re-rated to match.
+  - The eFuse now starts without V3V3 (P-14).
+- **Source control and limits:**
+  - ORing disable nets `EXP_ORING_DC_DIS` and `EXP_ORING_POE_DIS`.
+  - The input charger's current limit is set by expander bits, 1.00–2.09 A max.
+  - A `CHG_INHIBIT` input is OR'd into the input charger's enable.
+- **Aux rails:**
+  - Every 32 V-class buck now sits behind a TPS26631 that cuts off above 23.5 V, through two protected rails, `VPROT_A` and `VPROT_B`. This keeps the 38.9 V TVS clamp off them (X-3).
+  - TPS56A37 MODE resistor is 52.3k; the 0.95 V high corner is 0.976 V (X-23).
+- **Qi:** now runs from `V5_QI` (5 V, 5 W profile). The demod network now uses the reference BOM values, but its topology is reconstructed, so VERIFY. Bypass caps return to QI_PGND, and the coil has a 100k NTC (X-25).
+- **USB-A:** 5 V only, enforced in hardware: D+ and D− are shorted (charging-port mode) and a 1.5 A eFuse follows the IP6525S. This drops QC fast charging (X-24).
+- **DC out:** current limit 1.54 A, so 37 W at 24 V.
+
+**Still open (deferred to the VSYS wave):**
+- Main fuse with ≥ 1 kA interrupt rating (0297015.WXNV exists at LCSC but has no stocked holder).
+- Insertion precharge.
+- **System charge ceiling.** Proposal:
+  - pack shunt, INA180 and a comparator at 6 A, driving `CHG_INHIBIT`
+  - the same BAT54 OR on all four port ~CE pins
+  - firmware keeps `EN_ICHG_PIN` and `EN_ILIM_HIZ_PIN` at 1
+- The NIC TPS62933P bucks in `usbc_port.py` are still on the raw bus; move them to `VPROT_B`.
+
+**Requests to the lead:**
+- `mcu.py` expander changes, forwarded to the logic agent:
+  - P12: `DCI_EN` → `EXP_DCI_DIS`
+  - new outputs: `EXP_ORING_DC_DIS`, `EXP_ORING_POE_DIS`, `EXP_INS_ILIM_A`, `EXP_INS_ILIM_B`, `EXP_INS_CHG_DIS`
+  - new PoE class inputs
+- `build.py` `NET_CURRENT_A`: change `V12_QI: 0.6` to `V5_QI: 1.45`. That puts 1.45 A on a single 3 A B2B pin, 2.07:1, so give it two pins.
+- `docs/power-budget.md`: update for Qi at 5 V, USB-A 5 V/1.5 A, DC-out 37 W.
+- Passives keys to add: 0.1 % divider resistors (BQ feedback and the 0.95 V rail), R 133k, C 15n 50V, 10 µF/50 V 1210.
+- VERIFY: TPS56A37 datasheet (not in `docs/`: FB, MODE table, fsw), IP6525S idle with DP/DM tied, Qi tank 400 nF.
+
+### Cartridge agent: done; cartridge build 0 errors, ERC 0/0, all parts ≥ 25 stock (uncommitted)
+**Fixes**
+- **X-1:** SRP is on CELL0 for both ICs. Trips: OCD 12 A, SCD 24 A, OCC 12 A at 5 mΩ.
+- **X-5:** the gauge divider now has its high side switched (LBSS84 + BSS138). Its bottom stays permanently at CELL0, so BAT stays ≤ 0.913 V in every state.
+- **X-9:** documented single-IC BQ7791500 configuration:
+  - OCDP 487k: OCD 180 ms.
+  - DSG/CHG gate networks per Table 10-1.
+  - LD 470k.
+  - Cell inputs 150 Ω, balancing about 14 mA.
+- **X-4:** ISO1540 I²C isolator.
+  - Side 1 (main board) is powered from a `CART_3V3` pogo.
+  - Side 2 runs from the TLV70433, switched on only by the presence loop.
+  - The presence loop was re-scaled: it used to put 19 V on PRES and now puts 4.4 V.
+- **X-10:** prospective fault current is 583 A (7 mΩ/cell floor). The 0498030.J MIDI fuse (30 A, 2.5 kA interrupt) gives 4.3:1. **It has no footprint yet.**
+- **X-3:** the pack FETs stay off until the main board drives `CART_EN` through a PC817. The default, and a dead opto, both mean off.
+- **X-31:** flat target pads on the cartridge. Cell tabs are 2 power pads plus 6 Kelvin pads.
+
+**Pogo contacts (springs go on the main board, BWCD family):**
+1. GND, first make (C2826551)
+2. CART_3V3, about 13 mA
+3. SDA
+4. SCL
+5. PRES_A
+6. PRES_B
+7. CART_EN, last make (C2826549)
+
+The XT60 still carries PACK_P/PACK_N.
+
+**Requests to the lead (main-board side, next wave in `battery.py`):**
+- **Spring pins:** add the 7 pins, pitch ≥ 4 mm. Keep PRES_A away from GND: it can reach 42 V while the pins are rated 36 V. P5–P6 are shorted by a floating trace.
+- **Cartridge I²C:** a dedicated TCA9548A channel, with pull-ups ≥ 4.7k or none and ≤ 40 pF on side 1.
+- **CART_EN:** a 3.3 V push-pull output that defaults low and sources ≥ 2.5 mA.
+  - Insertion sequence: gauge ACKs at 0x55 → read pack V → hot-swap held open → CART_EN high → wait 20 ms → bidirectional precharge/ramp.
+  - Removal: a latch switch that drops CART_EN first, or ≥ 3 mm of XT60 overtravel.
+- **Library (needs the user):** in `lcsc.kicad_sym`:
+  - TLV70433 OUT is typed as power input; it should be power_out.
+  - ISO1540DR pins are "unspecified".
+  - The agent was **denied permission** to edit this shared file and works around it with `_retype` in `cartridge.py`. Only the user can decide whether to allow that library edit; do not make it on the agent's behalf.
+- **check.py:** add PIN_ABS_MAX entries:
+  - BQ34Z100PWR-G1: BAT/REGIN 5.5 V
+  - BQ7791500PWR: PRES 36 V, LD 20 V
+- **mech_spec:** 7 contacts, the 41×12 mm MIDI fuse on M5 studs, and the cell-tab pads. The 105.5 mm cell-width problem from X-31 is still open.
+- **Open:**
+  - The protector's charge trip is fixed at 12 A, which is more than 6 A. A BQ7791501 with a 3 mΩ shunt would fix it; otherwise the main-board charge ceiling (X-2) is the only limit.
+  - Fuse I²t vs the nickel strip and XT60.
+  - The design has not been tested on a cell simulator.
+
 ### Mechanical spec rev C: open inconsistencies found by the 3D build
 These were left for the lead to fix in `hardware/mechanical/mech_spec.json`, then run `sync_mech_spec.py`.
 1. **No room for the LED optic.** The LED board sits at x −4 (the outer face), leaving 0 mm for the 20 mm TIR optic. Actually lengthen the left cap to 16 mm (both `end_caps.left.outer_length` and `outer_to_interior_offset.x`), or move the LED board inward.

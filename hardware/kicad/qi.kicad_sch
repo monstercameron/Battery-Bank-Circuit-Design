@@ -5,10 +5,79 @@
   (uuid "d10caea1-1e99-53f8-97d8-41dd1c7d92cd")
   (paper "A1")
   (title_block
-    (title "Qi transmitter (5 W limited) under the non-metal top window")
+    (title "Qi transmitter (5 W, 5 V input) under the non-metal top window")
     (company "Battery Bank")
     (rev "A"))
   (lib_symbols
+    (symbol "bb:JP"
+      (pin_numbers hide)
+      (pin_names
+        (offset 0.254) hide)
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "JP"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "JP"
+        (at 0 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "JP_0_1"
+        (polyline
+          (pts
+            (xy -1.016 1.016)
+            (xy 1.016 1.016))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.016 -1.016)
+            (xy 1.016 -1.016))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "JP_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "2"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))))
     (symbol "lcsc:IP6826QFN32"
       (in_bom yes)
       (on_board yes)
@@ -701,62 +770,95 @@
             (effects
               (font
                 (size 1.27 1.27)))))))
-    (symbol "bb:QI_XTAL_TBD"
-      (pin_numbers hide)
-      (pin_names
-        (offset 0.254))
-      (exclude_from_sim no)
+    (symbol "lcsc:NCP15WF104F03RC"
       (in_bom yes)
       (on_board yes)
-      (property "Reference" "J"
-        (at 0 3.81 0)
+      (property "Reference" "R"
+        (id 0)
+        (at 0 5.08 0)
         (effects
           (font
             (size 1.27 1.27))))
-      (property "Value" "QI_XTAL_TBD"
-        (at 0 -3.81 0)
+      (property "Value" "NCP15WF104F03RC"
+        (id 1)
+        (at 0 -5.08 0)
         (effects
           (font
             (size 1.27 1.27))))
-      (property "Footprint" ""
-        (at 0 0 0)
+      (property "Footprint" "lcsc:R0402"
+        (id 2)
+        (at 0 -7.62 0)
         (effects
           (font
             (size 1.27 1.27)) hide))
-      (property "Datasheet" ""
-        (at 0 0 0)
+      (property "Datasheet" "https://lcsc.com/product-detail/NTC-Thermistors_muRata_NCP15WF104F03RC_NTCThermistor-100kR-1_C77130.html"
+        (id 3)
+        (at 0 -10.16 0)
         (effects
           (font
             (size 1.27 1.27)) hide))
-      (symbol "QI_XTAL_TBD_0_1"
+      (property "Manufacturer" "muRata(村田)"
+        (id 4)
+        (at 0 -12.70 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "MPN" "NCP15WF104F03RC"
+        (id 5)
+        (at 0 -15.24 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "LCSC Part" "C77130"
+        (id 6)
+        (at 0 -17.78 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "ki_keywords" "NTC Thermistors"
+        (id 8)
+        (at 0 -20.32 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "NCP15WF104F03RC_0_1"
         (rectangle
-          (start -5.08 -3.81)
-          (end 5.08 3.81)
+          (start -2.54 1.02)
+          (end 2.54 -1.02)
           (stroke
-            (width 0.254)
+            (width 0)
             (type default))
           (fill
-            (type none))))
-      (symbol "QI_XTAL_TBD_1_1"
-        (pin passive line
-          (at -7.62 1.27 0)
+            (type background)))
+        (polyline
+          (pts
+            (xy -2.54 -1.52)
+            (xy -1.27 -1.52)
+            (xy 2.29 2.03))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (pin input line
+          (at 5.08 -0.00 180)
           (length 2.54)
-          (name "XI"
-            (effects
-              (font
-                (size 1.27 1.27))))
-          (number "1"
-            (effects
-              (font
-                (size 1.27 1.27)))))
-        (pin passive line
-          (at -7.62 -1.27 0)
-          (length 2.54)
-          (name "XO"
+          (name "2"
             (effects
               (font
                 (size 1.27 1.27))))
           (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin input line
+          (at -5.08 -0.00 0)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
             (effects
               (font
                 (size 1.27 1.27)))))))
@@ -928,8 +1030,193 @@
           (number "2"
             (effects
               (font
+                (size 1.27 1.27)))))))
+    (symbol "lcsc:B5819W_C8598"
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (id 0)
+        (at 0 5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "B5819W_C8598"
+        (id 1)
+        (at 0 -5.08 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "lcsc:SOD-123_L2.7-W1.6-LS3.7-RD-1"
+        (id 2)
+        (at 0 -7.62 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://lcsc.com/product-detail/Schottky-Barrier-Diodes-SBD_B5819W-SL_C8598.html"
+        (id 3)
+        (at 0 -10.16 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Manufacturer" "CJ(江苏长电/长晶)"
+        (id 4)
+        (at 0 -12.70 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "MPN" "B5819W SL"
+        (id 5)
+        (at 0 -15.24 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "LCSC Part" "C8598"
+        (id 6)
+        (at 0 -17.78 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "ki_keywords" "Schottky Barrier Diodes (SBD)"
+        (id 8)
+        (at 0 -20.32 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "ki_description" "B5819W SL"
+        (id 9)
+        (at 0 -22.86 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "B5819W_C8598_0_1"
+        (polyline
+          (pts
+            (xy 1.27 1.52)
+            (xy -1.27 -0.00)
+            (xy 1.27 -1.52)
+            (xy 1.27 1.52))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type background)))
+        (polyline
+          (pts
+            (xy -0.51 -1.78)
+            (xy -0.51 -2.29)
+            (xy -1.27 -2.29)
+            (xy -1.27 1.02)
+            (xy -1.27 1.78)
+            (xy -2.03 1.78)
+            (xy -2.03 1.27))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (pin passive line
+          (at -5.08 -0.00 0)
+          (length 3.81)
+          (name "-"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 5.08 -0.00 180)
+          (length 3.81)
+          (name "+"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))))
+    (symbol "bb:LED"
+      (pin_numbers hide)
+      (pin_names
+        (offset 0.254) hide)
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "LED"
+        (at 0 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "LED_0_1"
+        (polyline
+          (pts
+            (xy -1.27 1.27)
+            (xy 1.27 1.27)
+            (xy 0 -1.27)
+            (xy -1.27 1.27))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -1.27 -1.27)
+            (xy 1.27 -1.27))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 1.778 0.508)
+            (xy 3.048 1.778))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "LED_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 2.54)
+          (name "A"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 2.54)
+          (name "K"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
                 (size 1.27 1.27))))))))
-  (text "Qi transmitter (5 W limited) under the non-metal top window"
+  (text "Qi transmitter (5 W, 5 V input) under the non-metal top window"
     (exclude_from_sim no)
     (at 20 20 0)
     (effects
@@ -937,1578 +1224,1597 @@
         (size 2 2))
       (justify left))
     (uuid "5038ab28-72bf-5d8a-9032-40d50fa095cd"))
-  (symbol
-    (lib_id "lcsc:IP6826QFN32")
-    (at 62.23 67.31 0)
-    (unit 1)
+  (text "5 V input -> IP6826 can only run the 5 W BPP profile (DS features). V5_QI from a TPS56A37 on aux_power."
     (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "c61df49b-4aa2-5674-b0fe-2dc6a873fb00")
-    (property "Reference" "U76"
-      (at 62.23 41.45 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Value" "IP6826"
-      (at 62.23 90.63 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" "lcsc:QFN-32_L5.0-W5.0-P0.50-BL-EP3.8"
-      (at 62.23 67.31 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Datasheet" ""
-      (at 62.23 67.31 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "LCSC" "C2921390"
-      (at 62.23 67.31 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "MPN" "IP6826"
-      (at 62.23 67.31 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Op_P" "5.0"
-      (at 62.23 67.31 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Rated_P" "15.0"
-      (at 62.23 67.31 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Note" "C-16: order PRE-PROGRAMMED (LCSC/JLC programming service, Injoinic 5 W firmware). CC/DP/DM unused."
-      (at 62.23 67.31 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "1"
-      (uuid "22ed1604-172d-5b17-86fd-3d9babf76fd6"))
-    (pin "2"
-      (uuid "e29ed3ab-fd9f-5cf5-8a4d-6532e5872ed8"))
-    (pin "3"
-      (uuid "af84f6e0-7f5c-5bae-bf0c-04beab7d71f7"))
-    (pin "4"
-      (uuid "377982a0-06d7-5a64-a981-102a038f3dfa"))
-    (pin "5"
-      (uuid "2f6bb3d1-36c1-5dc9-9ab6-888b3079462d"))
-    (pin "6"
-      (uuid "36fe3185-4fc3-55fa-b03c-b5f7e1511733"))
-    (pin "7"
-      (uuid "c2603ab7-3c7c-5ce1-9cd0-086154007bfc"))
-    (pin "8"
-      (uuid "9e7c36ce-f655-5f9c-a9d0-1083d867a276"))
-    (pin "9"
-      (uuid "94618c97-0564-5f49-8a90-4910f4812635"))
-    (pin "10"
-      (uuid "d0312aa0-4de4-5ea6-a2ff-58350d71f7e1"))
-    (pin "11"
-      (uuid "c1c01137-8b67-57e8-8f93-e05d9a75a0d5"))
-    (pin "12"
-      (uuid "626a822e-5522-5a61-bb14-ecce22e6f366"))
-    (pin "13"
-      (uuid "6f83c86e-c8c6-58c1-a4a1-3789ce5b1ee0"))
-    (pin "14"
-      (uuid "13c92b67-07d4-5dfd-ad07-58df052fa4ad"))
-    (pin "15"
-      (uuid "a7268982-5ebb-51ce-963e-0b7f11d91368"))
-    (pin "16"
-      (uuid "af866c49-7b75-5035-b684-dae041871b4e"))
-    (pin "17"
-      (uuid "76cdfe1b-141f-54e6-bbbf-a70c2e7e0dc8"))
-    (pin "18"
-      (uuid "5e2ea22c-8707-529b-9d6f-a8cefbee3b80"))
-    (pin "19"
-      (uuid "2bb776aa-2d8c-5b14-b1e2-8bbacd04bc89"))
-    (pin "20"
-      (uuid "a5f99d93-115a-5661-9787-fd79ab8b63d6"))
-    (pin "21"
-      (uuid "749092ca-10e2-5c05-9b2a-17c7788742da"))
-    (pin "22"
-      (uuid "0ce06ffd-c190-5794-997f-cdc3a414d656"))
-    (pin "23"
-      (uuid "9c14c51f-218b-50c6-93be-efb8869b4e5f"))
-    (pin "24"
-      (uuid "eb16b454-ac84-5edd-bd86-13afe0002e39"))
-    (pin "25"
-      (uuid "a2071ed3-500f-571f-b278-d285942360f2"))
-    (pin "26"
-      (uuid "477f7683-6d6e-5106-b56b-417bc3b21ace"))
-    (pin "27"
-      (uuid "a1a5ceb6-ea76-5c90-999c-f274ce225733"))
-    (pin "28"
-      (uuid "4b28c00c-f56c-506b-81ce-50c1fbadf82e"))
-    (pin "29"
-      (uuid "dc27c1db-2f94-51d6-8c93-f9f8f2975f44"))
-    (pin "30"
-      (uuid "1642e1bf-2375-514f-b240-1d105761b534"))
-    (pin "31"
-      (uuid "23c1aa73-fe8c-5c7a-bafc-21dd7c51133f"))
-    (pin "32"
-      (uuid "c4158dd4-95e2-5fc1-bb7e-c66e8c2b0425"))
-    (pin "33"
-      (uuid "4a0e646c-4b4e-5eb2-8f85-0a0ed424a336"))
-    (instances
-      (project "battery-bank"
-        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "U76")
-          (unit 1)))))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 44.45 49.53 180)
-    (fields_autoplaced yes)
+    (at 20 23.5 0)
     (effects
       (font
-        (size 1 1))
-      (justify right))
-    (uuid "952a2cb0-b6b3-514e-aed1-1185de763529"))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 80.01 49.53 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
+        (size 1.5 1.5))
       (justify left))
-    (uuid "762b6ebb-c98a-5695-b75e-09538571e30d"))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 44.45 52.07 180)
-    (fields_autoplaced yes)
+    (uuid "dce2a709-1aa4-5cad-9fba-5da0a79f857a"))
+  (text "Demod network values = reference BOM; topology reconstructed from the BOM, VERIFY vs datasheet Fig. 4/5 and p.12 schematic."
+    (exclude_from_sim no)
+    (at 20 27 0)
     (effects
       (font
-        (size 1 1))
-      (justify right))
-    (uuid "1013722e-44d7-5abd-84e9-763ac3f8349a"))
-  (global_label "QI_PGND"
-    (shape bidirectional)
-    (at 44.45 54.61 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "ddcd29eb-9709-5c2d-add9-b1af9802710d"))
-  (global_label "QI_PGND"
-    (shape bidirectional)
-    (at 44.45 59.69 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "83f9df8b-914d-5ec1-b4ee-7f6465b2e5f6"))
-  (global_label "QI_PGND"
-    (shape bidirectional)
-    (at 62.23 44.45 90)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1)))
-    (uuid "608a57ae-1d08-5eb1-8605-46353033dad0"))
-  (global_label "QI_VCC"
-    (shape bidirectional)
-    (at 44.45 57.15 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "0f8231ef-549e-5cdb-935b-525ff98f1d4e"))
-  (global_label "QI_XI"
-    (shape bidirectional)
-    (at 44.45 62.23 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "a0fa8d0b-bfda-571c-a614-4acc9b59d136"))
-  (global_label "QI_XO"
-    (shape bidirectional)
-    (at 44.45 64.77 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "b14815fd-e0f5-5082-9176-006f79e7d7cb"))
-  (global_label "QI_NTC"
-    (shape bidirectional)
-    (at 44.45 74.93 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "6b101a52-0a37-5133-8084-90bbe8c4e1bd"))
-  (global_label "QI_FOD"
-    (shape bidirectional)
-    (at 44.45 77.47 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "edf82072-5573-5d24-8e12-64a7c23d84fe"))
-  (global_label "QI_LED1"
-    (shape bidirectional)
-    (at 44.45 80.01 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "f57f1fd5-3668-590c-9577-4aa23077fb3b"))
-  (global_label "QI_LED2"
-    (shape bidirectional)
-    (at 44.45 87.63 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "40f50357-892f-5a3b-9a16-b0be89b94fbe"))
-  (global_label "QI_LED3"
-    (shape bidirectional)
-    (at 44.45 85.09 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "f6d67ddb-7243-5c3d-9006-a55e8dffa98f"))
-  (global_label "QI_VDEC"
-    (shape bidirectional)
-    (at 80.01 85.09 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
+        (size 1.5 1.5))
       (justify left))
-    (uuid "292f3e1a-a437-5868-b0a4-171b6f969bd8"))
-  (global_label "QI_VDET"
-    (shape bidirectional)
-    (at 80.01 54.61 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "85974f8c-6159-5d1a-8ef8-be7954b23d65"))
-  (global_label "QI_BST1"
-    (shape bidirectional)
-    (at 80.01 82.55 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "164f6b43-da26-5caa-9239-6d11a5cdf83a"))
-  (global_label "QI_LX1"
-    (shape bidirectional)
-    (at 80.01 80.01 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "9a807f01-ea51-527c-b746-063b029f2458"))
-  (global_label "QI_LX1"
-    (shape bidirectional)
-    (at 80.01 77.47 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "2b8db2a9-f0a8-5ad7-8297-1f943551a622"))
-  (global_label "QI_LX2"
-    (shape bidirectional)
-    (at 80.01 74.93 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "e5adafa7-a1e8-5d0d-9683-b6268472c2b5"))
-  (global_label "QI_LX2"
-    (shape bidirectional)
-    (at 80.01 72.39 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "3db720eb-ac75-56c7-86ec-e23a4c0a5a3b"))
-  (global_label "QI_BST2"
-    (shape bidirectional)
-    (at 80.01 69.85 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "6fac007e-c256-5323-84d8-e1eb569af477"))
-  (global_label "V12_QI"
-    (shape bidirectional)
-    (at 80.01 64.77 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "50a149cb-bb51-5c0a-8f6e-fccd6a212545"))
-  (global_label "V12_QI"
-    (shape bidirectional)
-    (at 80.01 62.23 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "11f8a7f3-6668-59b3-bce8-1f4879f3cbc2"))
-  (global_label "QI_DEBUG_TX"
-    (shape bidirectional)
-    (at 44.45 72.39 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "225d5ea5-4846-5505-9f96-5154b7f24fdd"))
-  (no_connect
-    (at 44.45 67.31)
-    (uuid "1f0fad34-5ceb-50ba-8543-58cf7b53687e"))
-  (no_connect
-    (at 80.01 57.15)
-    (uuid "bfc92d3d-301b-53d0-8a94-c9a6c9d19bb0"))
-  (no_connect
-    (at 44.45 82.55)
-    (uuid "3b8bc184-99f4-5dc8-a72a-e2588a655413"))
-  (no_connect
-    (at 80.01 59.69)
-    (uuid "38fd6675-d0ac-52df-b381-f6f8479ab617"))
-  (no_connect
-    (at 44.45 69.85)
-    (uuid "cf810327-dcea-5e99-87aa-f4671fb53363"))
-  (no_connect
-    (at 80.01 67.31)
-    (uuid "d7cc374d-bc17-5230-8d19-04e492b5f2ca"))
-  (no_connect
-    (at 80.01 52.07)
-    (uuid "d0fa917e-1fa1-5e4c-a738-706564fe1909"))
-  (no_connect
-    (at 80.01 87.63)
-    (uuid "6b0da3bd-5e99-5c3c-aecd-e34e75667dcf"))
+    (uuid "1672d00d-1271-53ea-b5d2-1c047369de06"))
   (symbol
-    (lib_id "bb:TP")
-    (at 116.84 41.91 0)
+    (lib_id "bb:JP")
+    (at 39.37 48.26 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom no)
     (on_board yes)
     (dnp no)
-    (uuid "e7e53af8-6cb8-5f91-8945-24a687cb2360")
-    (property "Reference" "TP143"
-      (at 116.84 41.45 0)
+    (uuid "59860863-7989-5139-86ef-3754e85187bc")
+    (property "Reference" "JP38"
+      (at 39.37 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "SJ Qi isolate"
+      (at 39.37 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm"
+      (at 39.37 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 39.37 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_I" "1.45"
+      (at 39.37 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "490798a4-8e09-5ebb-8698-4e1bfc627506"))
+    (pin "2"
+      (uuid "ecb365e3-27ca-5c96-8647-05ebbf811ffb"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "JP38")
+          (unit 1)))))
+  (global_label "V5_QI"
+    (shape bidirectional)
+    (at 39.37 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "723903c0-acac-55e9-bb03-376ef0f91ce6"))
+  (global_label "QI_VIN"
+    (shape bidirectional)
+    (at 39.37 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "433ae27a-2827-5a9f-a146-f6af760b6eeb"))
+  (symbol
+    (lib_id "lcsc:IP6826QFN32")
+    (at 88.9 67.31 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "9d7095be-1a43-559f-ae10-d7351c1b18b9")
+    (property "Reference" "U94"
+      (at 88.9 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "IP6826"
+      (at 88.9 90.63 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:QFN-32_L5.0-W5.0-P0.50-BL-EP3.8"
+      (at 88.9 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 88.9 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C2921390"
+      (at 88.9 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "IP6826"
+      (at 88.9 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "5.0"
+      (at 88.9 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "15.0"
+      (at 88.9 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "C-16: order PRE-PROGRAMMED (Injoinic 5 W firmware). 5 V input -> 5 W BPP only. CC/DP/DM unused. HOSCI/HOSCO NC: reference BOM has no crystal (C-25, VERIFY with Injoinic)."
+      (at 88.9 67.31 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "ed84772f-b61f-5784-82eb-29b57ba1e8cc"))
+    (pin "2"
+      (uuid "06da447e-af83-5f4f-9b52-48a945890eeb"))
+    (pin "3"
+      (uuid "aadbf7e6-b54d-59b0-92ab-c88735da2ec2"))
+    (pin "4"
+      (uuid "98f06670-1472-53dc-ad38-e5d9bb8cd68e"))
+    (pin "5"
+      (uuid "9236e6c0-b69e-5a3a-b11d-34d932fd5851"))
+    (pin "6"
+      (uuid "cb7bec43-1ad7-5117-8c20-3a76c13fbd94"))
+    (pin "7"
+      (uuid "c5f22f03-9eb6-502f-acbb-60193ff64fb9"))
+    (pin "8"
+      (uuid "4cab5949-3785-582d-b374-3499828ff441"))
+    (pin "9"
+      (uuid "89946695-3735-5063-a8b6-db5950014f06"))
+    (pin "10"
+      (uuid "cbd63366-dbcb-576c-a4c3-6a2047622942"))
+    (pin "11"
+      (uuid "b27dfeb4-ea7e-5cc9-9c1e-7cf61733c80e"))
+    (pin "12"
+      (uuid "fab71ec9-3802-52fa-a74c-1fba6f845939"))
+    (pin "13"
+      (uuid "bd30bace-2248-5f28-bd9e-f1f929a957a9"))
+    (pin "14"
+      (uuid "6ac1e630-beab-5a2d-bd62-dfcfc4cfb976"))
+    (pin "15"
+      (uuid "862f91f1-7e3a-5503-97bc-774ef9badc04"))
+    (pin "16"
+      (uuid "e417c81c-abdb-599a-abe7-9a9f64bdfc79"))
+    (pin "17"
+      (uuid "5828581e-9d71-5d5f-a8ef-5dc79e393eca"))
+    (pin "18"
+      (uuid "2dd689a0-a3ae-5273-b462-f981a9c00c7f"))
+    (pin "19"
+      (uuid "8653b8eb-eacf-56e7-b23c-399a871840dd"))
+    (pin "20"
+      (uuid "05e2a11b-50ad-5275-baea-c68d6e125b83"))
+    (pin "21"
+      (uuid "57fcc225-a1a6-5057-ba04-0217087060ea"))
+    (pin "22"
+      (uuid "9372a69d-3569-53c7-8124-b80f813daf83"))
+    (pin "23"
+      (uuid "20e4affe-471c-5393-a069-5107c4619c14"))
+    (pin "24"
+      (uuid "d16511ab-b9c9-5593-a602-0432e0b9ffe0"))
+    (pin "25"
+      (uuid "d2cc3017-c1ae-5dc5-ab80-68a3f859430e"))
+    (pin "26"
+      (uuid "8c879861-5b37-53bb-b9d5-8cf5bfc20c74"))
+    (pin "27"
+      (uuid "9e6ed0eb-306c-55c8-bb18-89c8430f963a"))
+    (pin "28"
+      (uuid "f446c17a-25f8-59dc-afe7-752fdbd1e15f"))
+    (pin "29"
+      (uuid "d997548d-2d36-50ad-bbd8-34d14c5a3d59"))
+    (pin "30"
+      (uuid "ff000f44-fef3-5621-aeb0-70b50d509a19"))
+    (pin "31"
+      (uuid "2e585b86-6221-563f-8e0b-d4fce9bec368"))
+    (pin "32"
+      (uuid "3a99bbcb-f089-5236-8d77-185a034d075b"))
+    (pin "33"
+      (uuid "1559e4b3-ac2a-5f96-9f90-3d5e3633ee38"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "U94")
+          (unit 1)))))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 71.12 49.53 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "29b9d2d2-c07e-512d-a1d1-d9b041cc25f1"))
+  (global_label "QI_IGND"
+    (shape bidirectional)
+    (at 71.12 52.07 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "4b7df916-223f-5f51-934d-47cf5cec0b03"))
+  (global_label "QI_ISNS"
+    (shape bidirectional)
+    (at 71.12 54.61 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "1c626cf3-33b4-5908-82c2-ac12ed311eb9"))
+  (global_label "QI_VCC"
+    (shape bidirectional)
+    (at 71.12 57.15 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "2f1c92d3-264a-5feb-ba75-daefbaaa48ef"))
+  (global_label "QI_PGND"
+    (shape bidirectional)
+    (at 71.12 59.69 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "4c48649d-4ffa-5537-a98d-e6be1c427b28"))
+  (no_connect
+    (at 71.12 62.23)
+    (uuid "15be3354-4e96-547f-8470-dce97a0896e3"))
+  (no_connect
+    (at 71.12 64.77)
+    (uuid "1b716329-5da4-5369-8d50-abf6832e343c"))
+  (no_connect
+    (at 71.12 67.31)
+    (uuid "a000c467-517f-5891-871e-8bbf5eedbcbb"))
+  (no_connect
+    (at 71.12 69.85)
+    (uuid "cdc0469b-be58-5d5b-b670-945c95bb1d52"))
+  (global_label "QI_DEBUG_TX"
+    (shape bidirectional)
+    (at 71.12 72.39 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "824dfe3b-cc52-53d9-98ad-d70067afceaf"))
+  (global_label "QI_NTC"
+    (shape bidirectional)
+    (at 71.12 74.93 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "a99959b2-beb4-5844-aaf0-5ad29eb90a32"))
+  (global_label "QI_FOD"
+    (shape bidirectional)
+    (at 71.12 77.47 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "d7b02231-ec52-569e-a208-813e99613fc7"))
+  (global_label "QI_LED1"
+    (shape bidirectional)
+    (at 71.12 80.01 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "b4857b39-8d5d-51ba-8435-f03e128c9daa"))
+  (no_connect
+    (at 71.12 82.55)
+    (uuid "e52bdf3c-e44c-54d6-9249-a5718b737045"))
+  (global_label "QI_LED3"
+    (shape bidirectional)
+    (at 71.12 85.09 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "6badcd55-8533-52cb-b324-4d6c7d89525f"))
+  (global_label "QI_LED2"
+    (shape bidirectional)
+    (at 71.12 87.63 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "a3d5911a-00f0-569c-8af5-35232cf6ece0"))
+  (no_connect
+    (at 106.68 87.63)
+    (uuid "22290152-0d4a-5f92-b0fd-a911ab62c2b0"))
+  (global_label "QI_VDEC"
+    (shape bidirectional)
+    (at 106.68 85.09 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "a2ab985e-7493-5ee4-987f-443ab52a4013"))
+  (global_label "QI_BST1"
+    (shape bidirectional)
+    (at 106.68 82.55 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "adac9d47-fda5-5aff-bf0f-990aa93ddaa9"))
+  (global_label "QI_LX1"
+    (shape bidirectional)
+    (at 106.68 80.01 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "f716a31a-02cf-5e36-8a67-d5b07522afcb"))
+  (global_label "QI_LX1"
+    (shape bidirectional)
+    (at 106.68 77.47 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "a36b3a57-4b0c-59fa-bb75-2b9b59e76e51"))
+  (global_label "QI_LX2"
+    (shape bidirectional)
+    (at 106.68 74.93 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "595a2512-3d26-5194-8f2e-2b7bf1bf2cb8"))
+  (global_label "QI_LX2"
+    (shape bidirectional)
+    (at 106.68 72.39 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "a39cdf5b-8623-5c5a-b70c-9d3a68e135b7"))
+  (global_label "QI_BST2"
+    (shape bidirectional)
+    (at 106.68 69.85 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "ba7d91f3-5962-558b-b515-b3726e99f63e"))
+  (no_connect
+    (at 106.68 67.31)
+    (uuid "bb59897a-721e-5067-aae0-87a35e71feb7"))
+  (global_label "QI_VIN"
+    (shape bidirectional)
+    (at 106.68 64.77 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "38f04b79-be05-5cf3-8183-7d9ae61155de"))
+  (global_label "QI_VIN"
+    (shape bidirectional)
+    (at 106.68 62.23 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "d9548a1f-1c84-5ef0-bdd0-22aa740165e8"))
+  (no_connect
+    (at 106.68 59.69)
+    (uuid "6f52b1d4-d29a-558e-93f4-3bfc399ff418"))
+  (no_connect
+    (at 106.68 57.15)
+    (uuid "41325a1a-48dc-52af-a9d2-df41b85f31cd"))
+  (global_label "QI_VDET"
+    (shape bidirectional)
+    (at 106.68 54.61 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "72d718ef-0db0-537b-80ec-315b6fb88a10"))
+  (no_connect
+    (at 106.68 52.07)
+    (uuid "d4887e46-8f6a-56c0-9783-a43de90b4204"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 106.68 49.53 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "0f385c0a-6e08-558c-8845-a64eff0d01c7"))
+  (global_label "QI_PGND"
+    (shape bidirectional)
+    (at 88.9 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "6db8825a-c924-5c37-ba24-11887802418d"))
+  (symbol
+    (lib_id "bb:TP")
+    (at 142.24 41.91 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "8b9d0773-373b-5da8-b555-ea68e891d2ae")
+    (property "Reference" "TP216"
+      (at 142.24 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "QI_DEBUG_TX"
-      (at 116.84 47.45 0)
+      (at 142.24 47.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-      (at 116.84 41.91 0)
+      (at 142.24 41.91 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 116.84 41.91 0)
+      (at 142.24 41.91 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "076f6aca-c7e2-5867-af13-be6f34f898f0"))
+      (uuid "ebda2cda-933c-5a08-b75a-37c4a8f3ece2"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "TP143")
+          (reference "TP216")
           (unit 1)))))
   (global_label "QI_DEBUG_TX"
     (shape bidirectional)
-    (at 116.84 44.45 270)
+    (at 142.24 44.45 270)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "3fdca87d-1083-5d79-88ec-9e416a9656f1"))
+    (uuid "4d4b990c-7494-52ac-9eff-ce409636bb5c"))
   (symbol
     (lib_id "bb:C")
-    (at 148.59 48.26 0)
+    (at 173.99 48.26 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "44a0d1da-4f09-5981-b705-a693f317287c")
-    (property "Reference" "C485"
-      (at 148.59 41.45 0)
+    (uuid "88721249-493b-5acc-b4e3-f4859d4a2d08")
+    (property "Reference" "C565"
+      (at 173.99 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Value" "2.2nF 50V"
-      (at 148.59 55.07 0)
+    (property "Value" "10uF 25V"
+      (at 173.99 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+      (at 173.99 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 173.99 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C15850"
+      (at 173.99 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL21A106KAYNNNE"
+      (at 173.99 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 173.99 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "25.0"
+      (at 173.99 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "C1 10 uF (reference) VIN-PGND, minimum loop"
+      (at 173.99 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "35228990-9ada-5a1f-b48f-9466530be0f6"))
+    (pin "2"
+      (uuid "1c255fa1-3a46-5034-8d40-5552e2407602"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "C565")
+          (unit 1)))))
+  (global_label "QI_VIN"
+    (shape bidirectional)
+    (at 173.99 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "853ac8de-55a1-589e-9d9b-2b709fa5fbf4"))
+  (global_label "QI_PGND"
+    (shape bidirectional)
+    (at 173.99 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "bc1c2e68-d55e-558f-b5c4-f1011eacfcd8"))
+  (symbol
+    (lib_id "bb:C")
+    (at 201.93 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "e10849d3-30a0-5d52-8bfc-1ad5df0d6d87")
+    (property "Reference" "C566"
+      (at 201.93 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "22uF 25V"
+      (at 201.93 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+      (at 201.93 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 201.93 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C45783"
+      (at 201.93 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL21A226MAQNNNE"
+      (at 201.93 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 201.93 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "25.0"
+      (at 201.93 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "C2/C3 22 uF (reference) VIN-PGND"
+      (at 201.93 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "6f3e98d7-7b7c-5b5b-b241-00b9ff5e3436"))
+    (pin "2"
+      (uuid "c9a22c12-9fff-54a3-b326-d03a6465282b"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "C566")
+          (unit 1)))))
+  (global_label "QI_VIN"
+    (shape bidirectional)
+    (at 201.93 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "27bc9103-69c4-5cf6-98ca-c2ce1d9b6484"))
+  (global_label "QI_PGND"
+    (shape bidirectional)
+    (at 201.93 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "e38aba91-205c-5f1c-8bae-1199268228cc"))
+  (symbol
+    (lib_id "bb:C")
+    (at 231.14 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "8d053c9d-d82b-5273-b13c-998b721c635b")
+    (property "Reference" "C567"
+      (at 231.14 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "22uF 25V"
+      (at 231.14 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+      (at 231.14 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 231.14 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C45783"
+      (at 231.14 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL21A226MAQNNNE"
+      (at 231.14 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 231.14 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "25.0"
+      (at 231.14 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "C2/C3 22 uF (reference) VIN-PGND"
+      (at 231.14 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "2a0b5e63-28a5-5a39-b6a5-9e8fd812555a"))
+    (pin "2"
+      (uuid "36eb6b9b-dbc9-585b-8dd4-55a7cbde0dc0"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "C567")
+          (unit 1)))))
+  (global_label "QI_VIN"
+    (shape bidirectional)
+    (at 231.14 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "723c6ea5-9dcb-5913-bcb0-9ca71c519107"))
+  (global_label "QI_PGND"
+    (shape bidirectional)
+    (at 231.14 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "60b617b7-999d-580e-9390-c0e30ab0bd0a"))
+  (symbol
+    (lib_id "bb:C")
+    (at 259.08 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "24343ced-185b-5bb7-99f5-aadea598c5e0")
+    (property "Reference" "C568"
+      (at 259.08 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 16V"
+      (at 259.08 55.07 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-      (at 148.59 48.26 0)
+      (at 259.08 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 148.59 48.26 0)
+      (at 259.08 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "LCSC" "C1531"
-      (at 148.59 48.26 0)
+    (property "LCSC" "C1525"
+      (at 259.08 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "0402B222K500NT"
-      (at 148.59 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "JLC_Class" "Preferred"
-      (at 148.59 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Rated_V" "50.0"
-      (at 148.59 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Note" "C-15: static-FOD 2.2 nF on VDET (datasheet default). Rest of demod network: copy reference schematic (VERIFY)"
-      (at 148.59 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "1"
-      (uuid "3b691ac2-3cc0-517e-a0a9-4aef6cc0ec22"))
-    (pin "2"
-      (uuid "aecbf02d-dbb4-5b79-8a8b-33337ea4c378"))
-    (instances
-      (project "battery-bank"
-        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "C485")
-          (unit 1)))))
-  (global_label "QI_VDET"
-    (shape bidirectional)
-    (at 148.59 44.45 90)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1)))
-    (uuid "be65d80c-9889-539e-99aa-fd2028c712e6"))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 148.59 52.07 270)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1)))
-    (uuid "42960639-29b1-5c16-a90f-e2193928b645"))
-  (symbol
-    (lib_id "lcsc:LR1206-21R020F4")
-    (at 181.61 44.45 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "1873a67b-3ab3-5f1f-a9cf-7e1efe809e80")
-    (property "Reference" "R278"
-      (at 181.61 41.45 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Value" "20m 1W"
-      (at 181.61 47.45 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" "lcsc:R1206"
-      (at 181.61 44.45 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Datasheet" ""
-      (at 181.61 44.45 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "LCSC" "C154638"
-      (at 181.61 44.45 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "MPN" "LR1206-21R020F4"
-      (at 181.61 44.45 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Op_P" "0.05"
-      (at 181.61 44.45 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Rated_P" "1.0"
-      (at 181.61 44.45 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "2"
-      (uuid "a8cf02af-455a-5290-9b15-9c5e3496cff4"))
-    (pin "1"
-      (uuid "d2e0f43c-806b-56b1-afc5-3ca6d3aacd96"))
-    (instances
-      (project "battery-bank"
-        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "R278")
-          (unit 1)))))
-  (global_label "QI_PGND"
-    (shape bidirectional)
-    (at 176.53 44.45 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "28b6d6e8-f64c-529d-8449-4f8d61d41da5"))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 186.69 44.45 0)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify left))
-    (uuid "1cb7becf-edd9-5b5a-af85-ac666cb4204c"))
-  (symbol
-    (lib_id "bb:C")
-    (at 213.36 48.26 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "824d7fee-d22e-5eb7-a730-ec5ed0aa38e0")
-    (property "Reference" "C486"
-      (at 213.36 41.45 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Value" "2.2uF 16V"
-      (at 213.36 55.07 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-      (at 213.36 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Datasheet" ""
-      (at 213.36 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "LCSC" "C23630"
-      (at 213.36 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "MPN" "CL10A225KO8NNNC"
-      (at 213.36 48.26 0)
+    (property "MPN" "CL05B104KO5NNNC"
+      (at 259.08 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "JLC_Class" "Basic"
-      (at 213.36 48.26 0)
+      (at 259.08 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_V" "16.0"
-      (at 213.36 48.26 0)
+      (at 259.08 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "C4 100 nF (reference)"
+      (at 259.08 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "ce0bc078-b8ae-5db5-8166-921092e2358f"))
+      (uuid "eaab5b2c-c7be-553a-8b45-c628f274c123"))
     (pin "2"
-      (uuid "02b84ea2-306b-5a72-b2fb-4f2ff642e1e4"))
+      (uuid "7e43424d-feb4-5f03-b557-1354bc7cefbf"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "C486")
+          (reference "C568")
           (unit 1)))))
-  (global_label "QI_VCC"
+  (global_label "QI_VIN"
     (shape bidirectional)
-    (at 213.36 44.45 90)
+    (at 259.08 44.45 90)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "6ef384a7-511e-5f63-9b5f-abe6af024425"))
-  (global_label "GND"
+    (uuid "a1400010-e02a-5556-898c-0e2fd8b3e711"))
+  (global_label "QI_PGND"
     (shape bidirectional)
-    (at 213.36 52.07 270)
+    (at 259.08 52.07 270)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "e03e7b5f-293c-55ef-9ad2-6e896a553c36"))
+    (uuid "104b7b16-001c-59ae-9407-dfc295e4ee5a"))
   (symbol
-    (lib_id "bb:C")
-    (at 240.03 48.26 0)
+    (lib_id "lcsc:LR1206-21R020F4")
+    (at 292.1 44.45 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "7f79ba7d-b934-55e5-b88f-d8588b09496a")
-    (property "Reference" "C487"
-      (at 240.03 41.45 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Value" "10uF 25V"
-      (at 240.03 55.07 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-      (at 240.03 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Datasheet" ""
-      (at 240.03 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "LCSC" "C15850"
-      (at 240.03 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "MPN" "CL21A106KAYNNNE"
-      (at 240.03 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "JLC_Class" "Basic"
-      (at 240.03 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Rated_V" "25.0"
-      (at 240.03 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "1"
-      (uuid "9dab1808-92ec-53e9-8405-6113cb993dd3"))
-    (pin "2"
-      (uuid "8594896f-00a8-5a2f-ab7f-373136557534"))
-    (instances
-      (project "battery-bank"
-        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "C487")
-          (unit 1)))))
-  (global_label "V12_QI"
-    (shape bidirectional)
-    (at 240.03 44.45 90)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1)))
-    (uuid "c4d2ccd4-799f-5964-8ead-15b73e8e86c0"))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 240.03 52.07 270)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1)))
-    (uuid "29900f0d-fb0c-53d0-95ce-506e662a997c"))
-  (symbol
-    (lib_id "bb:C")
-    (at 265.43 48.26 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "afec9aee-74ea-5083-8e99-904a4bb99134")
-    (property "Reference" "C488"
-      (at 265.43 41.45 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Value" "10uF 25V"
-      (at 265.43 55.07 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-      (at 265.43 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Datasheet" ""
-      (at 265.43 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "LCSC" "C15850"
-      (at 265.43 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "MPN" "CL21A106KAYNNNE"
-      (at 265.43 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "JLC_Class" "Basic"
-      (at 265.43 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Rated_V" "25.0"
-      (at 265.43 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "1"
-      (uuid "9086f3ea-1074-508e-b96b-4323af82ad23"))
-    (pin "2"
-      (uuid "2ade4545-9bf1-5d38-a6a3-10bb3cd7f55e"))
-    (instances
-      (project "battery-bank"
-        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "C488")
-          (unit 1)))))
-  (global_label "V12_QI"
-    (shape bidirectional)
-    (at 265.43 44.45 90)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1)))
-    (uuid "2e5763ec-b5bb-525e-bd46-54ac376cd251"))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 265.43 52.07 270)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1)))
-    (uuid "b778c0e3-f49b-5d6f-b60e-19ea393ad4bf"))
-  (symbol
-    (lib_id "bb:C")
-    (at 292.1 48.26 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "e7fe6e22-2002-578a-9dc7-3848c93fbec0")
-    (property "Reference" "C489"
+    (uuid "23b13734-7c97-50df-abd5-2396bc45d3de")
+    (property "Reference" "R432"
       (at 292.1 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Value" "100nF 50V"
-      (at 292.1 55.07 0)
+    (property "Value" "20m 1W"
+      (at 292.1 47.45 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-      (at 292.1 48.26 0)
+    (property "Footprint" "lcsc:R1206"
+      (at 292.1 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 292.1 48.26 0)
+      (at 292.1 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "LCSC" "C14663"
-      (at 292.1 48.26 0)
+    (property "LCSC" "C154638"
+      (at 292.1 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "CC0603KRX7R9BB104"
-      (at 292.1 48.26 0)
+    (property "MPN" "LR1206-21R020F4"
+      (at 292.1 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "JLC_Class" "Basic"
-      (at 292.1 48.26 0)
+    (property "Op_P" "0.05"
+      (at 292.1 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "Rated_V" "50.0"
-      (at 292.1 48.26 0)
+    (property "Rated_P" "1.0"
+      (at 292.1 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (pin "1"
-      (uuid "fabb8367-4ce0-51e6-a8be-35bb1ab263f5"))
+    (property "Note" "R16 20 mOhm shunt: 1.45^2 x 0.02 = 0.04 W"
+      (at 292.1 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
     (pin "2"
-      (uuid "dade1d83-60a8-53cd-9b4b-487455df85b3"))
+      (uuid "363e8e58-262c-5ff8-a1d5-1ffcb841affe"))
+    (pin "1"
+      (uuid "81e6fdee-2a09-5cbb-85b4-4caf08b6fa50"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "C489")
+          (reference "R432")
           (unit 1)))))
-  (global_label "V12_QI"
-    (shape bidirectional)
-    (at 292.1 44.45 90)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1)))
-    (uuid "c99fe596-0178-57ca-828b-7bd9be8e86fd"))
   (global_label "GND"
     (shape bidirectional)
-    (at 292.1 52.07 270)
+    (at 297.18 44.45 0)
     (fields_autoplaced yes)
     (effects
       (font
-        (size 1 1)))
-    (uuid "87e6eac6-938f-54cb-85b2-2660dddd730e"))
-  (symbol
-    (lib_id "bb:R")
-    (at 317.5 48.26 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "93206f42-5405-53ed-90b9-7b1be584736b")
-    (property "Reference" "R279"
-      (at 317.5 41.45 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Value" "100k"
-      (at 317.5 55.07 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-      (at 317.5 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Datasheet" ""
-      (at 317.5 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "LCSC" "C25741"
-      (at 317.5 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "MPN" "0402WGF1003TCE"
-      (at 317.5 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "JLC_Class" "Basic"
-      (at 317.5 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Rated_V" "50"
-      (at 317.5 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Rated_P" "0.0625"
-      (at 317.5 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Op_P" "0.0"
-      (at 317.5 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Note" "NTC unused (datasheet)"
-      (at 317.5 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "1"
-      (uuid "c4a75f8f-ca54-5e04-b1cc-8c1ad0040992"))
-    (pin "2"
-      (uuid "9acbc0fa-3c62-5dfa-ace2-4e26abeebcc7"))
-    (instances
-      (project "battery-bank"
-        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "R279")
-          (unit 1)))))
-  (global_label "QI_NTC"
+        (size 1 1))
+      (justify left))
+    (uuid "eb68a073-f89d-5c13-a473-bdde9c8699fd"))
+  (global_label "QI_PGND"
     (shape bidirectional)
-    (at 317.5 44.45 90)
+    (at 287.02 44.45 180)
     (fields_autoplaced yes)
     (effects
       (font
-        (size 1 1)))
-    (uuid "a55696dd-e71e-57e7-9a87-fa15c53083c5"))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 317.5 52.07 270)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1)))
-    (uuid "39961b2a-0b8f-5e32-9c3c-bcec33c256f9"))
-  (symbol
-    (lib_id "bb:R")
-    (at 344.17 48.26 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "aeaa20c5-8f46-5ecd-916f-122810774014")
-    (property "Reference" "R280"
-      (at 344.17 41.45 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Value" "100k"
-      (at 344.17 55.07 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-      (at 344.17 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Datasheet" ""
-      (at 344.17 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "LCSC" "C25741"
-      (at 344.17 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "MPN" "0402WGF1003TCE"
-      (at 344.17 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "JLC_Class" "Basic"
-      (at 344.17 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Rated_V" "50"
-      (at 344.17 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Rated_P" "0.0625"
-      (at 344.17 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Op_P" "0.0"
-      (at 344.17 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Note" "LOSS_THR 50-130k: start at 100k, tune FOD on the bench"
-      (at 344.17 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "1"
-      (uuid "42e86996-6eeb-591b-8fc7-95f0a21be641"))
-    (pin "2"
-      (uuid "f550396f-caee-5503-8891-816839b55099"))
-    (instances
-      (project "battery-bank"
-        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "R280")
-          (unit 1)))))
-  (global_label "QI_FOD"
-    (shape bidirectional)
-    (at 344.17 44.45 90)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1)))
-    (uuid "52996993-a64a-5058-ab7d-feff576a91f2"))
-  (global_label "GND"
-    (shape bidirectional)
-    (at 344.17 52.07 270)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1)))
-    (uuid "36960aee-4b8c-51b9-a093-134e99012970"))
+        (size 1 1))
+      (justify right))
+    (uuid "3d869d61-9668-5678-8181-35a4c08d6f69"))
   (symbol
     (lib_id "bb:C")
-    (at 370.84 48.26 0)
+    (at 323.85 48.26 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "b5407304-da70-5047-bce6-6ce36d829b3e")
-    (property "Reference" "C490"
-      (at 370.84 41.45 0)
+    (uuid "59b3eb8c-ab41-5742-bf2e-6803311428fd")
+    (property "Reference" "C569"
+      (at 323.85 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Value" "100nF 50V"
-      (at 370.84 55.07 0)
+    (property "Value" "2.2uF 16V"
+      (at 323.85 55.07 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-      (at 370.84 48.26 0)
+      (at 323.85 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 370.84 48.26 0)
+      (at 323.85 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "LCSC" "C14663"
-      (at 370.84 48.26 0)
+    (property "LCSC" "C23630"
+      (at 323.85 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "CC0603KRX7R9BB104"
-      (at 370.84 48.26 0)
+    (property "MPN" "CL10A225KO8NNNC"
+      (at 323.85 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "JLC_Class" "Basic"
-      (at 370.84 48.26 0)
+      (at 323.85 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "16.0"
+      (at 323.85 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "C7 2.2 uF at pin 4, ground to pin 1"
+      (at 323.85 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "087b1712-6977-538a-b818-63c6b58e53cb"))
+    (pin "2"
+      (uuid "cb86a6fb-8984-534a-8624-58abbdaac0a1"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "C569")
+          (unit 1)))))
+  (global_label "QI_VCC"
+    (shape bidirectional)
+    (at 323.85 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "36267e86-3880-5d90-9f8b-3e7a45d68b0b"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 323.85 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "d6d013cf-fde6-555d-8661-3c520e08bddf"))
+  (symbol
+    (lib_id "bb:C")
+    (at 350.52 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "7c6a3851-65e3-5d4f-bc13-0de3f69eb169")
+    (property "Reference" "C570"
+      (at 350.52 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 50V"
+      (at 350.52 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+      (at 350.52 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 350.52 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C14663"
+      (at 350.52 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CC0603KRX7R9BB104"
+      (at 350.52 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 350.52 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_V" "50.0"
-      (at 370.84 48.26 0)
+      (at 350.52 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "V_across" "5.5"
-      (at 370.84 48.26 0)
+      (at 350.52 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "C6 (must not be omitted)"
+      (at 350.52 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "4b2c1be4-fcaf-5658-9cfa-a3497119ec6c"))
+      (uuid "4466d4de-7fbe-5248-9593-1a496b3ed497"))
     (pin "2"
-      (uuid "785f29d3-1249-550a-8e2a-96efa3a59715"))
+      (uuid "e5b4bdd4-90f0-5e3b-92b3-c046427ad14e"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "C490")
+          (reference "C570")
           (unit 1)))))
   (global_label "QI_BST1"
     (shape bidirectional)
-    (at 370.84 44.45 90)
+    (at 350.52 44.45 90)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "9751392e-0ed7-572c-a4f9-cc3032ab136d"))
+    (uuid "44b29f57-a510-5126-84f7-0fa936742db0"))
   (global_label "QI_LX1"
     (shape bidirectional)
-    (at 370.84 52.07 270)
+    (at 350.52 52.07 270)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "c4fabaaa-55c7-5733-aa9c-8b62a18d6482"))
+    (uuid "54101317-20a4-5593-9601-1c0596fea81f"))
   (symbol
     (lib_id "bb:C")
-    (at 398.78 48.26 0)
+    (at 378.46 48.26 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "82681936-ca88-5c04-8598-f1089153de38")
-    (property "Reference" "C491"
-      (at 398.78 41.45 0)
+    (uuid "cd3a8ef8-e770-502c-92b4-4fd76eb65b1e")
+    (property "Reference" "C571"
+      (at 378.46 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "100nF 50V"
-      (at 398.78 55.07 0)
+      (at 378.46 55.07 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-      (at 398.78 48.26 0)
+      (at 378.46 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 398.78 48.26 0)
+      (at 378.46 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "LCSC" "C14663"
-      (at 398.78 48.26 0)
+      (at 378.46 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "MPN" "CC0603KRX7R9BB104"
-      (at 398.78 48.26 0)
+      (at 378.46 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "JLC_Class" "Basic"
-      (at 398.78 48.26 0)
+      (at 378.46 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_V" "50.0"
-      (at 398.78 48.26 0)
+      (at 378.46 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "V_across" "5.5"
-      (at 398.78 48.26 0)
+      (at 378.46 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "C8 (must not be omitted)"
+      (at 378.46 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "c0003bbf-9c63-56c4-b343-2df97fe9e657"))
+      (uuid "9b982cca-b9c0-5f4f-be73-9bd0ffcb5895"))
     (pin "2"
-      (uuid "477d6038-fa09-5143-8eae-e78e1a947e82"))
+      (uuid "8bf3e018-ade3-5816-b38f-86e76f294e48"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "C491")
+          (reference "C571")
           (unit 1)))))
   (global_label "QI_BST2"
     (shape bidirectional)
-    (at 398.78 44.45 90)
+    (at 378.46 44.45 90)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "18ddf89d-6a08-5e39-85e4-a8acdeac0e0b"))
+    (uuid "aa73768b-7e80-5b28-8964-65a0beeb8e1b"))
   (global_label "QI_LX2"
     (shape bidirectional)
-    (at 398.78 52.07 270)
+    (at 378.46 52.07 270)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "1886efb7-3341-5f67-8fc6-ee21db4fceff"))
+    (uuid "f938609c-08ee-584c-8b74-8863461ff9d3"))
   (symbol
-    (lib_id "bb:QI_XTAL_TBD")
-    (at 431.8 45.72 0)
-    (unit 1)
-    (exclude_from_sim no)
-    (in_bom yes)
-    (on_board yes)
-    (dnp yes)
-    (uuid "93147e34-64af-5797-a01c-2fa96e4c06a0")
-    (property "Reference" "Y8"
-      (at 431.8 41.45 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Value" "QI_XTAL_TBD"
-      (at 431.8 49.99 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" ""
-      (at 431.8 45.72 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Datasheet" ""
-      (at 431.8 45.72 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Note" "IP6826 crystal: frequency/load TBD from datasheet PDF"
-      (at 431.8 45.72 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "1"
-      (uuid "f8d0b058-e640-5d22-b27b-ae64bb567f5f"))
-    (pin "2"
-      (uuid "ba037098-0caa-591a-9e09-b7cd2fd96b2e"))
-    (instances
-      (project "battery-bank"
-        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "Y8")
-          (unit 1)))))
-  (global_label "QI_XI"
-    (shape bidirectional)
-    (at 424.18 44.45 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "78e58ccd-7f9c-5fbd-b676-949887adf72a"))
-  (global_label "QI_XO"
-    (shape bidirectional)
-    (at 424.18 46.99 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "f0997544-b7e1-523d-a870-c31503b78236"))
-  (symbol
-    (lib_id "lcsc:C1206N104J101T")
-    (at 454.66 44.45 0)
+    (lib_id "bb:R")
+    (at 405.13 48.26 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "904f09a3-242b-5306-9b72-0d59137b3d40")
-    (property "Reference" "C492"
-      (at 454.66 41.45 0)
+    (uuid "f0f8dba2-588e-5d65-8fa1-378ab61f0811")
+    (property "Reference" "R433"
+      (at 405.13 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Value" "100nF 100V C0G"
-      (at 454.66 47.45 0)
+    (property "Value" "100k"
+      (at 405.13 55.07 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "lcsc:C1206"
-      (at 454.66 44.45 0)
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 405.13 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 454.66 44.45 0)
+      (at 405.13 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "LCSC" "C2940749"
-      (at 454.66 44.45 0)
+    (property "LCSC" "C25741"
+      (at 405.13 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "C1206N104J101T"
-      (at 454.66 44.45 0)
+    (property "MPN" "0402WGF1003TCE"
+      (at 405.13 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "Rated_V" "100.0"
-      (at 454.66 44.45 0)
+    (property "JLC_Class" "Basic"
+      (at 405.13 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "Note" "resonant cap, C0G only. Coil voltage peak TBD on bench (VERIFY <= 50 V)"
-      (at 454.66 44.45 0)
+    (property "Rated_V" "50"
+      (at 405.13 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 405.13 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 405.13 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "R26 LOSS_THR default 100k (50-130k): tune dynamic FOD on the bench"
+      (at 405.13 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "8537b332-4e59-5fd7-bec1-4d932d277f80"))
+      (uuid "b505bdb4-94b2-5c83-9d7c-aa92d71c188c"))
     (pin "2"
-      (uuid "959653fc-3486-5a60-a862-4e52a6c4ac9f"))
+      (uuid "13336630-4400-554f-a7d4-16ee9f611b9b"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "C492")
+          (reference "R433")
           (unit 1)))))
-  (global_label "QI_LX1"
+  (global_label "QI_FOD"
     (shape bidirectional)
-    (at 449.58 44.45 180)
+    (at 405.13 44.45 90)
     (fields_autoplaced yes)
     (effects
       (font
-        (size 1 1))
-      (justify right))
-    (uuid "6eb809d0-eb3c-58fb-bdc9-46a5431496d4"))
-  (global_label "QI_RES"
+        (size 1 1)))
+    (uuid "be058f1a-e91e-5e10-be20-d292804c1f22"))
+  (global_label "GND"
     (shape bidirectional)
-    (at 459.74 44.45 0)
+    (at 405.13 52.07 270)
     (fields_autoplaced yes)
     (effects
       (font
-        (size 1 1))
-      (justify left))
-    (uuid "1c3716d1-761a-5481-9df4-3b2ad0b0a076"))
+        (size 1 1)))
+    (uuid "7d850989-8c78-5ca5-93fa-290e6e1106a2"))
   (symbol
-    (lib_id "lcsc:C1206N104J101T")
-    (at 491.49 44.45 0)
+    (lib_id "lcsc:NCP15WF104F03RC")
+    (at 436.88 44.45 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "f8ad3613-535f-5b41-b917-644fbfc1d586")
-    (property "Reference" "C493"
-      (at 491.49 41.45 0)
+    (uuid "7a7226c0-8b3a-5743-9720-348331da94c2")
+    (property "Reference" "TH8"
+      (at 436.88 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Value" "100nF 100V C0G"
-      (at 491.49 47.45 0)
+    (property "Value" "100k NTC B4250"
+      (at 436.88 47.45 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "lcsc:C1206"
-      (at 491.49 44.45 0)
+    (property "Footprint" "lcsc:R0402"
+      (at 436.88 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 491.49 44.45 0)
+      (at 436.88 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "LCSC" "C2940749"
-      (at 491.49 44.45 0)
+    (property "LCSC" "C77130"
+      (at 436.88 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "C1206N104J101T"
-      (at 491.49 44.45 0)
+    (property "MPN" "NCP15WF104F03RC"
+      (at 436.88 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "Rated_V" "100.0"
-      (at 491.49 44.45 0)
+    (property "Note" "X-25: real coil NTC (glue to the coil). 20 uA x 25k = 0.5 V stop -> 57 C with B4250 (DS example 60 C uses B3950); resume at 36k = 48 C. R_SetPoint1 = 0, R_SetPoint2 NC."
+      (at 436.88 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "Note" "resonant cap, C0G only. Coil voltage peak TBD on bench (VERIFY <= 50 V)"
-      (at 491.49 44.45 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (pin "1"
-      (uuid "f9a503ca-7df0-548c-9110-daa7dacea4d6"))
     (pin "2"
-      (uuid "6f9de653-58d0-5009-a19f-acb23f8d3687"))
+      (uuid "cf59508d-9242-552f-9ca7-3f02996409c5"))
+    (pin "1"
+      (uuid "2f1a8e30-83c9-54b9-a500-6e7fdec32868"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "C493")
+          (reference "TH8")
           (unit 1)))))
-  (global_label "QI_LX1"
+  (global_label "GND"
     (shape bidirectional)
-    (at 486.41 44.45 180)
-    (fields_autoplaced yes)
-    (effects
-      (font
-        (size 1 1))
-      (justify right))
-    (uuid "d7dd3882-fd84-5cc0-add8-542e68ec677a"))
-  (global_label "QI_RES"
-    (shape bidirectional)
-    (at 496.57 44.45 0)
+    (at 441.96 44.45 0)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify left))
-    (uuid "ac59c140-d5c4-595e-b47c-6850a14095d9"))
+    (uuid "b31bffd9-b386-5cde-b7a7-2e39f9bdd26b"))
+  (global_label "QI_NTC"
+    (shape bidirectional)
+    (at 431.8 44.45 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "cc09a88b-e336-55a3-aeab-73a25bfd088f"))
   (symbol
     (lib_id "lcsc:C1206N104J101T")
-    (at 527.05 44.45 0)
+    (at 472.44 44.45 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "78561461-6fa0-5034-804d-11775a095da6")
-    (property "Reference" "C494"
-      (at 527.05 41.45 0)
+    (uuid "ec520163-1f16-5793-9762-d5db33f882ab")
+    (property "Reference" "C572"
+      (at 472.44 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "100nF 100V C0G"
-      (at 527.05 47.45 0)
+      (at 472.44 47.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "lcsc:C1206"
-      (at 527.05 44.45 0)
+      (at 472.44 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 527.05 44.45 0)
+      (at 472.44 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "LCSC" "C2940749"
-      (at 527.05 44.45 0)
+      (at 472.44 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "MPN" "C1206N104J101T"
-      (at 527.05 44.45 0)
+      (at 472.44 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_V" "100.0"
-      (at 527.05 44.45 0)
+      (at 472.44 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "Note" "resonant cap, C0G only. Coil voltage peak TBD on bench (VERIFY <= 50 V)"
-      (at 527.05 44.45 0)
+    (property "Note" "resonant cap, C0G only. A11 coil 6.3 uH + 400 nF (DS lists 10 uH/250 nF, 13 uH/150 nF; A11 support stated) VERIFY. Coil voltage peak <= 50 V at 5 V in (bench)"
+      (at 472.44 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "9ae8cc9f-903c-5f27-b3f4-198d46314d52"))
+      (uuid "c5215359-f129-51c0-94be-1d1b22743157"))
     (pin "2"
-      (uuid "2789fdf7-abe8-5fbb-bc0e-b131d45e7b6c"))
+      (uuid "e68a10a4-5434-5cde-8eb8-4b4fe1f5ef3d"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "C494")
+          (reference "C572")
           (unit 1)))))
   (global_label "QI_LX1"
     (shape bidirectional)
-    (at 521.97 44.45 180)
+    (at 467.36 44.45 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "1cd0d698-043e-5257-87b5-778f83d00cc2"))
+    (uuid "41531ee2-6463-5878-8d14-6d46423a16d1"))
   (global_label "QI_RES"
     (shape bidirectional)
-    (at 532.13 44.45 0)
+    (at 477.52 44.45 0)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify left))
-    (uuid "cdabcdc0-8e6d-5ec7-b6a7-d13c31e5ecc0"))
+    (uuid "d2cf872a-ecc8-512f-8ec4-57a3c09e8cfb"))
   (symbol
     (lib_id "lcsc:C1206N104J101T")
-    (at 563.88 44.45 0)
+    (at 509.27 44.45 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "bd187419-c1a5-57a1-ac97-680d08229bfc")
-    (property "Reference" "C495"
-      (at 563.88 41.45 0)
+    (uuid "f01e64bc-ccbc-5aba-96fe-8d2e4a730c87")
+    (property "Reference" "C573"
+      (at 509.27 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "100nF 100V C0G"
-      (at 563.88 47.45 0)
+      (at 509.27 47.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "lcsc:C1206"
-      (at 563.88 44.45 0)
+      (at 509.27 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 563.88 44.45 0)
+      (at 509.27 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "LCSC" "C2940749"
-      (at 563.88 44.45 0)
+      (at 509.27 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "MPN" "C1206N104J101T"
-      (at 563.88 44.45 0)
+      (at 509.27 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_V" "100.0"
-      (at 563.88 44.45 0)
+      (at 509.27 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "Note" "resonant cap, C0G only. Coil voltage peak TBD on bench (VERIFY <= 50 V)"
-      (at 563.88 44.45 0)
+    (property "Note" "resonant cap, C0G only. A11 coil 6.3 uH + 400 nF (DS lists 10 uH/250 nF, 13 uH/150 nF; A11 support stated) VERIFY. Coil voltage peak <= 50 V at 5 V in (bench)"
+      (at 509.27 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "aabb729d-25aa-5db5-bd14-acd341c55b32"))
+      (uuid "121e5161-a22e-5088-8769-1ea2e00eac8b"))
     (pin "2"
-      (uuid "055df2bb-3362-5afb-ac66-5f3fd2282113"))
+      (uuid "250d0aec-a839-547e-894d-1690d310230c"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "C495")
+          (reference "C573")
           (unit 1)))))
   (global_label "QI_LX1"
     (shape bidirectional)
-    (at 558.8 44.45 180)
+    (at 504.19 44.45 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "120dd870-9501-5b44-b7b8-0a3b24d3a8cb"))
+    (uuid "2e80e908-74b3-5448-ae70-c22252a1fb9f"))
   (global_label "QI_RES"
     (shape bidirectional)
-    (at 568.96 44.45 0)
+    (at 514.35 44.45 0)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify left))
-    (uuid "57745c54-8b43-59e6-a668-b5a037f309b3"))
+    (uuid "0296f332-1b39-5d78-b482-84d64d1ffdc5"))
+  (symbol
+    (lib_id "lcsc:C1206N104J101T")
+    (at 544.83 44.45 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "5db96eb6-e9e7-53f0-947e-815d1a16def6")
+    (property "Reference" "C574"
+      (at 544.83 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 100V C0G"
+      (at 544.83 47.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:C1206"
+      (at 544.83 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 544.83 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C2940749"
+      (at 544.83 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "C1206N104J101T"
+      (at 544.83 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "100.0"
+      (at 544.83 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "resonant cap, C0G only. A11 coil 6.3 uH + 400 nF (DS lists 10 uH/250 nF, 13 uH/150 nF; A11 support stated) VERIFY. Coil voltage peak <= 50 V at 5 V in (bench)"
+      (at 544.83 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "09b9c1ba-ad74-5c11-980f-525302d4550c"))
+    (pin "2"
+      (uuid "113226ad-b4f1-5148-866b-f49ec9161a6b"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "C574")
+          (unit 1)))))
+  (global_label "QI_LX1"
+    (shape bidirectional)
+    (at 539.75 44.45 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "ea46f0a9-be4d-54ce-a0c2-491aeaf73d66"))
+  (global_label "QI_RES"
+    (shape bidirectional)
+    (at 549.91 44.45 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "450e0522-d2df-5e3a-b27f-2a952408c1a6"))
+  (symbol
+    (lib_id "lcsc:C1206N104J101T")
+    (at 581.66 44.45 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "6d58093f-3772-546a-8039-cf7dbe7fc366")
+    (property "Reference" "C575"
+      (at 581.66 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 100V C0G"
+      (at 581.66 47.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:C1206"
+      (at 581.66 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 581.66 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C2940749"
+      (at 581.66 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "C1206N104J101T"
+      (at 581.66 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "100.0"
+      (at 581.66 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "resonant cap, C0G only. A11 coil 6.3 uH + 400 nF (DS lists 10 uH/250 nF, 13 uH/150 nF; A11 support stated) VERIFY. Coil voltage peak <= 50 V at 5 V in (bench)"
+      (at 581.66 44.45 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "9f91005d-0d42-5ab6-b867-810db3f6c72a"))
+    (pin "2"
+      (uuid "37af3100-84ca-5c3a-8295-5ae0abd5bcfb"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "C575")
+          (unit 1)))))
+  (global_label "QI_LX1"
+    (shape bidirectional)
+    (at 576.58 44.45 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "f8635a71-953b-5606-bd70-e63504910a9c"))
+  (global_label "QI_RES"
+    (shape bidirectional)
+    (at 586.74 44.45 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "798d4c50-991e-564e-8313-72a1ed2e6f20"))
   (symbol
     (lib_id "bb:QI_COIL")
-    (at 601.98 45.72 0)
+    (at 619.76 45.72 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
@@ -2516,32 +2822,32 @@
     (dnp no)
     (uuid "08a8d1d1-6eb7-5158-9740-fe412b2ceb36")
     (property "Reference" "L22"
-      (at 601.98 41.45 0)
+      (at 619.76 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "QI_COIL"
-      (at 601.98 49.99 0)
+      (at 619.76 49.99 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" ""
-      (at 601.98 45.72 0)
+      (at 619.76 45.72 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 601.98 45.72 0)
+      (at 619.76 45.72 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "LCSC" "C3003211"
-      (at 601.98 45.72 0)
+      (at 619.76 45.72 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Note" "CND-tek A11 6.3 uH coil + ferrite, wired to pads under the PC/glass window"
-      (at 601.98 45.72 0)
+      (at 619.76 45.72 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
@@ -2556,531 +2862,1694 @@
           (unit 1)))))
   (global_label "QI_RES"
     (shape bidirectional)
-    (at 594.36 44.45 180)
+    (at 612.14 44.45 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "687d0fc2-d48d-56da-a207-849e065a455e"))
+    (uuid "f82f9733-cde6-5732-b8cc-4ecc3bcaa190"))
   (global_label "QI_LX2"
     (shape bidirectional)
-    (at 594.36 46.99 180)
+    (at 612.14 46.99 180)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1))
       (justify right))
-    (uuid "324bb992-a447-522e-b660-d0335265e0ea"))
+    (uuid "fa58bb75-d74c-58b6-a814-7e2618f1379f"))
   (symbol
     (lib_id "bb:R")
-    (at 621.03 48.26 0)
+    (at 641.35 48.26 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "36f8c925-1686-51ba-a599-f871621b5f2c")
-    (property "Reference" "R281"
-      (at 621.03 41.45 0)
+    (uuid "50ae356d-2d23-5fc9-b33e-85bc9523b4c6")
+    (property "Reference" "R434"
+      (at 641.35 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Value" "100k"
-      (at 621.03 55.07 0)
+    (property "Value" "120k"
+      (at 641.35 55.07 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-      (at 621.03 48.26 0)
+      (at 641.35 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 621.03 48.26 0)
+      (at 641.35 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "LCSC" "C25741"
-      (at 621.03 48.26 0)
+    (property "LCSC" "C25750"
+      (at 641.35 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "0402WGF1003TCE"
-      (at 621.03 48.26 0)
+    (property "MPN" "0402WGF1203TCE"
+      (at 641.35 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "JLC_Class" "Basic"
-      (at 621.03 48.26 0)
+    (property "JLC_Class" "Preferred"
+      (at 641.35 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_V" "50"
-      (at 621.03 48.26 0)
+      (at 641.35 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_P" "0.0625"
-      (at 621.03 48.26 0)
+      (at 641.35 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Op_P" "0.0"
-      (at 621.03 48.26 0)
+      (at 641.35 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "Note" "VDET divider top VERIFY"
-      (at 621.03 48.26 0)
+    (property "V_across" "45.0"
+      (at 641.35 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "R25 133k (reference) = 120k + 12k"
+      (at 641.35 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "c68b0a83-4311-59d8-9180-bac5e302e047"))
+      (uuid "f178cdd7-6eae-50c6-bac1-ddae63cf2e9b"))
     (pin "2"
-      (uuid "e2f9a64e-e21e-55f6-a81e-d294e1652a37"))
+      (uuid "9a833ba2-aef4-5d7e-858e-da9a51700ec5"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "R281")
+          (reference "R434")
           (unit 1)))))
   (global_label "QI_RES"
     (shape bidirectional)
-    (at 621.03 44.45 90)
+    (at 641.35 44.45 90)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "2d5c2642-8111-5c8b-b311-4fac2bf3f5a7"))
-  (global_label "QI_VDET"
+    (uuid "8f42b779-6885-5576-8649-0c428064f81d"))
+  (global_label "QI_VDIV_T"
     (shape bidirectional)
-    (at 621.03 52.07 270)
+    (at 641.35 52.07 270)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "f5005d68-7c1b-5bb5-b4f2-be11478a7303"))
+    (uuid "01c1e09d-1f41-5dfa-966d-0a8c693ca168"))
   (symbol
     (lib_id "bb:R")
-    (at 648.97 48.26 0)
+    (at 673.1 48.26 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "2cb05533-5db3-5ecd-985a-e2a82567ee37")
-    (property "Reference" "R282"
-      (at 648.97 41.45 0)
+    (uuid "e8b6885d-ca78-506c-a9fd-d0c7fe2b4de1")
+    (property "Reference" "R435"
+      (at 673.1 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Value" "10k"
-      (at 648.97 55.07 0)
+    (property "Value" "12k"
+      (at 673.1 55.07 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-      (at 648.97 48.26 0)
+      (at 673.1 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 648.97 48.26 0)
+      (at 673.1 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "LCSC" "C25744"
-      (at 648.97 48.26 0)
+    (property "LCSC" "C25752"
+      (at 673.1 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "0402WGF1002TCE"
-      (at 648.97 48.26 0)
+    (property "MPN" "0402WGF1202TCE"
+      (at 673.1 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "JLC_Class" "Basic"
-      (at 648.97 48.26 0)
+      (at 673.1 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_V" "50"
-      (at 648.97 48.26 0)
+      (at 673.1 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_P" "0.0625"
-      (at 648.97 48.26 0)
+      (at 673.1 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Op_P" "0.0"
-      (at 648.97 48.26 0)
+      (at 673.1 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "V_across" "5.0"
+      (at 673.1 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "93f3b54b-5217-5280-af42-1faaafc1b892"))
+      (uuid "e70cd4f3-1f6b-5476-a8db-4d512b15cc2a"))
     (pin "2"
-      (uuid "7543a933-63e3-5c82-8b39-475fc4c34e43"))
+      (uuid "0cd2bab2-6a7f-5a24-9204-e2155835f282"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "R282")
+          (reference "R435")
           (unit 1)))))
-  (global_label "QI_VDET"
+  (global_label "QI_VDIV_T"
     (shape bidirectional)
-    (at 648.97 44.45 90)
+    (at 673.1 44.45 90)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "1b2b7be0-340c-5e2f-a3a5-1aeee2d4d9b2"))
+    (uuid "23a09306-ed5d-5bab-afad-0844e17a5872"))
+  (global_label "QI_VDIV"
+    (shape bidirectional)
+    (at 673.1 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "2225e6a7-64ae-5d72-b410-41bf8db819d1"))
+  (symbol
+    (lib_id "bb:R")
+    (at 703.58 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "a433d32c-1f49-50bb-b745-1d5ad0d3eb8b")
+    (property "Reference" "R436"
+      (at 703.58 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "3.3k"
+      (at 703.58 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 703.58 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 703.58 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C25890"
+      (at 703.58 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF3301TCE"
+      (at 703.58 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 703.58 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 703.58 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 703.58 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 703.58 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "R22 3.3k: 133k/3.3k divides the coil node ~41:1"
+      (at 703.58 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "70e636d2-dce2-5f70-8ed1-26cb34f59267"))
+    (pin "2"
+      (uuid "17fff47c-cafc-5c53-a938-cf2f7e2fed6f"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "R436")
+          (unit 1)))))
+  (global_label "QI_VDIV"
+    (shape bidirectional)
+    (at 703.58 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "54036139-4e0a-5633-8efe-653d819fbe6c"))
   (global_label "GND"
     (shape bidirectional)
-    (at 648.97 52.07 270)
+    (at 703.58 52.07 270)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "86ea1b90-a7e2-55fa-9fec-0d07ab112f8c"))
+    (uuid "0392fe31-0da2-5f6e-a386-9994c29babeb"))
   (symbol
-    (lib_id "bb:R")
-    (at 676.91 48.26 0)
+    (lib_id "lcsc:B5819W_C8598")
+    (at 736.6 44.45 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "f6935347-6925-5aca-ad96-5eb287308b86")
-    (property "Reference" "R283"
-      (at 676.91 41.45 0)
+    (uuid "b5a74f76-1bc4-510f-9f3c-af5b71c06583")
+    (property "Reference" "D66"
+      (at 736.6 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Value" "100k"
-      (at 676.91 55.07 0)
+    (property "Value" "B5819W"
+      (at 736.6 47.45 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-      (at 676.91 48.26 0)
+    (property "Footprint" "lcsc:SOD-123_L2.7-W1.6-LS3.7-RD-1"
+      (at 736.6 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 676.91 48.26 0)
+      (at 736.6 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "LCSC" "C25741"
-      (at 676.91 48.26 0)
+    (property "LCSC" "C8598"
+      (at 736.6 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "MPN" "0402WGF1003TCE"
-      (at 676.91 48.26 0)
+    (property "MPN" "B5819W SL"
+      (at 736.6 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
-    (property "JLC_Class" "Basic"
-      (at 676.91 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Rated_V" "50"
-      (at 676.91 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Rated_P" "0.0625"
-      (at 676.91 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Op_P" "0.0"
-      (at 676.91 48.26 0)
-      (effects
-        (font
-          (size 1.27 1.27)) hide))
-    (property "Note" "V_DECODE network VERIFY"
-      (at 676.91 48.26 0)
+    (property "Note" "D1 1N5819 class (reference): envelope detector after the divider"
+      (at 736.6 44.45 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "52f562b3-0298-59ec-9316-e5fab60114c8"))
+      (uuid "9ef73ead-1c79-52db-9d11-c107b9f66408"))
     (pin "2"
-      (uuid "90de1afd-79ba-5e81-bdd3-d90ea8eb926a"))
+      (uuid "69faf01f-0408-5d00-a47c-dbdfe8abe4ed"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "R283")
+          (reference "D66")
           (unit 1)))))
-  (global_label "QI_RES"
+  (global_label "QI_VPK"
     (shape bidirectional)
-    (at 676.91 44.45 90)
+    (at 731.52 44.45 180)
     (fields_autoplaced yes)
     (effects
       (font
-        (size 1 1)))
-    (uuid "aad979aa-432f-56e3-b55f-b726f84342d5"))
-  (global_label "QI_VDEC"
+        (size 1 1))
+      (justify right))
+    (uuid "61e84970-3153-5852-b710-b5585b6f2f80"))
+  (global_label "QI_VDIV"
     (shape bidirectional)
-    (at 676.91 52.07 270)
+    (at 741.68 44.45 0)
     (fields_autoplaced yes)
     (effects
       (font
-        (size 1 1)))
-    (uuid "8f2c9ba5-16e7-513f-a9ef-c8893081b857"))
+        (size 1 1))
+      (justify left))
+    (uuid "2504e59a-429f-5401-87ac-17dce305a19a"))
   (symbol
     (lib_id "bb:C")
-    (at 704.85 48.26 0)
+    (at 768.35 48.26 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "a0bdf3bb-9d29-57a3-88a7-fd23e1b91504")
-    (property "Reference" "C496"
-      (at 704.85 41.45 0)
+    (uuid "e5d8fd46-3505-565c-8ecf-f9b1e91fa13b")
+    (property "Reference" "C576"
+      (at 768.35 41.45 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "10nF 50V"
-      (at 704.85 55.07 0)
+      (at 768.35 55.07 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-      (at 704.85 48.26 0)
+      (at 768.35 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 704.85 48.26 0)
+      (at 768.35 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "LCSC" "C15195"
-      (at 704.85 48.26 0)
+      (at 768.35 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "MPN" "CL05B103KB5NNNC"
-      (at 704.85 48.26 0)
+      (at 768.35 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "JLC_Class" "Basic"
-      (at 704.85 48.26 0)
+      (at 768.35 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Rated_V" "50.0"
-      (at 704.85 48.26 0)
+      (at 768.35 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "C10 15 nF = 10n + 4.7n"
+      (at 768.35 48.26 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "17f716c7-a20c-5bf7-8b92-fe6bfce33809"))
+      (uuid "13373228-dda7-5972-9fa9-5728cfcb2d40"))
     (pin "2"
-      (uuid "25809bf1-e3ad-5639-84dd-b0084e4f506c"))
+      (uuid "901e9196-45db-583c-a264-4024ef44cf27"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "C496")
+          (reference "C576")
           (unit 1)))))
-  (global_label "QI_VDEC"
+  (global_label "QI_VPK"
     (shape bidirectional)
-    (at 704.85 44.45 90)
+    (at 768.35 44.45 90)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "0cd05222-a5f6-5385-9580-5072f793ce96"))
+    (uuid "d05b816f-cea3-5980-b04c-66edce37d032"))
   (global_label "GND"
     (shape bidirectional)
-    (at 704.85 52.07 270)
+    (at 768.35 52.07 270)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "0ed86d3d-e372-5589-8b66-1b824f0236b2"))
+    (uuid "2c3bd801-6a22-5c29-99b0-46348ebc712f"))
   (symbol
-    (lib_id "bb:TP")
-    (at 732.79 41.91 0)
+    (lib_id "bb:C")
+    (at 39.37 110.49 0)
     (unit 1)
     (exclude_from_sim no)
-    (in_bom no)
+    (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "08b39ce9-ac4e-561b-b9e1-cc8426abaef5")
-    (property "Reference" "TP144"
-      (at 732.79 41.45 0)
+    (uuid "ebe0ad6b-e66e-5b73-b57d-0aad3c2a714f")
+    (property "Reference" "C577"
+      (at 39.37 103.68 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Value" "QI_LED1"
-      (at 732.79 47.45 0)
+    (property "Value" "4.7nF 50V"
+      (at 39.37 117.3 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-      (at 732.79 41.91 0)
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 39.37 110.49 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 732.79 41.91 0)
+      (at 39.37 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C1538"
+      (at 39.37 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402B472K500NT"
+      (at 39.37 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 39.37 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50.0"
+      (at 39.37 110.49 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "8ed0550c-0abd-5d2e-9098-7a50cf8c6c30"))
+      (uuid "74564d66-d2ca-5b5a-919d-a5df387267b8"))
+    (pin "2"
+      (uuid "b3198fad-368e-5651-9f7d-1da530345ff8"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "TP144")
+          (reference "C577")
           (unit 1)))))
-  (global_label "QI_LED1"
+  (global_label "QI_VPK"
     (shape bidirectional)
-    (at 732.79 44.45 270)
+    (at 39.37 106.68 90)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "8c692e2d-7a33-5589-802b-79ac1d8cfe80"))
+    (uuid "b84a568e-2692-56bc-9aab-8918f8e209ce"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 39.37 114.3 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "36118551-20eb-5e45-a4d4-8596190436ec"))
   (symbol
-    (lib_id "bb:TP")
-    (at 760.73 41.91 0)
+    (lib_id "bb:R")
+    (at 66.04 110.49 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "7664f568-7cfe-5d01-a0d3-84bda458249a")
+    (property "Reference" "R437"
+      (at 66.04 103.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100k"
+      (at 66.04 117.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 66.04 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 66.04 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C25741"
+      (at 66.04 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1003TCE"
+      (at 66.04 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 66.04 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 66.04 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 66.04 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 66.04 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "R20 100k envelope discharge"
+      (at 66.04 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "a65789d0-80a2-5f69-8591-7e0ed3d7c903"))
+    (pin "2"
+      (uuid "80becc1b-1880-5577-80e4-ee75d3c9f64d"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "R437")
+          (unit 1)))))
+  (global_label "QI_VPK"
+    (shape bidirectional)
+    (at 66.04 106.68 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "d22ad5d4-4562-5801-be24-08ac6d319e1b"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 66.04 114.3 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "04f6d1d9-771f-5a7d-92bf-2570c5aa2cfd"))
+  (symbol
+    (lib_id "bb:R")
+    (at 92.71 110.49 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "81c2399a-6cbf-5847-b151-12567c385125")
+    (property "Reference" "R438"
+      (at 92.71 103.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "10k"
+      (at 92.71 117.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 92.71 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 92.71 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C25744"
+      (at 92.71 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1002TCE"
+      (at 92.71 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 92.71 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 92.71 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 92.71 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 92.71 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "R21 10k"
+      (at 92.71 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "deb875f2-9ddc-5f2f-83e4-2e682ab5d63e"))
+    (pin "2"
+      (uuid "0f36340e-ffe0-594c-84ee-fe06eb671f17"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "R438")
+          (unit 1)))))
+  (global_label "QI_VPK"
+    (shape bidirectional)
+    (at 92.71 106.68 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "5265abbd-3057-55ed-9619-16cf6f892e94"))
+  (global_label "QI_VDET"
+    (shape bidirectional)
+    (at 92.71 114.3 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "9c0bfb59-2bf5-59ff-a275-0fc9282ba747"))
+  (symbol
+    (lib_id "bb:C")
+    (at 120.65 110.49 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "b69a6e9b-f0e0-5047-a140-7bcb45936c63")
+    (property "Reference" "C578"
+      (at 120.65 103.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "2.2nF 50V"
+      (at 120.65 117.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 120.65 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 120.65 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C1531"
+      (at 120.65 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402B222K500NT"
+      (at 120.65 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Preferred"
+      (at 120.65 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50.0"
+      (at 120.65 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "C5 2.2 nF static-FOD default (DS FOD section)"
+      (at 120.65 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "1d7d7b83-6649-53af-b63e-d33bce355768"))
+    (pin "2"
+      (uuid "c918f02d-b595-58e2-a109-f831e02dcb16"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "C578")
+          (unit 1)))))
+  (global_label "QI_VDET"
+    (shape bidirectional)
+    (at 120.65 106.68 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "450c439f-3bd1-583e-9637-3e73ba7aef21"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 120.65 114.3 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "4b40b116-8eaa-55ef-9bf4-505b2d35d8df"))
+  (symbol
+    (lib_id "bb:C")
+    (at 148.59 110.49 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "b2104c65-9718-595a-a2d7-1b156aeee5e7")
+    (property "Reference" "C579"
+      (at 148.59 103.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "10nF 50V"
+      (at 148.59 117.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 148.59 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 148.59 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C15195"
+      (at 148.59 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL05B103KB5NNNC"
+      (at 148.59 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 148.59 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50.0"
+      (at 148.59 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "C11 15 nF DC block = 10n + 4.7n"
+      (at 148.59 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "6ddfd039-4df8-588b-86fb-741867d65c5d"))
+    (pin "2"
+      (uuid "374e354f-f6ff-5438-b4a1-08aa0fa74731"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "C579")
+          (unit 1)))))
+  (global_label "QI_VPK"
+    (shape bidirectional)
+    (at 148.59 106.68 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "251ce69d-1cef-55ef-9bb6-8c9d2a5cc4ed"))
+  (global_label "QI_VDEC"
+    (shape bidirectional)
+    (at 148.59 114.3 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "039b47f7-6d07-5b34-9cfd-64d1cdccc848"))
+  (symbol
+    (lib_id "bb:C")
+    (at 176.53 110.49 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "b60df2b4-a9dc-56e5-81bc-cebb41afee3d")
+    (property "Reference" "C580"
+      (at 176.53 103.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "4.7nF 50V"
+      (at 176.53 117.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 176.53 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 176.53 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C1538"
+      (at 176.53 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402B472K500NT"
+      (at 176.53 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 176.53 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50.0"
+      (at 176.53 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "75500657-0491-559e-97ff-9d391578601a"))
+    (pin "2"
+      (uuid "dd9a14f1-37e9-5584-ae98-8ce3a57c6e77"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "C580")
+          (unit 1)))))
+  (global_label "QI_VPK"
+    (shape bidirectional)
+    (at 176.53 106.68 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "3260ffbc-f9c9-5c80-95a6-881ab52cef00"))
+  (global_label "QI_VDEC"
+    (shape bidirectional)
+    (at 176.53 114.3 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "fe1b2810-a1fc-5b5a-b02b-2a0b1c72974a"))
+  (symbol
+    (lib_id "bb:R")
+    (at 204.47 110.49 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "24f8d218-1365-5c2d-b8e5-62fc3494b331")
+    (property "Reference" "R439"
+      (at 204.47 103.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100k"
+      (at 204.47 117.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 204.47 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 204.47 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C25741"
+      (at 204.47 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1003TCE"
+      (at 204.47 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 204.47 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 204.47 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 204.47 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 204.47 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "R27 100k V_DECODE bias"
+      (at 204.47 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "b6544e39-f0cc-5015-83f8-bfd8e7487562"))
+    (pin "2"
+      (uuid "814ebf2b-5ca9-58a4-9e4d-9fc8c65a652d"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "R439")
+          (unit 1)))))
+  (global_label "QI_VDEC"
+    (shape bidirectional)
+    (at 204.47 106.68 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "99618d7c-51e4-5101-b69f-c43aa3025b2a"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 204.47 114.3 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "e72cd7b6-6bd1-5c9e-b00b-514499a54a32"))
+  (symbol
+    (lib_id "bb:R")
+    (at 232.41 110.49 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "c42ffe6f-2f32-544f-974a-c249571fbabc")
+    (property "Reference" "R440"
+      (at 232.41 103.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "1k"
+      (at 232.41 117.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 232.41 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 232.41 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C11702"
+      (at 232.41 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1001TCE"
+      (at 232.41 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 232.41 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 232.41 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 232.41 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 232.41 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "R23 1k Kelvin from the shunt high side"
+      (at 232.41 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "2d6eb718-3536-5341-b728-17a62daee1db"))
+    (pin "2"
+      (uuid "a36f5ba6-5e73-50c3-9e20-c1cfc5de0f5c"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "R440")
+          (unit 1)))))
+  (global_label "QI_PGND"
+    (shape bidirectional)
+    (at 232.41 106.68 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "90198950-d298-55aa-aa24-f2867cc65278"))
+  (global_label "QI_ISNS"
+    (shape bidirectional)
+    (at 232.41 114.3 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "fc31611c-2e10-5de9-a51b-6a3f1d67ffe5"))
+  (symbol
+    (lib_id "bb:R")
+    (at 261.62 110.49 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "f2721654-5709-59ea-b401-004c1e975fe5")
+    (property "Reference" "R441"
+      (at 261.62 103.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "1k"
+      (at 261.62 117.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 261.62 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 261.62 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C11702"
+      (at 261.62 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1001TCE"
+      (at 261.62 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 261.62 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 261.62 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 261.62 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 261.62 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "R24 1k Kelvin from the shunt low side (separate trace, DS layout note 3)"
+      (at 261.62 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "4a62ec57-4e8b-5094-9125-933cad3e73ea"))
+    (pin "2"
+      (uuid "37f646b8-1efc-5561-b424-8e1bbf6b0669"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "R441")
+          (unit 1)))))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 261.62 106.68 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "54947734-3dca-5a4c-b644-be0d33a6bc85"))
+  (global_label "QI_IGND"
+    (shape bidirectional)
+    (at 261.62 114.3 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "3798382e-6b05-5f11-badb-dde212b69138"))
+  (symbol
+    (lib_id "bb:C")
+    (at 289.56 110.49 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "b837eff6-92e4-5f5f-8755-0cc4dd5bb0fa")
+    (property "Reference" "C581"
+      (at 289.56 103.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "10nF 50V"
+      (at 289.56 117.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 289.56 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 289.56 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C15195"
+      (at 289.56 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL05B103KB5NNNC"
+      (at 289.56 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 289.56 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50.0"
+      (at 289.56 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "C12 15 nF = 10n + 4.7n: LPF ~5 kHz with 2x 1k"
+      (at 289.56 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "8dab649f-263d-58ad-bdcc-6932f7f4427a"))
+    (pin "2"
+      (uuid "f5ef80ca-62d0-564d-873f-34b8b4ab3503"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "C581")
+          (unit 1)))))
+  (global_label "QI_ISNS"
+    (shape bidirectional)
+    (at 289.56 106.68 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "c4a08b1f-5702-5d9c-85a2-6c0a818643e4"))
+  (global_label "QI_IGND"
+    (shape bidirectional)
+    (at 289.56 114.3 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "45d3f3da-603e-5f4f-b7d2-894b71c19d94"))
+  (symbol
+    (lib_id "bb:C")
+    (at 317.5 110.49 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "5c2ef554-1d77-53dd-966f-7053a93e4b2f")
+    (property "Reference" "C582"
+      (at 317.5 103.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "4.7nF 50V"
+      (at 317.5 117.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 317.5 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 317.5 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C1538"
+      (at 317.5 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402B472K500NT"
+      (at 317.5 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 317.5 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50.0"
+      (at 317.5 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "b7001c2c-efb6-54c8-b9cc-de8eff488997"))
+    (pin "2"
+      (uuid "75d67018-2197-50b3-9989-25fd8f9c15f3"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "C582")
+          (unit 1)))))
+  (global_label "QI_ISNS"
+    (shape bidirectional)
+    (at 317.5 106.68 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "4dd33a96-62e5-5e88-ade9-72883a9aacf7"))
+  (global_label "QI_IGND"
+    (shape bidirectional)
+    (at 317.5 114.3 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "581e86b2-00bc-58c9-afac-f76b645f6c32"))
+  (symbol
+    (lib_id "bb:JP")
+    (at 345.44 110.49 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom no)
     (on_board yes)
     (dnp no)
-    (uuid "522c9549-c3b0-5299-aca9-18da51a641b2")
-    (property "Reference" "TP145"
-      (at 760.73 41.45 0)
+    (uuid "cf33528e-548a-5694-9ccd-1b30f7727bab")
+    (property "Reference" "JP39"
+      (at 345.44 103.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "SJ LED cut"
+      (at 345.44 117.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm"
+      (at 345.44 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 345.44 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_I" "0.0"
+      (at 345.44 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "47ec67a7-09c9-56b4-b30a-b24d796f7924"))
+    (pin "2"
+      (uuid "9a055d42-916a-5f23-a0ec-4ea8444b234e"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "JP39")
+          (unit 1)))))
+  (global_label "QI_LED1"
+    (shape bidirectional)
+    (at 345.44 106.68 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "ce28e245-94ef-5a16-8423-324901df2962"))
+  (global_label "QI_LED1J"
+    (shape bidirectional)
+    (at 345.44 114.3 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "7ca18233-3688-5ccf-9750-1dad100c0ead"))
+  (symbol
+    (lib_id "bb:R")
+    (at 375.92 110.49 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "27364be7-a7b6-5c0c-a51f-538d61811580")
+    (property "Reference" "R442"
+      (at 375.92 103.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "1k"
+      (at 375.92 117.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 375.92 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 375.92 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C11702"
+      (at 375.92 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF1001TCE"
+      (at 375.92 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 375.92 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 375.92 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 375.92 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 375.92 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "LED1 series resistor (DS: drive LEDs through a current-limit resistor)"
+      (at 375.92 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "2a1c800c-3d6b-5d26-99ea-af707ffe9ee5"))
+    (pin "2"
+      (uuid "9eabe842-e05a-581c-b8f1-38f54982adcb"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "R442")
+          (unit 1)))))
+  (global_label "QI_LED1J"
+    (shape bidirectional)
+    (at 375.92 106.68 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "1a3731c0-1a46-5f92-b731-996715448ae5"))
+  (global_label "QI_LED1A"
+    (shape bidirectional)
+    (at 375.92 114.3 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "c67b86b7-06a0-5f03-b953-941c76635c2c"))
+  (symbol
+    (lib_id "bb:LED")
+    (at 406.4 110.49 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "8e05a68f-62c3-5938-be23-1c99a0742843")
+    (property "Reference" "D67"
+      (at 406.4 103.68 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "LED G"
+      (at 406.4 117.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "LED_SMD:LED_0603_1608Metric"
+      (at 406.4 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 406.4 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C12624"
+      (at 406.4 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "KT-0603G"
+      (at 406.4 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Extended"
+      (at 406.4 110.49 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "bd3d26dd-f6f8-5f6f-9334-86aa3d8531f3"))
+    (pin "2"
+      (uuid "5416d554-b3e3-5bcb-a7b0-c514affd134e"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
+          (reference "D67")
+          (unit 1)))))
+  (global_label "QI_LED1A"
+    (shape bidirectional)
+    (at 406.4 106.68 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "bbed3ae5-3797-591b-9b15-8af3d060e057"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 406.4 114.3 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "7736cee3-3577-58c9-b930-fa7146c823a8"))
+  (symbol
+    (lib_id "bb:TP")
+    (at 435.61 104.14 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "71b6ba8b-f84c-55d5-8d27-71527911c5a0")
+    (property "Reference" "TP217"
+      (at 435.61 103.68 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "QI_LED2"
-      (at 760.73 47.45 0)
+      (at 435.61 109.68 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-      (at 760.73 41.91 0)
+      (at 435.61 104.14 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 760.73 41.91 0)
+      (at 435.61 104.14 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "c570baee-cee3-524d-bf0c-33a15053ae7f"))
+      (uuid "71454659-2eac-5f5c-b449-c6997e8a5f19"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "TP145")
+          (reference "TP217")
           (unit 1)))))
   (global_label "QI_LED2"
     (shape bidirectional)
-    (at 760.73 44.45 270)
+    (at 435.61 106.68 270)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "76380c7c-0ca0-50ef-9e93-441a029fb443"))
+    (uuid "20c02eb0-3498-565b-ad48-168e435dccfd"))
   (symbol
     (lib_id "bb:TP")
-    (at 40.64 104.14 0)
+    (at 463.55 104.14 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom no)
     (on_board yes)
     (dnp no)
-    (uuid "20c5f9a0-136c-562d-887b-0e0e8fc1b9f7")
-    (property "Reference" "TP146"
-      (at 40.64 103.68 0)
+    (uuid "4dc98aa0-388a-57a9-b296-58808a7fc5d0")
+    (property "Reference" "TP218"
+      (at 463.55 103.68 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Value" "QI_LED3"
-      (at 40.64 109.68 0)
+      (at 463.55 109.68 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
-      (at 40.64 104.14 0)
+      (at 463.55 104.14 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 40.64 104.14 0)
+      (at 463.55 104.14 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "ce96e30c-dad0-5f73-8ed7-a73ebbf52db0"))
+      (uuid "eb2239a5-f59f-5767-a765-370b74c642ff"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "TP146")
+          (reference "TP218")
           (unit 1)))))
   (global_label "QI_LED3"
     (shape bidirectional)
-    (at 40.64 106.68 270)
+    (at 463.55 106.68 270)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "23d5c9c9-d1db-5b93-970d-acb2681d1f50"))
+    (uuid "d08dd0de-a3c3-5602-b20e-ab5dc06f9f2e"))
   (symbol
     (lib_id "bb:TP")
-    (at 68.58 104.14 0)
+    (at 490.22 104.14 0)
     (unit 1)
     (exclude_from_sim no)
     (in_bom no)
     (on_board yes)
     (dnp no)
-    (uuid "1cbe9178-8137-5504-88a2-0fd7b1b32888")
-    (property "Reference" "TP147"
-      (at 68.58 103.68 0)
+    (uuid "367b09a5-d9a7-54a6-895b-d5f4d74ebdb6")
+    (property "Reference" "TP219"
+      (at 490.22 103.68 0)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Value" "V12_QI"
-      (at 68.58 109.68 0)
+    (property "Value" "QI_VIN"
+      (at 490.22 109.68 0)
       (effects
         (font
           (size 1.27 1.27))))
     (property "Footprint" "TestPoint:TestPoint_Pad_D1.5mm"
-      (at 68.58 104.14 0)
+      (at 490.22 104.14 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (property "Datasheet" ""
-      (at 68.58 104.14 0)
+      (at 490.22 104.14 0)
       (effects
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "2d837ec4-186b-5683-9a91-97f014bfa695"))
+      (uuid "72c9f0e6-3adb-5221-a471-d514dce8bcaa"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/d10caea1-1e99-53f8-97d8-41dd1c7d92cd"
-          (reference "TP147")
+          (reference "TP219")
           (unit 1)))))
-  (global_label "V12_QI"
+  (global_label "QI_VIN"
     (shape bidirectional)
-    (at 68.58 106.68 270)
+    (at 490.22 106.68 270)
     (fields_autoplaced yes)
     (effects
       (font
         (size 1 1)))
-    (uuid "1657c410-575b-51df-bc79-c95af75b58e4")))
+    (uuid "77ed2f89-6965-575b-a123-d58857a3f7fd")))
