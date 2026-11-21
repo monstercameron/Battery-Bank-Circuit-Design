@@ -10,57 +10,67 @@ const THREE_URL = 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module
 const ORBIT_URL = 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/controls/OrbitControls.js';
 let THREE, OrbitControls;
 
-const FALLBACK_SPEC = /*SPEC-BEGIN*/{"_comment":"Single source of truth for mechanical layout. Units: mm. Origin: front-left-bottom corner of the enclosure interior floor; +X along the length (left->right), +Y front->back, +Z up. PCB coordinates are in each board's own frame: origin at the board's front-left corner, top view, +X right, +Y toward the back edge. The PCB layout (KiCad) and the 3D site model both read this file; change it here only. Rev A, 2026-11-21, pre-layout estimate.","rev":"A","enclosure":{"type":"extruded aluminium body with two ABS/PC end caps","outer":{"length":150.0,"width":94.0,"height":70.0},"wall":2.0,"corner_radius":6.0,"body_length":126.0,"end_cap_length":12.0,"end_caps":{"left":{"material":"PC, RF-transparent","contains":["flashlight optic D20","red night LED","Wi-Fi/BLE FPC antennas (RF window)","LoRa SMA bulkhead"]},"right":{"material":"ABS","contains":["battery cartridge door / slot","cartridge latch"]}},"top_window":{"material":"PC/glass, non-metal (Qi)","center_x":75.0,"center_y":47.0,"size_x":64.0,"size_y":64.0},"glow_strip":{"edge":"front-top","x0":20.0,"x1":130.0,"height":3.0},"speaker_grille":{"face":"top","center_x":28.0,"center_y":30.0,"diameter":40.0},"fan_grille":{"face":"back","center_x":118.0,"center_z":54.0,"size":30.0},"tripod_insert":{"face":"bottom","thread":"1/4-20 UNC","center_x":75.0,"center_y":47.0}},"cartridge":{"cells":"5S1P Samsung 50S 21700 (21.1 x 70.2 mm each), side by side along Y","outer":{"length":112.0,"width":82.0,"height":25.0},"position":{"x":14.0,"y":4.0,"z":0.0},"inserts_from":"right end cap (+X)","connector":{"type":"XT60PW + 4 pogo pads (GND, SDA, SCL, PRES)","mates_at_x":14.0,"note":"blind-mate at the left (inner) end of the bay, on the power board's underside bracket"},"energy_wh":90},"boards":[{"id":"power","name":"Power board (A)","outline":{"x":124.0,"y":86.0,"corner_radius":3.0},"thickness":1.6,"layers":6,"copper_outer_oz":2,"copper_inner_oz":1,"finish":"ENIG","mask":"matte black","position":{"x":11.0,"y":2.0,"z":28.0},"assembly":"SMT top side only + THT connectors","max_component_height_top":14.0,"mounting_holes":[{"x":4.0,"y":4.0,"d":3.2},{"x":120.0,"y":4.0,"d":3.2},{"x":4.0,"y":82.0,"d":3.2},{"x":120.0,"y":82.0,"d":3.2}],"edge_connectors":[{"ref":"J_USBC1","type":"USB-C 24p mid-mount","edge":"front","x":14.0,"w":9.0,"h":3.3},{"ref":"J_USBC2","type":"USB-C 24p mid-mount","edge":"front","x":30.0,"w":9.0,"h":3.3},{"ref":"J_USBC3","type":"USB-C 24p mid-mount","edge":"front","x":46.0,"w":9.0,"h":3.3},{"ref":"J_USBC4","type":"USB-C 24p mid-mount","edge":"front","x":62.0,"w":9.0,"h":3.3},{"ref":"J_USBA","type":"USB-A THT","edge":"front","x":80.0,"w":13.2,"h":5.8},{"ref":"SW_SLOW","type":"slide switch","edge":"front","x":98.0,"w":9.1,"h":3.5},{"ref":"SW_FLASH","type":"tactile button (light-pipe cap)","edge":"front","x":108.0,"w":5.1,"h":5.1},{"ref":"SW_BOOT","type":"tactile button (recessed)","edge":"front","x":116.0,"w":5.1,"h":5.1},{"ref":"J_DCIN","type":"DC barrel 2.0 mm (input)","edge":"back","x":50.0,"w":9.0,"h":11.0},{"ref":"J_DCOUT","type":"DC barrel 2.5 mm (output)","edge":"back","x":66.0,"w":9.0,"h":11.0}],"zones":[{"name":"USB-C port stages x4 (BQ25756 + 4 FETs + 17x17 inductor each)","x0":4.0,"y0":8.0,"x1":74.0,"y1":52.0},{"name":"Input + DC-out stages","x0":40.0,"y0":54.0,"x1":86.0,"y1":84.0},{"name":"Aux bucks, USB-A, eFuses","x0":76.0,"y0":8.0,"x1":120.0,"y1":52.0},{"name":"Fan 30x30x10 + heatsink","x0":92.0,"y0":54.0,"x1":122.0,"y1":84.0}]},{"id":"logic","name":"Logic / network board (B)","outline":{"x":124.0,"y":86.0,"corner_radius":3.0},"thickness":1.6,"layers":6,"copper_outer_oz":1,"copper_inner_oz":1,"finish":"ENIG","mask":"matte black","position":{"x":11.0,"y":2.0,"z":48.0},"assembly":"SMT top side only + THT RJ45","max_component_height_top":14.0,"board_to_board":{"type":"2x20 1.27 mm stacking header","height":18.4,"x":62.0,"y":70.0},"mounting_holes":[{"x":4.0,"y":4.0,"d":3.2},{"x":120.0,"y":4.0,"d":3.2},{"x":4.0,"y":82.0,"d":3.2},{"x":120.0,"y":82.0,"d":3.2}],"edge_connectors":[{"ref":"J_RJ45","type":"RJ45 2.5GBASE-T + PoE (bt)","edge":"back","x":18.0,"w":16.0,"h":13.5},{"ref":"J_MICROSD","type":"microSD push-push","edge":"front","x":100.0,"w":14.0,"h":1.9}],"zones":[{"name":"RTL8372N switch + RTL8221B PHY + PoE PD/isolated flyback","x0":4.0,"y0":50.0,"x1":56.0,"y1":84.0},{"name":"Router module (MT7981, 70x58 edge-card or SM81 50x36)","x0":54.0,"y0":4.0,"x1":124.0,"y1":62.0},{"name":"ESP32-WROOM-32UE + I2C mux/expander + RTC/NFC","x0":4.0,"y0":4.0,"x1":52.0,"y1":48.0},{"name":"LoRa node (E73 + E22)","x0":4.0,"y0":4.0,"x1":30.0,"y1":24.0}]},{"id":"led","name":"LED board (aluminium core)","outline":{"x":24.0,"y":24.0,"corner_radius":12.0},"thickness":1.6,"layers":1,"finish":"HASL","mask":"white","position":{"x":3.0,"y":35.0,"z":30.0},"orientation":"faces -X (out through left end cap)","parts":["Cree XP-G3 5700 K","red night LED"]}],"external_parts":[{"name":"Fan","size":[30,30,10],"position":{"x":103.0,"y":70.0,"z":30.0}},{"name":"Speaker 40 mm 4 ohm","diameter":40,"depth":7.4,"position":{"x":28.0,"y":30.0,"z":60.0}},{"name":"Qi coil A11 (50 mm)","diameter":50,"depth":3.0,"position":{"x":75.0,"y":47.0,"z":66.0}},{"name":"Glow light pipe + 8x SK6812MINI-E","position":"front-top edge"}]}/*SPEC-END*/;
+const FALLBACK_SPEC = /*SPEC-BEGIN*/{"_comment":"Single source of truth for mechanical layout. Units: mm. ONE frame for everything: origin = interior floor, front-left corner of the INTERIOR (inside the walls and the left end cap). +X along the length (left->right), +Y front->back, +Z up. Interior = 142 x 90 x 66. Board-local coordinates: origin at the board's front-left corner, top view, +X right, +Y toward the back edge; a board's 'position' is where its local origin sits in the interior frame. The PCB layout (KiCad) and the website 3D model both read this file. Rev B, 2026-11-21: fixes the 14 inconsistencies found by the 3D model build and applies the review-round-1 board partition (H-3).","rev":"B","changes_from_rev_A":["One coordinate frame (interior); all centres re-derived (rev A mixed outer/interior centres).","Partition: RTL8372N switch + NICs on board A; RTL8221B PHY + RJ45 + PoE + router + radios + audio + Qi + glow on board B; DC jacks stay on A.","Boards widened to 89 mm (0.5 mm from the inner walls) so edge connectors reach the wall; boards slide into extrusion card-guide slots (no standoffs over the cartridge).","Z stack re-planned: cartridge 0-25, board A at 30 (5 mm gap for THT leads), board B at 47, Qi coil and speaker under the top wall clear of board B's height limits.","Board B shortened to 96 mm so a 30x30x10 fan stands vertically at the right end, aligned with the back-face grille.","Cells side by side along X with axes along Y (105.5 x 70.2 fits the 112 x 82 cartridge).","Left end cap lengthened to 16 mm for a 20 mm TIR optic; Qi window and speaker no longer overlap."],"enclosure":{"type":"extruded aluminium body with two PC/ABS end caps; boards ride in card-guide slots in the extrusion","outer":{"length":150.0,"width":94.0,"height":70.0},"wall":2.0,"corner_radius":6.0,"interior":{"length":142.0,"width":90.0,"height":66.0},"end_caps":{"left":{"length":6.0,"outer_length":6.0,"note":"interior starts after the 4 mm cap wall + optic recess; see led board","material":"PC, RF-transparent","contains":["flashlight 20 mm TIR optic","red night LED","Wi-Fi/BLE FPC antennas (RF window)","LoRa SMA bulkhead"]},"right":{"material":"ABS","contains":["battery cartridge door (top-hinged)","cartridge latch"]}},"outer_to_interior_offset":{"x":4.0,"y":2.0,"z":2.0},"top_window":{"material":"PC/glass, non-metal (Qi)","center_x":78.0,"center_y":45.0,"size_x":56.0,"size_y":56.0},"speaker_grille":{"face":"top","center_x":26.0,"center_y":45.0,"diameter":40.0},"glow_strip":{"edge":"front-top","x0":12.0,"x1":130.0,"z_center":56.0,"height":3.0,"note":"light pipe on the flat front face (flat face spans z 4..60 interior)"},"fan_grille":{"face":"back","center_x":124.0,"center_z":46.0,"size":30.0},"tripod_insert":{"face":"bottom","thread":"1/4-20 UNC","center_x":71.0,"center_y":45.0}},"cartridge":{"cells":"5S1P Samsung 50S 21700 (21.1 dia x 70.2 mm): 5 cells side by side along X (pitch 21.1), axes along Y","outer":{"length":112.0,"width":82.0,"height":25.0},"position":{"x":26.0,"y":4.0,"z":0.0},"inserts_from":"right end cap (+X); slides along X","connector":{"type":"XT60PW + 5 pogo pads (GND, SDA, SCL, PRES_A, PRES_B)","mates_at_x":26.0,"note":"blind-mate at the inner (left) end of the bay, on a bracket under board A"},"energy_wh":90},"boards":[{"id":"power","name":"Power board (A)","outline":{"x":141.0,"y":89.0,"corner_radius":2.0},"thickness":1.6,"layers":6,"copper_outer_oz":2,"copper_inner_oz":1,"finish":"ENIG","mask":"matte black","position":{"x":0.5,"y":0.5,"z":30.0},"mounting":"card-guide slots along both long edges (1.5 mm engagement) + 2 screws into end-cap bosses at x 3 and x 138 on the centre line","assembly":"SMT top side only + THT connectors","max_component_height_top":14.0,"contents":["4x USB-C port stages (BQ25756 + TPS26750 + TPD4S480 + HD3SS3212 + RTL8156BG + 0.95 V buck)","RTL8372N switch + flash + core buck","input stage (DC jack eFuse + ORing + BQ25756)","DC-out stage","aux rails","USB-A","battery interface + bus","ESP32 + I2C mux/expanders + RTC + microSD","flashlight driver","fan (stands at the right end, see external_parts)"],"edge_connectors":[{"ref":"J_USBC1","type":"USB-C 24p mid-mount","edge":"front","x":22.0,"w":9.0,"h":3.3},{"ref":"J_USBC2","type":"USB-C 24p mid-mount","edge":"front","x":38.0,"w":9.0,"h":3.3},{"ref":"J_USBC3","type":"USB-C 24p mid-mount","edge":"front","x":54.0,"w":9.0,"h":3.3},{"ref":"J_USBC4","type":"USB-C 24p mid-mount","edge":"front","x":70.0,"w":9.0,"h":3.3},{"ref":"J_USBA","type":"USB-A THT","edge":"front","x":88.0,"w":13.2,"h":5.8},{"ref":"J_MICROSD","type":"microSD push-push","edge":"front","x":104.0,"w":14.0,"h":1.9},{"ref":"SW_SLOW","type":"slide switch","edge":"front","x":118.0,"w":9.1,"h":3.5},{"ref":"SW_FLASH","type":"tactile button (light-pipe cap)","edge":"front","x":128.0,"w":5.1,"h":5.1},{"ref":"SW_BOOT","type":"tactile button (recessed)","edge":"front","x":135.0,"w":5.1,"h":5.1},{"ref":"J_DCIN","type":"DC barrel 2.0 mm (input)","edge":"back","x":64.0,"w":9.0,"h":11.0},{"ref":"J_DCOUT","type":"DC barrel 2.5 mm (output)","edge":"back","x":80.0,"w":9.0,"h":11.0},{"ref":"J_LEDHARNESS","type":"JST PH 6p to the LED board","edge":"left","y":44.5,"w":13.9,"h":6.0}],"zones":[{"name":"USB-C port stages x4 (17x17 inductor each)","x0":4.0,"y0":6.0,"x1":80.0,"y1":50.0},{"name":"4x RTL8156BG NICs + RTL8372N switch (MDI inner stripline < 50 mm)","x0":4.0,"y0":50.0,"x1":56.0,"y1":70.0},{"name":"Input + DC-out stages","x0":56.0,"y0":50.0,"x1":98.0,"y1":70.0},{"name":"B2B strip (2x24 2.54 mm low-speed/power + HS mezzanine), mirrored on board B","x0":30.0,"y0":72.0,"x1":96.0,"y1":80.0},{"name":"DC jacks + their eFuses","x0":56.0,"y0":80.0,"x1":98.0,"y1":88.5},{"name":"Aux rails, USB-A, ESP32, microSD","x0":80.0,"y0":6.0,"x1":134.0,"y1":56.0},{"name":"Fan keep-out (fan stands here)","x0":102.0,"y0":74.0,"x1":134.0,"y1":88.5}],"board_to_board":[{"name":"low-speed + power","type":"2x24 2.54 mm stacking header (A) / socket (B)","stack_height":15.4,"x":33.0,"y":76.0,"orientation":"along X (61 mm)"},{"name":"SerDes mezzanine","type":"differential-rated mezzanine, G-S-S-G, 13+ pins","stack_height":15.4,"x":30.0,"y":73.0,"orientation":"along X; place nearest the switch"}]},{"id":"logic","name":"Logic / network board (B)","outline":{"x":96.0,"y":89.0,"corner_radius":2.0},"thickness":1.6,"layers":6,"copper_outer_oz":1,"copper_inner_oz":1,"finish":"ENIG","mask":"matte black","position":{"x":0.5,"y":0.5,"z":47.0},"mounting":"card-guide slots + B2B headers; screw boss at the left end","assembly":"SMT top side only + THT RJ45","max_component_height_top":12.0,"height_keepouts":[{"name":"under speaker (max 3.5 mm)","x0":6.0,"y0":25.0,"x1":46.0,"y1":65.0,"max_height":3.5},{"name":"under Qi coil (max 12 mm; coil sits above)","x0":53.0,"y0":20.0,"x1":96.0,"y1":70.0,"max_height":12.0}],"contents":["router module","RTL8221B PHY + RJ45 + PoE PD + isolated flyback","LoRa node","audio amp + mics","Qi transmitter","glow strip feed","NFC"],"edge_connectors":[{"ref":"J_RJ45","type":"RJ45 2.5GBASE-T + PoE (bt)","edge":"back","x":22.0,"w":16.0,"h":13.5}],"zones":[{"name":"RJ45 + RTL8221B + PoE PD + isolated flyback","x0":2.0,"y0":30.0,"x1":30.0,"y1":88.5},{"name":"Router module","x0":52.0,"y0":30.0,"x1":95.0,"y1":72.0},{"name":"B2B strip (mates board A)","x0":30.0,"y0":72.0,"x1":96.0,"y1":80.0},{"name":"LoRa node","x0":2.0,"y0":2.0,"x1":30.0,"y1":28.0},{"name":"Audio amp + mics + NFC","x0":30.0,"y0":2.0,"x1":52.0,"y1":70.0},{"name":"Qi transmitter (under the coil, max 12 mm)","x0":52.0,"y0":2.0,"x1":95.0,"y1":30.0}]},{"id":"led","name":"LED board (aluminium core)","outline":{"x":24.0,"y":24.0,"corner_radius":12.0},"thickness":1.6,"layers":1,"finish":"HASL","mask":"white","position":{"x":-4.0,"y":33.0,"z":32.0},"orientation":"faces -X into the 20 mm TIR optic in the left end cap","parts":["Cree XP-G3 5700 K","red night LED","10k NTC"]}],"external_parts":[{"name":"Fan 30x30x10 (vertical, blowing out the back grille)","size":[30,10,30],"position":{"x":109.0,"y":79.0,"z":32.0},"note":"x/y/z = min corner; axis along +Y; spans z 32-62, above board A (top 31.6) and right of board B (ends x 96.5)"},{"name":"Speaker 40 mm 4 ohm","diameter":40,"depth":7.4,"position":{"x":26.0,"y":45.0,"z":58.4},"note":"centre x/y; z = bottom; top at 65.8 under the 66 mm interior top"},{"name":"Qi coil A11 (50 mm) + ferrite","diameter":50,"depth":3.0,"position":{"x":78.0,"y":45.0,"z":62.8},"note":"centre x/y; z = bottom; top at 65.8"},{"name":"Glow light pipe + 8x SK6812MINI-E","position":"front-top edge, fed from board B"}],"notes":["All positions are pre-layout estimates; the layout must keep the edge-connector positions and the z stack.","Board B ends at x 96.5; the fan and the right end cap door path occupy x 102-142 above board A."]}/*SPEC-END*/;
 
 /* ------------------------------------------------------------------ layout (pure, no DOM) */
 const num = (s, re, d) => { const m = re.exec(s || ''); return m ? parseFloat(m[1]) : d; };
 // assumed connector body depths (mm, into the board from the mouth); not in the spec
-const DEPTH = [[/USB-C/i, 7.35], [/USB-A/i, 14], [/barrel/i, 14], [/RJ45/i, 21], [/microSD/i, 15], [/slide/i, 4.5], [/tactile/i, 3.8]];
+const DEPTH = [[/USB-C/i, 7.35], [/USB-A/i, 14], [/barrel/i, 14], [/RJ45/i, 21], [/microSD/i, 15], [/slide/i, 4.5], [/tactile/i, 3.8], [/JST/i, 6]];
 const box6 = (a) => ({ x0: a[0], y0: a[1], z0: a[2], x1: a[3], y1: a[4], z1: a[5] });
+const arr = (v) => (Array.isArray(v) ? v : v ? [v] : []);
 
 export function layout(S) {
   const E = S.enclosure, o = E.outer, w = E.wall, r = E.corner_radius, notes = [];
-  const out = box6([-w, -w, -w, o.length - w, o.width - w, o.height - w]);
-  const inn = { x: o.length - 2 * w, y: o.width - 2 * w, z: o.height - 2 * w };
+  const off = E.outer_to_interior_offset || { x: w, y: w, z: w }; // rev A had no offset: interior = outer - wall
+  const out = box6([-off.x, -off.y, -off.z, o.length - off.x, o.width - off.y, o.height - off.z]);
+  const I = E.interior || {}, inn = { x: I.length || o.length - 2 * off.x, y: I.width || o.width - 2 * off.y, z: I.height || o.height - 2 * off.z };
   const L = { S, E, out, inn, r, w, notes, rows: [] };
   const row = (id, b, src) => L.rows.push({ id, ...b, src });
-  L.capL = { x0: out.x0, x1: out.x0 + E.end_cap_length };
-  L.body = { x0: L.capL.x1, x1: L.capL.x1 + E.body_length };
-  L.capR = { x0: L.body.x1, x1: L.body.x1 + E.end_cap_length };
-  if (Math.abs(L.capR.x1 - out.x1) > 0.01) notes.push(`end caps + body = ${L.capR.x1 - out.x0} mm, outer.length = ${o.length} mm`);
-  row('body', { ...out, x0: L.body.x0, x1: L.body.x1 }, 'enclosure.body_length');
-  row('cap L', { ...out, x0: L.capL.x0, x1: L.capL.x1 }, 'enclosure.end_cap_length');
-  row('cap R', { ...out, x0: L.capR.x0, x1: L.capR.x1 }, 'enclosure.end_cap_length');
+  const ec = E.end_caps || {}, lc = ec.left || {}, rc = ec.right || {};
+  const capLen = (c, other) => c.outer_length ?? c.length ?? E.end_cap_length ?? other;
+  const cl = capLen(lc, 12), cr = capLen(rc, null) ?? cl;
+  if (capLen(rc, null) == null) notes.push(`end_caps.right has no length; drawn ${cr} mm (same as the left cap)`);
+  L.capL = { x0: out.x0, x1: out.x0 + cl }; L.capR = { x0: out.x1 - cr, x1: out.x1 }; L.body = { x0: L.capL.x1, x1: L.capR.x0 };
+  if (E.body_length && Math.abs(E.body_length - (L.body.x1 - L.body.x0)) > 0.01) notes.push(`body_length ${E.body_length} != outer length - caps`);
+  row('body', { ...out, x0: L.body.x0, x1: L.body.x1 }, 'enclosure.outer - end caps');
+  row('cap L', { ...out, x0: L.capL.x0, x1: L.capL.x1 }, 'end_caps.left.outer_length');
+  row('cap R', { ...out, x0: L.capR.x0, x1: L.capR.x1 }, 'end_caps.right (length assumed if absent)');
+  const flat = { z0: out.z0 + r, z1: out.z1 - r };
   const tw = E.top_window; L.win = { cx: tw.center_x, cy: tw.center_y, sx: tw.size_x, sy: tw.size_y };
   row('Qi window', box6([tw.center_x - tw.size_x / 2, tw.center_y - tw.size_y / 2, out.z1, tw.center_x + tw.size_x / 2, tw.center_y + tw.size_y / 2, out.z1]), 'top_window');
   const sg = E.speaker_grille; L.spkG = { cx: sg.center_x, cy: sg.center_y, rad: sg.diameter / 2 };
   row('speaker grille', box6([sg.center_x - sg.diameter / 2, sg.center_y - sg.diameter / 2, out.z1, sg.center_x + sg.diameter / 2, sg.center_y + sg.diameter / 2, out.z1]), 'speaker_grille');
-  const fg = E.fan_grille; L.fanG = { cx: fg.center_x, cz: fg.center_z, s: fg.size, zFlat: out.z1 - r, zLow: out.z0 + r };
+  const fg = E.fan_grille; L.fanG = { cx: fg.center_x, cz: fg.center_z, s: fg.size, zFlat: flat.z1, zLow: flat.z0 };
   row('fan grille', box6([fg.center_x - fg.size / 2, out.y1, fg.center_z - fg.size / 2, fg.center_x + fg.size / 2, out.y1, fg.center_z + fg.size / 2]), 'fan_grille');
-  const gs = E.glow_strip; L.glow = { x0: gs.x0, x1: gs.x1, z1: out.z1 - r, z0: out.z1 - r - gs.height };
-  row('glow strip', box6([gs.x0, out.y0, L.glow.z0, gs.x1, out.y0, L.glow.z1]), 'glow_strip (z = top of flat front face, derived from corner_radius)');
+  const gs = E.glow_strip, gz = gs.z_center ?? flat.z1 - gs.height / 2;
+  L.glow = { x0: gs.x0, x1: gs.x1, z0: gz - gs.height / 2, z1: gz + gs.height / 2 };
+  row('glow strip', box6([gs.x0, out.y0, L.glow.z0, gs.x1, out.y0, L.glow.z1]), gs.z_center != null ? 'glow_strip' : 'glow_strip (z derived: top of flat front face)');
+  L.flat = flat;
   const ti = E.tripod_insert; L.tripod = { cx: ti.center_x, cy: ti.center_y, r: /1\/4/.test(ti.thread) ? 3.175 : 3 };
 
   // cartridge + cells
   const C = S.cartridge, co = C.outer, cp = C.position;
   const cart = L.cart = { ...box6([cp.x, cp.y, cp.z, cp.x + co.length, cp.y + co.width, cp.z + co.height]), cells: [], C };
   row('cartridge', cart, 'cartridge.position/outer');
-  const d = num(C.cells, /([\d.]+)\s*x\s*[\d.]+\s*mm/i, 21.1), len = num(C.cells, /[\d.]+\s*x\s*([\d.]+)\s*mm/i, 70.2);
+  const d = num(C.cells, /([\d.]+)\s*(?:mm\s*)?(?:dia\s*)?x\s*[\d.]+\s*mm/i, 21.1), len = num(C.cells, /[\d.]+\s*(?:mm\s*)?(?:dia\s*)?x\s*([\d.]+)\s*mm/i, 70.2);
   const sp = /(\d+)S(\d+)P/i.exec(C.cells || ''), n = sp ? sp[1] * sp[2] : 5;
   const fitY = n * d <= co.width && len <= co.length, fitX = n * d <= co.length && len <= co.width;
-  const alongY = /along Y/i.test(C.cells) ? fitY || !fitX : !fitX && fitY;
-  if (/along Y/i.test(C.cells) && !fitY) notes.push(`cartridge: ${n} x ${d} mm cells side by side along Y need ${(n * d).toFixed(1)} mm but the cartridge is ${co.width} mm wide; drawn side by side along X (axes along Y) instead, which fits (${(n * d).toFixed(1)} <= ${co.length})`);
+  const dir = (/side by side along ([XY])/i.exec(C.cells || '') || [])[1];
+  const alongY = dir ? dir.toUpperCase() === 'Y' : !fitX && fitY;
+  if ((alongY && !fitY) || (!alongY && !fitX)) notes.push(`cartridge: ${n} x ${d} mm cells side by side along ${alongY ? 'Y' : 'X'} need ${(n * d).toFixed(1)} mm, cartridge is ${alongY ? co.width : co.length} mm`);
   for (let i = 0; i < n; i++) {
     const c = alongY ? { axis: 'x', cx: cart.x0 + co.length / 2, cy: cart.y0 + (co.width - n * d) / 2 + d * (i + 0.5) }
                      : { axis: 'y', cx: cart.x0 + (co.length - n * d) / 2 + d * (i + 0.5), cy: cart.y0 + co.width / 2 };
     cart.cells.push({ ...c, cz: cart.z0 + co.height / 2, r: d / 2, len });
+    row(`cell ${i + 1}`, c.axis === 'y' ? box6([c.cx - d / 2, c.cy - len / 2, cart.z0 + co.height / 2 - d / 2, c.cx + d / 2, c.cy + len / 2, cart.z0 + co.height / 2 + d / 2]) : box6([c.cx - len / 2, c.cy - d / 2, cart.z0 + co.height / 2 - d / 2, c.cx + len / 2, c.cy + d / 2, cart.z0 + co.height / 2 + d / 2]), 'cartridge.cells (centred in the cartridge)');
   }
   cart.alongY = alongY;
   if (d > co.height) notes.push(`cartridge: cell diameter ${d} > cartridge height ${co.height}`);
   cart.mate = C.connector && C.connector.mates_at_x;
+  cart.pogo = num(C.connector && C.connector.type, /(\d+)\s*pogo/i, 4);
 
   // boards
-  L.boards = []; L.ext = [];
+  L.boards = []; L.ext = []; L.hdrs = []; L.bosses = [];
   for (const b of S.boards) {
     const p = b.position, W = b.outline.x, H = b.outline.y, t = b.thickness;
     if (/[-+]X/.test(b.orientation || '')) {
@@ -68,29 +78,42 @@ export function layout(S) {
       row(b.name, L.led, `boards[${b.id}] (vertical, faces -X: local x->+Y, y->+Z)`);
       continue;
     }
-    const ovF = p.y, ovB = inn.y - (p.y + H);
+    const ov = { front: p.y, back: inn.y - (p.y + H), left: p.x, right: inn.x - (p.x + W) };
     const conns = (b.edge_connectors || []).map((c) => {
-      const dep = (DEPTH.find(([re]) => re.test(c.type)) || [0, 8])[1];
-      const mid = /mid-mount/i.test(c.type), front = c.edge === 'front';
-      if (c.edge !== 'front' && c.edge !== 'back') notes.push(`${c.ref}: edge "${c.edge}" not drawn`);
-      return { ...c, d: dep, mid, front, yMouth: front ? -ovF : H + ovB, zc: mid ? t / 2 : t + c.h / 2 };
+      const dep = (DEPTH.find(([re]) => re.test(c.type)) || [0, 8])[1], e = c.edge;
+      const mid = /mid-mount/i.test(c.type), front = e === 'front', side = e === 'left' || e === 'right';
+      const zc = mid ? t / 2 : t + c.h / 2;
+      // local frame: mouth point (mx,my), facing direction; footprint rect fx0..fx1, fy0..fy1 (board-local)
+      const k = side ? { mx: e === 'left' ? -ov.left : W + ov.right, my: c.y, rot: e === 'left' ? Math.PI / 2 : -Math.PI / 2 }
+                     : { mx: c.x, my: front ? -ov.front : H + ov.back, rot: front ? Math.PI : 0 };
+      const f = side ? { fx0: e === 'left' ? k.mx : k.mx - dep, fy0: c.y - c.w / 2, fw: dep, fd: c.w } : { fx0: c.x - c.w / 2, fy0: front ? k.my : k.my - dep, fw: c.w, fd: dep };
+      return { ...c, d: dep, mid, front, side, zc, ...k, ...f };
     });
-    const B = { ...b, p, W, H, t, conns, top: p.z + t, maxH: b.max_component_height_top || 0 };
+    const ko = arr(b.height_keepouts).map((q) => ({ ...q }));
+    const B = { ...b, p, W, H, t, conns, ko, top: p.z + t, maxH: b.max_component_height_top || 0 };
     L.boards.push(B);
     row(b.name, box6([p.x, p.y, p.z, p.x + W, p.y + H, p.z + t]), `boards[${b.id}].position/outline`);
-    for (const c of conns) {
-      const y0 = p.y + c.yMouth + (c.front ? 0 : -c.d);
-      row(c.ref, box6([p.x + c.x - c.w / 2, y0, p.z + c.zc - c.h / 2, p.x + c.x + c.w / 2, y0 + c.d, p.z + c.zc + c.h / 2]), `${b.id}.edge_connectors (depth assumed ${c.d})`);
-    }
+    for (const c of conns) row(c.ref, box6([p.x + c.fx0, p.y + c.fy0, p.z + c.zc - c.h / 2, p.x + c.fx0 + c.fw, p.y + c.fy0 + c.fd, p.z + c.zc + c.h / 2]), `${b.id}.edge_connectors (depth assumed ${c.d})`);
+    for (const q of ko) row(`keepout ${b.id}: ${q.name}`, box6([p.x + q.x0, p.y + q.y0, p.z + t + q.max_height, p.x + q.x1, p.y + q.y1, p.z + t + B.maxH]), `${b.id}.height_keepouts (board-local)`);
+    // screws into end-cap bosses ("... bosses at x 3 and x 138 on the centre line")
+    const mnt = b.mounting || '', bx = /boss/i.test(mnt) ? [...mnt.matchAll(/x\s*([\d.]+)/g)].map((m) => +m[1]) : [];
+    for (const x of bx) { L.bosses.push({ board: b.id, x, y: H / 2 }); row(`screw boss ${b.id} x${x}`, box6([p.x + x - 3, p.y + H / 2 - 3, p.z - 4, p.x + x + 3, p.y + H / 2 + 3, p.z]), `${b.id}.mounting (boss size assumed 6x6x4)`); }
+    if (/boss/i.test(mnt) && !bx.length) notes.push(`${b.id}: "${mnt}" gives no boss position; not drawn`);
+    B.rails = /card-guide/i.test(mnt) || /card-guide/i.test(E.type || '') ? num(mnt, /([\d.]+)\s*mm engagement/i, 1.5) : 0;
   }
-  // board-to-board header (orientation along X assumed)
-  for (const b of L.boards) if (b.board_to_board) {
-    const h = b.board_to_board, m = /(\d+)\s*x\s*(\d+)/i.exec(h.type), pitch = num(h.type, /([\d.]+)\s*mm/, 1.27);
-    const rows = m ? +m[1] : 2, cols = m ? +m[2] : 20, lw = cols * pitch + 2, ld = rows * pitch + 2;
-    const lower = L.boards.find((q) => q !== b && Math.abs(q.top - (b.p.z - h.height)) < 0.05);
-    if (!lower) notes.push(`B2B header height ${h.height} does not bridge to another board top`);
-    L.hdr = { ...h, rows, cols, pitch, lx0: h.x - lw / 2, ly0: h.y - ld / 2, lw, ld, upper: b.id, lower: lower && lower.id, z0: b.p.z - h.height, z1: b.p.z, wx: b.p.x, wy: b.p.y };
-    row('B2B header', box6([b.p.x + L.hdr.lx0, b.p.y + L.hdr.ly0, L.hdr.z0, b.p.x + L.hdr.lx0 + lw, b.p.y + L.hdr.ly0 + ld, L.hdr.z1]), `${b.id}.board_to_board (footprint assumed ${lw.toFixed(1)}x${ld.toFixed(1)}, along X)`);
+  // board-to-board connectors (object or list; x = left end, y = centreline, along X)
+  for (const b of L.boards) for (const h of arr(b.board_to_board)) {
+    const st = h.stack_height ?? h.height, m = /(\d+)\s*x\s*(\d+)/i.exec(h.type || ''), pitch = num(h.type, /([\d.]+)\s*mm/, 1.27);
+    const rows = m ? +m[1] : 0, cols = m ? +m[2] : 0;
+    const lw = num(h.orientation, /\(([\d.]+)\s*mm\)/, cols ? cols * pitch + (h.stack_height ? 0 : 2) : 12), ld = rows ? rows * pitch + (h.stack_height ? 0 : 2) : 4;
+    const other = L.boards.find((q) => q !== b && (Math.abs(q.p.z - (b.top + st)) < 0.05 || Math.abs(q.top - (b.p.z - st)) < 0.05));
+    if (!other) notes.push(`B2B "${h.name || h.type}" stack ${st} mm does not bridge to another board`);
+    const lower = other && other.p.z < b.p.z ? other : b, upper = lower === b ? other : b;
+    const centred = !h.stack_height; // rev A gave the header centre
+    const lx0 = centred ? h.x - lw / 2 : h.x, ly0 = h.y - ld / 2;
+    const hd = { ...h, rows, cols, pitch, lx0, ly0, lw, ld, lower: lower.id, upper: upper && upper.id, z0: lower.top, z1: lower.top + st, wx: b.p.x, wy: b.p.y, mezz: !m };
+    L.hdrs.push(hd);
+    row(`B2B ${h.name || 'header'}`, box6([b.p.x + lx0, b.p.y + ly0, hd.z0, b.p.x + lx0 + lw, b.p.y + ly0 + ld, hd.z1]), `${b.id}.board_to_board (${m ? '' : 'footprint assumed ' + lw + 'x' + ld + ', '}x = ${centred ? 'centre' : 'left end'}, y = centreline)`);
   }
   // external parts
   const fit = (v, s, hi, ax, nm) => {
@@ -102,8 +125,9 @@ export function layout(S) {
     const p = e.position;
     if (/^fan/i.test(e.name) && e.size) {
       const [x0, x1] = fit(p.x, e.size[0], inn.x, 'x', e.name), [y0, y1] = fit(p.y, e.size[1], inn.y, 'y', e.name), [z0, z1] = fit(p.z, e.size[2], inn.z, 'z', e.name);
-      L.fan = { ...box6([x0, y0, z0, x1, y1, z1]), name: e.name, size: e.size };
-      L.ext.push(L.fan); row('fan', L.fan, 'external_parts.Fan');
+      const axis = 'xyz'[e.size.indexOf(Math.min(...e.size))];
+      L.fan = { ...box6([x0, y0, z0, x1, y1, z1]), name: e.name, size: e.size, axis };
+      L.ext.push(L.fan); row('fan', L.fan, `external_parts.Fan (min corner, axis ${axis})`);
     } else if (e.diameter && typeof p === 'object') {
       const c = { name: e.name, cx: p.x, cy: p.y, rad: e.diameter / 2, ...box6([p.x - e.diameter / 2, p.y - e.diameter / 2, p.z, p.x + e.diameter / 2, p.y + e.diameter / 2, p.z + e.depth]) };
       if (/speaker/i.test(e.name)) L.spk = c; else if (/qi|coil/i.test(e.name)) L.coil = c;
@@ -114,51 +138,62 @@ export function layout(S) {
 }
 
 // assumed small-part kits per zone: [kind, w, d, h, count, label]
+const ESP = [['mod', 18, 19.2, 3.2, 1, 'ESP32-WROOM-32UE'], ['ic', 7.8, 4.4, 1.1, 1, 'TCA9548A I2C mux'], ['ic', 4, 4, 0.9, 1, 'I/O expander'], ['ic', 3.2, 1.5, 0.8, 1, 'RV-3028 RTC'], ['ic', 2.9, 1.6, 1.1, 2, 'level shifter'], ['conn', 3, 3, 1.2, 1, 'U.FL']];
 const KIT = {
-  input: [['ind', 13.5, 12.6, 6.5, 2, 'FXL1365 6.8 uH inductor'], ['ic', 6, 5, 0.9, 2, 'BQ25756 buck-boost'], ['ic', 5, 6, 1, 8, '100 V power FET'], ['res', 6.3, 3.2, 0.6, 4, '5 mOhm 2512 sense'], ['can', 6.3, 6.3, 5.8, 3, 'polymer bulk cap'], ['ic', 6.5, 4.4, 1, 1, 'TPS26631 eFuse'], ['ic', 5, 5, 0.9, 1, 'ORing / PoE ctrl'], ['mlcc', 3.2, 1.6, 1.4, 10, 'MLCC 1206']],
-  aux: [['ind', 10, 10, 5, 1, '12 V Qi buck inductor'], ['ind', 7, 7, 4.5, 3, 'aux buck inductor'], ['ic', 5, 5, 0.9, 1, 'IP6826 Qi transmitter'], ['ic', 3, 3, 0.8, 3, 'aux buck'], ['ic', 6.5, 4.4, 1, 2, 'TPS26631 eFuse'], ['ic', 5, 4, 1.5, 1, 'IP6525S USB-A'], ['ic', 2, 2, 0.8, 3, 'TPS22965 load switch'], ['res', 6.3, 3.2, 0.6, 2, '2512 sense'], ['mlcc', 2, 1.25, 1.1, 14, 'MLCC 0805']],
+  input: [['ind', 17, 17, 8, 2, '17x17 power inductor'], ['ic', 6, 5, 0.9, 2, 'BQ25756 buck-boost'], ['ic', 5, 6, 1, 8, '100 V power FET'], ['res', 6.3, 3.2, 0.6, 4, '5 mOhm 2512 sense'], ['can', 6.3, 6.3, 5.8, 2, 'polymer bulk cap'], ['ic', 5, 5, 0.9, 1, 'ORing controller'], ['mlcc', 3.2, 1.6, 1.4, 8, 'MLCC 1206']],
+  aux: [['ind', 10, 10, 5, 1, 'aux buck inductor (12 V)'], ['ind', 7, 7, 4.5, 3, 'aux buck inductor'], ['ic', 3, 3, 0.8, 3, 'aux buck'], ['ic', 5, 4, 1.5, 1, 'IP6525S USB-A'], ['ic', 2, 2, 0.8, 3, 'TPS22965 load switch'], ['ic', 3, 3, 0.8, 1, 'AL8860 flashlight driver'], ['res', 6.3, 3.2, 0.6, 2, '2512 sense'], ['mlcc', 2, 1.25, 1.1, 14, 'MLCC 0805']],
+  esp: ESP.concat([['ic', 3, 3, 0.8, 1, 'MAX98357A amp'], ['ic', 3.5, 2.65, 1, 1, 'PDM mic'], ['ic', 1.6, 1.6, 0.5, 1, 'NT3H2111 NFC'], ['mlcc', 2, 1.25, 1.1, 10, 'MLCC 0805']]),
+  esp2: ESP.concat([['mlcc', 2, 1.25, 1.1, 8, 'MLCC 0805']]),
+  nic: [['ic', 11, 11, 1, 1, 'RTL8372N 2.5G switch'], ['ic', 6, 6, 0.9, 4, 'RTL8156BG 2.5G NIC'], ['ic', 5, 4, 1.5, 1, 'SPI flash'], ['ind', 5, 5, 3, 1, 'core buck inductor'], ['ic', 3.2, 2.5, 0.8, 2, '25 MHz crystal'], ['mlcc', 2, 1.25, 1.1, 12, 'MLCC 0805']],
+  jack: [['ic', 6.5, 4.4, 1, 2, 'TPS26631 eFuse'], ['ic', 4.6, 3.9, 2.2, 2, 'TVS diode'], ['mlcc', 3.2, 1.6, 1.4, 6, 'MLCC 1206']],
   sw: [['xfmr', 14, 12, 10, 1, 'PoE flyback transformer'], ['ic', 11, 11, 1, 1, 'RTL8372N 2.5G switch'], ['ic', 6, 6, 0.9, 1, 'RTL8221B 2.5G PHY'], ['ic', 5, 5, 0.9, 1, 'PoE PD controller'], ['can', 8, 8, 6, 2, 'bulk cap'], ['ind', 5, 5, 3, 2, 'buck inductor'], ['ic', 4.6, 3.9, 2.2, 2, 'bridge rectifier'], ['ic', 3.2, 2.5, 0.8, 2, '25 MHz crystal'], ['mlcc', 2, 1.25, 1.1, 12, 'MLCC 0805']],
+  phy: [['xfmr', 14, 12, 10, 1, 'PoE flyback transformer'], ['ic', 6, 6, 0.9, 1, 'RTL8221B 2.5G PHY'], ['ic', 5, 5, 0.9, 1, 'PoE PD controller'], ['can', 8, 8, 6, 2, 'bulk cap'], ['ind', 5, 5, 3, 2, 'buck inductor'], ['ic', 4.6, 3.9, 2.2, 2, 'bridge rectifier'], ['ic', 3.2, 2.5, 0.8, 1, '25 MHz crystal'], ['mlcc', 2, 1.25, 1.1, 10, 'MLCC 0805']],
   router: [['mod', 50, 36, 3.4, 1, 'Acelink SM81 router module (MT7981B)']],
   lora: [['mod', 14, 20, 2.4, 1, 'E22-900M22S (SX1262)'], ['mod', 13, 18, 2.2, 1, 'E73-2G4M08S1CX (nRF52840)'], ['conn', 3, 3, 1.2, 2, 'IPEX antenna']],
-  esp: [['mod', 18, 19.2, 3.2, 1, 'ESP32-WROOM-32UE'], ['ic', 7.8, 4.4, 1.1, 1, 'TCA9548A I2C mux'], ['ic', 4, 4, 0.9, 1, 'I/O expander'], ['ic', 3.2, 1.5, 0.8, 1, 'RV-3028 RTC'], ['ic', 3, 3, 0.8, 1, 'MAX98357A amp'], ['ic', 3.5, 2.65, 1, 1, 'PDM mic'], ['ic', 1.6, 1.6, 0.5, 1, 'NT3H2111 NFC'], ['ic', 2.9, 1.6, 1.1, 2, 'level shifter'], ['conn', 3, 3, 1.2, 1, 'U.FL'], ['mlcc', 2, 1.25, 1.1, 10, 'MLCC 0805']],
+  audio: [['ic', 3, 3, 0.8, 1, 'MAX98357A amp'], ['ic', 3.5, 2.65, 1, 2, 'PDM mic'], ['ic', 1.6, 1.6, 0.5, 1, 'NT3H2111 NFC'], ['ic', 2.9, 1.6, 1.1, 2, 'level shifter'], ['mlcc', 2, 1.25, 1.1, 8, 'MLCC 0805']],
+  qi: [['ind', 10, 10, 5, 1, '12 V Qi buck inductor'], ['ic', 5, 5, 0.9, 1, 'IP6826 Qi transmitter'], ['ic', 3, 3, 0.8, 1, '12 V buck'], ['can', 6.3, 6.3, 5.8, 2, 'polymer bulk cap'], ['ic', 3.2, 2.5, 1, 2, 'full-bridge FET'], ['mlcc', 2, 1.25, 1.1, 8, 'MLCC 0805']],
 };
-const ZONEKIT = [[/USB-C/i, 'usb'], [/Input/i, 'input'], [/Aux/i, 'aux'], [/Fan/i, null], [/switch|RTL8372/i, 'sw'], [/Router/i, 'router'], [/LoRa/i, 'lora'], [/ESP32/i, 'esp']];
+// first match wins for the "family"; ESP32 adds its kit to any zone that names it
+const ZONEKIT = [[/B2B|keep-out/i, null], [/USB-C port/i, 'usb'], [/DC jacks/i, 'jack'], [/Input/i, 'input'], [/NIC|RTL8372/i, 'nic'], [/RJ45|RTL8221B|PoE/i, 'phy'], [/Fan/i, null], [/Router/i, 'router'], [/LoRa/i, 'lora'], [/Audio/i, 'audio'], [/Qi/i, 'qi'], [/Aux/i, 'aux'], [/ESP32/i, 'esp']];
 
 export function populate(L, b) {
   const occ = [], parts = [], miss = [], G = 0.5;
   const hit = (x, y, w, d, h) => occ.some((o) => x < o.x1 + G && x + w > o.x0 - G && y < o.y1 + G && y + d > o.y0 - G && h > o.zmin);
   const take = (x, y, w, d, zmin = 0) => occ.push({ x0: x, y0: y, x1: x + w, y1: y + d, zmin });
-  for (const c of b.conns) take(c.x - c.w / 2, c.front ? c.yMouth : c.yMouth - c.d, c.w, c.d);
+  for (const c of b.conns) take(c.fx0, c.fy0, c.fw, c.fd);
   for (const h of b.mounting_holes || []) take(h.x - h.d / 2 - 1.6, h.y - h.d / 2 - 1.6, h.d + 3.2, h.d + 3.2);
-  const H = L.hdr; if (H && (H.upper === b.id || H.lower === b.id)) take(H.lx0, H.ly0, H.lw, H.ld);
+  for (const s of L.bosses) if (s.board === b.id) take(s.x - 3.5, s.y - 3.5, 7, 7);
+  for (const H of L.hdrs) if (H.upper === b.id || H.lower === b.id) take(H.lx0, H.ly0, H.lw, H.ld);
+  for (const q of b.ko) take(q.x0, q.y0, q.x1 - q.x0, q.y1 - q.y0, q.max_height);
   for (const e of L.ext) { // external parts that sit inside this board's component envelope
     const zmin = e.z0 - b.top;
     if (zmin >= -0.5 && zmin < b.maxH && e.x1 > b.p.x && e.x0 < b.p.x + b.W && e.y1 > b.p.y && e.y0 < b.p.y + b.H) take(e.x0 - b.p.x, e.y0 - b.p.y, e.x1 - e.x0, e.y1 - e.y0, Math.max(0, zmin));
   }
   const put = (k, x, y, w, d, h, label, zone) => { parts.push({ k, x, y, w, d, h, label, zone: zone.name }); take(x, y, w, d); };
+  const scan = (k, w, d, h, label, z) => { for (let y = z.y0 + G / 2; y + d <= z.y1 - G / 2 + 1e-6; y += 0.5) for (let x = z.x0 + G / 2; x + w <= z.x1 - G / 2 + 1e-6; x += 0.5) if (x >= 0.5 && y >= 0.5 && x + w <= b.W - 0.5 && y + d <= b.H - 0.5 && !hit(x, y, w, d, h)) { put(k, x, y, w, d, h, label, z); return true; } return false; };
   const place = (k, w, d, h, label, zs) => {
-    for (const z of zs) for (let y = z.y0; y + d <= z.y1 + 1e-6; y += 0.5) for (let x = z.x0; x + w <= z.x1 + 1e-6; x += 0.5)
-      if (x >= 0.5 && y >= 0.5 && x + w <= b.W - 0.5 && y + d <= b.H - 0.5 && !hit(x, y, w, d, h)) {
-        if (z !== zs[0]) miss.push(`${label}: no room in "${zs[0].name}", placed in "${z.name}"`);
-        put(k, x, y, w, d, h, label, z); return true;
-      }
-    miss.push(`${label} (${w}x${d}) does not fit in "${zs[0].name}"`); return false;
+    for (const z of zs) for (const [pw, pd] of w === d ? [[w, d]] : [[w, d], [d, w]]) if (scan(k, pw, pd, h, label, z)) { if (z !== zs[0]) miss.push(`${label}: no room in "${zs[0].name}", placed in "${z.name}"`); return true; }
+    miss.push(`${label} (${w}x${d}) does not fit in "${zs[0].name}"`);
+    if (k === 'mod') { const z = zs[0], x = Math.max(0.5, Math.min(b.W - 0.5 - w, (z.x0 + z.x1 - w) / 2)), y = Math.max(0.5, Math.min(b.H - 0.5 - d, (z.y0 + z.y1 - d) / 2)); put(k, x, y, w, d, h, `${label} (overflows its zone)`, z); }
+    return false;
   };
   const zones = (b.zones || []).slice().sort((p, q) => (p.x1 - p.x0) * (p.y1 - p.y0) - (q.x1 - q.x0) * (q.y1 - q.y0));
   for (const z of zones) {
-    const kit = (ZONEKIT.find(([re]) => re.test(z.name)) || [0, 'aux'])[1];
+    const fam = ZONEKIT.find(([re]) => re.test(z.name)), kit = fam ? fam[1] : 'aux';
+    const kits = kit ? [kit] : [];
+    if (kit && kit !== 'esp' && /ESP32/i.test(z.name)) kits.push('esp2');
     const zs = [z, ...zones.filter((q) => q !== z && q.x0 <= z.x0 && q.y0 <= z.y0 && q.x1 >= z.x1 && q.y1 >= z.y1)];
     if (kit === 'usb') { // repeated port stage, hand-placed per column
       const n = num(z.name, /x\s*(\d+)/i, 4), cw = (z.x1 - z.x0) / n, y0 = z.y0;
       for (let i = 0; i < n; i++) {
         const cx = z.x0 + cw * (i + 0.5);
-        const S = [['ind', cx - 8.5, z.y1 - 17, 17, 17, 8, '17x17 power inductor'], ['ic', cx - 6.5, y0 + 0.5, 3, 3, 0.75, 'TPD4S480 CC/SBU protector'], ['ic', cx + 1.5, y0 + 0.2, 4, 4, 0.9, 'TPS26750 PD controller'],
+        const S = [['ind', cx - 8.5, z.y1 - 17 - G / 2, 17, 17, 8, '17x17 power inductor'], ['ic', cx - 6.5, y0 + 0.5, 3, 3, 0.75, 'TPD4S480 CC/SBU protector'], ['ic', cx + 1.5, y0 + 0.2, 4, 4, 0.9, 'TPS26750 PD controller'],
           ['ic', cx - 6, y0 + 5, 5, 6, 1, '100 V power FET'], ['ic', cx + 1, y0 + 5, 5, 6, 1, '100 V power FET'], ['ic', cx - 6, y0 + 11.5, 5, 6, 1, '100 V power FET'], ['ic', cx + 1, y0 + 11.5, 5, 6, 1, '100 V power FET'],
           ['ic', cx - 6.5, y0 + 19, 6, 5, 0.9, 'BQ25756 buck-boost'], ['res', cx + 0.8, y0 + 18.5, 6.3, 3.2, 0.6, '5 mOhm 2512 sense'], ['res', cx + 0.8, y0 + 22.4, 6.3, 3.2, 0.6, '5 mOhm 2512 sense'],
           ['mlcc', cx - 7, y0 + 25, 3.2, 1.6, 1.4, 'MLCC 1206'], ['mlcc', cx - 3.4, y0 + 25, 3.2, 1.6, 1.4, 'MLCC 1206']];
         for (const [k, x, y, w, d, h, lab] of S) if (!hit(x, y, w, d, h)) put(k, x, y, w, d, h, `${lab} (port ${i + 1})`, z); else place(k, w, d, h, `${lab} (port ${i + 1})`, zs);
       }
-    } else if (kit) for (const [k, w, d, h, n, lab] of KIT[kit]) for (let i = 0; i < n; i++) if (!place(k, w, d, h, lab, zs)) break;
+    } else for (const kk of kits) for (const [k, w, d, h, n, lab] of KIT[kk]) for (let i = 0; i < n; i++) if (!place(k, w, d, h, lab, zs)) break;
   }
   return { parts, miss };
 }
@@ -364,7 +399,6 @@ function start(host, S) {
     const { parts } = populate(L, b);
     const s = 6, cw = Math.ceil(b.W * s), ch = Math.ceil(b.H * s), Y = (y) => (b.H - y) * s;
     const R = (g, x, y, w, d) => g.fillRect(x * s, Y(y + d), w * s, d * s), C = (g, x, y, r) => { g.beginPath(); g.arc(x * s, Y(y), r * s, 0, 7); g.fill(); };
-    const hdr = L.hdr && (L.hdr.upper === b.id || L.hdr.lower === b.id) ? L.hdr : null;
     const maskTex = canvasTex(cw, ch, (g) => { // traces / pours under the mask (lighter = copper)
       g.fillStyle = '#c4c4c4'; g.fillRect(0, 0, cw, ch); g.fillStyle = '#d2d2d2';
       for (const z of b.zones || []) R(g, z.x0 + 0.6, z.y0 + 0.6, z.x1 - z.x0 - 1.2, z.y1 - z.y0 - 1.2);
@@ -380,6 +414,7 @@ function start(host, S) {
     const copper = canvasTex(cw, ch, (g) => {
       g.fillStyle = '#000'; g.fillRect(0, 0, cw, ch); g.fillStyle = '#fff';
       for (const h of b.mounting_holes || []) C(g, h.x, h.y, h.d / 2 + 1.4);
+      for (const q of L.bosses) if (q.board === b.id) C(g, q.x, q.y, 2.6);
       for (const f of [[2, 12], [b.W - 2, 12], [2, b.H - 12]]) C(g, f[0], f[1], 0.5);
       for (const p of parts) {
         if (p.k === 'ic') R(g, p.x - 0.35, p.y - 0.35, p.w + 0.7, p.d + 0.7);
@@ -389,14 +424,20 @@ function start(host, S) {
         else if (p.k === 'mod') for (let t = 0.8; t < p.d - 0.4; t += 1.27) { R(g, p.x - 0.6, p.y + t, 1.2, 0.8); R(g, p.x + p.w - 0.6, p.y + t, 1.2, 0.8); }
         else R(g, p.x - 0.3, p.y - 0.3, p.w + 0.6, p.d + 0.6);
       }
-      if (hdr && hdr.upper === b.id) for (let i = 0; i < hdr.cols; i++) for (let j = 0; j < hdr.rows; j++) C(g, hdr.lx0 + 1 + (i + 0.5) * hdr.pitch, hdr.ly0 + 1 + (j + 0.5) * hdr.pitch, 0.38);
+      for (const h of L.hdrs) if (h.upper === b.id) { // pin pads of each B2B part on the upper board
+        if (h.mezz) for (let x = h.lx0 + 0.6; x < h.lx0 + h.lw - 0.4; x += 0.8) { R(g, x, h.ly0 + 0.3, 0.4, 1.2); R(g, x, h.ly0 + h.ld - 1.5, 0.4, 1.2); }
+        else for (let i = 0; i < h.cols; i++) for (let j = 0; j < h.rows; j++) C(g, h.lx0 + (h.lw - h.cols * h.pitch) / 2 + (i + 0.5) * h.pitch, h.ly0 + (h.ld - h.rows * h.pitch) / 2 + (j + 0.5) * h.pitch, h.pitch * 0.3);
+      }
     });
     const silk = canvasTex(cw, ch, (g) => {
       g.fillStyle = '#000'; g.fillRect(0, 0, cw, ch); g.fillStyle = g.strokeStyle = '#fff'; g.lineWidth = 0.15 * s;
       g.font = `600 ${1.25 * s}px ui-monospace,Consolas,monospace`; g.textBaseline = 'top';
       for (const z of b.zones || []) { g.setLineDash([0.8 * s, 0.6 * s]); g.strokeRect(z.x0 * s + 2, Y(z.y1) + 2, (z.x1 - z.x0) * s - 4, (z.y1 - z.y0) * s - 4); g.setLineDash([]); }
       for (const h of b.mounting_holes || []) { g.beginPath(); g.arc(h.x * s, Y(h.y), (h.d / 2 + 2) * s, 0, 7); g.stroke(); }
-      for (const c of b.conns) { const ty = c.front ? c.yMouth + c.d + 2.1 : c.yMouth - c.d - 0.6; g.textAlign = 'center'; g.fillText(c.ref.replace(/^J_|^SW_/, ''), c.x * s, Y(ty)); }
+      for (const c of b.conns) { const ty = c.side ? c.y + 0.6 : c.front ? c.fy0 + c.fd + 2.1 : c.fy0 - 0.6; g.textAlign = c.side ? 'left' : 'center'; g.fillText(c.ref.replace(/^J_|^SW_/, ''), (c.side ? c.fx0 + c.fw + 1 : c.x) * s, Y(ty)); }
+      g.setLineDash([1.6 * s, 0.5 * s, 0.3 * s, 0.5 * s]); for (const q of b.ko) g.strokeRect(q.x0 * s + 5, Y(q.y1) + 5, (q.x1 - q.x0) * s - 10, (q.y1 - q.y0) * s - 10); g.setLineDash([]);
+      for (const q of b.ko) g.fillText(`MAX ${q.max_height} MM`, q.x0 * s + 9, Y(q.y0) - 1.8 * s);
+      for (const q of L.bosses) if (q.board === b.id) { g.beginPath(); g.arc(q.x * s, Y(q.y), 3.2 * s, 0, 7); g.stroke(); }
       g.textAlign = 'left';
       for (const p of parts) { if (p.k === 'ic' && p.w >= 3) C(g, p.x - 0.7, p.y + p.d + 0.7, 0.3); if (p.k === 'ind') g.strokeRect(p.x * s - 3, Y(p.y + p.d) - 3, p.w * s + 6, p.d * s + 6); }
       // title in the first free horizontal gap between zones on the left half
@@ -423,19 +464,35 @@ function start(host, S) {
       arr.forEach((a, i) => im.setMatrixAt(i, m4.compose(v1.set(a.x, a.y, b.t + a.z), q0, v2.set(a.w, a.d, a.h))));
       im.castShadow = im.receiveShadow = true; im.userData.parts = arr.map((a) => a.p); im.userData.board = b.name; bg.add(im); pick.push(im);
     }
+    for (const q of L.bosses) if (q.board === b.id) cylZ(bg, M.nickel, q.x, q.y, b.t, 2.7, 1.5, 24);
     // edge connectors on the board + matching openings in the wall
     for (const c of b.conns) {
-      const ci = { ref: c.ref, type: c.type, sub: `${b.name} \u00b7 ${c.edge} edge \u00b7 x ${c.x} mm \u00b7 ${c.w} x ${c.h} mm` };
-      const cg = connector(c, false); cg.position.set(c.x, c.yMouth, c.zc); if (c.front) cg.rotation.z = Math.PI; bg.add(cg); info(cg, ci);
-      const fg = connector(c, true); fg.position.set(b.p.x + c.x, c.front ? out.y0 - 0.02 : out.y1 + 0.02, b.p.z + c.zc); if (c.front) fg.rotation.z = Math.PI; G.body.add(fg); info(fg, ci);
+      const ci = { ref: c.ref, type: c.type, sub: `${b.name} \u00b7 ${c.edge} edge \u00b7 ${c.side ? 'y ' + c.y : 'x ' + c.x} mm \u00b7 ${c.w} x ${c.h} mm` };
+      const cg = connector(c, false); cg.position.set(c.mx, c.my, c.zc); cg.rotation.z = c.rot; bg.add(cg); info(cg, ci);
+      if (!c.side) { const fg = connector(c, true); fg.position.set(b.p.x + c.x, c.front ? out.y0 - 0.02 : out.y1 + 0.02, b.p.z + c.zc); fg.rotation.z = c.rot; G.body.add(fg); info(fg, ci); }
       portItems.push({ label: `${c.ref}  ${c.type}`, obj: cg, info: ci });
     }
   }
   // B2B header + standoffs between stacked boards
-  if (L.hdr) {
-    const h = L.hdr, hg = boxAt(G.hdr, M.plastic, h.wx + h.lx0, h.wy + h.ly0, h.z0, h.lw, h.ld, h.z1 - h.z0);
-    const ii = { ref: 'B2B header', type: h.type, sub: `x ${h.x}, y ${h.y} on ${h.upper}; ${h.height} mm stack` };
-    info(hg, ii); portItems.push({ label: `B2B  ${h.type}`, obj: hg, info: ii });
+  for (const h of L.hdrs) {
+    const hg = boxAt(G.hdr, h.mezz ? M.ind : M.plastic, h.wx + h.lx0, h.wy + h.ly0, h.z0, h.lw, h.ld, h.z1 - h.z0);
+    const ii = { ref: `B2B ${h.name || 'header'}`, type: h.type, sub: `x ${h.x}, y ${h.y} \u00b7 ${(h.z1 - h.z0).toFixed(1)} mm stack \u00b7 ${h.orientation || 'along X'}` };
+    info(hg, ii); portItems.push({ label: `B2B  ${h.name || h.type}`, obj: hg, info: ii });
+  }
+  // card-guide rails in the extrusion (notched at edge connectors) + end-cap screw bosses
+  for (const b of L.boards) if (b.rails) {
+    const e = b.rails + Math.min(b.p.y, L.inn.y - b.p.y - b.H), x0 = L.body.x0, x1 = L.body.x1;
+    for (const front of [true, false]) {
+      const cuts = b.conns.filter((c) => !c.side && c.front === front).map((c) => [b.p.x + c.x - c.w / 2 - 1, b.p.x + c.x + c.w / 2 + 1]).sort((p, q) => p[0] - q[0]);
+      const segs = []; let a = x0; for (const [c0, c1] of cuts) { if (c0 > a) segs.push([a, c0]); a = Math.max(a, c1); } if (a < x1) segs.push([a, x1]);
+      for (const [s0, s1] of segs) for (const z of [b.p.z - 1.2, b.top + 0.05]) boxAt(G.body, M.alu, s0, front ? 0 : L.inn.y - e, z, s1 - s0, e, 1.15);
+    }
+  }
+  for (const q of L.bosses) {
+    const b = L.boards.find((k) => k.id === q.board), wx = b.p.x + q.x, left = wx < (L.out.x0 + L.out.x1) / 2;
+    const xa = left ? 0 : wx - 3.5, xb = left ? wx + 3.5 : L.inn.x; // boss runs from the end-cap wall to the screw
+    const m = boxAt(left ? G.capL : G.capR, M.cap, xa, b.p.y + q.y - 3.5, b.p.z - 4, xb - xa, 7, 4);
+    info(m, { ref: 'Screw boss', type: `end-cap boss under ${b.name}`, sub: `board-local x ${q.x}, y ${q.y} (boss size assumed)` });
   }
   for (const up of L.boards) for (const lo of L.boards) {
     const gap = up.p.z - lo.top; if (up === lo || gap <= 0 || gap > 40) continue;
@@ -453,10 +510,10 @@ function start(host, S) {
     boxAt(lg, M.white, e.x0 - 0.8, ecy - 1.5, ecz - 1.5, 0.8, 3, 3);
     const dome = mesh(new THREE.SphereGeometry(1.25, 20, 10, 0, Math.PI * 2, 0, Math.PI / 2), M.lens, lg, false); dome.rotation.z = Math.PI / 2; dome.position.set(e.x0 - 0.8, ecy, ecz);
     boxAt(lg, M.ledA, e.x0 - 0.5, ecy + 6, ecz - 0.4, 0.5, 1.6, 0.8).material = std({ color: 0x300, emissive: 0xff2010, emissiveIntensity: 0.9 });
-    const od = num((S.enclosure.end_caps.left.contains || []).join(' '), /optic\s*D(\d+)/i, 20);
+    const lct = ((S.enclosure.end_caps || {}).left || {}).contains || [], od = num(lct.join(' '), /optic\s*D(\d+)/i, num(lct.join(' '), /(\d+)\s*mm[^,]*optic/i, 20));
     const lens = mesh(new THREE.CylinderGeometry(od / 2, od / 2, 1.2, 40), M.lens, G.capL, false); lens.rotation.z = Math.PI / 2; lens.position.set(out.x0 - 0.3, ecy, ecz);
     const bez = mesh(new THREE.TorusGeometry(od / 2 + 0.4, 0.55, 10, 48), M.nickel, G.capL, false); bez.rotation.y = Math.PI / 2; bez.position.set(out.x0 - 0.2, ecy, ecz);
-    info(lens, { ref: 'Flashlight optic', type: `D${od} optic, XP-G3 5700 K + red night LED`, sub: 'left end cap (RF window)' });
+    info(lens, { ref: 'Flashlight optic', type: `${od} mm optic, XP-G3 5700 K + red night LED`, sub: 'left end cap (RF window)' });
   }
   // cartridge + 5 cells
   {
@@ -478,19 +535,21 @@ function start(host, S) {
       const cyM = (c.y0 + c.y1) / 2, czM = (c.z0 + c.z1) / 2, pw = L.boards.find((q) => q.id === 'power') || L.boards[0], pg = G.boards[pw.id];
       const x = boxAt(pg, M.xt60, c.mate - 10 - pw.p.x, cyM - 7.9 - pw.p.y, czM - 4.1 - pw.p.z, 10, 15.8, 8.2);
       boxAt(pg, M.nickel, Math.max(0, c.mate - 3 - pw.p.x), cyM - 10 - pw.p.y, czM + 4.1 - pw.p.z, 1, 20, pw.p.z - czM - 4.1);
-      for (let i = 0; i < 4; i++) cylZ(g, M.gold, c.x0 - 0.2, cyM + 11 + i * 2.6, czM - 0.3, 0.7, 0.6, 16).rotation.set(0, 0, Math.PI / 2);
+      for (let i = 0; i < c.pogo; i++) cylZ(g, M.gold, c.x0 - 0.2, cyM + 11 + i * 2.6, czM - 0.3, 0.7, 0.6, 16).rotation.set(0, 0, Math.PI / 2);
       const ii = { ref: 'Cartridge connector', type: c.C.connector.type, sub: `mates at x ${c.mate} mm \u00b7 ${c.C.connector.note || ''}` };
       info(x, ii); portItems.push({ label: `XT60PW  cartridge mate`, obj: x, info: ii });
     }
   }
   // fan
   if (L.fan) {
-    const f = L.fan, g = G.fan, fw = f.x1 - f.x0, fd = f.y1 - f.y0, fh = f.z1 - f.z0, fcx = f.x0 + fw / 2, fcy = f.y0 + fd / 2;
-    const s = rrect(f.x0, f.y0, fw, fd, 2); s.holes.push(circ(fcx, fcy, Math.min(fw, fd) / 2 - 1));
-    const fr = mesh(new THREE.ExtrudeGeometry(s, { depth: fh, bevelEnabled: false, curveSegments: 24 }), M.plastic, g); fr.position.z = f.z0;
-    cylZ(g, M.plastic, fcx, fcy, f.z0 + 1, fw * 0.2, fh - 2);
-    for (let i = 0; i < 7; i++) { const bl = boxAt(g, M.plastic, 0, 0, 0, fw * 0.3, 4.5, 0.6); bl.position.set(fcx, fcy, f.z0 + fh / 2); bl.rotation.set(0.45, 0, (i / 7) * Math.PI * 2); bl.geometry.translate(fw * 0.32, 0, 0); }
-    info(fr, { ref: 'Fan', type: `${f.size.join(' x ')} mm`, sub: `x ${f.x0}-${f.x1}, y ${f.y0}-${f.y1}, z ${f.z0}` }); portItems.push({ label: 'Fan  30 x 30 x 10', obj: fr, info: fr.userData.info });
+    const f = L.fan, g = grp(G.fan), sz = { x: f.x1 - f.x0, y: f.y1 - f.y0, z: f.z1 - f.z0 }, ax = f.axis || 'z';
+    const [fw, fd] = ax === 'z' ? [sz.x, sz.y] : ax === 'y' ? [sz.x, sz.z] : [sz.y, sz.z], fh = sz[ax]; // built flat (axis = local Z), then turned
+    g.position.set(f.x0 + sz.x / 2, f.y0 + sz.y / 2, f.z0 + sz.z / 2); if (ax === 'y') g.rotation.x = -Math.PI / 2; else if (ax === 'x') g.rotation.y = Math.PI / 2;
+    const s = rrect(-fw / 2, -fd / 2, fw, fd, 2); s.holes.push(circ(0, 0, Math.min(fw, fd) / 2 - 1));
+    const fr = mesh(new THREE.ExtrudeGeometry(s, { depth: fh, bevelEnabled: false, curveSegments: 24 }), M.plastic, g); fr.position.z = -fh / 2;
+    cylZ(g, M.plastic, 0, 0, -fh / 2 + 1, fw * 0.2, fh - 2);
+    for (let i = 0; i < 7; i++) { const bl = boxAt(g, M.plastic, 0, 0, 0, fw * 0.3, 4.5, 0.6); bl.position.set(0, 0, 0); bl.rotation.set(0.45, 0, (i / 7) * Math.PI * 2); bl.geometry.translate(fw * 0.32, 0, 0); }
+    info(fr, { ref: 'Fan', type: `${f.size.join(' x ')} mm`, sub: `x ${f.x0}-${f.x1}, y ${f.y0}-${f.y1}, z ${f.z0}-${f.z1} \u00b7 axis ${ax}` }); portItems.push({ label: `Fan  ${f.size.join(' x ')}`, obj: fr, info: fr.userData.info });
   }
   // speaker (faces up)
   if (L.spk) {

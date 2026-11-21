@@ -1,0 +1,1852 @@
+(kicad_sch
+  (version 20231120)
+  (generator "bb_gen")
+  (generator_version "1.0")
+  (uuid "c3b46632-48ea-58b2-b470-da5b1d24c7c2")
+  (paper "A1")
+  (title_block
+    (title "Attention-glow strip: 8x SK6812MINI-E (board B, front-top light pipe)")
+    (company "Battery Bank")
+    (rev "A"))
+  (lib_symbols
+    (symbol "bb:R"
+      (pin_numbers hide)
+      (pin_names
+        (offset 0.254) hide)
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "R"
+        (at 0 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "R_0_1"
+        (rectangle
+          (start -1.016 -2.54)
+          (end 1.016 2.54)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "R_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "2"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))))
+    (symbol "lcsc:SK6812MINI-E_C5149201"
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "LED"
+        (id 0)
+        (at 0 6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "SK6812MINI-E_C5149201"
+        (id 1)
+        (at 0 -6.35 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" "lcsc:LED-SMD_4P-L3.2-W2.8-LS5.9_SK6812MINI-E"
+        (id 2)
+        (at 0 -8.89 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" "https://www.lcsc.com/datasheet/C5149201.pdf"
+        (id 3)
+        (at 0 -11.43 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Manufacturer" "OPSCO(欧思科)"
+        (id 4)
+        (at 0 -13.97 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "MPN" "SK6812MINI-E"
+        (id 5)
+        (at 0 -16.51 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "LCSC Part" "C5149201"
+        (id 6)
+        (at 0 -19.05 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "ki_keywords" "Light Emitting Diodes (LED)"
+        (id 8)
+        (at 0 -21.59 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "SK6812MINI-E_C5149201_0_1"
+        (rectangle
+          (start -7.62 3.81)
+          (end 7.62 -3.81)
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type background)))
+        (pin passive line
+          (at 10.16 -1.27 180)
+          (length 2.54)
+          (name "VDD"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 10.16 1.27 180)
+          (length 2.54)
+          (name "DOUT"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "4"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -10.16 1.27 0)
+          (length 2.54)
+          (name "GND"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -10.16 -1.27 0)
+          (length 2.54)
+          (name "DIN"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))))
+    (symbol "bb:C"
+      (pin_numbers hide)
+      (pin_names
+        (offset 0.254) hide)
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "C"
+        (at 0 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "C_0_1"
+        (polyline
+          (pts
+            (xy -2.032 0.762)
+            (xy 2.032 0.762))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy -2.032 -0.762)
+            (xy 2.032 -0.762))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "C_1_1"
+        (pin passive line
+          (at 0 3.81 270)
+          (length 1.27)
+          (name "1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -3.81 90)
+          (length 1.27)
+          (name "2"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))))
+    (symbol "bb:TP"
+      (pin_numbers hide)
+      (pin_names
+        (offset 0.254) hide)
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "TP"
+        (at 0 3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "TP"
+        (at 0 -3.81 0)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (effects
+          (font
+            (size 1.27 1.27)) hide))
+      (symbol "TP_0_1"
+        (polyline
+          (pts
+            (xy 0 0)
+            (xy 0 1.27))
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (circle
+          (center 0 1.778)
+          (radius 0.508)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "TP_1_1"
+        (pin passive line
+          (at 0 -2.54 90)
+          (length 2.54)
+          (name "1"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27))))))))
+  (text "Attention-glow strip: 8x SK6812MINI-E (board B, front-top light pipe)"
+    (exclude_from_sim no)
+    (at 20 20 0)
+    (effects
+      (font
+        (size 2 2))
+      (justify left))
+    (uuid "f0ce2c69-45b3-5c41-8006-5160d0890b3b"))
+  (symbol
+    (lib_id "bb:R")
+    (at 41.91 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "5daaabea-f662-545b-ab29-cdd6f4257a46")
+    (property "Reference" "R253"
+      (at 41.91 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "33"
+      (at 41.91 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+      (at 41.91 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 41.91 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C25105"
+      (at 41.91 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "0402WGF330JTCE"
+      (at 41.91 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 41.91 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "50"
+      (at 41.91 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_P" "0.0625"
+      (at 41.91 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_P" "0.0"
+      (at 41.91 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "684c5a8c-3685-51f2-8501-58be300154cf"))
+    (pin "2"
+      (uuid "7526b405-0263-5f14-9840-e2c80ecf7eaf"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3b46632-48ea-58b2-b470-da5b1d24c7c2"
+          (reference "R253")
+          (unit 1)))))
+  (global_label "GLOW_D5V"
+    (shape bidirectional)
+    (at 41.91 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "4f775b4b-ace7-51fc-ad2f-61b2aad7ab6e"))
+  (global_label "GLOW_D0"
+    (shape bidirectional)
+    (at 41.91 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "de7fa93a-a6f4-554f-a2e0-4181bfc44e2e"))
+  (symbol
+    (lib_id "lcsc:SK6812MINI-E_C5149201")
+    (at 81.28 45.72 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "321ce5c2-dd5a-5e70-8190-00a5802dbdc7")
+    (property "Reference" "D39"
+      (at 81.28 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "SK6812 #1"
+      (at 81.28 49.99 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:LED-SMD_4P-L3.2-W2.8-LS5.9_SK6812MINI-E"
+      (at 81.28 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 81.28 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C5149201"
+      (at 81.28 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "SK6812MINI-E"
+      (at 81.28 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_I" "0.012"
+      (at 81.28 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_I" "0.036"
+      (at 81.28 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "firmware caps each channel at 1/3"
+      (at 81.28 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "3"
+      (uuid "67e70899-2355-52ed-a628-f43ed46165dc"))
+    (pin "4"
+      (uuid "23c20604-851f-54f3-ad7d-6c7dc6c20f9c"))
+    (pin "1"
+      (uuid "876e273e-bf1a-5bdc-874f-6b0ef3c2fddd"))
+    (pin "2"
+      (uuid "7249eb11-00bf-56d5-86a7-4d61eeb1679f"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3b46632-48ea-58b2-b470-da5b1d24c7c2"
+          (reference "D39")
+          (unit 1)))))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 71.12 44.45 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "93cfd0b4-288f-5959-8bee-4d14d0111617"))
+  (global_label "GLOW_D0"
+    (shape bidirectional)
+    (at 71.12 46.99 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "28162a50-c95f-59a1-af7d-289ed8fc2ff5"))
+  (global_label "V5_GLOW"
+    (shape bidirectional)
+    (at 91.44 46.99 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "562bcb64-6c17-530a-b17d-21ce5e04e310"))
+  (global_label "GLOW_D1"
+    (shape bidirectional)
+    (at 91.44 44.45 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "dc8c407a-adba-508d-bbca-843c3c921ec4"))
+  (symbol
+    (lib_id "bb:C")
+    (at 119.38 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "2cc28c7e-aab5-5f29-a457-64b6f5d1f7db")
+    (property "Reference" "C448"
+      (at 119.38 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 16V"
+      (at 119.38 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 119.38 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 119.38 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C1525"
+      (at 119.38 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL05B104KO5NNNC"
+      (at 119.38 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 119.38 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "16.0"
+      (at 119.38 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "8131ad55-3a9b-539f-a8ce-63c4e8579b5e"))
+    (pin "2"
+      (uuid "1165d62f-3694-5c67-ae50-c1abc7a461ca"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3b46632-48ea-58b2-b470-da5b1d24c7c2"
+          (reference "C448")
+          (unit 1)))))
+  (global_label "V5_GLOW"
+    (shape bidirectional)
+    (at 119.38 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "8cd06a5a-06c1-5a69-af8b-37596976286b"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 119.38 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "9e9a147e-2fb5-5ef9-910d-b6abf8beafba"))
+  (symbol
+    (lib_id "lcsc:SK6812MINI-E_C5149201")
+    (at 157.48 45.72 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "5dbaea5e-afb0-5d55-9a4c-9176a9972d84")
+    (property "Reference" "D40"
+      (at 157.48 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "SK6812 #2"
+      (at 157.48 49.99 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:LED-SMD_4P-L3.2-W2.8-LS5.9_SK6812MINI-E"
+      (at 157.48 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 157.48 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C5149201"
+      (at 157.48 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "SK6812MINI-E"
+      (at 157.48 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_I" "0.012"
+      (at 157.48 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_I" "0.036"
+      (at 157.48 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "firmware caps each channel at 1/3"
+      (at 157.48 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "3"
+      (uuid "9279b706-4c15-5e75-93cd-afb332fe00d6"))
+    (pin "4"
+      (uuid "8d13ccbb-b8e0-5ce5-ab16-db1327c13e70"))
+    (pin "1"
+      (uuid "3c16862b-4568-5a6d-862a-b69e3e5239c8"))
+    (pin "2"
+      (uuid "a517c64d-0870-5b7b-8d48-e36a6e90c038"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3b46632-48ea-58b2-b470-da5b1d24c7c2"
+          (reference "D40")
+          (unit 1)))))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 147.32 44.45 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "f6d7f156-694c-54c5-9999-96e3f1954396"))
+  (global_label "GLOW_D1"
+    (shape bidirectional)
+    (at 147.32 46.99 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "ee95d6e0-bbcf-5113-b350-cbb739e25525"))
+  (global_label "V5_GLOW"
+    (shape bidirectional)
+    (at 167.64 46.99 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "89c14789-a54f-55a7-908b-246d48063773"))
+  (global_label "GLOW_D2"
+    (shape bidirectional)
+    (at 167.64 44.45 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "f30b0cf8-79cf-5bf5-a9f5-f476bd81c948"))
+  (symbol
+    (lib_id "bb:C")
+    (at 195.58 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "0af0106c-4da1-5b8f-b295-ce442044a06d")
+    (property "Reference" "C449"
+      (at 195.58 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 16V"
+      (at 195.58 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 195.58 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 195.58 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C1525"
+      (at 195.58 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL05B104KO5NNNC"
+      (at 195.58 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 195.58 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "16.0"
+      (at 195.58 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "cf2145f1-9c08-532a-bc8e-04853a2584bb"))
+    (pin "2"
+      (uuid "ad429f76-f852-519e-a3c0-b3ea581f1b64"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3b46632-48ea-58b2-b470-da5b1d24c7c2"
+          (reference "C449")
+          (unit 1)))))
+  (global_label "V5_GLOW"
+    (shape bidirectional)
+    (at 195.58 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "d441465b-3682-50ae-9ee1-eb11a1ecb2f4"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 195.58 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "a11360b1-f3a5-5608-9ad1-ea7d3a7841e6"))
+  (symbol
+    (lib_id "lcsc:SK6812MINI-E_C5149201")
+    (at 233.68 45.72 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "0f78420b-a2b6-508e-8ccf-f4def43249b7")
+    (property "Reference" "D41"
+      (at 233.68 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "SK6812 #3"
+      (at 233.68 49.99 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:LED-SMD_4P-L3.2-W2.8-LS5.9_SK6812MINI-E"
+      (at 233.68 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 233.68 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C5149201"
+      (at 233.68 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "SK6812MINI-E"
+      (at 233.68 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_I" "0.012"
+      (at 233.68 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_I" "0.036"
+      (at 233.68 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "firmware caps each channel at 1/3"
+      (at 233.68 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "3"
+      (uuid "7b4ae569-29e9-5dd0-a27b-9670fd7544ec"))
+    (pin "4"
+      (uuid "aa68b0e8-e5cf-50c6-ad48-0bf7ac5c23e8"))
+    (pin "1"
+      (uuid "2d8b2c40-6b82-5cb9-b423-8e269a64cd4f"))
+    (pin "2"
+      (uuid "988e918c-ae4c-51f7-aa49-e7f32d68529c"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3b46632-48ea-58b2-b470-da5b1d24c7c2"
+          (reference "D41")
+          (unit 1)))))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 223.52 44.45 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "8cfe2a3f-04ae-56a9-9bd1-acaee444e79c"))
+  (global_label "GLOW_D2"
+    (shape bidirectional)
+    (at 223.52 46.99 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "fd8f4f88-5ad3-5855-8418-dfec6d4a045f"))
+  (global_label "V5_GLOW"
+    (shape bidirectional)
+    (at 243.84 46.99 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "735b19e3-9cd0-5039-9084-2cab911175bf"))
+  (global_label "GLOW_D3"
+    (shape bidirectional)
+    (at 243.84 44.45 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "7f304b89-b3d2-52bb-bb61-ecbfaa337546"))
+  (symbol
+    (lib_id "bb:C")
+    (at 271.78 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "7784de10-3016-54a5-b692-a5e1659055be")
+    (property "Reference" "C450"
+      (at 271.78 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 16V"
+      (at 271.78 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 271.78 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 271.78 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C1525"
+      (at 271.78 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL05B104KO5NNNC"
+      (at 271.78 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 271.78 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "16.0"
+      (at 271.78 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "0fa855bb-ecdb-5e38-acbb-e5f14497415d"))
+    (pin "2"
+      (uuid "79df406e-e91a-5f72-b432-603b57d4e180"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3b46632-48ea-58b2-b470-da5b1d24c7c2"
+          (reference "C450")
+          (unit 1)))))
+  (global_label "V5_GLOW"
+    (shape bidirectional)
+    (at 271.78 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "b578ad30-8f0b-5db7-8f86-a250cf9b0768"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 271.78 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "f0491265-0c44-5d93-b9ef-e78ab927d812"))
+  (symbol
+    (lib_id "lcsc:SK6812MINI-E_C5149201")
+    (at 309.88 45.72 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "629df1b4-9fea-529a-8806-a0793e8bd04b")
+    (property "Reference" "D42"
+      (at 309.88 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "SK6812 #4"
+      (at 309.88 49.99 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:LED-SMD_4P-L3.2-W2.8-LS5.9_SK6812MINI-E"
+      (at 309.88 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 309.88 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C5149201"
+      (at 309.88 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "SK6812MINI-E"
+      (at 309.88 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_I" "0.012"
+      (at 309.88 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_I" "0.036"
+      (at 309.88 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "firmware caps each channel at 1/3"
+      (at 309.88 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "3"
+      (uuid "bd95ffeb-94bc-57ff-b394-f17d6e29d0e8"))
+    (pin "4"
+      (uuid "61d10e38-9a73-5269-b2a3-d9e2f4353644"))
+    (pin "1"
+      (uuid "656da307-0715-5a37-bf5c-265172e70567"))
+    (pin "2"
+      (uuid "f4dd58a6-a87b-53c1-8ded-1e638bcccc71"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3b46632-48ea-58b2-b470-da5b1d24c7c2"
+          (reference "D42")
+          (unit 1)))))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 299.72 44.45 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "c9c59d68-e779-5dc6-b49f-2241ebdbf2f3"))
+  (global_label "GLOW_D3"
+    (shape bidirectional)
+    (at 299.72 46.99 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "f1a57257-70f9-5665-9442-74c6a664c7e1"))
+  (global_label "V5_GLOW"
+    (shape bidirectional)
+    (at 320.04 46.99 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "7bef2172-154f-51cd-8465-615cc85f81c9"))
+  (global_label "GLOW_D4"
+    (shape bidirectional)
+    (at 320.04 44.45 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "9c44a096-0e0b-5dde-a241-17250535f9a8"))
+  (symbol
+    (lib_id "bb:C")
+    (at 347.98 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "f9cedad1-4bda-535d-96b6-b0349fd67d44")
+    (property "Reference" "C451"
+      (at 347.98 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 16V"
+      (at 347.98 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 347.98 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 347.98 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C1525"
+      (at 347.98 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL05B104KO5NNNC"
+      (at 347.98 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 347.98 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "16.0"
+      (at 347.98 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "021b81b1-e72b-570c-8b32-b0cd585f6227"))
+    (pin "2"
+      (uuid "e8170e81-e4b7-51cc-b904-231a4f3b84b2"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3b46632-48ea-58b2-b470-da5b1d24c7c2"
+          (reference "C451")
+          (unit 1)))))
+  (global_label "V5_GLOW"
+    (shape bidirectional)
+    (at 347.98 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "0f063fba-3e2a-51a6-ad13-8a63c42084c4"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 347.98 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "69ae49a2-de8c-5173-b27a-c9599b898ad3"))
+  (symbol
+    (lib_id "lcsc:SK6812MINI-E_C5149201")
+    (at 386.08 45.72 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "47812bf7-d429-517b-b885-a1b3d95397ea")
+    (property "Reference" "D43"
+      (at 386.08 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "SK6812 #5"
+      (at 386.08 49.99 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:LED-SMD_4P-L3.2-W2.8-LS5.9_SK6812MINI-E"
+      (at 386.08 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 386.08 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C5149201"
+      (at 386.08 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "SK6812MINI-E"
+      (at 386.08 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_I" "0.012"
+      (at 386.08 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_I" "0.036"
+      (at 386.08 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "firmware caps each channel at 1/3"
+      (at 386.08 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "3"
+      (uuid "674dea7a-b3a2-53c7-8183-0dac7f54c2f5"))
+    (pin "4"
+      (uuid "8d759eeb-d15a-5559-96eb-89670dbd78fa"))
+    (pin "1"
+      (uuid "1714780c-3229-57ab-925c-5a82a852960c"))
+    (pin "2"
+      (uuid "bdac8426-306e-5a05-8422-680db11dce84"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3b46632-48ea-58b2-b470-da5b1d24c7c2"
+          (reference "D43")
+          (unit 1)))))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 375.92 44.45 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "216f75bc-f8d1-5a40-82d1-5ec9738de242"))
+  (global_label "GLOW_D4"
+    (shape bidirectional)
+    (at 375.92 46.99 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "06e4bef8-2787-5afd-b155-bc7d981896da"))
+  (global_label "V5_GLOW"
+    (shape bidirectional)
+    (at 396.24 46.99 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "60b3a870-9f4d-5c6c-8fde-ac90dad6d695"))
+  (global_label "GLOW_D5"
+    (shape bidirectional)
+    (at 396.24 44.45 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "223db80e-3f41-5956-9938-f4c70799de09"))
+  (symbol
+    (lib_id "bb:C")
+    (at 424.18 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "b937ca71-c110-55e2-9053-b8d74209c1c0")
+    (property "Reference" "C452"
+      (at 424.18 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 16V"
+      (at 424.18 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 424.18 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 424.18 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C1525"
+      (at 424.18 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL05B104KO5NNNC"
+      (at 424.18 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 424.18 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "16.0"
+      (at 424.18 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "4220bf16-66fc-5d09-b86e-2b0d92a21cf7"))
+    (pin "2"
+      (uuid "abe5f6d7-d037-513e-9432-8c576676b806"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3b46632-48ea-58b2-b470-da5b1d24c7c2"
+          (reference "C452")
+          (unit 1)))))
+  (global_label "V5_GLOW"
+    (shape bidirectional)
+    (at 424.18 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "df98bf5f-1baf-5c48-ae60-e1ed93d3c411"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 424.18 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "48cd360b-ef7d-57c8-8cf2-352fb889947d"))
+  (symbol
+    (lib_id "lcsc:SK6812MINI-E_C5149201")
+    (at 462.28 45.72 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "aa887452-0c6d-5028-a7ab-86b8b1aa8bcf")
+    (property "Reference" "D44"
+      (at 462.28 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "SK6812 #6"
+      (at 462.28 49.99 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:LED-SMD_4P-L3.2-W2.8-LS5.9_SK6812MINI-E"
+      (at 462.28 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 462.28 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C5149201"
+      (at 462.28 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "SK6812MINI-E"
+      (at 462.28 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_I" "0.012"
+      (at 462.28 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_I" "0.036"
+      (at 462.28 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "firmware caps each channel at 1/3"
+      (at 462.28 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "3"
+      (uuid "fe7a9ecc-bc9f-5f27-8eca-46167677b15b"))
+    (pin "4"
+      (uuid "45d72879-4ff4-5c8e-a13e-a1dcf6e1d4bb"))
+    (pin "1"
+      (uuid "f79d39ae-d4a9-5576-90f9-55b771e8d154"))
+    (pin "2"
+      (uuid "6f485554-c372-53eb-bb2e-bda8c745fe7d"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3b46632-48ea-58b2-b470-da5b1d24c7c2"
+          (reference "D44")
+          (unit 1)))))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 452.12 44.45 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "cded9592-8562-560b-a17c-09fae2875795"))
+  (global_label "GLOW_D5"
+    (shape bidirectional)
+    (at 452.12 46.99 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "1fa0e637-028d-5a57-8f01-ba09ad98bb5a"))
+  (global_label "V5_GLOW"
+    (shape bidirectional)
+    (at 472.44 46.99 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "367b13ad-9696-5cff-9a29-ce30998dac97"))
+  (global_label "GLOW_D6"
+    (shape bidirectional)
+    (at 472.44 44.45 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "31b96606-bda7-5340-b38e-bda77dee17e3"))
+  (symbol
+    (lib_id "bb:C")
+    (at 500.38 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "bc908c0b-163e-53d2-ada4-9b8a7df61048")
+    (property "Reference" "C453"
+      (at 500.38 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 16V"
+      (at 500.38 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 500.38 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 500.38 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C1525"
+      (at 500.38 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL05B104KO5NNNC"
+      (at 500.38 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 500.38 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "16.0"
+      (at 500.38 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "c2119f85-c8bf-5ca0-b77e-519ff5fcbffd"))
+    (pin "2"
+      (uuid "8e7f87e1-e36f-5aaf-9b57-91ed93c91a57"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3b46632-48ea-58b2-b470-da5b1d24c7c2"
+          (reference "C453")
+          (unit 1)))))
+  (global_label "V5_GLOW"
+    (shape bidirectional)
+    (at 500.38 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "aa227e43-59cb-58f8-a08e-044b5f690865"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 500.38 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "60f2cb8a-6006-5407-9740-07a34518f0a1"))
+  (symbol
+    (lib_id "lcsc:SK6812MINI-E_C5149201")
+    (at 538.48 45.72 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "3b609195-d700-567b-8799-c367b81def29")
+    (property "Reference" "D45"
+      (at 538.48 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "SK6812 #7"
+      (at 538.48 49.99 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:LED-SMD_4P-L3.2-W2.8-LS5.9_SK6812MINI-E"
+      (at 538.48 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 538.48 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C5149201"
+      (at 538.48 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "SK6812MINI-E"
+      (at 538.48 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_I" "0.012"
+      (at 538.48 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_I" "0.036"
+      (at 538.48 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "firmware caps each channel at 1/3"
+      (at 538.48 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "3"
+      (uuid "9a8b4fcb-10ef-5b4c-bd18-55a682923964"))
+    (pin "4"
+      (uuid "96f25de0-9259-599b-8e65-295fc8542f9b"))
+    (pin "1"
+      (uuid "40b9d337-6f65-55a5-a61e-2d5e2ad1da4c"))
+    (pin "2"
+      (uuid "4bc1863c-7ebe-5cb6-a19f-81ca1c7689f1"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3b46632-48ea-58b2-b470-da5b1d24c7c2"
+          (reference "D45")
+          (unit 1)))))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 528.32 44.45 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "93c6a9f7-9e27-5a0c-be67-cd80544803df"))
+  (global_label "GLOW_D6"
+    (shape bidirectional)
+    (at 528.32 46.99 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "fbe2d22b-a9a5-5d45-9aaa-1c159b1e2e62"))
+  (global_label "V5_GLOW"
+    (shape bidirectional)
+    (at 548.64 46.99 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "5a891ada-9364-504b-bb72-eb695ec46a97"))
+  (global_label "GLOW_D7"
+    (shape bidirectional)
+    (at 548.64 44.45 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "c61cb03c-c47e-59ba-84ec-f85ff6249192"))
+  (symbol
+    (lib_id "bb:C")
+    (at 577.85 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "76ba349a-aec1-51a2-b567-10fe446713cc")
+    (property "Reference" "C454"
+      (at 577.85 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 16V"
+      (at 577.85 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 577.85 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 577.85 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C1525"
+      (at 577.85 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL05B104KO5NNNC"
+      (at 577.85 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 577.85 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "16.0"
+      (at 577.85 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "15b0d97a-c052-5b03-85a7-960e95735f6f"))
+    (pin "2"
+      (uuid "692903f6-70cc-5a08-81e1-987604854712"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3b46632-48ea-58b2-b470-da5b1d24c7c2"
+          (reference "C454")
+          (unit 1)))))
+  (global_label "V5_GLOW"
+    (shape bidirectional)
+    (at 577.85 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "585a8bee-a955-58c6-a0fa-4913fb377152"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 577.85 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "4a826a25-83e0-51c9-a99a-f1a18273b6de"))
+  (symbol
+    (lib_id "lcsc:SK6812MINI-E_C5149201")
+    (at 615.95 45.72 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "a0355a1e-f8ba-5e67-b9bd-19708e322116")
+    (property "Reference" "D46"
+      (at 615.95 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "SK6812 #8"
+      (at 615.95 49.99 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "lcsc:LED-SMD_4P-L3.2-W2.8-LS5.9_SK6812MINI-E"
+      (at 615.95 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 615.95 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C5149201"
+      (at 615.95 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "SK6812MINI-E"
+      (at 615.95 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Op_I" "0.012"
+      (at 615.95 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_I" "0.036"
+      (at 615.95 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Note" "firmware caps each channel at 1/3"
+      (at 615.95 45.72 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "3"
+      (uuid "9e28985a-a3c1-59bc-850c-9409c7f26380"))
+    (pin "4"
+      (uuid "7177fd50-61fc-562a-af03-bc0e0fa8c7c5"))
+    (pin "1"
+      (uuid "7949b280-aad8-5b87-a2b5-7cfa8bafff04"))
+    (pin "2"
+      (uuid "1b237185-baa2-5754-9233-c2d9a9929bbb"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3b46632-48ea-58b2-b470-da5b1d24c7c2"
+          (reference "D46")
+          (unit 1)))))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 605.79 44.45 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "672a5e01-d3f0-549b-b059-188e3dbde6c1"))
+  (global_label "GLOW_D7"
+    (shape bidirectional)
+    (at 605.79 46.99 180)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify right))
+    (uuid "bca3a206-b191-56aa-b687-90d3bf1de378"))
+  (global_label "V5_GLOW"
+    (shape bidirectional)
+    (at 626.11 46.99 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "4be36e2e-9ccf-5e11-baa9-828026bfe7c3"))
+  (global_label "GLOW_D8"
+    (shape bidirectional)
+    (at 626.11 44.45 0)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1))
+      (justify left))
+    (uuid "e166d2d0-dddd-5385-b3a0-f04a95bf11a2"))
+  (symbol
+    (lib_id "bb:C")
+    (at 654.05 48.26 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "ffe3471a-464f-51be-8f11-c29e98e04554")
+    (property "Reference" "C455"
+      (at 654.05 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF 16V"
+      (at 654.05 55.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+      (at 654.05 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 654.05 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "LCSC" "C1525"
+      (at 654.05 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "MPN" "CL05B104KO5NNNC"
+      (at 654.05 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "JLC_Class" "Basic"
+      (at 654.05 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Rated_V" "16.0"
+      (at 654.05 48.26 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "fdd999aa-8c93-5807-8037-4029c2c97891"))
+    (pin "2"
+      (uuid "bf5222bc-9481-5d48-844c-e6769e655311"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3b46632-48ea-58b2-b470-da5b1d24c7c2"
+          (reference "C455")
+          (unit 1)))))
+  (global_label "V5_GLOW"
+    (shape bidirectional)
+    (at 654.05 44.45 90)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "6e9e86ea-667e-50df-b8e1-741e332744ae"))
+  (global_label "GND"
+    (shape bidirectional)
+    (at 654.05 52.07 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "07773a6f-167b-5da3-b015-59a0fd29510c"))
+  (symbol
+    (lib_id "bb:TP")
+    (at 681.99 41.91 0)
+    (unit 1)
+    (exclude_from_sim no)
+    (in_bom no)
+    (on_board yes)
+    (dnp no)
+    (uuid "7029a12a-eea6-5b5c-aae0-46dacda53149")
+    (property "Reference" "TP130"
+      (at 681.99 41.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "GLOW_D8"
+      (at 681.99 47.45 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "TestPoint:TestPoint_Pad_D1.0mm"
+      (at 681.99 41.91 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (property "Datasheet" ""
+      (at 681.99 41.91 0)
+      (effects
+        (font
+          (size 1.27 1.27)) hide))
+    (pin "1"
+      (uuid "08b03405-a053-595a-9e44-5c6d578c8f5b"))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3b46632-48ea-58b2-b470-da5b1d24c7c2"
+          (reference "TP130")
+          (unit 1)))))
+  (global_label "GLOW_D8"
+    (shape bidirectional)
+    (at 681.99 44.45 270)
+    (fields_autoplaced yes)
+    (effects
+      (font
+        (size 1 1)))
+    (uuid "ddbacbce-59c0-52e2-a103-62812ec3c033")))

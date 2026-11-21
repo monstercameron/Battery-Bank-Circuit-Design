@@ -10,6 +10,52 @@ Newest entries first. Each entry records what changed, why, and what is still op
 
 ---
 
+## 2026-11-21 — Entry 12: round 1 repairs: control/DFM, core supplies, board partition, checker
+**Reviews in.** Power/safety found 6 critical / 23 major / 20 minor; control/DFM found 5 / 17 / 24. The full tracker is `hardware/review/round1_tracker.md`.
+
+**Fixed by the lead**
+- **Expanders and enables.**
+  - TCA9555 → **TCA9535** ×2. The '9555's internal pull-ups would have switched every "default-off" rail on at power-up.
+  - Always-on buck EN pins no longer see 21 V (6 V abs-max).
+  - USB-A gets a 22 µH inductor, 100 µF polymer cap, snubber and open-drain enable.
+  - The out-of-stock TPS26631PWPR is swapped for the VQFN TPS26631RGER.
+- **Pin and power-domain fixes.**
+  - GPIO re-plan: LED NTC on an ADC pin; mux reset held until firmware releases it.
+  - Fixed back-powering into gated rails (LoRa, router, glow).
+  - High-side fan switch.
+  - Diagonal tact-switch pads, which work whatever the internal pairing.
+- **Core supplies (H-10).** Realtek's analog 0.95 V needs PWM above 1 MHz with ≤ 15 mVpp.
+  - New V5_ETH rail.
+  - Each NIC and the PHY get a **TPS62933F** (forced-PWM) at 1.2 MHz from 5 V.
+- **Board partition (H-3 / C-4).**
+  - Board A: power, NICs, switch, MCU.
+  - Board B: router, PHY/RJ45/PoE, radios, audio, Qi, glow.
+  - The build now **generates the interconnect**: a 48-pin 2.54 mm low-speed/power pair (power pins sized 3:1) and a 13-pin G-S-S-G SerDes mezzanine carrying only 4 pairs.
+  - A new checker rule fails any net that crosses boards without them.
+- **Checker.**
+  - `PIN_ABS_MAX` table from the datasheets checks every IC pin against its net's worst case.
+  - `build.py --stock` checks JLCPCB stock ≥ 5 boards × quantity. It found the speaker (stock 2); the speaker is now off-board and fitted at final assembly.
+  - Reports how many nets fell back to the 3.6 V default.
+- **Mechanical spec rev B.** All 14 inconsistencies the 3D build found are fixed:
+  - One coordinate frame.
+  - Card-guide slots instead of standoffs over the cartridge.
+  - Re-planned z stack (A at 30, B at 47, Qi coil and speaker under the top).
+  - Shortened board B with a vertical fan.
+  - Cell orientation that fits.
+  - Deeper optic cap.
+
+**Running now**
+- Three repair agents with exclusive file ownership:
+  - USB-C stage: hardware VBUS switch and discharge, dead-battery path, bulk capacitance, 100 W EPR cap.
+  - PoE: UVLO, current sense, snubber, feedback, Y-cap.
+  - Inputs/battery/rails/USB-A/Qi: bidirectional TVS, dead-battery start, bus TVS vs 32 V abs-max, main fuse, cartridge inrush, hardware output limits.
+- The 3D model is being updated to rev B.
+- Codex review still running.
+
+**Build:** 19 sheets, 1,179 parts, 0 errors (`--stock` clean).
+
+---
+
 ## 2026-11-21 — Entry 11: review round 1, high-speed fixes
 The high-speed reviewer found **3 critical, 11 major and 19 minor** issues (`hardware/review/round1_highspeed.md`), all checked against the generated netlist. It also decrypted the RC4-protected Realtek datasheets so their text can be searched (`hardware/tools/flatpdf.py`).
 

@@ -23,10 +23,15 @@ def build(D):
     D.CONN(sh, "LED_BOARD", ["LED_A", "LED_K", "RED_A", "RED_K", "NTC", "GND"],
            {"LED_A": "LED_RS", "LED_K": "LED_K", "RED_A": "LED_RED_A", "RED_K": "LED_RED_K", "NTC": "LED_NTC", "GND": G},
            footprint="Connector_JST:JST_PH_B6B-PH-K_1x06_P2.00mm_Vertical", prefix="J",
-           fields={"LCSC": "C131342", "MPN": "B6B-PH-K-S(LF)(SN)", "Op_I": 0.5, "Rated_I": 2.0,
+           fields={"LCSC": "C131342", "MPN": "B6B-PH-K-S(LF)(SN)", "B2B": True, "Op_I": 0.5, "Rated_I": 2.0,
                    "Note": "JST PH 6-pin harness to the aluminium LED board (2 A contacts -> 4:1)"})
+    D.CONN(sh, "LED_BOARD_HDR", ["LED_A", "LED_K", "RED_A", "RED_K", "NTC", "GND"],
+           {"LED_A": "LED_RS", "LED_K": "LED_K", "RED_A": "LED_RED_A", "RED_K": "LED_RED_K", "NTC": "LED_NTC", "GND": G},
+           footprint="Connector_JST:JST_PH_B6B-PH-K_1x06_P2.00mm_Vertical", prefix="J",
+           fields={"LCSC": "C131342", "MPN": "B6B-PH-K-S(LF)(SN)", "Board": "LED", "B2B": True, "Op_I": 0.5, "Rated_I": 2.0,
+                   "Note": "LED-board end of the 6-wire harness"})
     D.IC(sh, "XPGDWT-01-0000-00ME2", {"A": "LED_RS", "K": "LED_K", "3": "LED_K"}, prefix="D", value="XP-G3 5700K",
-         fields={"Board": "LED (aluminium core)", "Op_I": 0.5, "Rated_I": 2.0, "Note": "pad 3 = thermal (cathode-side) VERIFY"})
+         fields={"Board": "LED", "Op_I": 0.5, "Rated_I": 2.0, "Note": "pad 3 = thermal (cathode-side) VERIFY"})
     D.jlc_generic(sh, "NTC", "NTC_10k_0603", {"1": "LED_NTC", "2": G}, prefix="TH", value="10k NTC @LED",
                   footprint="Resistor_SMD:R_0603_1608Metric", fields={"Board": "LED"})
     D.R(sh, "10k", "LED_NTC", "V3V3", fields={"Note": "read on an ESP32 ADC1 pin via the expander-free path TBD"})
@@ -42,7 +47,8 @@ def build(D):
     D.R(sh, "470", "V5_AUX", "LED_RED_A", pkg="0603", p_op=0.021)
     D.IC(sh, "AO3400A", {"D": "LED_RED_K", "G": "RED_LED", "S": G}, prefix="Q")
     D.v("LED_RED_K", 5.5)
-    # glow strip: 8x SK6812MINI-E chained
+    # glow strip: 8x SK6812MINI-E chained, on board B along the front-top edge light pipe
+    sh = D.sheet("glow", "Attention-glow strip: 8x SK6812MINI-E (board B, front-top light pipe)", board="B")
     D.R(sh, "33", "GLOW_D5V", "GLOW_D0")
     for i in range(8):
         D.IC(sh, "SK6812MINI-E_C5149201", {"GND": G, "DIN": f"GLOW_D{i}", "VDD": "V5_GLOW", "DOUT": f"GLOW_D{i+1}"},

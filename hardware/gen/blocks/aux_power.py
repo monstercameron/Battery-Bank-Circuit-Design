@@ -17,6 +17,7 @@ RAILS = [
     ("V3V3_ETH", "31.6k", "MAPM0630F-4R7M-LF", 5.0, 10.0, 1.0, "EXP_EN_ETH", "C_22u_10V", "3.33 V, gated"),
     ("V5_PD", "52.3k", "MSA75-6R8M", 5.0, 5.0, 0.8, None, "C_22u_10V", "4.98 V VCONN"),
     ("V5_AUX", "52.3k", "MSA75-6R8M", 5.0, 5.0, 1.0, None, "C_22u_10V", "4.98 V"),
+    ("V5_ETH", "52.3k", "MSA75-6R8M", 5.0, 5.0, 0.7, "EXP_EN_ETH", "C_22u_10V", "4.98 V, gated; feeds the 1.2 MHz FCCM 0.95 V NIC/PHY bucks (H-10)"),
     ("V12_QI", "140k", "FNR8040S120MT", 3.0, 4.0, 0.6, "EXP_EN_QI", "C_22u_25V", "12.0 V, gated"),
     ("V12_RTR", "140k", "FNR8040S120MT", 3.0, 4.0, 0.92, "EXP_EN_RTR", "C_22u_25V", "12.0 V, gated"),
 ]
@@ -36,7 +37,8 @@ def build(D):
         u.conns.pop("RT")
         u.nc.add("RT")
         if en is None:
-            D.R(sh, "100k", f"{t}_ENP", "VBAT", pkg="0603", fields={"Note": "always on (EN pull-up; floating also enables)"})
+            u.conns.pop("EN")   # C-2: EN abs-max 6 V; floating enables via the internal pull-up current (datasheet)
+            u.nc.add("EN")
         else:
             D.R(sh, "100k", en, "GND", fields={"Note": "default off until the expander enables it"})
         D.C(sh, "C_100n_16V", bst, sw, fields={"V_across": 5.5})
@@ -60,7 +62,7 @@ def build(D):
     D.v("V0V95_SW_SW", 21.0)
     D.IC(sh, "TPS56A37RPAR", {"EN": "EXP_EN_ETH", "FB": "V09SW_FB", "AGND": "GND", "PG": "V0V95_SW_PG", "SS": "V09SW_SS",
                               "SW": "V0V95_SW_SW", "BOOT": "V09SW_BST", "VIN": "VBAT", "PGND": "GND", "MODE": "V09SW_MODE"},
-         fields={"Op_I": 2.9, "Rated_I": 10.0, "Note": "FB 0.6 V assumed (VERIFY datasheet). MODE resistor selects freq/FCCM (VERIFY)."})
+         fields={"Op_I": 2.5, "Rated_I": 10.0, "Note": "RTL8372N core only (PHY now separate). FB 0.6 V and MODE->FCCM strap VERIFY (TPS56A37 datasheet not yet downloaded)."})
     D.R(sh, "6.04k", "V0V95_SW", "V09SW_FB", fields={"Note": "0.6 x (1 + 6.04/10) = 0.962 V (in 0.92-0.98 V window)"})
     D.R(sh, "10k", "V09SW_FB", "GND")
     D.C(sh, "C_22n_50V", "V09SW_SS", "GND")

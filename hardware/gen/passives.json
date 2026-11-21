@@ -356,6 +356,23 @@
    "Temperature Coefficient": "C0G"
   }
  },
+ "C_2n2_50V": {
+  "code": "C1531",
+  "mpn": "0402B222K500NT",
+  "brand": "FH (Guangdong Fenghua Advanced Tech)",
+  "package": "0402",
+  "desc": "2.2nF 50V X7R ±10% 0402 Multilayer Ceramic Capacitors MLCC - SMD/SMT ROHS",
+  "lib": "expand",
+  "preferred": true,
+  "stock": 771005,
+  "price1": 0.0021,
+  "attrs": {
+   "Voltage Rating": "50V",
+   "Tolerance": "±10%",
+   "Capacitance": "2.2nF",
+   "Temperature Coefficient": "X7R"
+  }
+ },
  "C_100u_10V": {
   "code": "C7432784",
   "mpn": "HGC1206R5107M100NSPJ",
@@ -2167,6 +2184,26 @@
    "Voltage-Supply(Max)": "75V",
    "Tolerance": "±1%",
    "Temperature Coefficient": "±100ppm/℃"
+  }
+ },
+ "R_2.2_0603": {
+  "code": "C22939",
+  "mpn": "0603WAF220KT5E",
+  "brand": "UNI-ROYAL(Uniroyal Elec)",
+  "package": "0603",
+  "desc": "-55℃~+155℃ 100mW 2.2Ω 75V Thick Film Resistor ±1% ±400ppm/℃ 0603 Chip Resistor - Surface Mount ROHS",
+  "lib": "base",
+  "preferred": false,
+  "stock": 212594,
+  "price1": 0.0027,
+  "attrs": {
+   "Resistance": "2.2Ω",
+   "Operating Temperature": "-55℃~+155℃",
+   "Power(Watts)": "100mW",
+   "Type": "Thick Film Resistor",
+   "Voltage-Supply(Max)": "75V",
+   "Tolerance": "±1%",
+   "Temperature Coefficient": "±400ppm/℃"
   }
  },
  "R_0_0805": {

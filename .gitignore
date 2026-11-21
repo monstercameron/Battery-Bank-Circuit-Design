@@ -60,3 +60,7 @@ docs/Gemfile.lock
 Thumbs.db
 desktop.ini
 .claude/settings.local.json
+
+# build staging / subset builds (X-36)
+hardware/*.staging/
+hardware/kicad_partial/

@@ -42,28 +42,53 @@ class Part:
         return self.sym["pins"]
 
     def resolve(self):
-        """Return list of (pin, net) with pin keys resolved to concrete pins."""
-        out = []
+        """Return list of (pin, net) with pin keys resolved to concrete pins.
+
+        X-41 precedence and conflict rules:
+          1. a key that matches a pin NUMBER binds exactly that pin and wins;
+          2. a key that matches a pin NAME binds every same-named pin not already bound by number;
+          3. two keys at the same precedence that bind one pin to different nets -> error;
+          4. a name key whose pins are all overridden by number keys -> error (dead assignment);
+          5. NC on a pin that is connected -> error.
+        """
         pins = self.pin_list()
-        used = set()
-        for key, net in self.conns.items():
-            matches = [p for p in pins if p["number"] == str(key)] or [p for p in pins if p["name"] == key]
-            if not matches:
-                raise KeyError(f"{self.ref}: no pin '{key}' in {self.sym['lib_id']}")
-            for p in matches:
-                if id(p) in used:
+        bound = {}                      # id(pin) -> (pin, net, key, rank)
+
+        def matches(key):
+            by_num = [p for p in pins if p["number"] == str(key)]
+            if by_num:
+                return by_num, 0
+            return [p for p in pins if p["name"] == key], 1
+
+        items = [(k, n) + matches(k) for k, n in self.conns.items()]
+        for rank in (0, 1):
+            for key, net, ms, r in items:
+                if r != rank:
                     continue
-                used.add(id(p))
-                out.append((p, net))
+                if not ms:
+                    raise KeyError(f"{self.ref}: no pin '{key}' in {self.sym['lib_id']}")
+                took = 0
+                for p in ms:
+                    prev = bound.get(id(p))
+                    if prev is None:
+                        bound[id(p)] = (p, net, key, rank)
+                        took += 1
+                    elif prev[3] == rank and prev[1] != net:
+                        raise ValueError(f"{self.ref}: pin {p['number']} ({p['name']}) assigned both '{prev[1]}' "
+                                         f"(key {prev[2]!r}) and '{net}' (key {key!r})")
+                if rank == 1 and not took and all(bound[id(p)][1] != net for p in ms):
+                    raise ValueError(f"{self.ref}: name key {key!r} -> '{net}' is overridden on every pin by number keys")
         for key in self.nc:
-            matches = [p for p in pins if p["number"] == str(key)] or [p for p in pins if p["name"] == key]
-            if not matches:
+            ms, _ = matches(key)
+            if not ms:
                 raise KeyError(f"{self.ref}: no pin '{key}' for NC")
-            for p in matches:
-                if id(p) not in used:
-                    used.add(id(p))
-                    out.append((p, None))
-        return out
+            for p in ms:
+                prev = bound.get(id(p))
+                if prev is not None and prev[1] is not None:
+                    raise ValueError(f"{self.ref}: pin {p['number']} ({p['name']}) marked NC but connected to '{prev[1]}'")
+                bound[id(p)] = (p, None, key, 2)
+        order = {id(p): i for i, p in enumerate(pins)}
+        return [(v[0], v[1]) for k, v in sorted(bound.items(), key=lambda kv: order[kv[0]])]
 
     def unconnected(self):
         resolved = {id(p) for p, _ in self.resolve()}
@@ -71,8 +96,9 @@ class Part:
 
 
 class Sheet:
-    def __init__(self, project, name, title, page_size="A1"):
+    def __init__(self, project, name, title, page_size="A1", board="A"):
         self.project = project
+        self.board = board
         self.name = name
         self.title = title
         self.page_size = page_size
@@ -97,8 +123,8 @@ class Project:
         self.lib_symbols = {}
         self.ref_counts = {}
 
-    def sheet(self, name, title, page_size="A1"):
-        s = Sheet(self, name, title, page_size)
+    def sheet(self, name, title, page_size="A1", board="A"):
+        s = Sheet(self, name, title, page_size, board)
         self.sheets.append(s)
         return s
 
@@ -135,12 +161,13 @@ class Project:
             rowh = max(rowh, h)
 
     # ----------------------------------------------------------------- writing
-    def _label(self, net, x, y, angle):
+    def _label(self, net, x, y, angle, owner=""):
+        # X-41: label UUID seeded by project/sheet/ref/pin, so identical net+coordinates on two sheets never collide
         return [Sym("global_label"), net, [Sym("shape"), Sym("bidirectional")], [Sym("at"), x, y, angle],
                 [Sym("fields_autoplaced"), Sym("yes")],
                 [Sym("effects"), [Sym("font"), [Sym("size"), 1.0, 1.0]], [Sym("justify"), Sym("right" if angle == 180 else "left")]] if angle in (0, 180)
                 else [Sym("effects"), [Sym("font"), [Sym("size"), 1.0, 1.0]]],
-                [Sym("uuid"), uid(f"lbl/{net}/{x}/{y}")]]
+                [Sym("uuid"), uid(f"lbl/{owner}/{net}/{x}/{y}")]]
 
     def _symbol_instance(self, sheet, part):
         node = [Sym("symbol"), [Sym("lib_id"), part.sym["lib_id"]], [Sym("at"), part.x, part.y, 0], [Sym("unit"), 1],
@@ -177,7 +204,7 @@ class Project:
                     items.append([Sym("no_connect"), [Sym("at"), ax, ay], [Sym("uuid"), uid(f"nc/{part.ref}/{p['number']}")]])
                 else:
                     angle = int((p["angle"] + 180) % 360)
-                    items.append(self._label(net, ax, ay, angle))
+                    items.append(self._label(net, ax, ay, angle, f"{self.name}/{sheet.name}/{part.ref}/{p['number']}"))
         texts = []
         ty = 20.0
         for t in [sheet.title] + sheet.notes:

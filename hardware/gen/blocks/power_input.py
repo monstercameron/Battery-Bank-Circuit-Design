@@ -23,11 +23,11 @@ def ideal_diode(D, sh, anode, cathode, tag):
 def efuse(D, sh, vin_raw, vout, tag, ilim_r="11k", note=""):
     """TPS26631 with input blocking FET, OV 24.3 V / UV 10.0 V, auto-retry."""
     ins = f"{tag}_INSYS"
-    D.IC(sh, "TPS26631PWPR", {
+    D.IC(sh, "TPS26631RGER", {
         "IN": f"{tag}_IN", "B_GATE": f"{tag}_BG", "DRV": f"{tag}_DRV", "IN_SYS": ins, "UVLO": f"{tag}_UV",
         "OVP": f"{tag}_OV", "GND": "GND", "dVdT": f"{tag}_DVDT", "ILIM": f"{tag}_ILIM", "MODE": "GND",
         "~{SHDN}": f"{tag}_EN", "IMON": f"{tag}_IMON", "~{FLT}": f"{tag}_FLT", "PGTH": vout, "PGOOD": f"{tag}_PG",
-        "OUT": vout, "EP": "GND"},
+        "OUT": vout, "EP": "GND"}, nc=["N.C"],
         fields={"Op_I": 1.65, "Rated_I": 6.0, "Note": f"I_LIM {ilim_r} = 1.65 A (3:1 on 5 A jack). MODE=GND auto-retry. {note}"})
     for n_, v in [(f"{tag}_IN", 24.3), (ins, 24.3), (vout, 24.3), (f"{tag}_BG", 40), (f"{tag}_DRV", 40), (f"{tag}_UV", 3.6), (f"{tag}_OV", 3.6),
                   (f"{tag}_DVDT", 5.5), (f"{tag}_ILIM", 5.5), (f"{tag}_IMON", 5.5), (f"{tag}_EN", 3.6), (f"{tag}_FLT", 3.6), (f"{tag}_PG", 3.6)]:

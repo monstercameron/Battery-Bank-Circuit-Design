@@ -773,8 +773,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "a7f692c0-398a-5a17-bfad-bdb3d02bbf4e")
-    (property "Reference" "C288"
+    (uuid "168983fe-63b1-5a5c-84cf-299282dd9d37")
+    (property "Reference" "C292"
       (at 266.7 41.45 0)
       (effects
         (font
@@ -815,13 +815,13 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "ffae3e38-142d-558d-9d8b-659ee3e4867a"))
+      (uuid "9c772305-34a8-5b79-a940-0a0a17abb9ad"))
     (pin "2"
-      (uuid "cc2b0b1f-34a2-520c-8d11-ace063951350"))
+      (uuid "ed255262-2a19-55ec-947e-81c8d1e8efd8"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3a0830e-743b-5c57-aa92-cfcdc97222e1"
-          (reference "C288")
+          (reference "C292")
           (unit 1)))))
   (global_label "VBAT"
     (shape bidirectional)
@@ -847,8 +847,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "88ff955b-c22f-5576-9357-6d88c9ed0184")
-    (property "Reference" "C289"
+    (uuid "7fb3468d-9f94-5f7e-9b11-6f0fd0977c4e")
+    (property "Reference" "C293"
       (at 289.56 41.45 0)
       (effects
         (font
@@ -889,13 +889,13 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "cd21f47c-eac5-5819-ac2d-344104b5d17a"))
+      (uuid "6959ce85-7949-58a6-8983-5b88291f5ce5"))
     (pin "2"
-      (uuid "b0c66517-d286-5ff6-82b0-52392b0acc09"))
+      (uuid "4cbfd971-c7e3-567f-a3af-cdea36d795e9"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3a0830e-743b-5c57-aa92-cfcdc97222e1"
-          (reference "C289")
+          (reference "C293")
           (unit 1)))))
   (global_label "VBAT"
     (shape bidirectional)
@@ -921,8 +921,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "f43ef271-c316-5b2d-b33e-96f17d1c497d")
-    (property "Reference" "C290"
+    (uuid "726a5da5-37fb-52b0-bed7-1161a4262d24")
+    (property "Reference" "C294"
       (at 311.15 41.45 0)
       (effects
         (font
@@ -963,13 +963,13 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "0d164505-e6cc-5490-8ef0-df5420e9af53"))
+      (uuid "ec2fe6c0-572a-580f-94e2-2bfde0092201"))
     (pin "2"
-      (uuid "e62c3873-32c0-5513-8636-3f3a29315340"))
+      (uuid "e79bc37a-839a-5fe5-9e6f-f2db7051c1a3"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3a0830e-743b-5c57-aa92-cfcdc97222e1"
-          (reference "C290")
+          (reference "C294")
           (unit 1)))))
   (global_label "VBAT"
     (shape bidirectional)
@@ -995,8 +995,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "f672b728-6c30-5a77-bfd7-1dec241cf6a9")
-    (property "Reference" "C291"
+    (uuid "42b80f11-549c-58ae-b1e8-75125b4383d5")
+    (property "Reference" "C295"
       (at 332.74 41.45 0)
       (effects
         (font
@@ -1037,13 +1037,13 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "60b80913-b56d-53c4-8542-d22dada2be80"))
+      (uuid "c375f10e-98ad-58a2-b3b4-6b24632ae565"))
     (pin "2"
-      (uuid "3c361e70-00b4-5b71-b941-28af1da3414e"))
+      (uuid "720a73c9-7d31-5aca-b2fa-43de7acf69af"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3a0830e-743b-5c57-aa92-cfcdc97222e1"
-          (reference "C291")
+          (reference "C295")
           (unit 1)))))
   (global_label "VBAT"
     (shape bidirectional)
@@ -1069,8 +1069,8 @@
     (in_bom yes)
     (on_board yes)
     (dnp no)
-    (uuid "168983fe-63b1-5a5c-84cf-299282dd9d37")
-    (property "Reference" "C292"
+    (uuid "1739c3df-dda4-50c9-8ea8-d2c32e99871a")
+    (property "Reference" "C296"
       (at 355.6 41.45 0)
       (effects
         (font
@@ -1111,13 +1111,13 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "9c772305-34a8-5b79-a940-0a0a17abb9ad"))
+      (uuid "6ab32393-9f92-5445-9473-2af6d507bbb7"))
     (pin "2"
-      (uuid "ed255262-2a19-55ec-947e-81c8d1e8efd8"))
+      (uuid "66ff15fb-126c-5da5-accc-25054785616c"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3a0830e-743b-5c57-aa92-cfcdc97222e1"
-          (reference "C292")
+          (reference "C296")
           (unit 1)))))
   (global_label "VBAT"
     (shape bidirectional)
@@ -1143,8 +1143,8 @@
     (in_bom no)
     (on_board yes)
     (dnp no)
-    (uuid "ff33792e-ed0d-5c35-aae8-58c06d0886f9")
-    (property "Reference" "TP62"
+    (uuid "393c1693-966f-5a85-ab14-0bfeaa8549d7")
+    (property "Reference" "TP58"
       (at 377.19 41.45 0)
       (effects
         (font
@@ -1165,11 +1165,11 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "9af83848-13e3-5d98-849e-9ed78a05332c"))
+      (uuid "5606bbfa-367d-561b-81dd-d4990baa5e1f"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3a0830e-743b-5c57-aa92-cfcdc97222e1"
-          (reference "TP62")
+          (reference "TP58")
           (unit 1)))))
   (global_label "VBAT"
     (shape bidirectional)
@@ -1187,8 +1187,8 @@
     (in_bom no)
     (on_board yes)
     (dnp no)
-    (uuid "6cbb1ac7-b597-54c1-a341-e9c32fb050d6")
-    (property "Reference" "TP63"
+    (uuid "29b23f92-f879-5bc1-b5b3-1d5df071507c")
+    (property "Reference" "TP59"
       (at 398.78 41.45 0)
       (effects
         (font
@@ -1209,11 +1209,11 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "dc09fa8c-dbc9-5791-845a-d4b67fba38af"))
+      (uuid "0ee4ce16-89f0-56c0-9e5f-8dab0e5f8e1d"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3a0830e-743b-5c57-aa92-cfcdc97222e1"
-          (reference "TP63")
+          (reference "TP59")
           (unit 1)))))
   (global_label "GND"
     (shape bidirectional)
@@ -1231,8 +1231,8 @@
     (in_bom no)
     (on_board yes)
     (dnp no)
-    (uuid "8916aee1-8d2b-57ab-a592-409feb5361d2")
-    (property "Reference" "TP64"
+    (uuid "8be7d2ce-c2ab-57b8-9eba-90ad0d49e243")
+    (property "Reference" "TP60"
       (at 421.64 41.45 0)
       (effects
         (font
@@ -1253,11 +1253,11 @@
         (font
           (size 1.27 1.27)) hide))
     (pin "1"
-      (uuid "53ebf579-bc01-5e6b-9fb9-24f3890a012e"))
+      (uuid "5409b25a-08ab-5076-b57b-ce02c74157f8"))
     (instances
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85/c3a0830e-743b-5c57-aa92-cfcdc97222e1"
-          (reference "TP64")
+          (reference "TP60")
           (unit 1)))))
   (global_label "GND"
     (shape bidirectional)

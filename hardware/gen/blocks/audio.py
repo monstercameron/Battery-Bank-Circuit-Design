@@ -5,7 +5,7 @@ MAX98357A: SD_MODE > 1.4 V = left channel, < 0.16 V shutdown; GAIN_SLOT floating
 
 
 def build(D):
-    sh = D.sheet("audio", "Speakerphone: MAX98357A amp + 2 PDM MEMS mics")
+    sh = D.sheet("audio", "Speakerphone: MAX98357A amp + 2 PDM MEMS mics", board="B")
     G = "GND"
     D.IC(sh, "MAX98357AETE+T", {"DIN": "AUD_DIN", "GND": G, "~{SD_MODE}": "AUD_SDM", "VDD": "V5_AUX", "OUTP": "AUD_SPKP",
                                  "OUTN": "AUD_SPKN", "LRCLK": "AUD_LRCLK", "BCLK": "AUD_BCLK", "EP": G},
@@ -14,7 +14,7 @@ def build(D):
     D.C(sh, "C_10u_16V", "V5_AUX", G)
     D.C(sh, "C_100n_16V", "V5_AUX", G)
     D.CONN(sh, "SPEAKER", ["SPK+", "SPK-"], {"SPK+": "AUD_SPKP", "SPK-": "AUD_SPKN"}, footprint="", prefix="LS",
-           fields={"LCSC": "C50387222", "Note": "XHXDZ 40 mm 4 ohm 3 W driver on flying leads (solder pads)"})
+           fields={"_nobom": True, "Consigned": True, "Note": "C-22: off-board 40 mm 4 ohm 3 W driver (e.g. XHXDZ C50387222, low JLC stock) on flying leads to solder pads; sourced and fitted at final assembly, not by JLCPCB"})
     D.TP(sh, "AUD_SPKP", small=True)
     D.TP(sh, "AUD_SPKN", small=True)
     for sel, side in ((G, "left"), ("V3V3", "right")):

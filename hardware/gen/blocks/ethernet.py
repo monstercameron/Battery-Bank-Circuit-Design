@@ -8,7 +8,7 @@ RTL8221B (Rev 1.2): SerDes HiSGMII/2500BASE-X, 0.1 uF AC caps both directions; M
 
 
 def build(D):
-    sh = D.sheet("ethernet", "2.5G switch RTL8372N + RTL8221B (RJ45 PHY) + router module")
+    sh = D.sheet("eth_switch", "2.5G switch RTL8372N + SPI flash (board A, beside the 4 NICs)", board="A")
     sh.note("Switch ports P0-P3 = USB-C ports 1-4 (PHY-to-PHY to each RTL8156BG). S0 -> router SerDes (LAN). S1 -> RTL8221B -> RJ45 (WAN, PoE in).")
     sh.note("Management: the router owns the switch (DSA) over SMDC/SMDIO; switch MDC0/MDIO0 manages the RTL8221B. SDK firmware in SPI flash.")
     G, V09, V33 = "GND", "V0V95_SW", "V3V3_ETH"
@@ -83,13 +83,35 @@ def build(D):
            {"GND": G, "3V3": V33, "CS": "ETH_SPF_CS", "CLK": "ETH_SPF_SCK", "MOSI": "ETH_SPF_MOSI", "MISO": "ETH_SPF_MISO"},
            footprint="Connector_PinHeader_1.27mm:PinHeader_1x06_P1.27mm_Vertical", fields={"_nobom": True}, prefix="J", dnp=True)
 
+    shA = sh
+    sh = D.sheet("eth_phy_router", "RTL8221B PHY + RJ45 side + router module (board B)", board="B")
+    sh.note("Board B: receives the switch SerDes S0/S1 over the high-speed mezzanine. PHY analog rails filtered locally.")
+    D.v("V3V3_PHYA", 3.6)
+    D.jlc_generic(sh, "FB", "FB_3A_0603", {"1": V33, "2": "V3V3_PHYA"}, prefix="FB", value="FB 100R 3A",
+                  footprint="Inductor_SMD:L_0603_1608Metric", fields={"Op_I": 0.2, "Rated_I": 3.0})
+    D.C(sh, "C_10u_16V", "V3V3_PHYA", G)
+    # RTL8221B core: TPS62933F FCCM 1.2 MHz from V5_ETH (H-10), local to the PHY on board B
+    D.v("V0V95_PHY_SW", 5.5)
+    D.IC(sh, "TPS62933FDRLR", {"RT": "GND", "EN": "EXP_EN_ETH", "VIN": "V5_ETH", "GND": "GND", "SW": "V0V95_PHY_SW",
+                               "BST": "V09PHY_BST", "SS": "V09PHY_SS", "FB": "V09PHY_FB"},
+         fields={"Op_I": 0.5, "Rated_I": 3.0, "Note": "RTL8221B 0.95 V (DVDD09/AVDD09/EVDD09), <= 15 mVpp, PWM > 1 MHz"})
+    D.C(sh, "C_33n_50V", "V09PHY_SS", "GND")
+    D.C(sh, "C_100n_16V", "V09PHY_BST", "V0V95_PHY_SW", fields={"V_across": 5.5})
+    D.L(sh, "FNR6045S2R2MT", "V0V95_PHY_SW", "V0V95_PHY", rated_i=5.0, isat=7.4, irms=0.5, ipk=0.7, value="2.2uH 5A")
+    D.R(sh, "1.87k", "V0V95_PHY", "V09PHY_FB", fields={"Note": "0.950 V"})
+    D.R(sh, "10k", "V09PHY_FB", "GND")
+    D.C(sh, "C_10u_16V", "V5_ETH", "GND")
+    D.C(sh, "C_22u_6V3", "V0V95_PHY", "GND")
+    D.C(sh, "C_22u_6V3", "V0V95_PHY", "GND")
+    D.TP(sh, "V0V95_PHY")
+
     # RTL8221B PHY for the RJ45
     D.IC(sh, "RTL8221B-VB-CG", {
-        "PHYRSTB": "EXP_PHY_RST_N", "MDC": "ETH_MDC", "MDIO": "ETH_MDIO", "DVDD09": V09, "DVDD3318": V33,
-        "AVDD33": "V3V3_ETHA", "AVDD33_XTAL": "V3V3_ETHA", "CKXTAL2": "ETH_PHY_XO", "CKXTAL1": "ETH_PHY_XI", "AVDD09": "V0V95_SWA",
+        "PHYRSTB": "EXP_PHY_RST_N", "MDC": "ETH_MDC", "MDIO": "ETH_MDIO", "DVDD09": "V0V95_PHY", "DVDD3318": V33,
+        "AVDD33": "V3V3_PHYA", "AVDD33_XTAL": "V3V3_PHYA", "CKXTAL2": "ETH_PHY_XO", "CKXTAL1": "ETH_PHY_XI", "AVDD09": "V0V95_PHY",
         "RSET": "ETH_PHY_RSET", "MDIP0": "RJ_TD0P", "MDIN0": "RJ_TD0N", "MDIP1": "RJ_TD1P", "MDIN1": "RJ_TD1N",
         "MDIP2": "RJ_TD2P", "MDIN2": "RJ_TD2N", "MDIP3": "RJ_TD3P", "MDIN3": "RJ_TD3N", "DVDD33": V33,
-        "EVDD09": "V0V95_SWA", "HSON": "ETH_PHY_HSON", "HSOP": "ETH_PHY_HSOP", "GND": G,
+        "EVDD09": "V0V95_PHY", "HSON": "ETH_PHY_HSON", "HSOP": "ETH_PHY_HSOP", "GND": G,
         "HSIP": "ETH_PHY_HSIP", "HSIN": "ETH_PHY_HSIN", "INTB/PMEB": "ETH_PHY_INT", "EP": G,
         "CFG_OPT0/GPIO15880": "ETH_PHY_CFG0", "CFG_OPT1/GPIO15883": "ETH_PHY_CFG1"},
         nc=["CLKOUT/SYNCE_CLK", "SPISO", "SPICSB", "SPISCK/GPIO15882/SYNCE_LOCK",
@@ -108,18 +130,15 @@ def build(D):
     D.TP(sh, "ETH_PHY_INT", small=True)
     D.TP(sh, "ETH_MDC", small=True)
     D.TP(sh, "ETH_MDIO", small=True)
-    for _ in range(6):
-        D.C(sh, "C_100n_16V", "V0V95_SWA", G)
+    for _ in range(7):
+        D.C(sh, "C_100n_16V", "V0V95_PHY", G)
     for _ in range(5):
-        D.C(sh, "C_100n_16V", "V3V3_ETHA", G)
-    # SerDes S1 <-> PHY: 100 nF both directions
-    for a, b in [("ETH_S1TXP", "ETH_PHY_HSIP"), ("ETH_S1TXN", "ETH_PHY_HSIN"), ("ETH_PHY_HSOP", "ETH_S1RXP"), ("ETH_PHY_HSON", "ETH_S1RXN")]:
-        D.C(sh, "C_100n_16V", a, b, fields={"Note": "SerDes AC coupling"})
-    # SerDes S0 -> router (switch TX caps here; router module carries caps on its own TX)
-    D.C(sh, "C_100n_16V", "ETH_S0TXP", "RTR_RXP")
-    D.C(sh, "C_100n_16V", "ETH_S0TXN", "RTR_RXN")
-    D.C(sh, "C_100n_16V", "RTR_TXP", "ETH_S0RXP", fields={"Note": "router->switch AC coupling (module caps unverified; 2 in series = 50 nF OK)"})
-    D.C(sh, "C_100n_16V", "RTR_TXN", "ETH_S0RXN")
+        D.C(sh, "C_100n_16V", "V3V3_PHYA", G)
+    # SerDes AC coupling next to each TRANSMITTER: switch TX caps on board A, PHY/router TX caps on board B
+    for a, b in [("ETH_S1TXP", "ETH_PHY_HSIP"), ("ETH_S1TXN", "ETH_PHY_HSIN"), ("ETH_S0TXP", "RTR_RXP"), ("ETH_S0TXN", "RTR_RXN")]:
+        D.C(shA, "C_100n_16V", a, b, fields={"Note": "SerDes AC coupling at the switch transmitter (board A)"})
+    for a, b in [("ETH_PHY_HSOP", "ETH_S1RXP"), ("ETH_PHY_HSON", "ETH_S1RXN"), ("RTR_TXP", "ETH_S0RXP"), ("RTR_TXN", "ETH_S0RXN")]:
+        D.C(sh, "C_100n_16V", a, b, fields={"Note": "SerDes AC coupling at the PHY/router transmitter (board B)"})
 
     # Router module (OpenWrt MT7981B, 12 V input, HSGMII). Consigned; pinout to confirm with vendor.
     D.CONN(sh, "ROUTER_MODULE", ["V12", "V12", "GND", "GND", "GND", "GND", "GND", "GND", "HS_RXP", "HS_RXN", "HS_TXP", "HS_TXN",
@@ -132,13 +151,13 @@ def build(D):
            prefix="M")
     for n_ in ("RTR_RXP", "RTR_RXN", "RTR_TXP", "RTR_TXN", "RTR_SMDC", "RTR_SMDIO", "RTR_UART_TX", "RTR_UART_RX", "RTR_LED", "ETH_S0TXP", "ETH_S0TXN"):
         D.v(n_, 3.6)
-    D.R(sh, "10k", "EXP_RTR_RST_N", "V3V3")
+    D.R(sh, "10k", "EXP_RTR_RST_N", V33, fields={"Note": "C-10: pull-up in the router/ETH domain, not always-on 3V3"})
     D.R(sh, "10k", "RTR_SMDIO", V33, fields={"Note": "management pull-up (MDIO-style) VERIFY"})
     D.TP(sh, "RTR_UART_TX", small=True)
     D.TP(sh, "RTR_UART_RX", small=True)
     D.TP(sh, "RTR_LED", small=True)
     D.R(sh, "10k", "RTR_BOOT", V33)
-    D.IC(sh, "TS-1187A-B-A-B", {"A": "RTR_BOOT", "B": "RTR_BOOT", "C": G, "D": G}, prefix="SW", value="ROUTER RECOVERY")
+    D.IC(sh, "TS-1187A-B-A-B", {"A": "RTR_BOOT", "D": G}, nc=["B", "C"], prefix="SW", value="ROUTER RECOVERY")
     for n_ in ("ETH_S0RXP", "ETH_S0RXN", "RTR_BOOT", "ETH_STR_IF1", "ETH_STR_IF0", "ETH_STR_ENPHY", "ETH_SW_SELX", "ETH_PHY_CFG0", "ETH_PHY_CFG1"):
         D.v(n_, 3.6)
     for _ in range(2):

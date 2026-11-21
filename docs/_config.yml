@@ -1,11 +1,31 @@
 title: Battery Bank / Travel Router
 description: Open-hardware USB-C battery bank, 2.5G Ethernet dock and OpenWrt travel router. Design in progress.
+url: https://monstercameron.github.io
+baseurl: /Battery-Bank-Circuit-Design
+lang: en
+author: monstercameron
+image: /assets/og-card.png
+twitter:
+  card: summary_large_image
+social:
+  name: Battery Bank Travel Router
+  links:
+    - https://github.com/monstercameron/Battery-Bank-Circuit-Design
 remote_theme: just-the-docs/just-the-docs
 plugins:
   - jekyll-remote-theme
   - jekyll-optional-front-matter
+  - jekyll-seo-tag
+  - jekyll-sitemap
+gh_edit_link: true
+gh_edit_repository: https://github.com/monstercameron/Battery-Bank-Circuit-Design
+gh_edit_branch: main
+gh_edit_source: docs
+gh_edit_view_mode: tree
+aux_links:
+  "View on GitHub":
+    - https://github.com/monstercameron/Battery-Bank-Circuit-Design
 search_enabled: true
-aux_links: {}
 heading_anchors: true
 exclude:
   - datasheets/text/

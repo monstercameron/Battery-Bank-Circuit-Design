@@ -225,14 +225,14 @@
       (type solid))
     (fill
       (color 0 0 0 0))
-    (uuid "b557fac4-ed53-57d3-865b-90fa088aca94")
-    (property "Sheetname" "ethernet"
+    (uuid "b869f810-dc0f-5447-83f5-d6968e97b497")
+    (property "Sheetname" "eth_switch"
       (at 625 39.3 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left bottom)))
-    (property "Sheetfile" "ethernet.kicad_sch"
+    (property "Sheetfile" "eth_switch.kicad_sch"
       (at 625 52.6 0)
       (effects
         (font
@@ -251,14 +251,14 @@
       (type solid))
     (fill
       (color 0 0 0 0))
-    (uuid "8c616ead-e111-5151-ad82-6dec339ad6ed")
-    (property "Sheetname" "mcu"
+    (uuid "a9352f8f-15ba-5e1e-86d4-982a32112be1")
+    (property "Sheetname" "eth_phy_router"
       (at 700 39.3 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left bottom)))
-    (property "Sheetfile" "mcu.kicad_sch"
+    (property "Sheetfile" "eth_phy_router.kicad_sch"
       (at 700 52.6 0)
       (effects
         (font
@@ -277,14 +277,14 @@
       (type solid))
     (fill
       (color 0 0 0 0))
-    (uuid "d6f863f2-4974-5638-955a-a85dc769cdb9")
-    (property "Sheetname" "lora"
+    (uuid "8c616ead-e111-5151-ad82-6dec339ad6ed")
+    (property "Sheetname" "mcu"
       (at 25 64.3 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left bottom)))
-    (property "Sheetfile" "lora.kicad_sch"
+    (property "Sheetfile" "mcu.kicad_sch"
       (at 25 77.6 0)
       (effects
         (font
@@ -303,14 +303,14 @@
       (type solid))
     (fill
       (color 0 0 0 0))
-    (uuid "64cab0f6-66c2-5baf-a623-5d043d9da308")
-    (property "Sheetname" "audio"
+    (uuid "d6f863f2-4974-5638-955a-a85dc769cdb9")
+    (property "Sheetname" "lora"
       (at 100 64.3 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left bottom)))
-    (property "Sheetfile" "audio.kicad_sch"
+    (property "Sheetfile" "lora.kicad_sch"
       (at 100 77.6 0)
       (effects
         (font
@@ -329,14 +329,14 @@
       (type solid))
     (fill
       (color 0 0 0 0))
-    (uuid "34061c2b-85ae-5526-a709-3feadd481567")
-    (property "Sheetname" "lighting"
+    (uuid "64cab0f6-66c2-5baf-a623-5d043d9da308")
+    (property "Sheetname" "audio"
       (at 175 64.3 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left bottom)))
-    (property "Sheetfile" "lighting.kicad_sch"
+    (property "Sheetfile" "audio.kicad_sch"
       (at 175 77.6 0)
       (effects
         (font
@@ -355,14 +355,14 @@
       (type solid))
     (fill
       (color 0 0 0 0))
-    (uuid "a6338c56-4f7e-5d5c-8894-f4cf77296d1f")
-    (property "Sheetname" "dc_output"
+    (uuid "34061c2b-85ae-5526-a709-3feadd481567")
+    (property "Sheetname" "lighting"
       (at 250 64.3 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left bottom)))
-    (property "Sheetfile" "dc_output.kicad_sch"
+    (property "Sheetfile" "lighting.kicad_sch"
       (at 250 77.6 0)
       (effects
         (font
@@ -381,14 +381,14 @@
       (type solid))
     (fill
       (color 0 0 0 0))
-    (uuid "13b44b88-b6c4-5cc3-b119-fb32b610eb58")
-    (property "Sheetname" "usb_a"
+    (uuid "c3b46632-48ea-58b2-b470-da5b1d24c7c2")
+    (property "Sheetname" "glow"
       (at 325 64.3 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left bottom)))
-    (property "Sheetfile" "usb_a.kicad_sch"
+    (property "Sheetfile" "glow.kicad_sch"
       (at 325 77.6 0)
       (effects
         (font
@@ -407,14 +407,14 @@
       (type solid))
     (fill
       (color 0 0 0 0))
-    (uuid "d10caea1-1e99-53f8-97d8-41dd1c7d92cd")
-    (property "Sheetname" "qi"
+    (uuid "a6338c56-4f7e-5d5c-8894-f4cf77296d1f")
+    (property "Sheetname" "dc_output"
       (at 400 64.3 0)
       (effects
         (font
           (size 1.27 1.27))
         (justify left bottom)))
-    (property "Sheetfile" "qi.kicad_sch"
+    (property "Sheetfile" "dc_output.kicad_sch"
       (at 400 77.6 0)
       (effects
         (font
@@ -424,6 +424,84 @@
       (project "battery-bank"
         (path "/ab655d0a-2672-54db-8ced-4d4843283f85"
           (page "17")))))
+  (sheet
+    (at 475 65)
+    (size 60 12)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "13b44b88-b6c4-5cc3-b119-fb32b610eb58")
+    (property "Sheetname" "usb_a"
+      (at 475 64.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "usb_a.kicad_sch"
+      (at 475 77.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85"
+          (page "18")))))
+  (sheet
+    (at 550 65)
+    (size 60 12)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "d10caea1-1e99-53f8-97d8-41dd1c7d92cd")
+    (property "Sheetname" "qi"
+      (at 550 64.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "qi.kicad_sch"
+      (at 550 77.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85"
+          (page "19")))))
+  (sheet
+    (at 625 65)
+    (size 60 12)
+    (fields_autoplaced yes)
+    (stroke
+      (width 0.1524)
+      (type solid))
+    (fill
+      (color 0 0 0 0))
+    (uuid "007a0237-d928-5fdd-8a4a-75a68f37e02d")
+    (property "Sheetname" "interconnect"
+      (at 625 64.3 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left bottom)))
+    (property "Sheetfile" "interconnect.kicad_sch"
+      (at 625 77.6 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (justify left top)))
+    (instances
+      (project "battery-bank"
+        (path "/ab655d0a-2672-54db-8ced-4d4843283f85"
+          (page "20")))))
   (sheet_instances
     (path "/"
       (page "1"))))

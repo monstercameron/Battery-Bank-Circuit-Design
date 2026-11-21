@@ -6,18 +6,20 @@ Crystal frequency and the V_DECODE/VDET demodulation network are NOT in the extr
 
 
 def build(D):
-    sh = D.sheet("qi", "Qi transmitter (5 W limited) under the non-metal top window")
+    sh = D.sheet("qi", "Qi transmitter (5 W limited) under the non-metal top window", board="B")
     G = "GND"
     D.IC(sh, "IP6826QFN32", {
         "GND": G, "AGND": G, "IGND": G, "ISENSE": "QI_PGND", "PGND": "QI_PGND", "EP": "QI_PGND", "VCC": "QI_VCC",
         "HOSCI": "QI_XI", "HOSCO": "QI_XO", "NTC": "QI_NTC", "LOSS_THR": "QI_FOD", "LED1": "QI_LED1", "LED2": "QI_LED2",
         "LED3": "QI_LED3", "V_DECODE": "QI_VDEC", "VDET": "QI_VDET", "BST1": "QI_BST1", "LX1": "QI_LX1", "LX2": "QI_LX2",
-        "BST2": "QI_BST2", "VIN": "V12_QI"},
-        nc=["CC1", "CC2", "DEBUG", "IO4", "IO7", "NC", "DM", "DP"],
-        fields={"Op_P": 5.0, "Rated_P": 15.0, "Note": "Needs factory firmware burn (JLCPCB listing). CC/DP/DM unused (fixed 12 V input)."})
+        "BST2": "QI_BST2", "VIN": "V12_QI", "DEBUG": "QI_DEBUG_TX"},
+        nc=["CC1", "CC2", "IO4", "IO7", "NC", "DM", "DP"],
+        fields={"Op_P": 5.0, "Rated_P": 15.0, "Note": "C-16: order PRE-PROGRAMMED (LCSC/JLC programming service, Injoinic 5 W firmware). CC/DP/DM unused."})
+    D.TP(sh, "QI_DEBUG_TX", small=True)
+    D.C(sh, "C_2n2_50V", "QI_VDET", G, fields={"Note": "C-15: static-FOD 2.2 nF on VDET (datasheet default). Rest of demod network: copy reference schematic (VERIFY)"})
     D.IC(sh, "LR1206-21R020F4", {"1": "QI_PGND", "2": G}, prefix="R", value="20m 1W", fields={"Op_P": 0.05, "Rated_P": 1.0})
     D.v("QI_VCC", 5.5)
-    for n_ in ("QI_NTC", "QI_FOD", "QI_LED1", "QI_LED2", "QI_LED3", "QI_XI", "QI_XO", "QI_VDET"):
+    for n_ in ("QI_NTC", "QI_FOD", "QI_LED1", "QI_LED2", "QI_LED3", "QI_XI", "QI_XO", "QI_VDET", "QI_DEBUG_TX"):
         D.v(n_, 5.5)
     D.C(sh, "C_2u2_16V", "QI_VCC", G)
     for _ in range(2):
